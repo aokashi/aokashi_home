@@ -1,0 +1,1 @@
+<a download href="{{ .Get "src" }}"{{ with .Get "title" }} title="{{ . }}"{{ end }}><img src="{{ .Get "src" }}" alt="{{ .Get "src" }}" {{ with .Get "class" }}class="{{ . }}" {{ end }}width="{{ .Get "width" }}" height="{{ .Get "height" }}"></a>
