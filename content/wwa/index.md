@@ -21,7 +21,9 @@ WWAのページへようこそ！
 
 #### WWA Wingのアップデートについて
 
-現在搭載されているWWA Wingは最新のものを利用しています。
+**WWA Wingのシステムは 2017年 9月 5日 (火) より W3.15 から W3.15c に変更予定です。**
+
+<!--現在搭載されているWWA Wingは最新のものを利用しています。-->
 
 - WWA Wingのバージョンアップに伴い、今まで使用していたパスワードセーブデータが無効になる場合があります(パスワードセーブ自体が無効になることはありません)。
 - 基本的にWWA Wingの新バージョンをリリースしてから1週間後に、当サイトのWWA Wingのアップデートを行います。
@@ -30,18 +32,19 @@ WWAのページへようこそ！
 
 ### Thanks
 
-<aside class="note is-info">
+{{< note info >}}
   <p>2017年3月23日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
-</aside>
+{{< /note >}}
 
-- [キャラバンサークル](http://www.wwajp.com)
-- [WWA Wing](http://wwawing.com)
-- [天使の血 悪魔の涙](http://tenaku.sakura.ne.jp)
+- [キャラバンサークル](http://www.wwajp.com/)
+- [WWA Wing](http://wwawing.com/)
+- [天使の血 悪魔の涙](http://tenaku.sakura.ne.jp/)
 - [福田直人のホームページ](http://www.t3.rim.or.jp/~naoto/naoto.html)
 
 #### WWA素材
 
-- [ヒラリラーのMP](http://hirarira.net)
+- [ヒラリラーのMP](http://hirarira.net/)
+- [万色の宙](http://c-lr.net/touch/)
 - [まてるある～ん](http://ameblo.jp/msrr-material/)
 - [G-Eden](http://geo.kesagiri.net/)
 
@@ -49,7 +52,7 @@ WWAのページへようこそ！
 
 - [TAM Music Factory](http://www.tam-music.com/)
 - [FREEDOM House 2nd](http://fhouse.s17.xrea.com/)
-- [MusMus](http://musmus.main.jp)
+- [MusMus](http://musmus.main.jp/)
 - [魔王魂](http://maoudamashii.jokersounds.com/)
 - [WEB WAVE LIB](http://wwl.s-t-t.com/)
 - [般若's MIDIの里](http://hannya.nce.buttobi.net/)

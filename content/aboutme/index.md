@@ -12,6 +12,7 @@ weight = 1
       <li><a href="https://twitter.com/aokashi" title="Aokashi(あおかし)(@aokashi)">Twitter</a></li>
       <li><a href="https://github.com/aokashi" title="aokashi(Aokashi)">GitHub</a></li>
       <li><a href="https://ask.fm/aokashi" title="Aokashi(@aokashi)">askfm</a></li>
+      <li><a href="https://aokashi.github.io/" title="Aokashi Home Pages">GitHub Pages</a></li>
     </ul>
     <p>ゲームが作れることに影響を受けて、いつの間にかデザインを行っていた大学生。主にネットワークに関わることを学んでいるが、分散システムに興味を持っており、後悔はしていない。</p>
     <p>趣味はドット絵制作と鉄道。不定期ながらも旅行に行ったりしている。</p>
