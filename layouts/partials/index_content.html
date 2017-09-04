@@ -1,0 +1,17 @@
+<div class="box is-cols-2">
+  <section class="boxes">
+    <h2 class="boxes-title">トップページをリニューアルしました</h2>
+    <p>Aokashi Homeのコンテンツ内容をより分かりやすくするために、トップページをリニューアルしました。</p>
+    <p><a href="#">リニューアル内容を確認する</a></p>
+  </section>
+</div>
+<div class="box is-cols-1">
+  <section class="boxes">
+    <h2 class="boxes-title">最新情報</h2>
+    <p>当サイトからのお知らせを5件表示しています。すべてのお知らせは<a href="{{ .Site.BaseURL }}informations.html">お知らせ</a>でご覧になれます。</p>
+    <ul>{{ range first 5 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
+      <li>{{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+    </ul>
+    <p>更新履歴は<a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">今年のお知らせ</a>でご覧になれます。</p>
+  </section>
+</div>
