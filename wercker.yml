@@ -21,6 +21,10 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-        name: echo
+        name: get theme
         code: |
-          echo "hello world!"
+            git clone https://github.com/aokashi/aokashi_base.git themes
+            rm -rf ./themes/aokashi_base/.git
+    - arjen/hugo-build:
+        version: "0.27.1"
+        theme: "aokashi_base"
