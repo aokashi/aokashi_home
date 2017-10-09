@@ -25,8 +25,11 @@ build:
     - script:
         name: get theme
         code: |
-            git clone https://github.com/aokashi/aokashi_base.git themes
+            mkdir themes
+            cd themes
+            git clone https://github.com/aokashi/aokashi_base.git
             rm -rf ./themes/aokashi_base/.git
+            cd ..
     - arjen/hugo-build:
         version: "0.27.1"
         theme: "aokashi_base"
