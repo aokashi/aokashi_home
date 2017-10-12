@@ -59,4 +59,4 @@ deploy:
         name: deploy to server
         code: |
             echo "ssh -p $SVPSKEYP -i $WERCKER_ROOT/.ssh/SVPSKey"
-            rsync -av -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/.ssh/SVPSKey -o StrictHostKeyChecking=no" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
+            rsync -rlOtv -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/.ssh/SVPSKey -o StrictHostKeyChecking=no" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
