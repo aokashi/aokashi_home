@@ -45,8 +45,9 @@ deploy:
         name: create ssh key file
         filename: $WERCKER_ROOT/SVPSKey
         content: $SVPSKEYN_PRIVATE
+        overwrite: true
     - script:
         name: deploy to server
         code: |
             echo "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey"
-            rsync -av -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
+            rsync -av -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey -o StrictHostKeyChecking=no" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
