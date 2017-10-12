@@ -20,7 +20,26 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
+    - install-packages:
+        packages: git
     - script:
-        name: echo
+        name: get theme
         code: |
-          echo "hello world!"
+            mkdir themes
+            cd themes
+            git clone https://github.com/aokashi/aokashi_base.git
+            cd ..
+    - arjen/hugo-build:
+        version: "0.27.1"
+        theme: "aokashi_base"
+deploy:
+  steps:
+    - install-packages:
+        packages: ssh-client
+    - add-to-known_hosts:
+        hostname: aokashi.net
+    - add-ssh-key:
+        keyname: SVPSKEYN
+    - script:
+        name: deploy to server
+        code: rsync -av public/ rsync://aokashi@aokashi.net:$SVPSKEYP/var/www/www/
