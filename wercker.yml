@@ -41,13 +41,22 @@ deploy:
         hostname: aokashi.net
     - add-ssh-key:
         keyname: SVPSKEYN
+    - script:
+        name: create ssh key directory
+        code: |
+            cd $WERCKER_ROOT
+            mkdir .ssh
+            chmod 700 .ssh
     - create-file:
         name: create ssh key file
-        filename: $WERCKER_ROOT/SVPSKey
+        filename: $WERCKER_ROOT/.ssh/SVPSKey
         content: $SVPSKEYN_PRIVATE
         overwrite: true
     - script:
+        name: set permission ssh key file
+        code: chmod 600 $WERCKER_ROOT/.ssh/SVPSKey
+    - script:
         name: deploy to server
         code: |
-            echo "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey"
+            echo "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SSH/SVPSKey"
             rsync -av -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey -o StrictHostKeyChecking=no" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
