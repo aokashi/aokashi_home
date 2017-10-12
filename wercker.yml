@@ -28,8 +28,18 @@ build:
             mkdir themes
             cd themes
             git clone https://github.com/aokashi/aokashi_base.git
-            rm -rf ./themes/aokashi_base/.git
             cd ..
     - arjen/hugo-build:
         version: "0.27.1"
         theme: "aokashi_base"
+deploy:
+  steps:
+    - install-packages:
+        packages: ssh-client
+    - add-to-known_hosts:
+        hostname: aokashi.net
+    - add-ssh-key:
+        keyname: SVPSKEYN
+    - script:
+        name: deploy to server
+        code: rsync -av public/ rsync://aokashi@aokashi.net:$SVPSKEYP/var/www/www/
