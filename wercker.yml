@@ -25,6 +25,7 @@ build:
     - script:
         name: get theme
         code: |
+            cd $WERCKER_ROOT
             mkdir themes
             cd themes
             git clone https://github.com/aokashi/aokashi_base.git
@@ -35,7 +36,7 @@ build:
 deploy:
   steps:
     - install-packages:
-        packages: ssh-client
+        packages: ssh-client rsync
     - add-to-known_hosts:
         hostname: aokashi.net
     - add-ssh-key:
@@ -43,6 +44,4 @@ deploy:
     - script:
         name: deploy to server
         code: |
-            sudo apt-get update
-            sudo apt-get install -y rsync
-            rsync -av public/ rsync://aokashi@aokashi.net:$SVPSKEYP/var/www/www/
+            rsync -av -e "ssh -i $PRIVATEKEY_PATH -p $SVPSKEYP" $WERCKER_ROOT/public/ rsync://aokashi@aokashi.net:/var/www/www/
