@@ -41,8 +41,12 @@ deploy:
         hostname: aokashi.net
     - add-ssh-key:
         keyname: SVPSKEYN
+    - create-file:
+        name: create ssh key file
+        filename: $WERCKER_ROOT/SVPSKey
+        content: $SVPSKEYN_PRIVATE
     - script:
         name: deploy to server
         code: |
-            echo "ssh -p $SVPSKEYP -i $PRIVATEKEY_PATH"
-            rsync -av -e "ssh -p $SVPSKEYP -i $PRIVATEKEY_PATH" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
+            echo "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey"
+            rsync -av -e "ssh -p $SVPSKEYP -i $WERCKER_ROOT/SVPSKey" $WERCKER_ROOT/public/ aokashi@aokashi.net:/var/www/www/
