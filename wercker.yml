@@ -43,5 +43,4 @@ deploy:
         keyname: SVPSKEYN
     - script:
         name: deploy to server
-        code: |
-            rsync -av -e "ssh -i $PRIVATEKEY_PATH -p $SVPSKEYP" $WERCKER_ROOT/public/ rsync://aokashi@aokashi.net:/var/www/www/
+        code: rsync -av -e "ssh -i $PRIVATEKEY_PATH -p $SVPSKEYP" $WERCKER_ROOT/public/ rsync://aokashi@aokashi.net:/var/www/www/
