@@ -23,13 +23,8 @@ build:
     - install-packages:
         packages: git
     - script:
-        name: get theme
-        code: |
-            cd $WERCKER_ROOT
-            mkdir themes
-            cd themes
-            git clone https://github.com/aokashi/aokashi_base.git
-            cd ..
+        name: initalize git submodules
+        code: git submodule update --init --recursive
     - arjen/hugo-build:
         version: "0.27.1"
         theme: "aokashi_base"

@@ -1,0 +1,3 @@
+[submodule "themes/aokashi_base"]
+	path = themes/aokashi_base
+	url = git@github.com:aokashi/aokashi_base.git
