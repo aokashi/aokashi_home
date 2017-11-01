@@ -59,6 +59,58 @@ plualizeListTitles = false
   identifier = "wwafansq"
   url = "http://www.wwafansq.com"
 
+[[menu.top]]
+  name = "Playing"
+  weight = 1
+  identifier = "playing"
+  url = "/playing/"
+  [[menu.top]]
+    parent = "playing"
+    name = "WWA"
+    weight = 1
+    identifier = "wwa"
+    url = "/wwa/"
+  [[menu.top]]
+    parent = "playing"
+    name = "Docs"
+    weight = 2
+    identifier = "docs"
+    url = "https://contents.aokashi.net/docs/"
+[[menu.top]]
+  name = "Making"
+  weight = 2
+  identifier = "making"
+  url = "/making/"
+  [[menu.top]]
+    parent = "making"
+    name = "Program"
+    weight = 1
+    identifier = "program"
+    url = "/program/"
+  [[menu.top]]
+    parent = "making"
+    name = "Materials"
+    weight = 2
+    identifier = "materials"
+    url = "/materials/"
+[[menu.top]]
+  name = "About"
+  weight = 3
+  identifier = "about"
+  url = "/about/"
+[[menu.top]]
+  name = "Twitter"
+  weight = 4
+  identifier = "twitter"
+[[menu.top]]
+  name = "GitHub"
+  weight = 5
+  identifier = "github"
+[[menu.top]]
+  name = "Blog"
+  weight = 6
+  identifier = "blog"
+
 [params]
   blog = "http://aokashi.hatenablog.jp"
   twitter = "https://twitter.com/aokashi"
