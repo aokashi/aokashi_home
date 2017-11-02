@@ -1,23 +1,18 @@
-<!--<div class="box is-cols-2">
-  <section class="boxes">
-    <h2 class="boxes-title">トップページをリニューアルしました</h2>
-    <p>Aokashi Homeのコンテンツ内容をより分かりやすくするために、トップページをリニューアルしました。</p>
-    <p><a href="#">リニューアル内容を確認する</a></p>
-  </section>
-</div>-->
-<div class="l-main-topic topic">
-  <div class="topic-title">
+<section class="l-main-topic topic">
+  <header class="topic-title">
     <h2 class="topic-title-text">最新情報</h2>
-  </div>
+  </header>
   <div class="topic-content">
     <ul class="topic-list">{{ range first 3 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
       <li>{{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ end }}{{ end }}
     </ul>
-    <div class="linkbutton">
-      <a href="{{ .Site.BaseURL }}informations.html">全部見る</a></p>
-    </div>
-    <div class="linkbutton">
+    <footer class="topic-footer">
+      <div class="linkbutton">
+        <a href="{{ .Site.BaseURL }}informations.html">全部見る</a>
+      </div>
+      <div class="linkbutton">
         <a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">更新履歴も見る</a>
-    </div>
+      </div>
+    </footer>
   </div>
-</div>
+</section>
