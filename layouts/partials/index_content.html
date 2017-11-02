@@ -5,13 +5,19 @@
     <p><a href="#">リニューアル内容を確認する</a></p>
   </section>
 </div>-->
-<div class="box is-cols-1">
-  <section class="boxes">
-    <h2 class="boxes-title">最新情報</h2>
-    <ul>{{ range first 3 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
+<div class="l-main-topic topic">
+  <div class="topic-title">
+    <h2 class="topic-title-text">最新情報</h2>
+  </div>
+  <div class="topic-content">
+    <ul class="topic-list">{{ range first 3 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
       <li>{{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ end }}{{ end }}
     </ul>
-    <p><a href="{{ .Site.BaseURL }}informations.html">全部見る</a></p>
-    <p><a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">更新履歴も見る</a></p>
-  </section>
+    <div class="linkbutton">
+      <a href="{{ .Site.BaseURL }}informations.html">全部見る</a></p>
+    </div>
+    <div class="linkbutton">
+        <a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">更新履歴も見る</a>
+    </div>
+  </div>
 </div>
