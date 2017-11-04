@@ -10,168 +10,168 @@ WWAで利用できる素材です。
 WWAの素材規格に合わせて制作した素材です。そのままWWAの制作に割り当てることができます。
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/Set09.gif" width="400" height="1000" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/Set14.gif" width="400" height="960" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/Set16.gif" width="400" height="1280" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Bu: 建物
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding10-1.gif" width="240" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding10-2.gif" width="160" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding10-3.gif" width="360" height="400" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding11.gif" width="240" height="200" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding12-1.gif" width="360" height="320" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding12-2.gif" width="240" height="120" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding14_plus.gif" width="400" height="480" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuBuilding16.gif" width="720" height="1120" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuHouse10.gif" width="400" height="280" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuHouse12.gif" width="360" height="440" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/BuWwaWindow14.gif" width="40" height="40" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Gr: 背景
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/GrRail12.gif" width="400" height="320" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/GrRoad10.gif" width="240" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/GrRoad11.gif" width="400" height="440" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/GrRoad12.gif" width="320" height="200" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Hu: 人物
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/HuPeople10.gif" width="240" height="120" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/HuPlayer10.gif" width="320" height="40" >}}
-  {{< /boxes >}}
-{{< /boxes >}}
+  {{< /box-items >}}
+{{< /box-items >}}
 
 ### It: アイテム
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/ItBottle15.gif" width="160" height="40" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ItFood12.gif" width="120" height="120" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ItPhone14.gif" width="80" height="40" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ItSushi15.gif" width="160" height="160" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Ob: 物体
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/ObFurniture11-1.gif" width="440" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ObFurniture11-2.gif" width="240" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ObMachine11.gif" width="80" height="120" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ObMachine12.gif" width="200" height="80" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ObObject16.gif" width="400" height="440" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/ObTreasure11.gif" width="80" height="40" >}}
-  {{</ boxes >}}
+  {{</ box-items >}}
 {{< /box >}}
 
 ### Sy: システム
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/SyCommand10.gif" width="200" height="40" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/SyCommand14-1.gif" width="160" height="80" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/SyCommand14-2.gif" class="bg is-gray" width="280" height="160" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/SySystem10.gif" width="280" height="120" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Ve: 乗り物
 
 {{< box 3 >}}
-  {{< boxes >}}
+  {{< box-items >}}
     {{< material src="wwa/VeBus13.gif" width="400" height="320" >}}
-  {{</ boxes >}}
-  {{< boxes >}}
+  {{</ box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeCar11.gif" width="320" height="160" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrain11-1.gif" width="320" height="360" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrain11-2.gif" width="320" height="360" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrain14-1.gif" width="320" height="360" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrain14-2.gif" width="320" height="360" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrain14-3.gif" width="360" height="320" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrainInterior11.gif" width="280" height="240" >}}
-  {{< /boxes >}}
-  {{< boxes >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeTrainSystem11.gif" width="120" height="240" >}}
-  {{< /boxes >}}
+  {{< /box-items >}}
 {{< /box >}}

@@ -6,7 +6,7 @@ title = "おすすめサイト"
 私が普段利用している(かもしれない)サイトやコンテンツをご紹介します。
 
 {{< box 2 >}}
-{{< boxes title="Sandcat.jp" >}}
+{{< box-items title="Sandcat.jp" >}}
 <p>箱庭諸島「<a href="http://hako.sandcat.jp">究想の箱庭</a>」を運営しているサイトです。私はここで「都環島」として参加しています。</p>
-{{< /boxes >}}
+{{< /box-items >}}
 {{< /box >}}

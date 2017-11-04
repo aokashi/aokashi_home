@@ -14,7 +14,7 @@ USBメモリ上でも起動できるシンプルなWindowsランチャーです�
 ### リポジトリ
 実行ファイルのダウンロードはリポジトリのページにある "Releases" よりダウンロードできます。
 
-{{< linkbutton href="https://github.com/aokashi/PortableLauncher" >}}GitHubのリポジトリ{{< /linkbutton >}}
+{{< link_button href="https://github.com/aokashi/PortableLauncher" >}}GitHubのリポジトリ{{< /link_button >}}
 
 #### 詳細情報
 - 開発環境:

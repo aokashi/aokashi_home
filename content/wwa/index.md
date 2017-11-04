@@ -5,7 +5,7 @@ weight = 1
 
 WWAのページへようこそ！
 
-{{< linkbutton href="list_js.html" title="WWA作品一覧" >}}WWAをプレイする{{< /linkbutton >}}
+{{< link_button href="list_js.html" title="WWA作品一覧" >}}WWAをプレイする{{< /link_button >}}
 
 <div class="area is-center">
   <a href="list_java.html" title="Java版WWA作品一覧">Javaアプレットで起動するWWAはこちらから</a>
