@@ -15,33 +15,69 @@ uglyURLs = true
 plualizeListTitles = false
 
 [[menu.main]]
-  name = "WWA"
+  name = "Playing"
   weight = 1
-  identifier = "wwa"
-  url = "/wwa/"
-  # WWAは OneDrive/Documents/Games/WWA -> wwa/
+  identifier = "playing"
+  url = "/playing/"
+  [[menu.main]]
+    parent = "playing"
+    name = "WWA"
+    weight = 1
+    identifier = "wwa"
+    url = "/wwa/"
+    # WWAは OneDrive/Documents/Games/WWA -> wwa/
+  [[menu.main]]
+    parent = "playing"
+    name = "Docs"
+    weight = 3
+    identifier = "docs"
+    url = "https://contents.aokashi.net/docs/"
 [[menu.main]]
-  name = "作品"
+  name = "Making"
   weight = 2
-  identifier = "works"
-  url = "/works/"
+  identifier = "making"
+  url = "/making/"
+  [[menu.main]]
+    parent = "making"
+    name = "Program"
+    weight = 1
+    identifier = "program"
+    url = "/program/"
+  [[menu.main]]
+    parent = "making"
+    name = "Materials"
+    weight = 2
+    identifier = "materials"
+    url = "/materials/"
+    # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
+    # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
 [[menu.main]]
-  name = "素材"
+  name = "AboutMe"
   weight = 3
-  identifier = "materials"
-  url = "/materials/"
-  # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
-  # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
-[[menu.main]]
-  name = "資料"
-  weight = 4
-  identifier = "docs"
-  url = "https://contents.aokashi.net/docs/"
-[[menu.main]]
-  name = "Aokashiについて"
-  weight = 5
   identifier = "aboutme"
   url = "/aboutme/"
+  [[menu.main]]
+    parent = "aboutme"
+    name = "Twitter"
+    weight = 1
+    identifier = "twitter"
+    url = "https://twitter.com/aokashi"
+  [[menu.main]]
+    parent = "aboutme"
+    name = "GitHub"
+    weight = 2
+    identifier = "github"
+    url = "https://github.com/aokashi"
+[[menu.main]]
+  name = "Blog"
+  weight = 4
+  identifier = "blog"
+  url = "https://aokashi.hatenablog.jp"
+[[menu.main]]
+  name = "WWA FanSquare"
+  weight = 5
+  identifier = "wwa_fansq"
+  url = "http://wwafansq.com"
 
 [[menu.footer]]
   name = "お知らせ"
@@ -58,58 +94,6 @@ plualizeListTitles = false
   weight = 3
   identifier = "wwafansq"
   url = "http://www.wwafansq.com"
-
-[[menu.top]]
-  name = "Playing"
-  weight = 1
-  identifier = "playing"
-  url = "/playing/"
-  [[menu.top]]
-    parent = "playing"
-    name = "WWA"
-    weight = 1
-    identifier = "wwa"
-    url = "/wwa/"
-  [[menu.top]]
-    parent = "playing"
-    name = "Docs"
-    weight = 2
-    identifier = "docs"
-    url = "https://contents.aokashi.net/docs/"
-[[menu.top]]
-  name = "Making"
-  weight = 2
-  identifier = "making"
-  url = "/making/"
-  [[menu.top]]
-    parent = "making"
-    name = "Program"
-    weight = 1
-    identifier = "program"
-    url = "/program/"
-  [[menu.top]]
-    parent = "making"
-    name = "Materials"
-    weight = 2
-    identifier = "materials"
-    url = "/materials/"
-[[menu.top]]
-  name = "About"
-  weight = 3
-  identifier = "about"
-  url = "/about/"
-[[menu.top]]
-  name = "Twitter"
-  weight = 4
-  identifier = "twitter"
-[[menu.top]]
-  name = "GitHub"
-  weight = 5
-  identifier = "github"
-[[menu.top]]
-  name = "Blog"
-  weight = 6
-  identifier = "blog"
 
 [params]
   blog = "http://aokashi.hatenablog.jp"
