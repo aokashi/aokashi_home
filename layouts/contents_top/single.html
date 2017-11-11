@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+  <main class="l-main">
+    <div class="sub-wrap">
+      <div class="l-main-content">
+        <section class="l-main-contents">
+          <header class="l-main-contents-header intro is-medium">
+            <img src="{{ .Site.BaseURL }}css/{{ .Section }}.png" class="intro-icon" width="128" height="128">
+            <div class="intro-description">
+              <h6 class="intro-items-title">Playing</h6>
+              <p>{{ .Params.description }}</p>
+            </div>
+          </header>
+          <article class="l-main-contents-article set-doc">
+
+{{ .Content }}
+
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+
+{{ end }}

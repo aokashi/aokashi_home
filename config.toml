@@ -77,7 +77,7 @@ plualizeListTitles = false
   name = "WWA FanSquare"
   weight = 5
   identifier = "wwa_fansq"
-  url = "http://wwafansq.com"
+  url = "http://www.wwafansq.com"
 
 [[menu.footer]]
   name = "お知らせ"
