@@ -32,6 +32,7 @@ plualizeListTitles = false
     weight = 3
     identifier = "docs"
     url = "https://contents.aokashi.net/docs/"
+  # 項目を追加したら content/playing/index.html にも忘れずに！
 [[menu.main]]
   name = "Making"
   weight = 2
@@ -51,6 +52,7 @@ plualizeListTitles = false
     url = "/materials/"
     # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
     # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
+  # 項目を追加したら content/making/index.html にも忘れずに！
 [[menu.main]]
   name = "AboutMe"
   weight = 3
