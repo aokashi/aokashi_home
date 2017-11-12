@@ -1,6 +1,8 @@
 +++
-title = "WWA トップページ"
-weight = 1
+title = "WWA"
+type = "playing"
+weight = 2
+description = "簡単にゲームが作れるWWAの作品を置いています"
 +++
 
 WWAのページへようこそ！
