@@ -99,5 +99,5 @@ plualizeListTitles = false
 
 [params]
   blog = "http://aokashi.hatenablog.jp"
-  twitter = "https://twitter.com/aokashi"
-  github = "https://github.com/aokashi"
+  twitter = "aokashi"
+  github = "aokashi"
