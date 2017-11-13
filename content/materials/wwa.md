@@ -1,6 +1,9 @@
 +++
 title = "WWA素材"
-weight = 2
+type = "making"
+weight = 3
+description = "WWAに利用できる素材です。1マス40×40で、2009年頃から作成を始めたこのWWA素材は、現代の建物を中心に多く取り扱っています。"
+image = "/css/materials_wwa.png"
 +++
 
 WWAで利用できる素材です。
