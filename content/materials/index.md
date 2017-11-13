@@ -1,7 +1,7 @@
 +++
 title = "素材"
 type = "making"
-weight = 2
+weight = 3
 description = "ゲームやプログラムに利用できる画像ファイル(素材)を公開しています。"
 +++
 

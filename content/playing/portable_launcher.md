@@ -1,6 +1,8 @@
 +++
 title = "Portable Launcher"
-weight = 2
+type = "playing"
+weight = 3
+description = "USBメモリ上で起動できるWindowsアプリケーションです。"
 +++
 
 USBメモリ上でも起動できるシンプルなWindowsランチャーです。
