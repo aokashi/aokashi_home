@@ -1,6 +1,9 @@
 +++
 title = "Aokashiについて"
+type = "aboutme"
+layout = "index"
 weight = 1
+description = "私自身のご紹介です。"
 +++
 
 {{< intro src="aokashi.png" alt="Aokashi" title="Aokashi(あおかし)" width="256" height="256" >}}
