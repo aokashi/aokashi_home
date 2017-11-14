@@ -91,11 +91,6 @@ plualizeListTitles = false
   weight = 2
   identifier = "about"
   url = "/about.html"
-[[menu.footer]]
-  name = "WWA FanSquare"
-  weight = 3
-  identifier = "wwafansq"
-  url = "http://www.wwafansq.com"
 
 [params]
   blog = "http://aokashi.hatenablog.jp"
