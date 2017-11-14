@@ -1,9 +1,10 @@
 +++
 title = "資料集"
 type = "playing"
-weight = 2
-description = "ゲームで使われる舞台の資料が集まっています。"
+weight = 4
+
 absURL = "https://contents.aokashi.net/docs/"
+description = "ゲームで使われる舞台の資料が集まっています。"
 +++
 資料集は以下のリンクからどうぞ。
 

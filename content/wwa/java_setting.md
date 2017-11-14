@@ -1,5 +1,6 @@
 +++
 title = "JavaアプレットのWWAを動作するには"
+type = "playing"
 weight = 6
 +++
 
