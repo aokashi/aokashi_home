@@ -27,7 +27,7 @@
     <div class="sub-wrap is-left">
       <nav class="l-main-sidebar_menu menu">
         <ul>
-          <li class="menu-items is-top"><a href="/{{ .Type }}.html">戻る</a></li>
+          <li class="menu-items is-top"><a href="{{ .Site.BaseURL }}{{ .Section }}.html">戻る</a></li>
         {{ range (where .Site.Pages "Section" .Section) }}
         {{ if eq .File.BaseFileName "index" }}
           <li class="menu-items"><a href="{{ replace .URL ".html" "/" }}">{{ .Title }}</a></li>

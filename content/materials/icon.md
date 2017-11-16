@@ -3,7 +3,7 @@ title = "アイコン素材"
 type = "making"
 weight = 4
 description = "Webサイトに利用できる32×32の建物のアイコン素材です。元々CGIゲームの「TOWN」を利用するために制作しました。"
-image = "/css/materials_icon.png"
+image = "css/materials_icon.png"
 +++
 
 アイコンはすべて32×32のサイズに統一しています。
