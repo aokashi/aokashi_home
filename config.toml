@@ -15,33 +15,71 @@ uglyURLs = true
 plualizeListTitles = false
 
 [[menu.main]]
-  name = "WWA"
+  name = "Playing"
   weight = 1
-  identifier = "wwa"
-  url = "/wwa/"
-  # WWAは OneDrive/Documents/Games/WWA -> wwa/
+  identifier = "playing"
+  url = "/playing/"
+  [[menu.main]]
+    parent = "playing"
+    name = "WWA"
+    weight = 1
+    identifier = "wwa"
+    url = "/wwa/"
+    # WWAは OneDrive/Documents/Games/WWA -> wwa/
+  [[menu.main]]
+    parent = "playing"
+    name = "Docs"
+    weight = 3
+    identifier = "docs"
+    url = "https://contents.aokashi.net/docs/"
+  # 項目を追加したら content/playing/index.html にも忘れずに！
 [[menu.main]]
-  name = "作品"
+  name = "Making"
   weight = 2
-  identifier = "works"
-  url = "/works/"
+  identifier = "making"
+  url = "/making/"
+  [[menu.main]]
+    parent = "making"
+    name = "Program"
+    weight = 1
+    identifier = "program"
+    url = "/program/"
+  [[menu.main]]
+    parent = "making"
+    name = "Materials"
+    weight = 2
+    identifier = "materials"
+    url = "/materials/"
+    # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
+    # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
+  # 項目を追加したら content/making/index.html にも忘れずに！
 [[menu.main]]
-  name = "素材"
+  name = "AboutMe"
   weight = 3
-  identifier = "materials"
-  url = "/materials/"
-  # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
-  # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
-[[menu.main]]
-  name = "資料"
-  weight = 4
-  identifier = "docs"
-  url = "https://contents.aokashi.net/docs/"
-[[menu.main]]
-  name = "Aokashiについて"
-  weight = 5
   identifier = "aboutme"
   url = "/aboutme/"
+  [[menu.main]]
+    parent = "aboutme"
+    name = "Twitter"
+    weight = 1
+    identifier = "twitter"
+    url = "https://twitter.com/aokashi"
+  [[menu.main]]
+    parent = "aboutme"
+    name = "GitHub"
+    weight = 2
+    identifier = "github"
+    url = "https://github.com/aokashi"
+[[menu.main]]
+  name = "Blog"
+  weight = 4
+  identifier = "blog"
+  url = "http://aokashi.hatenablog.jp"
+[[menu.main]]
+  name = "WWA FanSquare"
+  weight = 5
+  identifier = "wwa_fansq"
+  url = "http://www.wwafansq.com"
 
 [[menu.footer]]
   name = "お知らせ"
@@ -53,13 +91,8 @@ plualizeListTitles = false
   weight = 2
   identifier = "about"
   url = "/about.html"
-[[menu.footer]]
-  name = "WWA FanSquare"
-  weight = 3
-  identifier = "wwafansq"
-  url = "http://www.wwafansq.com"
 
 [params]
   blog = "http://aokashi.hatenablog.jp"
-  twitter = "https://twitter.com/aokashi"
-  github = "https://github.com/aokashi"
+  twitter = "aokashi"
+  github = "aokashi"

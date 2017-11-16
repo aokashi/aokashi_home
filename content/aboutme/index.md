@@ -1,71 +1,51 @@
 +++
 title = "Aokashiについて"
+type = "aboutme"
+layout = "index"
 weight = 1
+description = "私自身のご紹介です。"
 +++
 
-<div class="intro">
-  <img src="aokashi.png" alt="aokashi.png" class="intros is-icon" width="256" height="256">
-  <section class="intros is-description">
-    <h6 class="intros-title">Aokashi(あおかし)</h6>
+{{< intro src="aokashi.png" alt="Aokashi" title="Aokashi(あおかし)" width="256" height="256" >}}
+  <div class="social_menu">
+  <ul>
+    <li class="social_menu-items is-blog"><a href="http://aokashi.hatenablog.jp" title="Aokashi Room">ブログ(はてなブログ)</a></li>
+    <li class="social_menu-items is-twitter"><a href="https://twitter.com/aokashi" title="Aokashi(あおかし)(@aokashi)">@aokashi</a></li>
+    <li class="social_menu-items is-github"><a href="https://github.com/aokashi" title="aokashi(Aokashi)">aokashi</a></li>
+    <li class="social_menu-items is-askfm"><a href="https://ask.fm/aokashi" title="Aokashi(@aokashi)">askfm</a></li>
+    <li class="social_menu-items is-speakerdeck"><a href="https://speakerdeck.com/aokashi" title="Presentations by Aokashi">Speaker Deck</a></li>
+    <li class="social_menu-items"><a href="https://aokashi.github.io/" title="Aokashi Home Pages">GitHub Pages</a></li>
+  </div>
+{{< /intro >}}
+
+{{< box 2 >}}
+  {{< box-items title="やっていること" >}}
+    <p><strong>開発に役立つプログラム</strong>や<strong>ドット絵</strong>の制作をしています。</p>
+    <p>大学では<strong>ネットワーク</strong>や<strong>コンピュータ</strong>、<strong>ソフトウェア</strong>に関することを講義で学んでいます。が、言うほどネットワークに詳しくないです。</p>
+  {{< /box-items >}}
+  {{< box-items title="すきなもの">}}
     <ul>
-      <li><a href="http://aokashi.hatenablog.jp" title="Aokashi Room">ブログ(はてなブログ)</a></li>
-      <li><a href="https://twitter.com/aokashi" title="Aokashi(あおかし)(@aokashi)">Twitter</a></li>
-      <li><a href="https://github.com/aokashi" title="aokashi(Aokashi)">GitHub</a></li>
-      <li><a href="https://ask.fm/aokashi" title="Aokashi(@aokashi)">askfm</a></li>
-      <li><a href="https://aokashi.github.io/" title="Aokashi Home Pages">GitHub Pages</a></li>
+      <li><strong>パソコン</strong> ... 主にパーツいじりが好きです</li>
+      <li><strong>鉄道</strong> ... 駅来たら次何の列車来るかわくわくしません？</li>
+      <li><strong>ドット絵</strong> ... 黒枠付きのレトロゲームタイプが好みですが、作るときの解像度はいつも高めです</li>
+      <li><strong>デザイン</strong> ... 丸、三角、四角を多用したり敷き詰めたりしたデザインが非現実的なイメージが漂って好きです</li>
     </ul>
-    <p>ゲームが作れることに影響を受けて、いつの間にかデザインを行っていた大学生。主にネットワークに関わることを学んでいるが、分散システムに興味を持っており、後悔はしていない。</p>
-    <p>趣味はドット絵制作と鉄道。不定期ながらも旅行に行ったりしている。</p>
-  </section>
-</div>
+  {{< /box-items >}}
+  {{< box-items title="つかっているもの" >}}
+    <p><strong>自作のデスクトップPC</strong>と<strong>モバイルPC(ThinkPad Yoga 260)</strong>の2台体制で使っています。</p>
+    <p>たまに検証用とで<strong>MacBook Pro</strong>を引っ張ることがあります。</p>
+  {{< /box-items >}}
+  {{< box-items title="ここをつくったきっかけ" >}}
+    <p>2007年頃にWWAの存在を知り、ここでゲームが作れることにわくわくしてて、そこでゲームを公開する場として設立しました。</p>
+    <p>現状個人サイトはなかなかアクセスされにくいのでつらいですが、頑張って維持します。</p>
+  {{< /box-items >}}
+{{< /box >}}
 
-### 環境について
+### 利用しているソフトウェア
+ドット絵制作には EDGE2 がメインです。たまにイメージの加工に Paint.NET を使う場合があります。他にもプログラム制作には Visual Studio Code を使っています。
 
-以下のPCを利用しています。
-
-- 自作PC(第2世代) - microATXを利用したデスクトップパソコン。床下ではなく、机の横に置いています。
-- ThinkPad Yoga 260 - 普段利用するモバイルパソコン。普段はArchLinuxを利用していて、保険としてWindowsも共存しています。
-- MacBook Pro (2015 Early) - 前まではメインのモバイルパソコンでしたが、家庭内で人気だったのかメインでの利用を手放すことに。たまたま検証目的で利用します。
-
-#### 利用しているソフトウェア
-
-- [Paint.NET](http://www.getpaint.net/)
 - [![EDGE2](http://takabosoft.com/wp-content/themes/takabosoft/edge2/banner00.png)](http://takabosoft.com/edge2)
+- [Paint.NET](http://www.getpaint.net/)
+- [Visual Studio Code](https://code.visualstudio.com)
 
-### どうでもいい情報
-
-<div class="box is-cols-2">
-  <section class="boxes">
-    <h6 class="boxes-title">日常のこと</h6>
-    <ul>
-      <li>埼玉県のふじみ野に住んでいます。池袋から急行列車で25分くらいで駅に着きます。</li>
-      <li>自宅から大学までは片道2時間。長いけどもう慣れました。</li>
-      <li>自室は快適に作業できるように定期的に工夫はしていますが、肝心のモチベーションが不足。時間の無駄だと分かっても習慣の一つとなっています。</li>
-    </ul>
-  </section>
-  <section class="boxes">
-    <h6 class="boxes-title">趣味のこと</h6>
-    <ul>
-      <li>世界観の設定を作るのも好きなことから、<strong>「A列車で行こう」</strong>をたまにプレイしています。最初にプレイした作品は「A列車で行こうDS」で、作中に出てくる地名の名前が私の名前の由来だったりします。</li>
-      <li>鉄道は新幹線のような速い列車よりも在来線の列車が好み。恐らく、列車のバリエーションの幅が広いことからでしょうか。</li>
-    </ul>
-  </section>
-  <section class="boxes">
-    <h6 class="boxes-title">ゲームのこと</h6>
-    <ul>
-      <li>ゲームの作成に憧れたのは小学生の頃。当時でも簡単にゲームが作れるツールはあったものの、この時使っていたパソコンがMacで、作れなくてがっかりした事があります。
-        <ul>
-          <li>この間に、ゲームに使える素材なら作れるとドット絵を作り始めました。</li>
-        </ul></li>
-      <li>ゲームは主人公側が「しゃべる」方が好み。そのためか、ドラゴンクエストよりもファイナルファンタジーをよく遊んでいました。</li>
-      <li>(世界観が)古すぎる、新しすぎるものではなく、現代のものが好み。</li>
-    </ul>
-  </section>
-  <section class="boxes">
-    <h6 class="boxes-title">その他</h6>
-    <ul>
-      <li>自室のデスクトップパソコンは自作です。2017年現在、最近導入したばかりですが、初めてパソコンを組み立てたのは2013年の頃です。</li>
-      <li>Web開発では長い間HTML+CSS+PHPで行っていたが、最近はJavaScript(+TypeScript)も学ぶように。サーバーサイドもPHPだけ！という事にならないように何かしら勉強しています。</li>
-    </ul>
-  </section>
-</div>
+最近はWindowsばかりではなくLinuxを普段から使おうと考えてはいるものの、ドット絵制作に支障をきたさないか心配だったりします。

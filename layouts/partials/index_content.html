@@ -1,0 +1,18 @@
+<section class="l-main-topic topic">
+  <header class="topic-title">
+    <h2 class="topic-title-text">最新情報</h2>
+  </header>
+  <div class="topic-content">
+    <ul class="topic-list">{{ range first 3 (where .Data.Pages "Section" "informations") }}{{ if ne .File.BaseFileName "index" }}
+      <li>{{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+    </ul>
+    <footer class="topic-footer">
+      <div class="link_button">
+        <a href="{{ .Site.BaseURL }}informations.html">全部見る</a>
+      </div>
+      <div class="link_button">
+        <a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">更新履歴も見る</a>
+      </div>
+    </footer>
+  </div>
+</section>
