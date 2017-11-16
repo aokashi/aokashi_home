@@ -42,7 +42,7 @@ plualizeListTitles = false
     name = "Program"
     weight = 1
     identifier = "program"
-    url = "/program/"
+    url = "/making/program.html"
     # WWA素材は OneDrive/Pictures/WWAMaterials/Public -> materials/wwa/
     # アイコン素材は Dropbox/Pictures/Web/Icons -> materials/icon/
 [[menu.main]]

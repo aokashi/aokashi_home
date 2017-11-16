@@ -5,7 +5,9 @@ weight = 2
 description = "作品の制作に役立つプログラムを公開しています。"
 +++
 
-制作したプログラムを公開しています。
+制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。
+
+{{< link_button href="https://github.com/aokashi" >}}GitHubへアクセス{{< /link_button >}}
 
 {{< note info >}}
   <p>各プログラムのライセンスはGitHubのLICENSEファイルをご参照願います。</p>

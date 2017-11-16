@@ -3,7 +3,7 @@
   <main class="l-main">
     <div class="sub-wrap is-center">
       <div class="l-main-content">
-        <section class="l-main-contents">
+        <article class="l-main-contents">
           <header class="l-main-contents-header list">
             <h2 class="list-title">{{ .Title }}</h2>
           {{ $date := .Date.Format "2006-01-02" }}
@@ -13,12 +13,12 @@
             </div>
           {{ end }}
           </header>
-          <article class="l-main-contents-article set-doc">
+          <div class="l-main-contents-doc set-doc">
 
 {{ .Content }}
 
-          </article>
-        </section>
+          </div>
+        </article>
       </div>
     </div>
 
