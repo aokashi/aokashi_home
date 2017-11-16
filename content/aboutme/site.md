@@ -1,6 +1,8 @@
 +++
 title = "過去のサイト"
-
+type = "aboutme"
+weight = 3
+description = "過去に運営していたサイトを見ることが出来ます。"
 +++
 
 Aokashiが運営していた過去のサイトを見ることができます。

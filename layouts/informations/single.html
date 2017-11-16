@@ -1,35 +1,41 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-    <main class="l-main">
-      <div class="l-wrap is-center">
-        <div class="l-main-content">
-          <section class="l-main-contents">
-            <header class="l-main-contents-header block">
-              <h2 class="l-main-contents-header-title">{{ .Title }}</h2>{{ $date := .Date.Format "2006-01-02" }}{{ if ne $date "0001-01-01" }}
-              <div class="blocks"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年 01月 02日" }}</time></div>{{ end }}
-            </header>
-            <article class="l-main-contents-article l-doc">
+  <main class="l-main">
+    <div class="sub-wrap is-center">
+      <div class="l-main-content">
+        <article class="l-main-contents">
+          <header class="l-main-contents-header list">
+            <h2 class="list-title">{{ .Title }}</h2>
+          {{ $date := .Date.Format "2006-01-02" }}
+          {{ if ne $date "0001-01-01" }}
+            <div class="list-items">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年 01月 02日" }}</time>
+            </div>
+          {{ end }}
+          </header>
+          <div class="l-main-contents-doc set-doc">
 
 {{ .Content }}
 
-            </article>
-          </section>
-        </div>
+          </div>
+        </article>
       </div>
-      <div class="l-wrap is-right">{{ if ne "" .TableOfContents }}
-        <nav class="l-main-toc menu">
-          <h2 class="l-main-toc-title">目次</h2>
-          {{ .TableOfContents }}
-        </nav>{{ end }}
-      </div>
-      <div class="l-wrap is-left">
-        <nav class="l-main-nav menu">
-          <ul>
-            <li class="menus is-top"><a href="/{{ .Type }}.html">戻る</a></li>{{ range (where .Site.Pages "Section" .Section) }}{{ if eq .File.BaseFileName "index" }}
-            <li class="menus"><a href="{{ replace .URL ".html" "/" }}">{{ .Title }}</a></li>{{ end }}{{ end }}
-          </ul>
-        </nav>
-      </div>
-    </main>
+    </div>
 
-{{ partial "footer.html" . }}
+{{ partial "sidebar_toc.html" . }}
+
+    <div class="sub-wrap is-left">
+      <nav class="l-main-sidebar_menu menu">
+        <ul>
+          <li class="menu-items is-top"><a href="{{ .Site.BaseURL }}{{ .Section }}.html">戻る</a></li>
+        {{ range (where .Site.Pages "Section" .Section) }}
+        {{ if eq .File.BaseFileName "index" }}
+          <li class="menu-items"><a href="{{ replace .URL ".html" "/" }}">{{ .Title }}</a></li>
+        {{ end }}
+        {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+{{ end }}

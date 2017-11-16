@@ -1,27 +1,30 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-    <main class="l-main">
-      <div class="l-wrap">
-        <div class="l-main-content">
-          <section class="l-main-contents">
-            <header class="l-main-contents-header">
-              <h2 class="l-main-contents-header-title">404 - File Not Found</h2>
-            </header>
-            <article class="l-main-contents-article l-doc">
-              <p>URLに該当するページが見つかりませんでした。</p>
-              <section>
-                <h3>もしかして</h3>
-                <ul>
-                  <li>URLの入力ミス</li>
-                  <li>他サイト、もしくは旧サイトからのリンクによるもの</li>
-                </ul>
-                <p>旧サイト含め、当サイトではリンク切れをできるだけ無くすように努力をしておりますが、それでもこのページに転送される場合は、<a href="/about.html">お問い合わせ</a>よりご連絡をお願いします。</p>
-                <p>他サイトからのリンク切れの場合は、対象のリンクを設置したサイトへのご連絡をお願いします。</p>
-              </section>
-            </article>
-          </section>
-        </div>
+  <main class="l-main">
+    <div class="sub-wrap is-center">
+      <div class="l-main-content">
+        <article class="l-main-contents">
+          <header class="l-main-contents-header list">
+            <h2 class="list-title">404 - File Not Found</h2>
+            <nav class="list-items is-link">
+              <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">戻る</a>
+            </nav>
+          </header>
+          <div class="l-main-contents-doc set-doc">
+            <p>URLに該当するページが見つかりませんでした。</p>
+            <section>
+              <h3>もしかして</h3>
+              <ul>
+                <li>URLの入力ミス</li>
+                <li>他サイト、もしくは旧サイトからのリンクによるもの</li>
+              </ul>
+              <p>旧サイト含め、当サイトではリンク切れをできるだけ無くすように努力をしておりますが、それでもこのページに転送される場合は、<a href="/about.html">お問い合わせ</a>よりご連絡をお願いします。</p>
+              <p>他サイトからのリンク切れの場合は、対象のリンクを設置したサイトへのご連絡をお願いします。</p>
+            </section>
+          </div>
+        </article>
       </div>
-    </main>
+    </div>
+  </main>
 
-{{ partial "footer.html" . }}
+{{ end }}

@@ -1,5 +1,6 @@
 +++
-title = "JavaアプレットのWWAを動作するには"
+title = "JavaアプレットのWWAを動かすには"
+type = "playing"
 weight = 6
 +++
 
@@ -22,28 +23,28 @@ Java実行環境を整えてもJavaアプレットはセキュリティ設定に
   <p>コンピューターの設定を変更するため、学校や図書館などの公共施設内のPCでは設定できない場合があります。</p>
 </aside>
 
-<div class="box is-cols-2">
-  <section class="boxes">
-    １．Javaのコントロールパネルを開きます。コントロールパネルの開き方は色々ありますが、ここではスタートメニューからそのまま Java と入力し、 Javaの構成が表示されたところを選択します。<br>
-    <img src="wwa_setting-1.png" alt="wwa_setting-1.png">
-  </section>
-  <section class="boxes">
-    ２．コントロールパネル内の「セキュリティ」タブを開きます。<br>
-    <img src="wwa_setting-2.png" alt="wwa_setting-2.png">
-  </section>
-  <section class="boxes">
-    ３．「セキュリティ」を開いた後、「例外サイト・リスト」内の「サイト・リストの編集(S)...」を押します。<br>
-    <img src="wwa_setting-3.png" alt="wwa_setting-3.png">
-  </section>
-  <section class="boxes">
-    ４．「例外サイト・リスト」ダイアログにある「追加(A)...」ボタンを押して、URI(URL)の欄に <code>https://www.aokashi.net/</code> と入力します。入力したら、Enterキーを押します。<br>
-    <img src="wwa_setting-4.png" alt="wwa_setting-4.png">
-  </section>
-  <section class="boxes">
-    ５．ちゃんとリストに <code>https://www.aokashi.net/</code> が表示されていることを確認して、「OK」ボタンを押します。ここで、セキュリティ警告が表示された場合は最初の文字がhttp<strong>s</strong>になっているか確認してください。<br>
-    <img src="wwa_setting-5.png" alt="wwa_setting-5.png">
-  </section>
-  <section class="boxes">
-    ６．「OK」を押してコントロール パネルを閉じます。
-  </section>
-</div>
+{{< box 2 >}}
+  {{< box-items title="ステップ１" >}}
+    <img class="box-items-image" src="wwa_setting-1.png" alt="wwa_setting-1.png">
+    Javaのコントロールパネルを開きます。コントロールパネルの開き方は色々ありますが、ここではスタートメニューからそのまま Java と入力し、 Javaの構成が表示されたところを選択します。
+  {{< /box-items >}}
+  {{< box-items title="ステップ２" >}}
+    <img class="box-items-image" src="wwa_setting-2.png" alt="wwa_setting-2.png">
+    コントロールパネル内の「セキュリティ」タブを開きます。
+  {{< /box-items >}}
+  {{< box-items title="ステップ３" >}}
+    <img class="box-items-image" src="wwa_setting-3.png" alt="wwa_setting-3.png">
+    「セキュリティ」を開いた後、「例外サイト・リスト」内の「サイト・リストの編集(S)...」を押します。
+  {{< /box-items >}}
+  {{< box-items title="ステップ４" >}}
+    <img class="box-items-image" src="wwa_setting-4.png" alt="wwa_setting-4.png">
+    「例外サイト・リスト」ダイアログにある「追加(A)...」ボタンを押して、URI(URL)の欄に <code>https://www.aokashi.net/</code> と入力します。入力したら、Enterキーを押します。
+  {{< /box-items >}}
+  {{< box-items title="ステップ５" >}}
+    <img class="box-items-image" src="wwa_setting-5.png" alt="wwa_setting-5.png">
+    ちゃんとリストに <code>https://www.aokashi.net/</code> が表示されていることを確認して、「OK」ボタンを押します。ここで、セキュリティ警告が表示された場合は最初の文字がhttp<strong>s</strong>になっているか確認してください。
+  {{< /box-items >}}
+  {{< box-items title="ステップ６" >}}
+    「OK」を押してJavaのコントロール パネルを閉じます。
+  {{< /box-items >}}
+{{< /box >}}
