@@ -14,10 +14,10 @@
               <h6 class="list-items-title">{{ dateFormat "01月 02日" .date }}</h6>
               <ul class="list-items-content">
               {{ range .item }}
-              {{ if isset . ".link" }}
-                <li{{ if hasPrefix .link "informations" }} class="is-page"{{ end }}><a href="{{ .link }}" title="{{ .name }}"></a></li>
+              {{ if isset . "link" }}
+                <li{{ if hasPrefix .link "informations" }} class="is-page"{{ end }}><a href="{{ .link }}" title="{{ .name }}">{{ .name | markdownify }}</a></li>
               {{ else }}
-                <li></li>
+                <li>{{ .name | markdownify }}</li>
               {{ end }}
               {{ end }}
               </ul>
