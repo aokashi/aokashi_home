@@ -1,105 +1,246 @@
-[
-  {
-    "name": "素材のクリエイティブ・コモンズを削除",
+{
+  "10_29": {
+    "item": [
+      {
+        "name": "素材のクリエイティブ・コモンズを削除"
+      }, {
+        "name": "プログラム作品のGitHubの文字を修正"
+      }
+    ],
     "date": "2016-10-29"
-  }, {
-    "name": "プログラム作品のGitHubの文字を修正",
-    "date": "2016-10-29"
-  }, {
-    "name": "WWA素材を追加",
+  },
+  "10_01": {
+    "item": [
+      {
+        "name": "WWA素材を追加"
+      }
+    ],
     "date": "2016-10-01"
-  }, {
-    "name": "Aokashi Home Pagesを試験的に開設",
+  },
+  "09_01": {
+    "item": [
+      {
+        "name": "Aokashi Home Pagesを試験的に開設"
+      }
+    ],
     "date": "2016-09-01"
-  }, {
-    "name": "当サイトの説明がAokashi Sushiになっていた箇所を修正",
+  },
+  "07_09": {
+    "item": [
+      {
+        "name": "当サイトの説明がAokashi Sushiになっていた箇所を修正"
+      }
+    ],
     "date": "2016-07-09"
-  }, {
-    "name": "利用デバイスにThinkPad Yoga 260を追加",
+  },
+  "06_25": {
+    "item": [
+      {
+        "name": "利用デバイスにThinkPad Yoga 260を追加"
+      }
+    ],
     "date": "2016-06-25"
-  }, {
-    "name": "WWA WingをW3.15からW3.15aへバージョンアップ",
+  },
+  "06_05": {
+    "item": [
+      {
+        "name": "WWA WingをW3.15からW3.15aへバージョンアップ"
+      }
+    ],
     "date": "2016-06-05"
-  }, {
-    "name": "WWA Wing W3.15aリリースに伴い、バージョンアップを予告",
+  },
+  "05_29": {
+    "item": [
+      {
+        "name": "WWA Wing W3.15aリリースに伴い、バージョンアップを予告"
+      }
+    ],
     "date": "2016-05-29"
-  }, {
-    "name": "作品とWWA素材にライセンス(MITライセンス、クリエイティブ・コモンズ)を付与",
+  },
+  "05_19": {
+    "item": [
+      {
+        "name": "作品とWWA素材にライセンス(MITライセンス、クリエイティブ・コモンズ)を付与"
+      }
+    ],
     "date": "2016-05-19"
-  }, {
-    "name": "Aokashi RoomをAokashi Log時代のドメインに変更",
+  },
+  "05_09": {
+    "item": [
+      {
+        "name": "Aokashi RoomをAokashi Log時代のドメインに変更"
+      }, {
+        "name": "メニューにブログ(Aokashi Room)を追加"
+      }
+    ],
     "date": "2016-05-09"
-  }, {
-    "name": "メニューにブログ(Aokashi Room)を追加",
-    "date": "2016-05-09"
-  }, {
-    "name": "Aokashi LogはAokashi Roomと名前を変えて移行しました",
+  },
+  "05_05": {
+    "item": [
+      {
+        "name": "Aokashi LogはAokashi Roomと名前を変えて移行しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/05_05.html"
+      }
+    ],
     "date": "2016-05-05"
-  }, {
-    "name": "スパムメール発生により、お問い合わせのメールアドレスを画像に変更",
+  },
+  "04_19": {
+    "item": [
+      {
+        "name": "スパムメール発生により、お問い合わせのメールアドレスを画像に変更"
+      }
+    ],
     "date": "2016-04-19"
-  }, {
-    "name": "PSO2チーム「お布団(:3[＿＿]」のアカウント削除に伴い、Twitter運営方針を修正",
+  },
+  "04_16": {
+    "item": [
+      {
+        "name": "PSO2チーム「お布団(:3[＿＿]」のアカウント削除に伴い、Twitter運営方針を修正"
+      }
+    ],
     "date": "2016-04-16"
-  }, {
-    "name": "Aokashi HomeはAokasushi Homeになりました",
+  },
+  "04_01": {
+    "item": [
+      {
+        "name": "Aokashi HomeはAokasushi Homeになりました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/04_01.html"
+      }
+    ],
     "date": "2016-04-01"
-  }, {
-    "name": "Javascriptのプログラムを追加しました",
+  },
+  "03_28": {
+    "item": [
+      {
+        "name": "Javascriptのプログラムを追加しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/03_28.html"
+      }
+    ],
     "date": "2016-03-28"
-  }, {
-    "name": "Aokashi WorldWikiのPukiwikiのバージョンを1.5.1にバージョンアップ",
+  },
+  "03_08": {
+    "item": [
+      {
+        "name": "Aokashi WorldWikiのPukiwikiのバージョンを1.5.1にバージョンアップ"
+      }
+    ],
     "date": "2016-03-08"
-  }, {
-    "name": "英棟市のバージョン履歴を追加",
+  },
+  "02_14": {
+    "item": [
+      {
+        "name": "英棟市のバージョン履歴を追加"
+      }, {
+        "name": "英棟市のメインページを修正"
+      }
+    ],
     "date": "2016-02-14"
-  }, {
-    "name": "英棟市のメインページを修正",
-    "date": "2016-02-14"
-  }, {
-    "name": "お世話になっているサイトのリンクを更新",
+  },
+  "02_13": {
+    "item": [
+      {
+        "name": "お世話になっているサイトのリンクを更新"
+      }
+    ],
     "date": "2016-02-13"
-  }, {
-    "name": "WWA Wingの著作権表記を更新",
+  },
+  "02_12": {
+    "item": [
+      {
+        "name": "WWA Wingの著作権表記を更新"
+      }
+    ],
     "date": "2016-02-12"
-  }, {
-    "name": "Coden City 設立から6周年を迎えました",
+  },
+  "02_03": {
+    "item": [
+      {
+        "name": "Coden City 設立から6周年を迎えました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/02_03.html"
+      }
+    ],
     "date": "2016-02-03"
-  }, {
-    "name": "WWA Wingのバーションアップに関するメッセージの変更を忘れていたため、変更",
+  },
+  "01_31": {
+    "item": [
+      {
+        "name": "WWA Wingのバーションアップに関するメッセージの変更を忘れていたため、変更"
+      }
+    ],
     "date": "2016-01-31"
-  }, {
-    "name": "Twitter運営方針を更新(フォロー制限について)",
+  },
+  "01_29": {
+    "item": [
+      {
+        "name": "Twitter運営方針を更新(フォロー制限について)"
+      }
+    ],
     "date": "2016-01-29"
-  }, {
-    "name": "更新情報をお知らせへ統合しました",
+  },
+  "01_20": {
+    "item": [
+      {
+        "name": "更新情報をお知らせへ統合しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/01_20.html"
+      }, {
+        "name": "WWA WingをW3.14b+からW3.15へバージョンアップ"
+      }
+    ],
     "date": "2016-01-20"
-  }, {
-    "name": "WWA WingをW3.14b+からW3.15へバージョンアップ",
-    "date": "2016-01-20"
-  }, {
-    "name": "更新情報のレイアウトを変更しました",
+  },
+  "01_17": {
+    "item": [
+      {
+        "name": "更新情報のレイアウトを変更しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/01_17.html"
+      }
+    ],
     "date": "2016-01-17"
-  }, {
-    "name": "Twitterアカウントを改正しました",
+  },
+  "01_14": {
+    "item": [
+      {
+        "name": "Twitterアカウントを改正しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/01_14.html"
+      }, {
+        "name": "WWA Wing 3.15リリースに伴い、バージョンアップを予告"
+      }
+    ],
     "date": "2016-01-14"
-  }, {
-    "name": "WWA Wing 3.15リリースに伴い、バージョンアップを予告",
-    "date": "2016-01-14"
-  }, {
-    "name": "WWA一覧表示を更新しました",
+  },
+  "01_08": {
+    "item": [
+      {
+        "name": "WWA一覧表示を更新しました",
+        "link": "https://contents.aokashi.net/restore/ah_1-2/about/information/2016/01_08.html"
+      }
+    ],
     "date": "2016-01-08"
-  }, {
-    "name": "WWA素材を追加(乗り物)",
+  },
+  "01_05": {
+    "item": [
+      {
+        "name": "WWA素材を追加(乗り物)"
+      }, {
+        "name": "WWAのはじめにを修正(Javaアプレットがサポートされていないブラウザーに関する注意事項)"
+      }
+    ],
     "date": "2016-01-05"
-  }, {
-    "name": "WWAのはじめにを修正(Javaアプレットがサポートされていないブラウザーに関する注意事項)",
-    "date": "2016-01-05"
-  }, {
-    "name": "リンクを修正(リンク先、メッセージの修正)",
+  },
+  "01_02": {
+    "item": [
+      {
+        "name": "リンクを修正(リンク先、メッセージの修正)"
+      }
+    ],
     "date": "2016-01-02"
-  }, {
-    "name": "トップページを更新",
+  },
+  "01_01": {
+    "item": [
+      {
+        "name": "トップページを更新"
+      }
+    ],
     "date": "2016-01-01"
   }
-]
+}

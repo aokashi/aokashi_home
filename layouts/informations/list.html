@@ -1,14 +1,17 @@
 {{ define "main" }}
+{{ $data := getJSON .Params.data }}
 
-  <main class="l-main">
-    <div class="sub-wrap is-center">
-      <div class="l-main-content">
-        <article class="l-main-contents">
-          <header class="l-main-contents-header list">
-            <h2 class="list-title">{{ .Title }}</h2>
-          </header>
-          <div class="l-main-contents-list list has-title">
-          {{- $data := .Site.Data.informations.info2017 -}}
+<main class="l-main">
+  <div class="sub-wrap is-center">
+    <div class="l-main-content">
+      <article class="l-main-contents">
+        <header class="l-main-contents-header list">
+          <h2 class="list-title">{{ .Title }}</h2>
+        </header>
+        <div class="l-main-contents-doc set-doc">
+          {{ .Content }}
+        </div>
+        <div class="l-main-contents-list list has-title">
           {{- range sort ($data) ".date" "desc" -}}
             <section class="list-items">
               <h6 class="list-items-title">{{ dateFormat "01月 02日" .date }}</h6>
@@ -27,6 +30,23 @@
         </article>
       </div>
     </div>
+
+    <div class="sub-wrap is-left">
+      <nav class="l-main-sidebar_menu menu">
+        <ul>
+          <li class="menu-items is-top"><a href="{{ .Site.BaseURL }}{{ .Section }}.html">戻る</a></li>
+        {{ range (where .Site.Pages "Section" .Section) }}
+          {{- if eq .Kind "section" -}}
+          <li class="menu-items"><a href="{{ .URL }}">{{ .Title }}</a></li>
+          {{- end -}}
+        {{ end }}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sub-wrap is-right">
+    </div>
+
   </main>
 
 {{ end }}
