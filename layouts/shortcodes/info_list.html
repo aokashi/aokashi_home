@@ -1,0 +1,18 @@
+<div class="l-main-contents-list list has-title">
+{{ $dataPath := .Get 0 }}
+{{- $data := getJSON $dataPath -}}
+{{- range sort $data ".date" "desc" }}
+  <section class="list-items">
+    <h6 class="list-items-title">{{ dateFormat "01月 02日" .date }}</h6>
+    <ul class="list-items-content">
+    {{- range .item -}}
+      {{- if .link }}
+      <li{{ if hasPrefix .link "informations" }} class="is-page"{{ end }}><a href="{{ .link }}" title="{{ .name }}">{{ .name | markdownify }}</a></li>
+      {{- else }}
+      <li>{{ .name | markdownify }}</li>
+      {{- end -}}
+    {{- end }}
+    </ul>
+  </section>
+{{- end -}}
+</div>
