@@ -22,20 +22,10 @@
       </div>
     </div>
 
+{{ partial "sidebar_menu-information.html" . }}
+
 {{ partial "sidebar_toc.html" . }}
 
-    <div class="sub-wrap is-left">
-      <nav class="l-main-sidebar_menu menu">
-        <ul>
-          <li class="menu-items is-top"><a href="{{ .Site.BaseURL }}{{ .Section }}.html">戻る</a></li>
-        {{ range (where .Site.Pages "Section" .Section) }}
-        {{ if eq .File.BaseFileName "index" }}
-          <li class="menu-items"><a href="{{ replace .URL ".html" "/" }}">{{ .Title }}</a></li>
-        {{ end }}
-        {{ end }}
-        </ul>
-      </nav>
-    </div>
   </main>
 
 {{ end }}

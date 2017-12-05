@@ -1,0 +1,11 @@
+<div class="sub-wrap is-left">
+  <nav class="l-main-sidebar_menu menu">
+    <ul>
+    {{- range where .Site.Pages.Reverse "Section" .Section }}
+      {{- if .IsNode }}
+      <li class="menu-items{{ if .Parent.IsHome }} is-top{{ end }}"><a href="{{ .URL }}">{{ .Title }}</a></li>
+      {{- end }}
+    {{- end }}
+    </ul>
+  </nav>
+</div>
