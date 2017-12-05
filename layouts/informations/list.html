@@ -16,18 +16,7 @@
     </div>
   </div>
 
-    <div class="sub-wrap is-left">
-      <nav class="l-main-sidebar_menu menu">
-        <ul>
-          <li class="menu-items is-top"><a href="{{ .Site.BaseURL }}{{ .Section }}.html">戻る</a></li>
-        {{ range (where .Site.Pages "Section" .Section) }}
-          {{- if eq .Kind "section" -}}
-          <li class="menu-items"><a href="{{ .URL }}">{{ .Title }}</a></li>
-          {{- end -}}
-        {{ end }}
-        </ul>
-      </nav>
-    </div>
+{{ partial "sidebar_menu-information.html" . }}
 
     <div class="sub-wrap is-right">
     </div>

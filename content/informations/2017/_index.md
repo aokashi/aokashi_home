@@ -1,6 +1,7 @@
 ---
 title: "2017年のお知らせ"
+weight: 17
 ---
 <div>
-{{< info_list "data/informations/info2017.json" >}}
+{{< information_list "data/informations/info2017.json" >}}
 </div>
