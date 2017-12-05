@@ -3,7 +3,7 @@
 {{- $data := getJSON $dataPath -}}
 {{- range sort $data ".date" "desc" }}
   <section class="list-items">
-    <h6 class="list-items-title">{{ dateFormat "01月 02日" .date }}</h6>
+    <h6 class="list-items-title">{{ dateFormat "01月 02日" .date }}{{ if .endDate }} ～<span class="list-items-title-end">{{ dateFormat "01月 02日" .endDate }}</span>{{ end }}</h6>
     <ul class="list-items-content">
     {{- range .item -}}
       {{- if .link }}
