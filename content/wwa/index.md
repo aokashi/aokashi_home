@@ -17,16 +17,8 @@ WWAのページへようこそ！
   <p>WWAの操作方法についてはキャラバンサークルの <a href="http://www.wwajp.com/manual.html" title="WWA Manual">WWA Manual</a> をご参照ください。</p>
 {{< /note >}}
 
-#### WWA Wingのアップデートについて
-
-<!--**WWA Wingのシステムは 2017年 9月 5日 (火) より W3.15a から W3.15c に変更予定です。**-->
-
-現在搭載されているWWA Wingは最新のものを利用しています。
-
-- WWA Wingのバージョンアップに伴い、今まで使用していたパスワードセーブデータが無効になる場合があります(パスワードセーブ自体が無効になることはありません)。
-- 基本的にWWA Wingの新バージョンをリリースしてから1週間後に、当サイトのWWA Wingのアップデートを行います。
-- アップデートによる重大な不具合が発生した場合は、アップデート前のバージョンに戻します。
-- バージョンアップによる変更点については <a href="http://wwawing.com" title="WWA Wing">WWA Wing</a> をご参照ください。
+- [各WWA作品に関する情報やお知らせは資料集にあります](https://contents.aokashi.net/docs/?WWA)
+- [素材については Making のページにあります](/making/)
 
 ### WWA作品一覧
 
