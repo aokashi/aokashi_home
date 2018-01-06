@@ -1,6 +1,6 @@
 <ul>
 {{- $limit := .Get 0 -}}
-{{- $data := .Site.Data.informations.info2017 -}}
+{{- $data := .Site.Data.informations.info2018 -}}
 {{- $.Scratch.Set "count" 0 -}}
 {{- range sort ($data) ".date" "desc" -}}
   {{- $count := $.Scratch.Get "count" -}}
