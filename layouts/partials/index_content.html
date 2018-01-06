@@ -4,7 +4,7 @@
   </header>
   <div class="topic-content">
     <ul class="topic-list">
-    {{- $data := .Site.Data.informations.info2017 -}}
+    {{- $data := .Site.Data.informations.info2018 -}}
     {{- $.Scratch.Set "count" 0 -}}
     {{- range sort ($data) ".date" "desc" -}}
       {{- $count := $.Scratch.Get "count" -}}
@@ -25,7 +25,7 @@
         <a href="{{ .Site.BaseURL }}informations.html">お知らせトップ</a>
       </div>
       <div class="link_button">
-        <a href="{{ .Site.BaseURL }}informations/2017.html" title="2017年のお知らせ">全部みる</a>
+        <a href="{{ .Site.BaseURL }}informations/2018.html" title="2018年のお知らせ">全部みる</a>
       </div>
     </footer>
   </div>
