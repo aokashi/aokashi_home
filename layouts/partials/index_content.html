@@ -4,18 +4,28 @@
   </header>
   <div class="topic-content">
     <ul class="topic-list">
-    {{ range first 3 (where .Data.Pages "Section" "informations") }}
-    {{ if ne .File.BaseFileName "index" }}
-      <li>{{ .Date.Format "2006/01/02" }} - <a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></li>
-    {{ end }}
-    {{ end }}
+    {{- $data := .Site.Data.informations.info2018 -}}
+    {{- $.Scratch.Set "count" 0 -}}
+    {{- range sort ($data) ".date" "desc" -}}
+      {{- $count := $.Scratch.Get "count" -}}
+      {{- if lt $count 3 -}}
+        {{- $date := .date -}}
+        {{- range .item }}
+      <li>
+        {{- dateFormat "2006/01/02" $date }} -
+        {{- if .link }} <a href="{{ .link }}" title="{{ .name }}">{{ .name }}</a>{{ else }} {{ .name }}{{ end -}}
+      </li>
+          {{- $.Scratch.Add "count" 1 -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
     </ul>
     <footer class="topic-footer">
       <div class="link_button">
-        <a href="{{ .Site.BaseURL }}informations.html">全部見る</a>
+        <a href="{{ .Site.BaseURL }}informations.html">お知らせトップ</a>
       </div>
       <div class="link_button">
-        <a href="{{ .Site.BaseURL }}informations/2017/" title="2017年のお知らせ">更新履歴も見る</a>
+        <a href="{{ .Site.BaseURL }}informations/2018.html" title="2018年のお知らせ">全部みる</a>
       </div>
     </footer>
   </div>

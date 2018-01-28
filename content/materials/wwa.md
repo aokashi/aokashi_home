@@ -77,6 +77,9 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/GrRoad12.gif" width="320" height="200" >}}
   {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/GrRail16-compact.gif" width="400" height="240" >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Hu: 人物
@@ -123,7 +126,7 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/ObMachine12.gif" width="200" height="80" >}}
   {{</ box-items >}}
   {{< box-items >}}
-    {{< material src="wwa/ObObject16.gif" width="400" height="440" >}}
+    {{< material src="wwa/ObObject16.gif" width="400" height="560" >}}
   {{</ box-items >}}
   {{< box-items >}}
     {{< material src="wwa/ObTreasure11.gif" width="80" height="40" >}}
@@ -176,5 +179,17 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< /box-items >}}
   {{< box-items >}}
     {{< material src="wwa/VeTrainSystem11.gif" width="120" height="240" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeTrain16-1.gif" width="360" height="160" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeTrain16-2.gif" width="320" height="160">}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeLocomotive16-1.gif" width="240" height="80" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeFreight16.gif" width="280" height="80" >}}
   {{< /box-items >}}
 {{< /box >}}

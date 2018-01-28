@@ -1,0 +1,26 @@
+{{ define "base" }}../{{ end }}
+
+{{ define "main" }}
+
+<main class="l-main">
+  <div class="sub-wrap is-center">
+    <div class="l-main-content">
+      <article class="l-main-contents">
+        <header class="l-main-contents-header list">
+          <h2 class="list-title">{{ .Title }}</h2>
+        </header>
+        <div class="l-main-contents-doc set-doc">
+          {{ .Content }}
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="sub-wrap is-right">
+  </div>
+
+{{ partial "sidebar_menu-information.html" . }}
+
+  </main>
+
+{{ end }}
