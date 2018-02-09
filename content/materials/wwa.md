@@ -187,7 +187,10 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/VeTrain16-2.gif" width="320" height="160">}}
   {{< /box-items >}}
   {{< box-items >}}
-    {{< material src="wwa/VeLocomotive16-1.gif" width="240" height="80" >}}
+    {{< material src="wwa/VeTrain16-3.gif" width="280" height="160">}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeLocomotive16-1.gif" width="240" height="160" >}}
   {{< /box-items >}}
   {{< box-items >}}
     {{< material src="wwa/VeFreight16.gif" width="280" height="80" >}}
