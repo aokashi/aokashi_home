@@ -8,6 +8,14 @@ image = "css/materials_wwa.png"
 
 WWAで利用できる素材です。
 
+{{< note info >}}
+  <p>一式以外のWWA素材はWWA制作に使う画像ファイルに埋め込む必要があります。 <a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial">埋め込み方は当サイトの資料集で知ることができます。</a></p>
+{{< /note >}}
+
+{{< note >}}
+  <p>緑の背景の素材は <a href="http://www.wwajp.com" title="キャラバンサークル">キャラバンサークル</a> の素材を加工したものとなります。問題がありましたら、削除する場合があります。</p>
+{{< /note >}}
+
 ### 素材一式
 
 WWAの素材規格に合わせて制作した素材です。そのままWWAの制作に割り当てることができます。
@@ -108,6 +116,9 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/ItSushi15.gif" width="160" height="160" >}}
   {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/ItClock18.gif" width="40" height="40" >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Ob: 物体
@@ -131,6 +142,9 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/ObTreasure11.gif" width="80" height="40" >}}
   {{</ box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/ObBed18.gif" width="160" height="240" >}}
+  {{</ box-items >}}
 {{< /box >}}
 
 ### Sy: システム
@@ -147,6 +161,12 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< /box-items >}}
   {{< box-items >}}
     {{< material src="wwa/SySystem10.gif" width="280" height="120" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/SyNumber16.gif" class="bg is-green" width="400" height="40" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/SyAlphabet16.gif" class="bg is-green" width="400" height="120" >}}
   {{< /box-items >}}
 {{< /box >}}
 
@@ -190,7 +210,13 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/VeTrain16-3.gif" width="280" height="160">}}
   {{< /box-items >}}
   {{< box-items >}}
+    {{< material src="wwa/VeTrain16-4.gif" width="280" height="160" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeLocomotive16-1.gif" width="240" height="160" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/VeLocomotive16-2.gif" width="240" height="160" >}}
   {{< /box-items >}}
   {{< box-items >}}
     {{< material src="wwa/VeFreight16.gif" width="280" height="80" >}}
