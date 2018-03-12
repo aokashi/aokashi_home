@@ -33,6 +33,7 @@ description = "作品の制作に役立つプログラムを公開していま�
     <p>勉強会で制作したJavaScriptプログラムです。</p>
     <ul>
       <li><a href="https://github.com/aokashi/PlayListJs" title="aokashi/PlayListJs">GitHubのリポジトリ</a></li>
+      <li><a href="http://musmus.main.jp" title="Musmus">Musmus</a>(音楽提供元)</li>
     </ul>
   {{< /box-items >}}
 {{< /box >}}
