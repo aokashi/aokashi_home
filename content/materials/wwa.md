@@ -34,6 +34,24 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
 
 ### Bu: 建物
 
+#### 家
+
+{{< box 3 >}}
+  {{< box-items >}}
+    {{< material src="wwa/BuHouse10.gif" width="400" height="280" >}}
+  {{</ box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/BuHouse12.gif" width="360" height="440" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/BuHouse18.gif" width="720" height="680" >}}
+  {{< /box-items >}}
+{{< /box >}}
+
+上記に限らず、下記の建物にも家に使える素材が含まれています。
+
+#### 建物
+
 {{< box 3 >}}
   {{< box-items >}}
     {{< material src="wwa/BuBuilding10-1.gif" width="240" height="240" >}}
@@ -57,13 +75,7 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/BuBuilding14_plus.gif" width="400" height="480" >}}
   {{</ box-items >}}
   {{< box-items >}}
-    {{< material src="wwa/BuBuilding16.gif" width="720" height="1120" >}}
-  {{< /box-items >}}
-  {{< box-items >}}
-    {{< material src="wwa/BuHouse10.gif" width="400" height="280" >}}
-  {{</ box-items >}}
-  {{< box-items >}}
-    {{< material src="wwa/BuHouse12.gif" width="360" height="440" >}}
+    {{< material src="wwa/BuBuilding18.gif" width="520" height="840" >}}
   {{< /box-items >}}
   {{< box-items >}}
     {{< material src="wwa/BuWwaWindow14.gif" width="40" height="40" >}}
@@ -88,7 +100,18 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/GrRail16-compact.gif" width="400" height="240" >}}
   {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/16Ground.gif" width="400" height="680" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Road-Road.gif" width="240" height="280" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Road-RoadCarReady.gif" width="240" height="240" >}}
+  {{< /box-items >}}
 {{< /box >}}
+
+道路の素材については、下記の自動車素材に対応したものと対応していないものがあります。対応したものは配置しづらいため、自動車を配置する予定がない場合は対応していないもののご利用をおすすめします。
 
 ### Hu: 人物
 
@@ -119,6 +142,9 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/ItClock18.gif" width="40" height="40" >}}
   {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Food.gif" width="120" height="40" >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Ob: 物体
@@ -145,6 +171,15 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/ObBed18.gif" width="160" height="240" >}}
   {{</ box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Furniture.gif" width="400" height="320">}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18StoreShelf.gif" width="320" height="360" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Escalator.gif" width="440" height="240" >}}
+  {{< /box-items >}}
 {{< /box >}}
 
 ### Sy: システム
@@ -172,6 +207,7 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
 
 ### Ve: 乗り物
 
+#### 自動車
 {{< box 3 >}}
   {{< box-items >}}
     {{< material src="wwa/VeBus13.gif" width="400" height="320" >}}
@@ -179,6 +215,25 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
   {{< box-items >}}
     {{< material src="wwa/VeCar11.gif" width="320" height="160" >}}
   {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Car-Car.gif" width="200" height="80" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Car-OneBoxCar.gif" width="160" height="80" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Car-Truck.gif" width="160" height="200" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Car-CommuterBus.gif" width="320" height="160" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
+    {{< material src="wwa/18Car-HighwayBus.gif" width="320" height="120" >}}
+  {{< /box-items >}}
+{{< /box >}}
+
+#### 列車
+{{< box 3 >}}
   {{< box-items >}}
     {{< material src="wwa/VeTrain11-1.gif" width="320" height="360" >}}
   {{< /box-items >}}
@@ -219,6 +274,16 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/VeLocomotive16-2.gif" width="240" height="160" >}}
   {{< /box-items >}}
   {{< box-items >}}
+    {{< material src="wwa/VeLocomotive16-3.gif" width="320" height="160" >}}
+  {{< /box-items >}}
+  {{< box-items >}}
     {{< material src="wwa/VeFreight16.gif" width="280" height="80" >}}
+  {{< /box-items >}}
+{{< /box >}}
+
+#### その他
+{{< box 3 >}}
+  {{< box-items >}}
+    {{< material src="wwa/18AirPlane.gif" width="280" height="400" >}}
   {{< /box-items >}}
 {{< /box >}}
