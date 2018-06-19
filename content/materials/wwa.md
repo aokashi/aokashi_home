@@ -198,10 +198,7 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
     {{< material src="wwa/SySystem10.gif" width="280" height="120" >}}
   {{< /box-items >}}
   {{< box-items >}}
-    {{< material src="wwa/SyNumber16.gif" class="bg is-green" width="400" height="40" >}}
-  {{< /box-items >}}
-  {{< box-items >}}
-    {{< material src="wwa/SyAlphabet16.gif" class="bg is-green" width="400" height="120" >}}
+    {{< material src="wwa/18String.gif" class="bg is-green" width="400" height="200" >}}
   {{< /box-items >}}
 {{< /box >}}
 
