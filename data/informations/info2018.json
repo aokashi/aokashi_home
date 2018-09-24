@@ -1,4 +1,16 @@
 {
+  "09_24": {
+    "item": [
+      {
+        "name": "WWA Wing対応WWAの見た目を変更しました",
+        "link": "informations/2018/09_24.html"
+      }, {
+        "name": "WWAゲーム「アクション・2D」のステータス枠画像を見やすいように修正",
+        "link": "wwa/action_2d.html"
+      }
+    ],
+    "date": "2018-09-24"
+  },
   "06_19": {
     "item": [
       {
