@@ -32,8 +32,8 @@ description = "私自身のご紹介です。"
     </ul>
   {{< /box-items >}}
   {{< box-items title="つかっているもの" >}}
-    <p><strong>自作のデスクトップPC</strong>と<strong>モバイルPC(ThinkPad Yoga 260)</strong>の2台体制で使っています。</p>
-    <p>たまに検証用とで<strong>MacBook Pro</strong>を引っ張ることがあります。</p>
+    <p><strong>自作のデスクトップPC</strong>と検証用として<strong>MacBook Pro</strong>を使っています。</p>
+    <p>前はモバイルPCがもう1台あったんですが、何度修理しても壊れてしまい、今は放置したままです。</p>
   {{< /box-items >}}
   {{< box-items title="ここをつくったきっかけ" >}}
     <p>2007年頃にWWAの存在を知り、ここでゲームが作れることにわくわくしてて、そこでゲームを公開する場として設立しました。</p>
@@ -42,7 +42,7 @@ description = "私自身のご紹介です。"
 {{< /box >}}
 
 ### 利用しているソフトウェア
-ドット絵制作には EDGE2 がメインです。たまにイメージの加工に Paint.NET を使う場合があります。他にもプログラム制作には Visual Studio Code を使っています。
+ドット絵制作には EDGE2 がメインです。
 
 - [![EDGE2](http://takabosoft.com/wp-content/themes/takabosoft/edge2/banner00.png)](http://takabosoft.com/edge2)
 - [Paint.NET](http://www.getpaint.net/)

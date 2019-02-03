@@ -5,7 +5,7 @@
   <div class="topic-content">
     <ul>
       <li>現在一部ページで目次の取扱を停止しています。</li>
-      <li>目次の再開には、URLの変更が必要になります。URLの変更については後ほどお知らせします。</li>
+      <li>目次の再開には、URLの変更が必要になります。URLの変更については<a href="informations/2018/10_25.html" title="Aokashi Homeのコンテンツ変更のお知らせ">Aokashi Homeのコンテンツ変更のお知らせ</a>をご参照ください。</li>
     </ul>
   </div>
 </section>
@@ -16,7 +16,7 @@
   </header>
   <div class="topic-content">
     <ul class="topic-list">
-    {{- $data := .Site.Data.informations.info2018 -}}
+    {{- $data := .Site.Data.informations.info2019 -}}
     {{- $.Scratch.Set "count" 0 -}}
     {{- range sort ($data) ".date" "desc" -}}
       {{- $count := $.Scratch.Get "count" -}}
