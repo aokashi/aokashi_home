@@ -1,7 +1,29 @@
-[![wercker status](https://app.wercker.com/status/07b6a44ba19fe2bc554df8201af72bbe/s/master "wercker status")](https://app.wercker.com/project/byKey/07b6a44ba19fe2bc554df8201af72bbe)
+# new-aokashi-home
 
-Aokashi Homeの生成元ファイルです。静的サイトジェネレータの [Hugo](https://gohugo.io) を利用しています。
+## Project setup
+```
+yarn install
+```
 
-また、このリポジトリはWerckerを介して自動的にデプロイが働きます。masterブランチにプッシュするとWerckerが反応し、Hugoで生成したファイルをAokashi HomeのVPSに送る仕組みになっています。
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-なお、外部の著作物が入る可能性のある static ディレクトリはリポジトリには含めていません。同様の理由でWWAのマップデータやファイルも含めていません。
+### Compiles and minifies for production
+```
+yarn run build
+```
+
+### Run your tests
+```
+yarn run test
+```
+
+### Lints and fixes files
+```
+yarn run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
