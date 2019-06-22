@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'Aokashi Home',
+  siteDescription: 'Aokashi が制作した作品を置くホームページ',
   plugins: []
 }
