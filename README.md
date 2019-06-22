@@ -1,29 +1,24 @@
-# new-aokashi-home
+# Aokashi Home
+Aokashi Home のリポジトリです。
+この Aokashi Home は Nuxt.js を利用しています。
 
-## Project setup
-```
-yarn install
-```
+> My transcendent Nuxt.js project
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## 始めるには
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+``` bash
+# 開発環境の構築
+$ yarn install
 
-### Run your tests
-```
-yarn run test
-```
+# 開発モードでプレビュー
+$ yarn run dev
 
-### Lints and fixes files
-```
-yarn run lint
+# プロダクションモードでプレビュー
+$ yarn run build
+$ yarn start
+
+# 生成
+$ yarn run generate
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+詳しい挙動については [Nuxt.js のドキュメント](https://nuxtjs.org) をご参照ください。
