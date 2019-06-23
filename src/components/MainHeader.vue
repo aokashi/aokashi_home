@@ -2,7 +2,7 @@
   <header class="header">
     <div class="title">
       <g-link to="/" title="Aokashi Home">
-        <img src="/images/logo-mini.png" class="logo" alt="Aokashi Home">
+        <g-image src="~/assets/images/logo-mini.png" class="logo" alt="Aokashi Home" />
       </g-link>
     </div>
     <div class="menu">
@@ -25,20 +25,18 @@
   </header>
 </template>
 
-<style scoped>
-.header {
-  background-color: #c0c0c0;
-  border-bottom: 2px solid #000080;
-}
+<style lang="sass" scoped>
+.header
+  background-color: #c0c0c0
+  border-bottom: 2px solid #000080
+  +content-width()
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+.menu
+  display: flex
+  flex-direction: row
+  justify-content: center
 
-.menu__item {
-  flex: 0 0 6rem;
-  text-align: center;
-}
+.menu__item
+  flex: 0 0 6rem
+  text-align: center
 </style>
