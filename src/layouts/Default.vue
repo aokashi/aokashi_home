@@ -29,12 +29,3 @@ export default {
   }
 }
 </script>
-
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Noto Sans CJK JP","Meiryo",Roboto,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-</style>

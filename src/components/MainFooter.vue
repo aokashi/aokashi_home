@@ -1,21 +1,26 @@
 <template>
-  <div class="footer">
-    <div class="menu">
-      <div class="menu__item">
-        <g-link to="/" title="Home">Home</g-link>
-      </div>
-      <div class="menu__item">
-        <g-link to="/about" title="当サイトについて">当サイトについて</g-link>
+  <footer class="footer">
+    <div class="container mx-auto">
+      <Menu>
+        <MenuItem to="/" name="Home" />
+        <MenuItem to="/about" name="当サイトについて" />
+      </Menu>
+      <div class="copyright">
+        <p>Copyright © 2010-{{currentYear}} Aokashi.</p>
       </div>
     </div>
-    <div class="copyright">
-      <p>Copyright © 2010-{{currentYear}} Aokashi.</p>
-    </div>
-  </div>
+  </footer>
 </template>
 
 <script>
+import Menu from '../components/Menu.vue';
+import MenuItem from '../components/MenuItem.vue';
+
 export default {
+  components: {
+    Menu,
+    MenuItem
+  },
   computed: {
     currentYear() {
       return new Date().getFullYear()
@@ -29,7 +34,6 @@ export default {
   background-color: #404040
   color: #fff
   border-top: 2px solid #000080
-  +content-width()
 
 a:link,
 a:visited

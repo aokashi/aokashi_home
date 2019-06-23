@@ -5,20 +5,26 @@
         <g-image alt="Aokashi Home" src="~/assets/images/logo.png" />
       </h1>
     </header>
-    <nav class="menu">
-      <div class="menu__item">
-        WWA
-      </div>
-    </nav>
-    <footer>
-    </footer>
+    <Menu>
+      <MenuItem to="/" name="WWA" />
+    </Menu>
+    <MainFooter />
   </div>
 </template>
 
 <script>
+import MainFooter from '../components/MainFooter.vue';
+import Menu from '../components/Menu.vue';
+import MenuItem from '../components/MenuItem.vue';
+
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Aokashi Home'
+  },
+  components: {
+    MainFooter,
+    Menu,
+    MenuItem
   }
 }
 </script>

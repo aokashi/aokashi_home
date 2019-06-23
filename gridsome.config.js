@@ -18,11 +18,18 @@ function addStyleResource (rule) {
 module.exports = {
   siteName: 'Aokashi Home',
   siteDescription: 'Aokashi が制作した作品を置くホームページ',
-  plugins: [],
+  plugins: [
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        config: './tailwind.config.js'
+      }
+    }
+  ],
   chainWebpack (config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach(type => {
-      addStyleResource(config.module.rule('sass').oneOf(type))
+      addStyleResource(config.module.rule('sass').oneOf(type));
     })
   }
 }

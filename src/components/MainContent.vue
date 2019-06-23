@@ -1,20 +1,20 @@
 <template>
   <div class="main">
-    <div class="content">
-      <slot/>
+    <div class="container mx-auto">
+      <div class="content">
+        <slot/>
+      </div>
+      <aside class="menu">
+        <p>サイドバー</p>
+      </aside>
     </div>
-    <aside class="menu">
-      <p>サイドバー</p>
-    </aside>
   </div>
 </template>
 
 <style lang="sass" scoped>
 .main
   display: flex
-  flex-direction: row
   background-image: url('/images/background.png')
-  +content-width()
 
 .content
   order: 2
