@@ -4,7 +4,7 @@
       <h1>WWA</h1>
     </header>
     <p>WWA作品を扱っています。</p>
-    <div v-for="(wwa, wwaNumber) in WWAData" v-bind:key="wwaNumber">
+    <div v-for="(wwa, wwaNumber) in WWAData" :key="wwaNumber">
       <WWAItem :number="wwaNumber" :data="wwa" />
     </div>
   </Layout>
@@ -25,7 +25,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
