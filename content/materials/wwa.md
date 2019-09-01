@@ -290,6 +290,6 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
 #### 16Character-Matsuyuki
 {{< material src="wwa/16Character-Matsuyuki.gif" width="40" height="40" >}}
 
-上記の画像の利用を検討されている方は、利用目的を添えて、[Twitter @matsuyuki_a](https://twitter.com/matsuyuki_a)（DMでも大丈夫です）や メール(matsuyuki.eca@gmail.com)などでご相談ください。
+上記の画像の利用を検討されている方は、利用目的を添えて、[Twitter @matsuyuki_a](https://twitter.com/matsuyuki_a)（DMでも大丈夫です）や まつゆきのメールアドレス(matsuyuki.eca@gmail.com) などでご相談ください。
 
 もちろん、 **引用の要件を満たす場合には** この手順を踏まずに無断で利用して大丈夫です。
