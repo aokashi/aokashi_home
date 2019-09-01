@@ -292,8 +292,6 @@ WWAの素材規格に合わせて制作した素材です。そのままWWAの�
 
 上記の画像の利用を検討されている方は、利用目的を添えて、まつゆきの [Twitter(@matsuyuki_a)](https://twitter.com/matsuyuki_a)（DMでも大丈夫です）または メールアドレス(matsuyuki.eca@gmail.com) などでご相談ください。
 
-もちろん、 **引用の要件を満たす場合には** この手順を踏まずに無断で利用して大丈夫です。
-
 {{< note >}}
 <p>まつゆき については <a href="https://matsuyuki.dev">matsuyuki.dev</a> をご参照ください。</p>
 {{< /note >}}
