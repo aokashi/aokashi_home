@@ -6,7 +6,10 @@
       </h1>
     </header>
     <Menu>
-      <MenuItem to="/" name="WWA" />
+      <MenuItem to="/wwa" name="WWA" />
+      <MenuItem to="/software" name="Software" />
+      <MenuItem to="/material" name="Material" />
+      <MenuItem to="/portfolio" name="Portfolio" />
     </Menu>
     <MainFooter />
   </div>
@@ -30,6 +33,10 @@ export default {
 </script>
 
 <style>
+body {
+  background: #808080 url('~@/assets/images/background-home.png');
+}
+
 .home-links a {
   margin-right: 1rem;
 }
