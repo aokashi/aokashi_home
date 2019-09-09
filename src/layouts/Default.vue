@@ -8,14 +8,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import MainHeader from '../components/MainHeader.vue'
 import MainContent from '../components/MainContent.vue'
@@ -29,3 +21,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+body
+  background: #404040 none;
+</style>

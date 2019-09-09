@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="containe mx-auto lg:flex">
+    <div class="container mx-auto lg:flex">
       <div class="title">
         <g-link to="/" title="Aokashi Home">
           <g-image src="~/assets/images/logo-mini.png" class="logo mx-auto" alt="Aokashi Home" />
