@@ -12,20 +12,31 @@ function addStyleResource (rule) {
     })
 }
 
+const tailwind = require('tailwindcss');
+const purgecss = require('@fullhuman/postcss-purgecss');
+
+const postcssPlugins = [
+  tailwind(),
+];
+
+if (process.env.NODE_ENV === 'production') {
+  postcssPlugins.push(purgecss());
+}
+
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
   siteName: 'Aokashi Home',
   siteDescription: 'Aokashi が制作した作品を置くホームページ',
-  plugins: [
-    {
-      use: 'gridsome-plugin-tailwindcss',
-      options: {
-        config: './tailwind.config.js'
+  plugins: [],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins
       }
     }
-  ],
+  },
   chainWebpack (config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach(type => {
