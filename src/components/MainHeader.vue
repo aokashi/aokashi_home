@@ -1,22 +1,22 @@
 <template>
-  <header class="header">
+  <header class="main-header header">
     <div class="container mx-auto flex items-center justify-between flex-wrap">
-      <div class="title flex items-center flex-shrink-0 mr-6">
+      <div class="header__title flex items-center flex-shrink-0">
         <g-link to="/" title="Aokashi Home">
           <g-image src="~/assets/images/logo-mini.png" class="logo mx-auto" alt="Aokashi Home" />
         </g-link>
       </div>
       <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-navy border-navy" @click="toggleMenuButton">
+        <button class="header__menu-button" @click="toggleMenuButton">
           Menu
         </button>
       </div>
       <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto" :class="menuClasses">
-        <div class="text-sm lg:flex-grow">
-          <g-link to="/wwa" class="block mt-4 lg:inline-block lg:mt-0 mr-4">WWA</g-link>
-          <g-link to="/software" class="block mt-4 lg:inline-block lg:mt-0 mr-4">Software</g-link>
-          <g-link to="/material" class="block mt-4 lg:inline-block lg:mt-0 mr-4">Material</g-link>
-          <g-link to="/portfolio" class="block mt-4 lg:inline-block lg:mt-0 mr-4">Portfolio</g-link>
+        <div class="header__menu text-sm lg:flex-grow">
+          <g-link to="/wwa" class="menu__item lg:menu__item--lg block lg:inline-block">WWA</g-link>
+          <g-link to="/software" class="menu__item block lg:inline-block">Software</g-link>
+          <g-link to="/material" class="menu__item block lg:inline-block">Material</g-link>
+          <g-link to="/portfolio" class="menu__item block lg:inline-block">Portfolio</g-link>
         </div>
       </div>
     </div>
@@ -50,12 +50,31 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.header
-  background-color: #c0c0c0
-  border-bottom: 2px solid #000080
+<style lang="sass">
+.main-header
+  @apply bg-silver border-b-2 border-navy
 
-.menu__item
-  flex: 0 0 6rem
-  text-align: center
+  .container
+    @apply py-4
+
+  .header__title
+    @apply mr-6
+
+  .header__menu-button
+    @apply items-center px-3 py-2 border border-navy rounded
+
+  .header__menu
+    @apply mt-4
+
+    .menu__item
+      @apply p-2 border-l-2 border-gray-500
+      @screen lg
+        @apply border-l-0 border-t-2
+    
+    .menu__item--active
+      @apply border-navy
+
+    .menu__item:hover
+      @apply bg-gray-500
+  
 </style>

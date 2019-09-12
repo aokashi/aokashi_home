@@ -29,15 +29,10 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .footer
+  @apply text-white border-t-2 border-navy py-2
   background-color: #404040
-  color: #fff
-  border-top: 2px solid #000080
-
-a:link,
-a:visited
-  color: #fff
 
 .copyright
   text-align: center
