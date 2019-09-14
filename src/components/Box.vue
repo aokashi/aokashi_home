@@ -8,16 +8,17 @@ BoxList のスロットの中に入れる必要があります。
   - コンポーネントの横幅です
   - Tailwind CSS の横幅で指定します
   - 横幅の指定については https://tailwindcss.com/docs/width をご参照ください
-- `title` ... タイトルテキスト
-  - 指定すると、上部にタイトルが表示されます
-- `class` ... クラス
-  - 要素に追加でクラスが欲しい場合はこのプロパティを使用します
 </docs>
 
 <template>
   <div :class="classes">
-    <h2 v-if="title">{{title}}</h2>
+    <header class="box__header header">
+      <h2 class="header__title"><slot name="title"></slot></h2>
+    </header>
     <slot/>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
   </div>
 </template>
 
@@ -27,20 +28,20 @@ export default {
     width: {
       type: String,
       required: true
-    },
-    title: {
-      type: String,
-      required: false
-    },
-    class: {
-      type: String,
-      default: ''
     }
   },
   computed: {
     classes() {
-      return `box w-${this.width} ${this.class}`;
+      return `box w-${this.width}`;
     }
   }
 }
 </script>
+
+<style lang="sass">
+.box
+  @apply p-2
+  .box__header
+    .header__title
+      @apply text-base bg-transparent border-0
+</style>
