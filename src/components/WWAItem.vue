@@ -1,13 +1,15 @@
 <docs>
-## WWA アイテム
+# WWA アイテム
 WWA作品を表すコンポーネントです。
 
-### `number` について
+## プロパティについて
+
+### `number`
 WWA作品を一意に識別するための番号です。
 
 3桁構成にする必要があります。
 
-### `data` について
+### `data`
 - `id`: WWA作品のIDで、ファイル名に利用されます
 - `name`: 名前
 - `description`: 説明
@@ -26,20 +28,30 @@ WWA作品を一意に識別するための番号です。
 </docs>
 
 <template>
-  <div>
-    <h2 v-for="(game, gameNumber) in games" :key="game.id">
-      [{{getNumber(number, gameNumber)}}]
-      <a :href="getUrl(game.id)">{{data.name}} {{game.name}}</a>
-    </h2>
+  <Box :width="width">
+    <template v-slot:title>
+      {{data.name}}
+    </template>
+    <div class="flex">
+      <div v-for="game in games" :key="game.id" class="w-full">
+        <a :href="getUrl(game.id)">{{game.name}}</a>
+      </div>
+    </div>
     <p>{{data.description}}</p>
-  </div>
+    <template v-slot:footer></template>
+  </Box>
 </template>
 
 <script>
+import Box from '~/components/Box.vue';
+
 export default {
+  components: {
+    Box
+  },
   props: {
     number: {
-      type: Number,
+      type: String,
       required: true
     },
     data: {
@@ -52,10 +64,24 @@ export default {
       if (!this.data.games) {
         return [{
           id: this.data.id,
-          name: ''
+          name: 'プレイ'
         }];
       }
       return this.data.games;
+    },
+    width() {
+      let length = 1;
+      if (this.data.games) {
+        length = Object.keys(this.data.games).length;
+      }
+      switch (length) {
+        case 1:
+          return '1/3';
+        case 2:
+          return '2/3';
+        default:
+          return 'full';
+      }
     }
   },
   methods: {
