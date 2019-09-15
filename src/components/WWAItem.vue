@@ -28,16 +28,21 @@ WWA作品を一意に識別するための番号です。
 </docs>
 
 <template>
-  <Box :width="width">
+  <Box :width="width" class="wwa-item">
     <template v-slot:title>
       {{data.name}}
     </template>
-    <div class="flex">
-      <div v-for="game in games" :key="game.id" class="w-full">
-        <a :href="getUrl(game.id)">{{game.name}}</a>
+    <div class="md:flex">
+      <div v-for="game in games" :key="game.id" class="wwa-item__game-item game-item">
+        <a class="game-item__link" :href="getUrl(game.id)">
+          <img class="game-item__img" :src="getImagePath(game.id)" :alt="game.name">
+          {{game.name}}
+        </a>
       </div>
     </div>
-    <p>{{data.description}}</p>
+    <div class="wwa-item__description">
+      <p>{{data.description}}</p>
+    </div>
     <template v-slot:footer></template>
   </Box>
 </template>
@@ -74,13 +79,13 @@ export default {
       if (this.data.games) {
         length = Object.keys(this.data.games).length;
       }
-      switch (length) {
+      switch (length) { // TODO: Box の width プロパティに Tailwind CSS のクラス名を直で記述しないようにしておきたい
         case 1:
-          return '1/3';
+          return 'full md:w-1/2 lg:w-1/3 xl:w-1/4';
         case 2:
-          return '2/3';
+          return 'full lg:w-2/3 xl:w-2/4';
         default:
-          return 'full';
+          return 'full xl:w-3/4';
       }
     }
   },
@@ -90,11 +95,23 @@ export default {
     },
     getUrl(id) {
       return this.data.hasMainPage ? `/wwa/${id}` : `/wwa/${id}.html`;
+    },
+    getImagePath(id) {
+      return `/images/wwa/${id}.gif`;
     }
   }
 }
 </script>
 
-<style>
+<style lang="sass">
+.wwa-item
 
+  .wwa-item__game-item
+    @apply w-full rounded bg-gray-400 m-1 p-1 text-center font-bold
+
+    .game-item__img
+      @apply mx-auto
+
+  .wwa-item__description
+    @apply text-sm p-2
 </style>
