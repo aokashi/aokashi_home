@@ -69,7 +69,7 @@ export default {
       if (!this.data.games) {
         return [{
           id: this.data.id,
-          name: 'プレイ'
+          name: this.data.hasMainPage ? 'メインページ' : 'プレイ'
         }];
       }
       return this.data.games;
