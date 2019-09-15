@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <header class="header">
+    <template v-slot:header>
       <h1>WWA</h1>
-    </header>
+    </template>
     <p>WWA作品を扱っています。</p>
     <BoxList>
       <WWAItem v-for="(wwa, wwaNumber) in WWAData" :key="wwaNumber" :number="wwaNumber" :data="wwa" />

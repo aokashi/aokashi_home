@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <header class="header">
+    <template v-slot:header>
       <h1>Aokashi Home について</h1>
-    </header>
+    </template>
     <p>Aokashi Home は Aokashi が運営するWebサイトです。</p>
     <section>
       <h2>コンテンツの転載について</h2>

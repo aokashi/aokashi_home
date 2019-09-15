@@ -1,23 +1,20 @@
 <template>
-  <div class="main__content content">
-    <div class="container mx-auto flex md:flex-row flex-wrap">
-      <div class="content__content w-3/4">
-        <slot/>
-      </div>
-      <aside class="content__sidebar sidebar w-1/4">
-        <!-- TODO サイドバーの使いみちを考える -->
+  <div class="main-content content">
+    <div class="container mx-auto lg:flex lg:flex-nowrap">
+      <aside class="content__sidebar sidebar lg:w-1/6">
       </aside>
+      <article class="content__article lg:w-5/6 lg:ml-4">
+        <slot/>
+      </article>
     </div>
   </div>
 </template>
 
 <style lang="sass">
-.main__content
+.main-content
   background-image: url('/images/background.png')
 
-  .content__content
-    order: 2
-    flex: 0 0 auto
+  .content__article
     a
       @apply text-blue-600
       &:hover

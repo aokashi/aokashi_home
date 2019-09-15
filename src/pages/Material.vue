@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <header class="header">
+    <template v-slot:header>
       <h1>素材・ライブラリ</h1>
-    </header>
+    </template>
     <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
     <section>
       <h2>ご利用について</h2>

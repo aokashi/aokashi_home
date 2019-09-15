@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <header class="header">
+    <template v-slot:header>
       <h1>ソフトウェア</h1>
-    </header>
+    </template>
     <p>制作したソフトウェアを公開しています。公開しているプログラムはすべて GitHub にリポジトリを残しています。以下のリンクから GitHub へアクセスできます。</p>
     <a class="button" href="https://github.com/aokashi/">GitHub へアクセス</a>
     <div v-for="(software, softwareKey) in SoftwareData" :key="softwareKey">
@@ -27,8 +27,7 @@ export default {
 }
 </script>
 
-<style>
-.button {
-  @apply bg-blue-500 text-white m-2 p-2 rounded;
-}
+<style lang="sass">
+.button
+  @apply bg-blue-500 text-white m-2 p-2 rounded
 </style>

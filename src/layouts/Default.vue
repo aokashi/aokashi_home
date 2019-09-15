@@ -2,7 +2,12 @@
   <div>
     <MainHeader />
     <MainContent>
-      <slot/>
+      <header class="content__header">
+        <slot name="header" />
+      </header>
+      <div>
+        <slot/>
+      </div>
     </MainContent>
     <MainFooter />
   </div>
