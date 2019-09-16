@@ -1,7 +1,7 @@
 <template>
   <header class="main-header header">
-    <div class="container mx-auto flex items-center justify-between flex-wrap">
-      <div class="header__title flex items-center flex-shrink-0">
+    <div class="container">
+      <div class="header__title">
         <g-link to="/" title="Aokashi Home">
           <g-image src="~/assets/images/logo-mini.png" class="logo mx-auto" alt="Aokashi Home" />
         </g-link>
@@ -11,28 +11,27 @@
           Menu
         </button>
       </div>
-      <div class="header__menu w-full flex-grow lg:flex lg:items-center lg:w-auto lg:ml-auto" :class="menuClasses">
-        <g-link to="/wwa" class="menu__item lg:menu__item--lg block lg:inline-block">WWA</g-link>
-        <g-link to="/software" class="menu__item block lg:inline-block">Software</g-link>
-        <g-link to="/material" class="menu__item block lg:inline-block">Material</g-link>
-        <g-link to="/portfolio" class="menu__item block lg:inline-block">Portfolio</g-link>
-      </div>
+      <Menu
+        class="header__menu"
+        :class="menuClasses"
+        :data="MenuData"
+      />
     </div>
   </header>
 </template>
 
 <script>
 import Menu from '../components/Menu.vue';
-import MenuItem from '../components/MenuItem.vue';
+import MenuData from '~/data/menu/header-menu.json';
 
 export default {
   components: {
-    Menu,
-    MenuItem
+    Menu
   },
   data() {
     return {
-      isOpened: false
+      isOpened: false,
+      MenuData
     }
   },
   methods: {
@@ -53,7 +52,7 @@ export default {
   @apply bg-silver border-b-2 border-navy
 
   .container
-    @apply px-2 py-4
+    @apply mx-auto flex items-center justify-between flex-wrap px-2 py-4
   
   .header__title
     @screen lg
@@ -63,15 +62,16 @@ export default {
     @apply items-center px-3 py-2 border border-navy rounded
 
   .header__menu
-    @apply mt-4
+    @apply w-full flex-grow mt-4
+    @screen lg
+      @apply flex w-auto ml-auto
 
     .menu__item
-      @apply p-2 border-l-2 border-gray-500
+      @apply block border-l-2 border-gray-500 p-2
+      &--active
+        @apply border-navy
       @screen lg
-        @apply border-l-0 border-t-2
-    
-    .menu__item--active
-      @apply border-navy
+        @apply inline-block border-l-0 border-t-2
 
     .menu__item:hover
       @apply bg-gray-500

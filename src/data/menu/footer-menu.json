@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  }, {
+    "name": "当サイトについて",
+    "link": "/about"
+  }, {
+    "name": "ブログ",
+    "link": "https://aokashi.hatenablog.jp"
+  }, {
+    "name": "WWA FanSquare",
+    "link": "https://www.wwafansq.com"
+  }
+]
