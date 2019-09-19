@@ -5,7 +5,7 @@ import AokashiHomeLogo from "../images/ah-logo_mini.png"
 
 const Header = ({ siteTitle }) => (
   <header className="main-header">
-    <div className="main-header__container">
+    <div className="container mx-auto">
       <h1 className="main-header__title">
         <Link to="/">
           <img src={AokashiHomeLogo} alt={siteTitle} />
