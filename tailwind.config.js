@@ -9,6 +9,9 @@ module.exports = {
         navy: '#000080',
         darkgray: '#404040'
       }
+    },
+    container: {
+      center: true
     }
   },
   variants: {},

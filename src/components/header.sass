@@ -1,0 +1,30 @@
+.main-header
+  @apply bg-silver border-b-2 border-navy py-3
+
+  .container
+    @apply flex items-center justify-between flex-wrap px-2
+
+  &__title
+    @screen lg
+      @apply mr-6
+
+  &__button
+    @apply block
+    @screen lg
+      @apply hidden
+
+  &__menu-button
+    @apply border border-navy rounded
+
+  &__nav
+    @apply w-full flex-grow mt-4
+    @screen lg
+      @apply block w-auto ml-auto
+
+    .menu__item
+      @apply block border-l-2 border-gray-500 p-3
+      @screen lg
+        @apply inline-block border-l-0 border-t-2
+        
+      &:hover
+        @apply bg-gray-500
