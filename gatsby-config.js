@@ -41,7 +41,7 @@ module.exports = {
       options: {
         printRejected: true,
         develop: true,
-        tailwind: true,
+        tailwind: false,
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
