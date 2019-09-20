@@ -17,17 +17,17 @@ const IndexLayout = ({ children }) => {
 
   return (
     <>
-      <div class="main-header">
-        <div class="container mx-auto">
+      <div className="main-header">
+        <div className="container mx-auto">
           <img src={Logo} alt={data.site.siteMetadata.title}></img>
         </div>
       </div>
-      <div class="main-menu">
-        <div class="container mx-auto">
+      <div className="main-menu">
+        <div className="container mx-auto">
         </div>
       </div>
-      <div class="main-content">
-        <div class="container mx-auto">
+      <div className="main-content">
+        <div className="container mx-auto">
           {children}
         </div>
       </div>
