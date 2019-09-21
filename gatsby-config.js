@@ -40,8 +40,8 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
-        develop: true,
-        tailwind: false,
+        develop: false,
+        tailwind: true,
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

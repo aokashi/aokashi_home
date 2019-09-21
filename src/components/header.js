@@ -9,7 +9,7 @@ const Header = class extends React.Component {
     super(props);
     this.state = {
       isOpened: false,
-      navBarClass: 'hidden'
+      navBarClass: 'hidden lg:block'
     }
   }
 
@@ -24,7 +24,7 @@ const Header = class extends React.Component {
               navBarClass: 'block',
             })
           : this.setState({
-              navBarClass: 'hidden',
+              navBarClass: 'hidden lg:block',
             })
       }
     )
