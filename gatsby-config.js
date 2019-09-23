@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Aokashi Home`,
@@ -30,13 +32,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [
-          require('tailwindcss')('./tailwind.config.js')
-        ],
-        precision: 8,
+        data: `@import base.sass`,
+        includePaths: [path.resolve(__dirname, 'src/styles')],
       }
     },
-    `gatsby-plugin-styled-components`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

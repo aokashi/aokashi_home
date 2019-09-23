@@ -1,0 +1,51 @@
+.header
+  background-color: #c0c0c0
+  border-bottom: 2px solid #000080
+  padding: 12px 8px
+
+  .container
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 8px 0
+
+  .title
+    +desktop
+      margin-right: 24px
+
+  .button
+    +desktop
+      display: none
+
+  .menuButton
+    border: 1px solid #000080
+    padding: 12px
+    border-radius: 8px
+    margin-left: auto
+
+  .nav
+    display: none
+    width: 100%
+    margin-top: 16px
+    +desktop
+      display: block
+      width: auto
+    
+    &.isOpened
+      display: block
+
+    .navItem
+      display: block
+      border-width: 0 0 0 2px
+      border-style: solid
+      border-color: #808080
+      padding: 12px
+      +desktop
+        display: inline-block
+        border-width: 2px 0 0 0
+        
+      &:hover
+        background-color: #808080
+    
+      &.isActive
+        border-color: #000080

@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styles from "./page-layout.module.sass"
 
 import Header from "../components/header"
-import "../styles/layout.sass"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,12 +27,12 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="main-content">
-        <div className="container mx-auto">
+        <div className="container">
           <main>{children}</main>
         </div>
       </div>
-      <footer className="main-footer">
-        <div className="container mx-auto">
+      <footer className={styles.footer}>
+        <div className="container">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
