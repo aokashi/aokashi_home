@@ -1,0 +1,50 @@
+.aboutme
+  padding: .5rem
+
+  &__title
+    background-color: #c0c0c0
+    color: #000080
+    font-size: 2rem
+
+  &__introduction,
+  &__extra
+    +desktop
+      display: flex
+
+  &__introduction
+    margin: 1rem
+
+  &__icon
+    text-align: center
+
+  &__description
+    margin: 1rem
+  
+  &__socials
+    .socials__item
+      display: inline-block
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: 32px 32px
+      height: calc(32px + 1rem)
+      line-height: 32px
+      margin: 0 1rem
+      padding-left: calc(32px + .5rem)
+      &--twitter
+        background-image: url('../images/social_icon-twitter.png')
+      &--github
+        background-image: url('../images/social_icon-github.png')
+
+  &__extra
+    section
+      background-color: #c0c0c0
+      margin: 1rem
+      h3
+        font-size: 1.25em
+        font-weight: bold
+        border-bottom: 2px solid #000080
+        padding: .5rem
+      h4
+        font-weight: bold
+      p
+        margin-left: 1rem

@@ -2,12 +2,12 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 import Layout from '../layouts/index-layout'
 
+import './index-page.sass'
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Icon from '../images/aokashi-icon.png'
 
-const IndexPageTemplate = ({
-  data
-}) => {
+const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter } = markdownRemark
   return (
@@ -22,33 +22,42 @@ const IndexPageTemplate = ({
       <Link to="/page-2/">Go to page 2</Link>
       <section className="aboutme">
         <h2 className="aboutme__title">{frontmatter.aboutme.heading}</h2>
-        <p>{frontmatter.aboutme.description}</p>
-        <div className="aboutme__socials socials">
-          <a className="socials__item socials__item--twitter" href={`https://twitter.com/${frontmatter.aboutme.socials.twitter}`}>@{frontmatter.aboutme.socials.twitter}</a>
-          <a className="socials__item socials__item--github" href={`https://github.com/${frontmatter.aboutme.socials.github}`}>{frontmatter.aboutme.socials.github}</a>
+        <div className="aboutme__introduction">
+          <div className="aboutme__icon">
+            <img src={Icon} alt="Aokashi"/>
+          </div>
+          <div className="aboutme__description">
+            <div className="aboutme__socials socials">
+              <a className="socials__item socials__item--twitter" href={`https://twitter.com/${frontmatter.aboutme.socials.twitter}`}>@{frontmatter.aboutme.socials.twitter}</a>
+              <a className="socials__item socials__item--github" href={`https://github.com/${frontmatter.aboutme.socials.github}`}>{frontmatter.aboutme.socials.github}</a>
+            </div>
+            <p>{frontmatter.aboutme.description}</p>
+          </div>
         </div>
-        <section className="aboutme__likes">
-          <h3>好きなもの</h3>
-          {
-            frontmatter.aboutme.items.likes.map(item => (
-              <section>
-                <h4>{item.name}</h4>
-                <p>{item.text}</p>
-              </section>
-            ))
-          }
-        </section>
-        <section className="aboutme__environments">
-          <h3>使用環境</h3>
-          {
-            frontmatter.aboutme.items.environments.map(item => (
-              <section>
-                <h4>{item.name}</h4>
-                <p>{item.text}</p>
-              </section>
-            ))
-          }
-        </section>
+        <div className="aboutme__extra">
+          <section className="aboutme__likes">
+            <h3>好きなもの</h3>
+            {
+              frontmatter.aboutme.items.likes.map(item => (
+                <section>
+                  <h4>{item.name}</h4>
+                  <p>{item.text}</p>
+                </section>
+              ))
+            }
+          </section>
+          <section className="aboutme__environments">
+            <h3>使用環境</h3>
+            {
+              frontmatter.aboutme.items.environments.map(item => (
+                <section>
+                  <h4>{item.name}</h4>
+                  <p>{item.text}</p>
+                </section>
+              ))
+            }
+          </section>
+        </div>
         <p>{frontmatter.aboutme.extra}</p>
       </section>
     </Layout>
