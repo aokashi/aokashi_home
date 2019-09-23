@@ -1,5 +1,7 @@
 ---
+path: "/about/"
 title: 当サイトについて
+template: default
 ---
 
 Aokashi Home は、Aokashiが運営するWebサイトです。主にゲームやプログラムと、それらに役立つ素材を公開しています。

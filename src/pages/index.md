@@ -1,4 +1,6 @@
 ---
+title: Aokashi Home
+template: 'index-page'
 aboutme:
   heading: Aokashi について
   description: >-
