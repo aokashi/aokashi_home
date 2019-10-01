@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import "./footer.sass"
 
 const Footer = ({ siteTitle }) => (
-  <footer class="main-footer">
-    <div class="container">
-      <div class="main-footer__copyright">
+  <footer className="main-footer">
+    <div className="container">
+      <div className="main-footer__copyright">
         <div>
           Copyright © 2010-{new Date().getFullYear()} {siteTitle}.
         </div>
