@@ -4,7 +4,10 @@ import styles from './InfoNote.module.sass'
 import InfoIcon from '../images/note_icon-info.png';
 
 const InfoNote = ({ children }) => (
-  <Note className={styles.infoNote} icon={InfoIcon}>{children}</Note>
+  <Note
+    className={styles.infoNote}
+    icon={InfoIcon}
+  >{children}</Note>
 )
 
 export default InfoNote
