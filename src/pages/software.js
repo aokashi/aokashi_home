@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../layouts/page-layout'
 
 import SoftwareData from '../data/software.json'
+import InfoNote from '../components/InfoNote'
 
 const SoftwarePage = () => (
   <Layout>
@@ -12,9 +13,9 @@ const SoftwarePage = () => (
       <div className="article-content content">
         <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
         <a className="link-button" href="https://github.com/aokashi">GitHubへアクセス</a>
-        <div className="note note--info">
+        <InfoNote>
           <p>各プログラムのライセンスはGitHubのLICENSEファイルをご参照願います。</p>
-        </div>
+        </InfoNote>
       </div>
     </article>
     {softwareList}
