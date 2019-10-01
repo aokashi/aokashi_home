@@ -25,14 +25,14 @@ const SoftwarePage = () => (
 const softwareList = (
   <div className="software-list list">
     {
-      SoftwareData.map((item) => (
-        <div className="list__item">
+      SoftwareData.map((item, index) => (
+        <div className="list__item" key={index}>
           <h3>{item.name}</h3>
           <p>{item.description}</p>
           <div className="item__keywords keywords">
             {
-              item.keywords.map((keyword) => (
-                <span className="keywords__item">{keyword}</span>
+              item.keywords.map((keyword, keywordIndex) => (
+                <span className="keywords__item" key={keywordIndex}>{keyword}</span>
               ))
             }
           </div>
@@ -42,8 +42,8 @@ const softwareList = (
                 <a className="nav__item nav__item--github-repo" href={item.repository}>GitHub リポジトリ</a>
             }
             {
-              item.references.map((link) => (
-                <a className="nav__item" href={link.url}>{link.name}</a>
+              item.references.map((link, linkIndex) => (
+                <a className="nav__item" href={link.url} key={linkIndex}>{link.name}</a>
               ))
             }
           </div>

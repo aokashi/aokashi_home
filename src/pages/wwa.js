@@ -21,14 +21,14 @@ const WWAPage = () => (
 const wwaList = (
   <div className="wwa-list list">
     {
-      WWAGameData.map((item) => (
-        <div className="list__item">
+      WWAGameData.map((item, index) => (
+        <div className="list__item" key={index}>
           <h3>{item.name}</h3>
           <p>{item.description}</p>
           <div className="item__nav">
             {
-              item.links.map((link) => (
-                <a href={link.link}>{link.name ? link.name : 'プレイ'}</a>
+              item.links.map((link, linkIndex) => (
+                <a href={link.link} key={linkIndex}>{link.name ? link.name : 'プレイ'}</a>
               ))
             }
           </div>

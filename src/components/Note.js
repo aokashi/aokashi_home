@@ -16,7 +16,7 @@ Note.propTypes = {
   name: PropTypes.string,
   className: PropTypes.string,
   icon: PropTypes.string,
-  children: PropTypes.element
+  children: PropTypes.node,
 }
 
 export default Note
