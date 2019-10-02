@@ -3,6 +3,7 @@ import Layout from '../layouts/page-layout'
 
 import SoftwareData from '../data/software.json'
 import InfoNote from '../components/InfoNote'
+import LinkButton from '../components/LinkButton'
 
 const SoftwarePage = () => (
   <Layout>
@@ -12,7 +13,7 @@ const SoftwarePage = () => (
       </header>
       <div className="article-content content">
         <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
-        <a className="link-button" href="https://github.com/aokashi">GitHubへアクセス</a>
+        <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
         <InfoNote>
           <p>各プログラムのライセンスはGitHubのLICENSEファイルをご参照願います。</p>
         </InfoNote>
