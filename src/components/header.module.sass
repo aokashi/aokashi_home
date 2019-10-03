@@ -1,27 +1,34 @@
 .header
-  background-color: #c0c0c0
-  border-bottom: 2px solid #000080
-  padding: 12px 8px
+  +block
+  background-color: $light
+  border-bottom: 2px solid $primary
 
   .container
     display: flex
     align-items: center
     flex-wrap: wrap
-    padding: 8px 0
+    padding: $block-spacing 0
+    +touch
+      padding: $block-spacing
 
   .title
     +desktop
-      margin-right: 24px
+      margin-right: $gap
 
   .button
+    margin-left: auto
     +desktop
       display: none
 
   .menuButton
-    border: 1px solid #000080
+    background-color: $grey-light
+    color: $primary
+    font-size: 
+    border: 2px solid $primary
     padding: 12px
     border-radius: 8px
-    margin-left: auto
+    &:hover
+      background-color: $grey
 
   .nav
     display: none
@@ -38,14 +45,15 @@
       display: block
       border-width: 0 0 0 2px
       border-style: solid
-      border-color: #808080
+      border-color: $grey-light
       padding: 12px
       +desktop
         display: inline-block
         border-width: 2px 0 0 0
         
       &:hover
-        background-color: #808080
+        background-color: $grey-light
     
       &.isActive
-        border-color: #000080
+        border-color: $primary
+        background-color: $grey-light
