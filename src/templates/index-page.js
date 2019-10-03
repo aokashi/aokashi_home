@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import Layout from '../layouts/index-layout'
 
 import './index-page.sass'
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Icon from '../images/aokashi-icon.png'
 
@@ -13,13 +12,11 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+      <nav className="index-nav">
+        {
+          frontmatter.nav_items.map((navItem, navIndex) => getNavLink(navItem, navIndex))
+        }
+      </nav>
       <section className="aboutme">
         <h2 className="aboutme__title">{frontmatter.aboutme.heading}</h2>
         <div className="aboutme__introduction">
@@ -38,8 +35,8 @@ const IndexPageTemplate = ({ data }) => {
           <section className="aboutme__likes">
             <h3>好きなもの</h3>
             {
-              frontmatter.aboutme.items.likes.map(item => (
-                <section>
+              frontmatter.aboutme.items.likes.map((item, index) => (
+                <section key={index}>
                   <h4>{item.name}</h4>
                   <p>{item.text}</p>
                 </section>
@@ -49,8 +46,8 @@ const IndexPageTemplate = ({ data }) => {
           <section className="aboutme__environments">
             <h3>使用環境</h3>
             {
-              frontmatter.aboutme.items.environments.map(item => (
-                <section>
+              frontmatter.aboutme.items.environments.map((item, index) => (
+                <section key={index}>
                   <h4>{item.name}</h4>
                   <p>{item.text}</p>
                 </section>
@@ -64,11 +61,50 @@ const IndexPageTemplate = ({ data }) => {
   )
 }
 
+const getNavLink = (navItem, navIndex) => {
+  const linkContent = (
+    <>
+      {
+        navItem.icon &&
+          <img src={navItem.icon} alt="" className="nav-item__icon" />
+      }
+      <span className="nav-item__text">{navItem.name}</span>
+    </>
+  )
+  const itemStyle = {
+    backgroundColor: navItem.color
+  }
+
+  if (navItem.link.match(/^https?:\/\//) !== null) {
+    return (
+      <div className="index-nav__item nav-item" key={navIndex}>
+        <a href={navItem.link} title={navItem.name} className="nav-item__link" style={itemStyle}>
+          {linkContent}
+        </a>
+      </div>
+    )
+  } else {
+    return (
+      <div className="index-nav__item nav-item" key={navIndex}>
+        <Link to={navItem.link} className="nav-item__link" style={itemStyle}>
+          {linkContent}
+        </Link>
+      </div>
+    )
+  }
+}
+
 export const pageQuery = graphql`
   query {
     markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
         title
+        nav_items {
+          name
+          link
+          icon
+          color
+        }
         aboutme {
           heading
           description

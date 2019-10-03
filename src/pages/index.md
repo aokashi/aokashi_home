@@ -1,6 +1,31 @@
 ---
 title: Aokashi Home
 template: 'index-page'
+nav_items:
+  - name: WWA
+    link: wwa/
+    icon: /images/menu_icon-wwa.png
+    color: '#ffc0c0'
+  - name: Software
+    link: software/
+    icon: 
+    color: '#c0ffc0'
+  - name: Material
+    link: material/
+    icon: /images/menu_icon-material.png
+    color: '#a0e0e0'
+  - name: Portfolio
+    link: portfolio/
+    icon: 
+    color: '#e0a0e0'
+  - name: Blog
+    link: http://aokashi.hatenablog.jp
+    icon: /images/menu_icon-blog.png
+    color: '#e0e0a0'
+  - name: WWA FanSquare
+    link: https://www.wwafansq.com
+    icon: /images/menu_icon-wwa_fansq.png
+    color: '#ff9a31'
 aboutme:
   heading: Aokashi について
   description: >-

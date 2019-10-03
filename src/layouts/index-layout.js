@@ -25,10 +25,6 @@ const IndexLayout = ({ children }) => {
           <img src={Logo} alt={data.site.siteMetadata.title}></img>
         </div>
       </div>
-      <div className={styles.mainMenu}>
-        <div className={styles.container}>
-        </div>
-      </div>
       <div className={styles.mainContent}>
         <div className={styles.container}>
           {children}
