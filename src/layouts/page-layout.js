@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from './page-layout.module.sass'
@@ -26,6 +27,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <body className={styles.pageBody} />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={styles.mainContent}>
         <div className="container">

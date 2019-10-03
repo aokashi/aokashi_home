@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import styles from './index-layout.module.sass'
@@ -20,6 +21,9 @@ const IndexLayout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <body className={styles.indexBody} />
+      </Helmet>
       <div className={styles.mainHeader}>
         <div className={styles.container}>
           <img src={Logo} alt={data.site.siteMetadata.title}></img>
