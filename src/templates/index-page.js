@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from '../layouts/index-layout'
 
 import './index-page.sass'
+import Link from '../components/Link'
 import SEO from "../components/seo"
 import Icon from '../images/aokashi-icon.png'
 
@@ -62,36 +63,25 @@ const IndexPageTemplate = ({ data }) => {
 }
 
 const getNavLink = (navItem, navIndex) => {
-  const linkContent = (
-    <>
-      {
-        navItem.icon &&
-          <img src={navItem.icon} alt="" className="nav-item__icon" />
-      }
-      <span className="nav-item__text">{navItem.name}</span>
-    </>
-  )
   const itemStyle = {
     backgroundColor: navItem.color
   }
-
-  if (navItem.link.match(/^https?:\/\//) !== null) {
-    return (
-      <div className="index-nav__item nav-item" key={navIndex}>
-        <a href={navItem.link} title={navItem.name} className="nav-item__link" style={itemStyle}>
-          {linkContent}
-        </a>
-      </div>
-    )
-  } else {
-    return (
-      <div className="index-nav__item nav-item" key={navIndex}>
-        <Link to={navItem.link} className="nav-item__link" style={itemStyle}>
-          {linkContent}
-        </Link>
-      </div>
-    )
-  }
+  
+  return (
+    <div className="index-nav__item nav-item" key={navIndex}>
+      <Link
+        href={navItem.link}
+        className="nav-item__link"
+        style={itemStyle}
+      >
+        {
+          navItem.icon &&
+            <img src={navItem.icon} alt="" className="nav-item__icon" />
+        }
+        <span className="nav-item__text">{navItem.name}</span>
+      </Link>
+    </div>
+  )
 }
 
 export const pageQuery = graphql`
