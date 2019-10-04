@@ -43,10 +43,10 @@ const Header = class extends React.Component {
             <button className={styles.menuButton} onClick={() => this.toggleNavBar()}>Menu</button>
           </div>
           <nav className={`${styles.nav} ${this.state.navBarClass}`}>
-            <Link to="/wwa" className={styles.navItem} activeClassName={styles.isActive}>WWA</Link>
-            <Link to="/software" className={styles.navItem} activeClassName={styles.isActive}>Software</Link>
-            <Link to="/material" className={styles.navItem} activeClassName={styles.isActive}>Material</Link>
-            <Link to="/portfolio" className={styles.navItem} activeClassName={styles.isActive}>Portfolio</Link>
+            <Link to="/wwa/" className={styles.navItem} activeClassName={styles.isActive}>WWA</Link>
+            <Link to="/software/" className={styles.navItem} activeClassName={styles.isActive}>Software</Link>
+            <Link to="/material/" className={styles.navItem} activeClassName={styles.isActive}>Material</Link>
+            <Link to="/portfolio/" className={styles.navItem} activeClassName={styles.isActive}>Portfolio</Link>
             <a href="http://aokashi.hatenablog.jp" className={styles.navItem}>Blog</a>
             <a href="https://www.wwafansq.com" className={styles.navItem}>WWA FanSquare</a>
           </nav>
