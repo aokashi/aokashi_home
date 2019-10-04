@@ -3,6 +3,9 @@ import Layout from '../layouts/page-layout'
 
 import WWAGameData from '../data/wwa.json'
 
+import BoxList from '../components/BoxList'
+import Box from '../components/Box'
+
 const WWAPage = () => (
   <Layout>
     <article>
@@ -19,23 +22,34 @@ const WWAPage = () => (
 )
 
 const wwaList = (
-  <div className="wwa-list list">
+  <BoxList className="wwa-list">
     {
       WWAGameData.map((item, index) => (
-        <div className="list__item" key={index}>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <div className="item__nav">
-            {
-              item.links.map((link, linkIndex) => (
-                <a href={link.link} key={linkIndex}>{link.name ? link.name : 'プレイ'}</a>
-              ))
-            }
-          </div>
-        </div>
+        <Box
+          title={item.name}
+          className="is-one-third wwa-item"
+          navItems={getLinks(item.links)}
+          key={index}
+        >
+          <img src={`/images/wwa_screens/${item.id}.gif`} alt="" className="wwa-item__screen" />
+          <p className="wwa-item__description">{item.description}</p>
+        </Box>
       ))
     }
-  </div>
+  </BoxList>
 )
+
+/**
+ * WWA作品の links を出力します。
+ * @param {array} links 
+ */
+function getLinks (links) {
+  return links.map((linkItem) => {
+    return {
+      "link": linkItem.link,
+      "name": linkItem.name ? linkItem.name : 'プレイ'
+    }
+  })
+}
 
 export default WWAPage
