@@ -19,7 +19,7 @@ const isExternalLink = (link) => {
 }
 
 LinkComponent.propTypes = {
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
   className: PropTypes.string,
   activeClassName: PropTypes.string,
   style: PropTypes.object,

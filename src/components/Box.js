@@ -23,7 +23,7 @@ Box.propTypes = {
   className: PropTypes.string,
   navItems: PropTypes.arrayOf(
     PropTypes.shape({
-      link: PropTypes.string,
+      link: PropTypes.string.isRequired,
       name: PropTypes.string,
     })
   ),
