@@ -1,18 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import "./footer.sass"
+import styles from "./footer.module.sass"
 
 const Footer = ({ siteTitle }) => (
-  <footer className="main-footer">
+  <footer className={`footer ${styles.footer}`}>
     <div className="container">
-      <nav className="main-footer__nav nav">
-        <Link to="/" className="nav__item">Home</Link>
-        <Link to="/about/" className="nav__item">当サイトについて</Link>
-        <a href="http://aokashi.hatenablog.jp" className="nav__item">Blog</a>
-        <a href="https://www.wwafansq.com" className="nav__item">WWA FanSquare</a>
+      <nav className={styles.footerNav}>
+        <Link to="/" className={styles.footerNavItem}>Home</Link>
+        <Link to="/about/" className={styles.footerNavItem}>当サイトについて</Link>
+        <a href="http://aokashi.hatenablog.jp" className={styles.footerNavItem}>Blog</a>
+        <a href="https://www.wwafansq.com" className={styles.footerNavItem}>WWA FanSquare</a>
       </nav>
-      <div className="main-footer__copyright">
+      <div className={styles.footerCopyright}>
         <div>
           Copyright © 2010-{new Date().getFullYear()} {siteTitle}.
         </div>
