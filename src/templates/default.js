@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import RenderAst from '../renderAst'
 import Layout from '../layouts/page-layout'
 
+import styles from './default.module.sass'
+
 const DefaultTemplate = ({
   data
 }) => {
@@ -11,12 +13,14 @@ const DefaultTemplate = ({
   return (
     <Layout>
       <article>
-        <header className="article-header header">
-          <h1 className="header__title">{frontmatter.title}</h1>
+        <header className={styles.header}>
+          <h1 className={styles.headerTitle}>{frontmatter.title}</h1>
         </header>
-        {
-          RenderAst(htmlAst)
-        }
+        <div class="content">
+          {
+            RenderAst(htmlAst)
+          }
+        </div>
       </article>
     </Layout>
   )

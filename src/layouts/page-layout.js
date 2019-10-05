@@ -14,7 +14,7 @@ import styles from './page-layout.module.sass'
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,11 +34,6 @@ const Layout = ({ title, children }) => {
       <main className={styles.mainContent}>
         <div className="container">
           <article class={styles.mainArticle}>
-            { title &&
-              <header class={styles.mainArticleHeader}>
-                <h1>{title}</h1>
-              </header>
-            }
             {children}
           </article>
         </div>

@@ -9,18 +9,16 @@ import LinkButton from '../components/LinkButton'
 
 const SoftwarePage = () => (
   <Layout>
-    <article>
-      <header className="article-header header">
-        <h1 className="header__title">ソフトウェア</h1>
-      </header>
-      <div className="article-content content">
-        <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
-        <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
-        <InfoNote>
-          <p>各プログラムのライセンスはGitHubのLICENSEファイルをご参照願います。</p>
-        </InfoNote>
-      </div>
-    </article>
+    <header>
+      <h1>ソフトウェア</h1>
+    </header>
+    <div className="content">
+      <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
+      <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
+      <InfoNote>
+        <p>各プログラムのライセンスはGitHubのLICENSEファイルをご参照願います。</p>
+      </InfoNote>
+    </div>
     {softwareList}
   </Layout>
 )
