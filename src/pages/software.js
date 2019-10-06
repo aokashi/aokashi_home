@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../layouts/page-layout'
 
 import SoftwareData from '../data/software.json'
+import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
 import Box from '../components/Box'
 import InfoNote from '../components/InfoNote'
@@ -9,9 +10,9 @@ import LinkButton from '../components/LinkButton'
 
 const SoftwarePage = () => (
   <Layout>
-    <header>
+    <PageHeader>
       <h1>ソフトウェア</h1>
-    </header>
+    </PageHeader>
     <div className="content">
       <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
       <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>

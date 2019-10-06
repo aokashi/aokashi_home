@@ -3,14 +3,15 @@ import Layout from '../layouts/page-layout'
 
 import WWAGameData from '../data/wwa.json'
 
+import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
 import Box from '../components/Box'
 
 const WWAPage = () => (
   <Layout>
-    <header>
+    <PageHeader>
       <h1>WWA</h1>
-    </header>
+    </PageHeader>
     <div className="content">
       <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
       <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>

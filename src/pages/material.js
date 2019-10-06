@@ -1,12 +1,14 @@
 import React from 'react'
 import Layout from '../layouts/page-layout'
+
+import PageHeader from '../components/PageHeader'
 import WarningNote from '../components/WarningNote'
 
 const MaterialIndexPage = () => (
   <Layout>
-    <header>
+    <PageHeader>
       <h1>素材</h1>
-    </header>
+    </PageHeader>
     <div className="content">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <section className="section">
