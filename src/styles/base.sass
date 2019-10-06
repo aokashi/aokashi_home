@@ -1,26 +1,9 @@
 /**
- * ベースのスタイルシートファイルです。各 CSS ファイルを利用すると、事前にこのファイルが自動的にインポートされます。
+ * ベースのスタイルシートファイルです。 layouts 下のコンポーネントでは、必ずこの sass ファイルを import してください。
  */
 
 @charset "utf-8"
 
-$family-sans-serif: "Noto Sans CJK JP", "Noto Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", -sans-serif
-$text: #000000
-
-$primary: #000080
-$light: #c0c0c0
-$dark: #404040
-
-$warning: hsl(48, 100%, 80%)
-$warning-invert: hsl(48, 100%, 30%)
-
-$info: hsl(204, 64%, 80%)
-$info-invert: hsl(204, 64%, 30%)
-
-$danger: hsl(348, 64%, 80%)
-$danger-invert: hsl(348, 64%, 30%)
-
-@import "~bulma/sass/utilities/_all.sass"
 @import "~bulma/sass/base/_all.sass"
 @import "~bulma/sass/elements/container.sass"
 

@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        data: `@import base.sass`,
+        data: `@import utilities.sass`,
         includePaths: [path.resolve(__dirname, 'src/styles')],
       }
     },

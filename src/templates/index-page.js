@@ -13,7 +13,7 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <nav className="index-nav">
+      <nav className="index-nav columns">
         {
           frontmatter.nav_items.map((navItem, navIndex) => getNavLink(navItem, navIndex))
         }
@@ -68,7 +68,7 @@ const getNavLink = (navItem, navIndex) => {
   }
   
   return (
-    <div className="index-nav__item nav-item" key={navIndex}>
+    <div className="index-nav__item nav-item column" key={navIndex}>
       <Link
         href={navItem.link}
         className="nav-item__link"
