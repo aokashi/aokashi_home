@@ -6,4 +6,8 @@ const BoxList = ({ className, children }) => (
   </div>
 )
 
+BoxList.defaultProps = {
+  className: ''
+}
+
 export default BoxList

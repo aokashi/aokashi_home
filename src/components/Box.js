@@ -10,13 +10,22 @@ const Box = ({ title, className, navItems, children }) => (
     {children}
     <div className={styles.boxNav}>
       {
-        navItems.map((navItem, navIndex) => (
-          <Link href={navItem.link} className={styles.navItem} key={navIndex}>{navItem.name}</Link>
-        ))
+        navItems.map(renderNavItem)
       }
     </div>
   </div>
 )
+
+const renderNavItem = (navItem, navIndex) => {
+  if (navItem.isDownloadable) {
+    return (
+      <a href={navItem.link} download={navItem.link} className={styles.navItem} key={navIndex}>{navItem.name}</a>
+    )
+  }
+  return (
+    <Link href={navItem.link} className={styles.navItem} key={navIndex}>{navItem.name}</Link>
+  )
+}
 
 Box.propTypes = {
   title: PropTypes.string,
@@ -25,6 +34,7 @@ Box.propTypes = {
     PropTypes.shape({
       link: PropTypes.string.isRequired,
       name: PropTypes.string,
+      isDownloadable: PropTypes.bool,
     })
   ),
   children: PropTypes.node,
