@@ -27,7 +27,7 @@
   }, {
     "name": "BuHouse18",
     "file": "wwa/BuHouse18.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "建物"]
   }, {
     "name": "BuBuilding10-1",
@@ -62,12 +62,12 @@
   }, {
     "name": "BuBuilding14_plus",
     "file": "wwa/BuBuilding14_plus.gif",
-    "publishedAt": "",
+    "publishedAt": "2015-05-28",
     "tags": ["WWA素材第2世代", "建物"]
   }, {
     "name": "BuBuilding18",
     "file": "wwa/BuBuidling18.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "建物"]
   }, {
     "name": "BuWwaWindow14",
@@ -98,22 +98,22 @@
   }, {
     "name": "GrRail16-compact",
     "file": "wwa/GrRail16-compact.gif",
-    "publishedAt": "",
-    "tags": ["WWA素材第2世代", "地面"]
+    "publishedAt": "2017-12-16",
+    "tags": ["WWA素材第3世代", "地面"]
   }, {
     "name": "16Ground",
     "file": "wwa/16Ground.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "地面"]
   }, {
     "name": "Road-Road",
     "file": "wwa/18Road-Road.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "地面"]
   }, {
     "name": "RoadCarReady-RoadCarReady",
     "file": "wwa/18Road-RoadCarReady.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "地面"],
     "description": "当サイトの自動車素材に対応した道路素材です。配置しづらいため、自動車を配置する予定がない場合は対応していない素材のご利用をおすすめします。"
   }, {
@@ -151,17 +151,17 @@
   }, {
     "name": "ItSushi15",
     "file": "wwa/ItSushi15.gif",
-    "publishedAt": "",
+    "publishedAt": "2015-11-11",
     "tags": ["WWA素材第3世代", "アイテム"]
   }, {
     "name": "ItClock18",
     "file": "wwa/ItClock18.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-24",
     "tags": ["WWA素材第3世代", "アイテム"]
   }, {
     "name": "18Food",
     "file": "wwa/18Food.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "アイテム"]
   }, {
     "name": "ObFurniture11",
@@ -186,7 +186,7 @@
   }, {
     "name": "ObObject16",
     "file": "wwa/ObObject16.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-01-07",
     "tags": ["WWA素材第3世代", "物体"]
   }, {
     "name": "ObTreasure11",
@@ -196,22 +196,22 @@
   }, {
     "name": "ObBed18",
     "file": "wwa/ObBed18.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-24",
     "tags": ["WWA素材第3世代", "物体"]
   }, {
     "name": "18Furniture",
     "file": "wwa/18Furniture.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "物体"]
   }, {
     "name": "18StoreShelf",
     "file": "wwa/18StoreShelf.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "物体"]
   }, {
     "name": "18Escalator",
     "file": "wwa/18Escalator.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "物体"]
   }, {
     "name": "SyCommand10",
@@ -236,7 +236,7 @@
   }, {
     "name": "18String",
     "file": "wwa/18String.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["標準素材風", "システム"],
     "description": "数字の１２３４はNAOさんのWWA標準素材を利用しています。問題がありましたら、削除する場合があります。"
   }, {
@@ -252,27 +252,27 @@
   }, {
     "name": "18Car-Car",
     "file": "wwa/18Car-Car.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "自動車"]
   }, {
     "name": "18Car-OneBoxCar",
     "file": "wwa/18Car-OneBoxCar.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "自動車"]
   }, {
     "name": "18Car-Truck",
     "file": "wwa/18Car-Truck.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "自動車"]
   }, {
     "name": "18Car-CommuterBus",
     "file": "wwa/18Car-CommuterBus.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "自動車"]
   }, {
     "name": "18Car-HighwayBus",
     "file": "wwa/18Car-HighwayBus.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "自動車"]
   }, {
     "name": "VeTrain11-1",
@@ -297,7 +297,7 @@
   }, {
     "name": "VeTrain14-3",
     "file": "wwa/VeTrain14-3.gif",
-    "publishedAt": "",
+    "publishedAt": "2015-01-05",
     "tags": ["WWA素材第2世代", "乗り物", "列車"]
   }, {
     "name": "VeTrainInterior11",
@@ -312,47 +312,47 @@
   }, {
     "name": "VeTrain16-1",
     "file": "wwa/VeTrain16-1.gif",
-    "publishedAt": "",
+    "publishedAt": "2017-12-16",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeTrain16-2",
     "file": "wwa/VeTrain16-2.gif",
-    "publishedAt": "",
+    "publishedAt": "2017-12-16",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeTrain16-3",
     "file": "wwa/VeTrain16-3.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-09",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeTrain16-4",
     "file": "wwa/VeTrain16-4.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-24",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeLocomotive16-1",
     "file": "wwa/VeLocomotive16-1.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-09",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeLocomotive16-2",
     "file": "wwa/VeLocomotive16-2.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-02-24",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeLocomotive16-3",
     "file": "wwa/VeLocomotive16-3.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "VeFreight16",
     "file": "wwa/VeFreight16.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-01-07",
     "tags": ["WWA素材第3世代", "乗り物", "列車"]
   }, {
     "name": "18AirPlane",
     "file": "wwa/18AirPlane.gif",
-    "publishedAt": "",
+    "publishedAt": "2018-06-19",
     "tags": ["WWA素材第3世代", "乗り物"]
   }  
 ]
