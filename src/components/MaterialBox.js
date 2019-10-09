@@ -6,7 +6,7 @@ import styles from './MaterialBox.module.sass'
 
 const MaterialBox = ({ materialItem }) => (
   <Box
-    className="is-one-third"
+    className={`${styles.materialBox} is-one-third`}
   >
     <div className={styles.imageWrapper}>
       <img src={materialItem.file} alt={materialItem.name} className={styles.image} />
