@@ -5,7 +5,7 @@ import Layout from '../../layouts/page-layout'
 import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/InfoNote'
 import BoxList from '../../components/BoxList'
-import Box from '../../components/Box'
+import MaterialBox from '../../components/MaterialBox'
 
 const WWAMaterialPage = () => {
 
@@ -44,21 +44,10 @@ const wwaMaterialList = (materialData) => {
     <BoxList>
       {
         materialData.allWwaMaterialJson.nodes.map((item, itemIndex) => (
-          <Box
-            title={item.name}
-            className="is-one-third"
-            navItems={[{
-              link: item.file,
-              name: 'ダウンロード',
-              isDownloadable: true
-            }]}
+          <MaterialBox
+            materialItem={item}
             key={itemIndex}
-          >
-            {
-              item.description &&
-                <p>{item.description}</p>
-            }
-          </Box>
+          />
         ))
       }
     </BoxList>
