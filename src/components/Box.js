@@ -5,7 +5,10 @@ import styles from './Box.module.sass'
 
 const Box = ({ title, className, children }) => (
   <div className={`column ${styles.box} ${className}`}>
-    <h3 className={styles.boxTitle}>{title}</h3>
+    {
+      title &&
+        <h3 className={styles.boxTitle}>{title}</h3>
+    }
     {children}
   </div>
 )
