@@ -6,8 +6,10 @@ import CloseButtonIcon from '../images/button_icon-close.svg'
 
 const Modal = ({ onOutsideClick, children }) => (
   <div className={styles.modal} onClick={onOutsideClick}>
-    <img src={CloseButtonIcon} alt="" className={styles.closeButton} onClick={onOutsideClick} />
     <div className={styles.modalContent}>
+      <div className={styles.closeButtonWrapper}>
+        <img src={CloseButtonIcon} alt="" className={styles.closeButton} onClick={onOutsideClick} />
+      </div>
       {children}
     </div>
   </div>

@@ -14,8 +14,7 @@ class WWAMaterialPage extends React.Component {
     super()
     this.state = {
       isPreview: false,
-      previewFile: '',
-      previewAlt: '',
+      previewItem: {},
     }
   }
 
@@ -36,7 +35,14 @@ class WWAMaterialPage extends React.Component {
         {
           this.state.isPreview &&
             <Modal onOutsideClick={() => this.hidePreview()}>
-              <img src={this.state.previewFile} alt={this.state.previewAlt} />
+              <div style={{overflow: 'auto'}}>
+                <img src={this.state.previewItem.file} alt={this.state.previewItem.name} style={{width: 'auto', height: 'auto'}} />
+              </div>
+              <div>{this.state.previewItem.name}</div>
+              {
+                this.state.previewItem.description &&
+                  <div>{this.state.previewItem.description}</div>
+              }
             </Modal>
         }
       </Layout>
@@ -67,7 +73,7 @@ class WWAMaterialPage extends React.Component {
                   <MaterialBox
                     materialItem={item}
                     key={itemIndex}
-                    onItemClick={() => this.showPreview(item.file, item.name)}
+                    onItemClick={() => this.showPreview(item)}
                   />
                 ))
               }
@@ -78,11 +84,10 @@ class WWAMaterialPage extends React.Component {
     )
   }
 
-  showPreview(imageSrc, imageAlt) {
+  showPreview(item) {
     this.setState({
       isPreview: true,
-      previewFile: imageSrc,
-      previewAlt: imageAlt,
+      previewItem: item,
     })
   }
 
