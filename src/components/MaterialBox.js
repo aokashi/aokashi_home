@@ -4,11 +4,11 @@ import Box from './Box'
 
 import styles from './MaterialBox.module.sass'
 
-const MaterialBox = ({ materialItem }) => (
+const MaterialBox = ({ materialItem, onItemClick }) => (
   <Box
     className={`${styles.materialBox} is-one-third`}
   >
-    <div className={styles.imageWrapper}>
+    <div className={styles.imageWrapper} onClick={onItemClick}>
       <img src={materialItem.file} alt={materialItem.name} className={styles.image} />
     </div>
     <div className={styles.buttons}>
@@ -26,7 +26,12 @@ MaterialBox.propTypes = {
     name: PropTypes.string.isRequired,
     file: PropTypes.string.isRequired,
     description: PropTypes.string,
-  })
+  }),
+  onItemClick: PropTypes.func,
+}
+
+MaterialBox.defaultProps = {
+  onItemClick: () => {}
 }
 
 export default MaterialBox
