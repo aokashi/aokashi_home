@@ -33,10 +33,10 @@ class IconPage extends React.Component {
               }
             `}
             render={data => (
-              <>
+              <div className="columns is-multiline">
                 {
                   data.allIconMaterialJson.nodes.map((item, index) => (
-                    <section className="section" key={index}>
+                    <section className="column is-half section" key={index}>
                       <h2>{item.name}</h2>
                       <div className="block">
                         {
@@ -45,14 +45,17 @@ class IconPage extends React.Component {
                           ))
                         }
                       </div>
-                      <div className="block">
-                        <LinkButton href={item.downloadFile}>ダウンロード</LinkButton>
-                      </div>
+                      {
+                        item.downloadFile &&
+                          <div className="block">
+                            <LinkButton href={item.downloadFile}>ダウンロード</LinkButton>
+                          </div>
+                      }
                       <p>{item.description}</p>
                     </section>
                   ))
                 }
-              </>
+              </div>
             )}
           />
         </div>

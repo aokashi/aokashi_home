@@ -3,69 +3,69 @@
     "name": "hp1",
     "files": [
       {
-        "src": "icon/hp1/hp1-1.gif"
+        "src": "/materials/icon/hp1/hp1-1.gif"
       }, {
-        "src": "icon/hp1/hp1-2.gif"
+        "src": "/materials/icon/hp1/hp1-2.gif"
       }, {
-        "src": "icon/hp1/hp1-3.gif"
+        "src": "/materials/icon/hp1/hp1-3.gif"
       }, {
-        "src": "icon/hp1/hp1-4.gif"
+        "src": "/materials/icon/hp1/hp1-4.gif"
       }, {
-        "src": "icon/hp1/hp1-5.gif"
+        "src": "/materials/icon/hp1/hp1-5.gif"
       }, {
-        "src": "icon/hp1/hp1-6.gif"
+        "src": "/materials/icon/hp1/hp1-6.gif"
       }, {
-        "src": "icon/hp1/hp1-7.gif"
+        "src": "/materials/icon/hp1/hp1-7.gif"
       }, {
-        "src": "icon/hp1/hp1-8.gif"
+        "src": "/materials/icon/hp1/hp1-8.gif"
       }, {
-        "src": "icon/hp1/hp1-9.gif"
+        "src": "/materials/icon/hp1/hp1-9.gif"
       }, {
-        "src": "icon/hp1/hp1-10.gif"
+        "src": "/materials/icon/hp1/hp1-10.gif"
       }, {
-        "src": "icon/hp1/hp1-11.gif"
+        "src": "/materials/icon/hp1/hp1-11.gif"
       }, {
-        "src": "icon/hp1/hp1-12.gif"
+        "src": "/materials/icon/hp1/hp1-12.gif"
       }, {
-        "src": "icon/hp1/hp1-13.gif"
+        "src": "/materials/icon/hp1/hp1-13.gif"
       }, {
-        "src": "icon/hp1/hp1-14.gif"
+        "src": "/materials/icon/hp1/hp1-14.gif"
       }, {
-        "src": "icon/hp1/hp1-15.gif"
+        "src": "/materials/icon/hp1/hp1-15.gif"
       }, {
-        "src": "icon/hp1/hp1-16.gif"
+        "src": "/materials/icon/hp1/hp1-16.gif"
       }, {
-        "src": "icon/hp1/hp1-17.gif"
+        "src": "/materials/icon/hp1/hp1-17.gif"
       }, {
-        "src": "icon/hp1/hp1-18.gif"
+        "src": "/materials/icon/hp1/hp1-18.gif"
       }, {
-        "src": "icon/hp1/hp1-19.gif"
+        "src": "/materials/icon/hp1/hp1-19.gif"
       }, {
-        "src": "icon/hp1/hp1-20.gif"
+        "src": "/materials/icon/hp1/hp1-20.gif"
       }, {
-        "src": "icon/hp1/hp1-21.gif"
+        "src": "/materials/icon/hp1/hp1-21.gif"
       }, {
-        "src": "icon/hp1/hp1-22.gif"
+        "src": "/materials/icon/hp1/hp1-22.gif"
       }, {
-        "src": "icon/hp1/hp1-23.gif"
+        "src": "/materials/icon/hp1/hp1-23.gif"
       }, {
-        "src": "icon/hp1/hp1-24.gif"
+        "src": "/materials/icon/hp1/hp1-24.gif"
       }, {
-        "src": "icon/hp1/hp1-25.gif"
+        "src": "/materials/icon/hp1/hp1-25.gif"
       }, {
-        "src": "icon/hp1/hp1-26.gif"
+        "src": "/materials/icon/hp1/hp1-26.gif"
       }, {
-        "src": "icon/hp1/hp1-27.gif"
+        "src": "/materials/icon/hp1/hp1-27.gif"
       }, {
-        "src": "icon/hp1/hp1-28.gif"
+        "src": "/materials/icon/hp1/hp1-28.gif"
       }, {
-        "src": "icon/hp1/hp1-29.gif"
+        "src": "/materials/icon/hp1/hp1-29.gif"
       }, {
-        "src": "icon/hp1/hp1-30.gif"
+        "src": "/materials/icon/hp1/hp1-30.gif"
       }, {
-        "src": "icon/hp1/hp1-31.gif"
+        "src": "/materials/icon/hp1/hp1-31.gif"
       }, {
-        "src": "icon/hp1/hp1-32.gif"
+        "src": "/materials/icon/hp1/hp1-32.gif"
       }
     ],
     "downloadFile": "/materials/icon/hp1/hp1.zip",
@@ -75,55 +75,55 @@
     "name": "hp2",
     "files": [
       {
-        "src": "icon/hp2/hp2-1.gif"
+        "src": "/materials/icon/hp2/hp2-1.gif"
       }, {
-        "src": "icon/hp2/hp2-2.gif"
+        "src": "/materials/icon/hp2/hp2-2.gif"
       }, {
-        "src": "icon/hp2/hp2-3.gif"
+        "src": "/materials/icon/hp2/hp2-3.gif"
       }, {
-        "src": "icon/hp2/hp2-4.gif"
+        "src": "/materials/icon/hp2/hp2-4.gif"
       }, {
-        "src": "icon/hp2/hp2-5.gif"
+        "src": "/materials/icon/hp2/hp2-5.gif"
       }, {
-        "src": "icon/hp2/hp2-6.gif"
+        "src": "/materials/icon/hp2/hp2-6.gif"
       }, {
-        "src": "icon/hp2/hp2-7.gif"
+        "src": "/materials/icon/hp2/hp2-7.gif"
       }, {
-        "src": "icon/hp2/hp2-8.gif"
+        "src": "/materials/icon/hp2/hp2-8.gif"
       }, {
-        "src": "icon/hp2/hp2-9.gif"
+        "src": "/materials/icon/hp2/hp2-9.gif"
       }, {
-        "src": "icon/hp2/hp2-10.gif"
+        "src": "/materials/icon/hp2/hp2-10.gif"
       }, {
-        "src": "icon/hp2/hp2-11.gif"
+        "src": "/materials/icon/hp2/hp2-11.gif"
       }, {
-        "src": "icon/hp2/hp2-12.gif"
+        "src": "/materials/icon/hp2/hp2-12.gif"
       }, {
-        "src": "icon/hp2/hp2-13.gif"
+        "src": "/materials/icon/hp2/hp2-13.gif"
       }, {
-        "src": "icon/hp2/hp2-14.gif"
+        "src": "/materials/icon/hp2/hp2-14.gif"
       }, {
-        "src": "icon/hp2/hp2-15.gif"
+        "src": "/materials/icon/hp2/hp2-15.gif"
       }, {
-        "src": "icon/hp2/hp2-16.gif"
+        "src": "/materials/icon/hp2/hp2-16.gif"
       }, {
-        "src": "icon/hp2/hp2-17.gif"
+        "src": "/materials/icon/hp2/hp2-17.gif"
       }, {
-        "src": "icon/hp2/hp2-18.gif"
+        "src": "/materials/icon/hp2/hp2-18.gif"
       }, {
-        "src": "icon/hp2/hp2-19.gif"
+        "src": "/materials/icon/hp2/hp2-19.gif"
       }, {
-        "src": "icon/hp2/hp2-20.gif"
+        "src": "/materials/icon/hp2/hp2-20.gif"
       }, {
-        "src": "icon/hp2/hp2-21.gif"
+        "src": "/materials/icon/hp2/hp2-21.gif"
       }, {
-        "src": "icon/hp2/hp2-22.gif"
+        "src": "/materials/icon/hp2/hp2-22.gif"
       }, {
-        "src": "icon/hp2/hp2-23.gif"
+        "src": "/materials/icon/hp2/hp2-23.gif"
       }, {
-        "src": "icon/hp2/hp2-24.gif"
+        "src": "/materials/icon/hp2/hp2-24.gif"
       }, {
-        "src": "icon/hp2/hp2-25.gif"
+        "src": "/materials/icon/hp2/hp2-25.gif"
       }
     ],
     "downloadFile": "/materials/icon/hp2/hp2.zip",
@@ -133,40 +133,40 @@
     "name": "hp1b",
     "files": [
       {
-        "src": "icon/hp1b/work.gif",
+        "src": "/materials/icon/hp1b/work.gif",
         "alt": "hp1b 職業安定所"
       }, {
-        "src": "icon/hp1b/bank.gif",
+        "src": "/materials/icon/hp1b/bank.gif",
         "alt": "hp1b 銀行"
       }, {
-        "src": "icon/hp1b/syokudou.gif",
+        "src": "/materials/icon/hp1b/syokudou.gif",
         "alt": "hp1b 食堂"
       }, {
-        "src": "icon/hp1b/kentiku.gif",
+        "src": "/materials/icon/hp1b/kentiku.gif",
         "alt": "hp1b 建築会社"
       }, {
-        "src": "icon/hp1b/depart.gif",
+        "src": "/materials/icon/hp1b/depart.gif",
         "alt": "hp1b デパート"
       }, {
-        "src": "icon/hp1b/yakuba.gif",
+        "src": "/materials/icon/hp1b/yakuba.gif",
         "alt": "hp1b 役場"
       }, {
-        "src": "icon/hp1b/game.gif",
+        "src": "/materials/icon/hp1b/game.gif",
         "alt": "hp1b ゲーム"
       }, {
-        "src": "icon/hp1b/img115.gif",
+        "src": "/materials/icon/hp1b/img115.gif",
         "alt": "hp1b お宝ゲーム"
       }, {
-        "src": "icon/hp1b/loto.gif",
+        "src": "/materials/icon/hp1b/loto.gif",
         "alt": "hp1b ロト"
       }, {
-        "src": "icon/hp1b/bbs5.gif",
+        "src": "/materials/icon/hp1b/bbs5.gif",
         "alt": "hp1b 掲示板"
       }, {
-        "src": "icon/hp1b/resai.gif",
+        "src": "/materials/icon/hp1b/resai.gif",
         "alt": "hp1b リサイクルショップ"
       }, {
-        "src": "icon/hp1b/donuts_tate.gif",
+        "src": "/materials/icon/hp1b/donuts_tate.gif",
         "alt": "hp1b ゲーム施設"
       }
     ],
@@ -177,110 +177,110 @@
     "name": "hp2b",
     "files": [
       {
-        "src": "icon/hp2b/assenjo.gif",
+        "src": "/materials/icon/hp2b/assenjo.gif",
         "alt": "hp2b 斡旋所"
       }, {
-        "src": "icon/hp2b/auction.gif",
+        "src": "/materials/icon/hp2b/auction.gif",
         "alt": "hp2b オークション"
       }, {
-        "src": "icon/hp2b/bank.gif",
+        "src": "/materials/icon/hp2b/bank.gif",
         "alt": "hp2b 銀行"
       }, {
-        "src": "icon/hp2b/bbs1.gif",
+        "src": "/materials/icon/hp2b/bbs1.gif",
         "alt": "hp2b 掲示板1"
       }, {
-        "src": "icon/hp2b/bbs2.gif",
+        "src": "/materials/icon/hp2b/bbs2.gif",
         "alt": "hp2b 掲示板2"
       }, {
-        "src": "icon/hp2b/bbs3.gif",
+        "src": "/materials/icon/hp2b/bbs3.gif",
         "alt": "hp2b 掲示板3"
       }, {
-        "src": "icon/hp2b/bbs4.gif",
+        "src": "/materials/icon/hp2b/bbs4.gif",
         "alt": "hp2b 掲示板4"
       }, {
-        "src": "icon/hp2b/bbs5.gif",
+        "src": "/materials/icon/hp2b/bbs5.gif",
         "alt": "hp2b 掲示板他"
       }, {
-        "src": "icon/hp2b/bil1.gif",
+        "src": "/materials/icon/hp2b/bil1.gif",
         "alt": "hp2b 住所録"
       }, {
-        "src": "icon/hp2b/chara_battle.gif",
+        "src": "/materials/icon/hp2b/chara_battle.gif",
         "alt": "hp2b Cリーグ"
       }, {
-        "src": "icon/hp2b/coupon.gif",
+        "src": "/materials/icon/hp2b/coupon.gif",
         "alt": "hp2b クーポン"
       }, {
-        "src": "icon/hp2b/depart.gif",
+        "src": "/materials/icon/hp2b/depart.gif",
         "alt": "hp2b デパート"
       }, {
-        "src": "icon/hp2b/depart2.gif",
+        "src": "/materials/icon/hp2b/depart2.gif",
         "alt": "hp2b デパート(2)"
       }, {
-        "src": "icon/hp2b/donuts_tate.gif",
+        "src": "/materials/icon/hp2b/donuts_tate.gif",
         "alt": "hp2b ゲーム施設"
       }, {
-        "src": "icon/hp2b/game.gif",
+        "src": "/materials/icon/hp2b/game.gif",
         "alt": "hp2b ゲーム"
       }, {
-        "src": "icon/hp2b/gouseiyai.gif",
+        "src": "/materials/icon/hp2b/gouseiyai.gif",
         "alt": "hp2b 合成屋"
       }, {
-        "src": "icon/hp2b/gym.gif",
+        "src": "/materials/icon/hp2b/gym.gif",
         "alt": "hp2b ジム"
       }, {
-        "src": "icon/hp2b/hospital.gif",
+        "src": "/materials/icon/hp2b/hospital.gif",
         "alt": "hp2b 病院"
       }, {
-        "src": "icon/hp2b/house1.gif",
+        "src": "/materials/icon/hp2b/house1.gif",
         "alt": "hp2b 特殊施設",
         "background": "#ff8080"
       }, {
-        "src": "icon/hp2b/img062.gif",
+        "src": "/materials/icon/hp2b/img062.gif",
         "alt": "hp2b アイテム投稿所"
       }, {
-        "src": "icon/hp2b/kabu.gif",
+        "src": "/materials/icon/hp2b/kabu.gif",
         "alt": "hp2b 株の取引所"
       }, {
-        "src": "icon/hp2b/keiba.gif",
+        "src": "/materials/icon/hp2b/keiba.gif",
         "alt": "hp2b 競馬"
       }, {
-        "src": "icon/hp2b/kentiku.gif",
+        "src": "/materials/icon/hp2b/kentiku.gif",
         "alt": "hp2b 建設会社"
       }, {
-        "src": "icon/hp2b/kyousitu.gif",
+        "src": "/materials/icon/hp2b/kyousitu.gif",
         "alt": "hp2b 教室"
       }, {
-        "src": "icon/hp2b/matikon.gif",
+        "src": "/materials/icon/hp2b/matikon.gif",
         "alt": "hp2b 街コンテスト"
       }, {
-        "src": "icon/hp2b/onsen.gif",
+        "src": "/materials/icon/hp2b/onsen.gif",
         "alt": "hp2b 温泉"
       }, {
-        "src": "icon/hp2b/prof.gif",
+        "src": "/materials/icon/hp2b/prof.gif",
         "alt": "hp2b プロフィール"
       }, {
-        "src": "icon/hp2b/resai.gif",
+        "src": "/materials/icon/hp2b/resai.gif",
         "alt": "hp2b リサイクルショップ"
       }, {
-        "src": "icon/hp2b/school.gif",
+        "src": "/materials/icon/hp2b/school.gif",
         "alt": "hp2b スクール"
       }, {
-        "src": "icon/hp2b/syokudou.gif",
+        "src": "/materials/icon/hp2b/syokudou.gif",
         "alt": "hp2b 食堂"
       }, {
-        "src": "icon/hp2b/syokudou2.gif",
+        "src": "/materials/icon/hp2b/syokudou2.gif",
         "alt": "hp2b 食堂(2)"
       }, {
-        "src": "icon/hp2b/tokuten.gif",
+        "src": "/materials/icon/hp2b/tokuten.gif",
         "alt": "hp2b 特典"
       }, {
-        "src": "icon/hp2b/tonya.gif",
+        "src": "/materials/icon/hp2b/tonya.gif",
         "alt": "hp2b 問屋"
       }, {
-        "src": "icon/hp2b/work.gif",
+        "src": "/materials/icon/hp2b/work.gif",
         "alt": "hp2b 職業安定所"
       }, {
-        "src": "icon/hp2b/yakuba.gif",
+        "src": "/materials/icon/hp2b/yakuba.gif",
         "alt": "hp2b 役場"
       }
     ],
@@ -291,58 +291,58 @@
     "name": "hp3b",
     "files": [
       {
-        "src": "icon/hp3b/work.gif",
+        "src": "/materials/icon/hp3b/work.gif",
         "alt": "hp3b 職業安定所"
       }, {
-        "src": "icon/hp3b/syokudou.gif",
+        "src": "/materials/icon/hp3b/syokudou.gif",
         "alt": "hp3b 食堂"
       }, {
-        "src": "icon/hp3b/bank.gif",
+        "src": "/materials/icon/hp3b/bank.gif",
         "alt": "hp3b 銀行"
       }, {
-        "src": "icon/hp3b/kentiku.gif",
+        "src": "/materials/icon/hp3b/kentiku.gif",
         "alt": "hp3b 建築会社"
       }, {
-        "src": "icon/hp3b/depart.gif",
+        "src": "/materials/icon/hp3b/depart.gif",
         "alt": "hp3b デパート"
       }, {
-        "src": "icon/hp3b/gym.gif",
+        "src": "/materials/icon/hp3b/gym.gif",
         "alt": "hp3b ジム"
       }, {
-        "src": "icon/hp3b/school.gif",
+        "src": "/materials/icon/hp3b/school.gif",
         "alt": "hp3b スクール"
       }, {
-        "src": "icon/hp3b/onsen.gif",
+        "src": "/materials/icon/hp3b/onsen.gif",
         "alt": "hp3b 温泉"
       }, {
-        "src": "icon/hp3b/yakuba.gif",
+        "src": "/materials/icon/hp3b/yakuba.gif",
         "alt": "hp3b 役場"
       }, {
-        "src": "icon/hp3b/chara_battle.gif",
+        "src": "/materials/icon/hp3b/chara_battle.gif",
         "alt": "hp3b Cリーグ"
       }, {
-        "src": "icon/hp3b/matikon.gif",
+        "src": "/materials/icon/hp3b/matikon.gif",
         "alt": "hp3b 街コンテスト"
       }, {
-        "src": "icon/hp3b/prof.gif",
+        "src": "/materials/icon/hp3b/prof.gif",
         "alt": "hp3b プロフィール"
       }, {
-        "src": "icon/hp3b/assenjo.gif",
+        "src": "/materials/icon/hp3b/assenjo.gif",
         "alt": "hp3b 斡旋所"
       }, {
-        "src": "icon/hp3b/hospital.gif",
+        "src": "/materials/icon/hp3b/hospital.gif",
         "alt": "hp3b 病院"
       }, {
-        "src": "icon/hp3b/keiba.gif",
+        "src": "/materials/icon/hp3b/keiba.gif",
         "alt": "hp3b 競馬"
       }, {
-        "src": "icon/hp3b/tonya.gif",
+        "src": "/materials/icon/hp3b/tonya.gif",
         "alt": "hp3b 問屋"
       }, {
-        "src": "icon/hp3b/bbs1.gif",
+        "src": "/materials/icon/hp3b/bbs1.gif",
         "alt": "hp3b 掲示板1"
       }, {
-        "src": "icon/hp3b/donuts_tate.gif",
+        "src": "/materials/icon/hp3b/donuts_tate.gif",
         "alt": "hp3b ゲーム施設"
       }
     ],
@@ -353,46 +353,46 @@
     "name": "TOWNの副産物",
     "files": [
       {
-        "src": "icon/sub/cardw2.gif",
+        "src": "/materials/icon/sub/cardw2.gif",
         "alt": "カードゲーム(マルチカード)"
       }, {
-        "src": "icon/sub/g1.gif",
+        "src": "/materials/icon/sub/g1.gif",
         "alt": "カードゲーム(1)"
       }, {
-        "src": "icon/sub/g2.gif",
+        "src": "/materials/icon/sub/g2.gif",
         "alt": "カードゲーム(2)"
       }, {
-        "src": "icon/sub/g3.gif",
+        "src": "/materials/icon/sub/g3.gif",
         "alt": "カードゲーム(3)"
       }, {
-        "src": "icon/sub/g4.gif",
+        "src": "/materials/icon/sub/g4.gif",
         "alt": "カードゲーム(High and Low)"
       }, {
-        "src": "icon/sub/g5.gif",
+        "src": "/materials/icon/sub/g5.gif",
         "alt": "カードゲーム(スロット)"
       }, {
-        "src": "icon/sub/g6.gif",
+        "src": "/materials/icon/sub/g6.gif",
         "alt": "カードゲーム(サイコロ)"
       }, {
-        "src": "icon/sub/g7.gif",
+        "src": "/materials/icon/sub/g7.gif",
         "alt": "カードゲーム(くじ)"
       }, {
-        "src": "icon/sub/poker.gif",
+        "src": "/materials/icon/sub/poker.gif",
         "alt": "カードゲーム(ポーカー)"
       }, {
-        "src": "icon/sub/bus1.gif",
+        "src": "/materials/icon/sub/bus1.gif",
         "alt": "バス停(小)"
       }, {
-        "src": "icon/sub/bus2.gif",
+        "src": "/materials/icon/sub/bus2.gif",
         "alt": "バス停(大)"
       }, {
-        "src": "icon/sub/temple.gif",
+        "src": "/materials/icon/sub/temple.gif",
         "alt": "寺院"
       }, {
-        "src": "icon/sub/treasure.gif",
+        "src": "/materials/icon/sub/treasure.gif",
         "alt": "お宝ゲーム"
       }, {
-        "src": "icon/sub/zihanki.gif",
+        "src": "/materials/icon/sub/zihanki.gif",
         "alt": "自動販売機"
       }
     ],
