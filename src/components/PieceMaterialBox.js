@@ -9,20 +9,23 @@ const PieceMaterialBox = ({ materialItem }) => {
 
   return (
     <MaterialBox
+      width="half"
       title={materialItem.name}
       materialItem={materialItem}
     >
       <div className="block">
         {
           materialItem.files.map((file, fileIndex) => {
-            let noteSign = '';
+            let noteSign = ''
             if (file.note) {
-              notes.push(file.note);
-              noteSign = notes.length;
+              notes.push(file.note)
+              noteSign = <sup>{notes.length}</sup>
             }
             return (
               <span key={fileIndex}>
-                <img src={file.src} alt={file.alt} />
+                <a download={file.src} href={file.src}>
+                  <img src={file.src} alt={file.alt} />
+                </a>
                 {noteSign}
               </span>
             )

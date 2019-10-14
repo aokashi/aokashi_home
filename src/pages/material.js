@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../layouts/page-layout'
 
+import MaterialSidebar from '../components/MaterialSidebar'
 import PageHeader from '../components/PageHeader'
 import WarningNote from '../components/WarningNote'
 
 const MaterialIndexPage = () => (
-  <Layout>
+  <Layout sidebarContent={MaterialSidebar()}>
     <PageHeader>
       <h1>素材</h1>
     </PageHeader>

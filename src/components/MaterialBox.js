@@ -4,10 +4,10 @@ import Box from './Box'
 
 import styles from './MaterialBox.module.sass'
 
-const MaterialBox = ({ materialItem, title, children }) => (
+const MaterialBox = ({ materialItem, width, title, children }) => (
   <Box
     title={title}
-    className={`${styles.materialBox} is-one-third`}
+    className={`${styles.materialBox} is-${width}`}
   >
     {children}
     {
@@ -33,12 +33,14 @@ MaterialBox.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
   }),
+  width: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.node,
 }
 
 MaterialBox.defaultProps = {
-  onItemClick: () => {}
+  width: 'one-third',
+  onItemClick: () => {},
 }
 
 export default MaterialBox

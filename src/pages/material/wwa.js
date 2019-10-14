@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../../layouts/page-layout'
 
+import MaterialSidebar from '../../components/MaterialSidebar'
 import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/InfoNote'
 import BoxList from '../../components/BoxList'
@@ -21,7 +22,7 @@ class WWAMaterialPage extends React.Component {
   render() {
 
     return (
-      <Layout>
+      <Layout sidebarContent={MaterialSidebar()}>
         <PageHeader>
           <h1>WWA素材</h1>
         </PageHeader>
