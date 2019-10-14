@@ -172,7 +172,7 @@
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - アイテム"
+    - アイテム
   description: |
     右下の黒い食品は未だに何なのか分かっていません。しらす？
 - name: ItPhone14
@@ -288,7 +288,7 @@
   publishedAt: 2018-06-19
   tags:
     - 標準素材風
-    - システム"
+    - システム
   description: |
     数字の１２３４はNAOさんのWWA標準素材を利用しています。問題がありましたら、削除する場合があります。
 - name: VeBus13

@@ -4,16 +4,22 @@ import Box from './Box'
 
 import styles from './MaterialBox.module.sass'
 
-const MaterialBox = ({ materialItem, onItemClick }) => (
+const MaterialBox = ({ materialItem, title, children }) => (
   <Box
+    title={title}
     className={`${styles.materialBox} is-one-third`}
   >
-    <div className={styles.imageWrapper} onClick={onItemClick}>
-      <img src={materialItem.file} alt={materialItem.name} className={styles.image} />
-    </div>
-    <div className={styles.buttons}>
-      <a download={materialItem.file} href={materialItem.file} className={styles.downloadButton}>ダウンロード</a>
-    </div>
+    {children}
+    {
+      materialItem.tags &&
+        <div className={styles.tags}>
+          {
+            materialItem.tags.map((tagItem, tagIndex) => (
+              <span className={styles.tagItem} key={tagIndex}>{tagItem}</span>
+            ))
+          }
+        </div>
+    }
     {
       materialItem.description &&
         <p className={styles.description}>{materialItem.description}</p>
@@ -24,10 +30,11 @@ const MaterialBox = ({ materialItem, onItemClick }) => (
 MaterialBox.propTypes = {
   materialItem: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    file: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
   }),
-  onItemClick: PropTypes.func,
+  title: PropTypes.string,
+  children: PropTypes.node,
 }
 
 MaterialBox.defaultProps = {

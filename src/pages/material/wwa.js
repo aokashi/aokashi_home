@@ -5,8 +5,8 @@ import Layout from '../../layouts/page-layout'
 import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/InfoNote'
 import BoxList from '../../components/BoxList'
-import MaterialBox from '../../components/MaterialBox'
 import Modal from '../../components/Modal'
+import ImageMaterialBox from '../../components/ImageMaterialBox'
 
 class WWAMaterialPage extends React.Component {
 
@@ -70,7 +70,7 @@ class WWAMaterialPage extends React.Component {
             <>
               {
                 data.allWwaMaterialYaml.nodes.map((item, itemIndex) => (
-                  <MaterialBox
+                  <ImageMaterialBox
                     materialItem={item}
                     key={itemIndex}
                     onItemClick={() => this.showPreview(item)}
