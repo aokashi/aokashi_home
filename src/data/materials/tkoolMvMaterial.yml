@@ -1,0 +1,21 @@
+- name: GrRail17
+  file: /materials/tkool_mv/GrRail17.png
+  tags:
+    - 線路
+  description: |
+    線路を敷く地面を先に設置してください。バラストは後に追加予定です。
+- name: VeCommuterTrain17-1
+  file: /materials/tkool_mv/VeCommuterTrain17-1.png
+  tags:
+    - 列車
+- name: VeCommuterTrain17-2
+  file: /materials/tkool_mv/VeCommuterTrain17-2.png
+  tags:
+    - 列車
+- name: VeCommuterTrainDoor17
+  file: /materials/tkool_mv/!VeCommuterTrainDoor17.png
+  tags:
+    - ドア
+  description: |
+    ファイル名に含まれる ! はキャラクターの位置をマップチップのマスと合わせるための設定です。
+    省略すると、ドアと車両の位置がズレる場合があります。

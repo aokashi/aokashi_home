@@ -5,6 +5,7 @@ import SoftwareData from '../data/software.json'
 import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
 import Box from '../components/Box'
+import BoxNav from '../components/BoxNav'
 import InfoNote from '../components/InfoNote'
 import LinkButton from '../components/LinkButton'
 
@@ -31,7 +32,6 @@ const softwareList = (
         <Box
           title={item.name}
           className="list__item"
-          navItems={getLinks(item)}
           key={index}
         >
           <p>{item.description}</p>
@@ -42,6 +42,7 @@ const softwareList = (
               ))
             }
           </div>
+          <BoxNav navItems={getLinks(item)} />
         </Box>
       ))
     }

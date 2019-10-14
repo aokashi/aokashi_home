@@ -6,6 +6,7 @@ import WWAGameData from '../data/wwa.json'
 import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
 import Box from '../components/Box'
+import BoxNav from '../components/BoxNav'
 
 const WWAPage = () => (
   <Layout>
@@ -27,11 +28,11 @@ const wwaList = (
         <Box
           title={item.name}
           className="is-one-third wwa-item"
-          navItems={getLinks(item.links)}
           key={index}
         >
           <img src={`/images/wwa_screens/${item.id}.gif`} alt="" className="wwa-item__screen" />
           <p className="wwa-item__description">{item.description}</p>
+          <BoxNav navItems={getLinks(item.links)} />
         </Box>
       ))
     }
@@ -40,7 +41,8 @@ const wwaList = (
 
 /**
  * WWA作品の links を出力します。
- * @param {array} links 
+ * @param {array} links
+ * @returns {Array}
  */
 function getLinks (links) {
   return links.map((linkItem) => {
