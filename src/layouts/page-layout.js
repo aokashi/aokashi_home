@@ -14,6 +14,7 @@ import styles from './page-layout.module.sass'
 
 import Header from "../components/header"
 import Footer from "../components/footer"
+import Sidebar from "../components/Sidebar/Sidebar"
 
 const Layout = ({ sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
@@ -37,9 +38,7 @@ const Layout = ({ sidebarContent, children }) => {
           <div className="columns">
             {
               sidebarContent &&
-                <aside className={`${styles.mainSidebar} column is-narrow`}>
-                  {sidebarContent}
-                </aside>
+                <Sidebar>{sidebarContent}</Sidebar>
             }
             <article className={`${styles.mainArticle} column`}>
               {children}

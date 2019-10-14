@@ -4,9 +4,9 @@ import Layout from '../layouts/page-layout'
 import SoftwareData from '../data/software.json'
 import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
-import Box from '../components/Box'
+import Box from '../components/Box/Box'
 import BoxNav from '../components/BoxNav'
-import InfoNote from '../components/InfoNote'
+import InfoNote from '../components/Note/InfoNote'
 import LinkButton from '../components/LinkButton'
 
 const SoftwarePage = () => (

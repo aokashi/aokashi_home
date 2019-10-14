@@ -2,10 +2,10 @@ import React from 'react'
 import Layout from '../../layouts/page-layout'
 import { StaticQuery, graphql } from 'gatsby'
 
-import MaterialSidebar from '../../components/MaterialSidebar'
+import MaterialSidebar from '../../components/Sidebar/MaterialSidebar'
 import PageHeader from '../../components/PageHeader'
 import BoxList from '../../components/BoxList'
-import PieceMaterialBox from '../../components/PieceMaterialBox'
+import PieceMaterialBox from '../../components/Box/PieceMaterialBox'
 
 class IconPage extends React.Component {
   render() {

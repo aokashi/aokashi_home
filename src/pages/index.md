@@ -8,7 +8,7 @@ nav_items:
     color: '#ffc0c0'
   - name: Software
     link: software/
-    icon: 
+    icon: /images/menu_icon-software.png
     color: '#c0ffc0'
   - name: Material
     link: material/

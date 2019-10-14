@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../layouts/page-layout'
 
-import MaterialSidebar from '../components/MaterialSidebar'
+import MaterialSidebar from '../components/Sidebar/MaterialSidebar'
 import PageHeader from '../components/PageHeader'
-import WarningNote from '../components/WarningNote'
+import WarningNote from '../components/Note/WarningNote'
 
 const MaterialIndexPage = () => (
   <Layout sidebarContent={MaterialSidebar()}>

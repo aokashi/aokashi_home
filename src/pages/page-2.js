@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 import Layout from "../layouts/page-layout"
 import SEO from "../components/seo"
-import WarningNote from "../components/WarningNote"
-import InfoNote from "../components/InfoNote"
-import DangerNote from "../components/DangerNote"
+import WarningNote from "../components/Note/WarningNote"
+import InfoNote from "../components/Note/InfoNote"
+import DangerNote from "../components/Note/DangerNote"
 
 const SecondPage = () => (
   <Layout>

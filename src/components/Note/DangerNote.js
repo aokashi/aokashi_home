@@ -1,7 +1,7 @@
 import React from 'react'
 import Note from './Note'
 import styles from './DangerNote.module.sass'
-import DangerIcon from '../images/note_icon-danger.png'
+import DangerIcon from '../../images/note_icon-danger.png'
 
 const DangerNote = ({ children }) => (
   <Note

@@ -5,7 +5,7 @@ import WWAGameData from '../data/wwa.json'
 
 import PageHeader from '../components/PageHeader'
 import BoxList from '../components/BoxList'
-import Box from '../components/Box'
+import Box from '../components/Box/Box'
 import BoxNav from '../components/BoxNav'
 
 const WWAPage = () => (
