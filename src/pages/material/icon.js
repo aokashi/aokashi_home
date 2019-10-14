@@ -17,7 +17,7 @@ class IconPage extends React.Component {
           <StaticQuery
             query={graphql`
               query IconMaterialDataQuery {
-                allIconMaterialJson {
+                allIconMaterialYaml {
                   nodes {
                     name
                     description
@@ -25,7 +25,7 @@ class IconPage extends React.Component {
                     files {
                       src
                       alt
-                      background
+                      note
                     }
                     tags
                   }
@@ -35,25 +35,45 @@ class IconPage extends React.Component {
             render={data => (
               <div className="columns is-multiline">
                 {
-                  data.allIconMaterialJson.nodes.map((item, index) => (
-                    <section className="column is-half section" key={index}>
-                      <h2>{item.name}</h2>
-                      <div className="block">
+                  data.allIconMaterialYaml.nodes.map((item, index) => {
+                    let notes = [];
+                    return (
+                      <section className="column is-half section" key={index}>
+                        <h2>{item.name}</h2>
+                        <div className="block">
+                          {
+                            item.files.map((file, fileIndex) => {
+                              let noteSign = '';
+                              if (file.note) {
+                                notes.push(file.note);
+                                noteSign = notes.length;
+                              }
+                              return (
+                                <span key={fileIndex}>
+                                  <img src={file.src} alt={file.alt} />
+                                  {noteSign}
+                                </span>
+                              )
+                            })
+                          }
+                        </div>
+                        <ol>
+                          {
+                            notes.map((noteItem, noteIndex) => (
+                              <li key={noteIndex}>{noteItem}</li>
+                            ))
+                          }
+                        </ol>
                         {
-                          item.files.map((file, fileIndex) => (
-                            <img src={file.src} alt={file.alt} key={fileIndex} />
-                          ))
+                          item.downloadFile &&
+                            <div className="block">
+                              <LinkButton href={item.downloadFile}>ダウンロード</LinkButton>
+                            </div>
                         }
-                      </div>
-                      {
-                        item.downloadFile &&
-                          <div className="block">
-                            <LinkButton href={item.downloadFile}>ダウンロード</LinkButton>
-                          </div>
-                      }
-                      <p>{item.description}</p>
-                    </section>
-                  ))
+                        <p>{item.description}</p>
+                      </section>
+                    )
+                  })
                 }
               </div>
             )}

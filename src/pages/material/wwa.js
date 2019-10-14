@@ -55,7 +55,7 @@ class WWAMaterialPage extends React.Component {
         <StaticQuery
           query={graphql`
             query WWAMaterialDataQuery {
-              allWwaMaterialJson {
+              allWwaMaterialYaml {
                 nodes {
                   name
                   file
@@ -69,7 +69,7 @@ class WWAMaterialPage extends React.Component {
           render={data => (
             <>
               {
-                data.allWwaMaterialJson.nodes.map((item, itemIndex) => (
+                data.allWwaMaterialYaml.nodes.map((item, itemIndex) => (
                   <MaterialBox
                     materialItem={item}
                     key={itemIndex}

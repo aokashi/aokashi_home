@@ -1,0 +1,431 @@
+- name: Set09
+  file: /materials/wwa/Set09.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第1世代
+    - セット
+- name: Set14
+  file: /materials/wwa/Set14.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - セット
+- name: Set16
+  file: /materials/wwa/Set16.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第3世代
+    - セット
+- name: BuHouse10
+  file: /materials/wwa/BuHouse10.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuHouse12
+  file: /materials/wwa/BuHouse12.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuHouse18
+  file: /materials/wwa/BuHouse18.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 建物
+- name: BuBuilding10-1
+  file: /materials/wwa/BuBuilding10-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding10-2
+  file: /materials/wwa/BuBuilding10-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding10-3
+  file: /materials/wwa/BuBuilding10-3.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding11
+  file: /materials/wwa/BuBUilding11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding12-1
+  file: /materials/wwa/BuBuilding12-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuiding12-2
+  file: /materials/wwa/BuBuilding12-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding14_plus
+  file: /materials/wwa/BuBuilding14_plus.gif
+  publishedAt: 2015-05-28
+  tags:
+    - WWA素材第2世代
+    - 建物
+- name: BuBuilding18
+  file: /materials/wwa/BuBuidling18.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 建物
+- name: BuWwaWindow14
+  file: /materials/wwa/BuWwaWindow14.gif
+  publishedAt: ''
+  tags:
+    - 標準素材風
+    - 建物
+- name: GrRail12
+  file: /materials/wwa/GrRail12.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 地面
+- name: GrRoad10
+  file: /materials/wwa/GrRoad10.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 地面
+  description: |
+    道路の部分が背景色になっていますが、実際の使用に問題はありません。
+- name: GrRoad11
+  file: /materials/wwa/GrRoad11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 地面
+- name: GrRoad12
+  file: /materials/wwa/GrRoad12.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 地面
+- name: GrRail16-compact
+  file: /materials/wwa/GrRail16-compact.gif
+  publishedAt: 2017-12-16
+  tags:
+    - WWA素材第3世代
+    - 地面
+- name: 16Ground
+  file: /materials/wwa/16Ground.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 地面
+- name: Road-Road
+  file: /materials/wwa/18Road-Road.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 地面
+- name: RoadCarReady-RoadCarReady
+  file: /materials/wwa/18Road-RoadCarReady.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 地面
+  description: |
+    当サイトの自動車素材に対応した道路素材です。
+    配置しづらいため、自動車を配置する予定がない場合は対応していない素材のご利用をおすすめします。
+- name: HuPeople10
+  file: /materials/wwa/HuPeoPle10.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - キャラクター
+- name: HuPlayer10
+  file: /materials/wwa/HuPlayer10
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - プレイヤー
+- name: 16Character-Matsuyuki
+  file: /materials/wwa/16Character-Matsuyuki.gif
+  publishedAt: 2019-09-01
+  tags:
+    - キャラクター
+  description: |
+    利用は許可制です。
+    画像の利用を検討されている方は、利用目的を添えて、まつゆきの Twitter(@matsuyuki_a)（DMでも大丈夫です）または メールアドレス(matsuyuki.eca@gmail.com) などでご相談ください。
+- name: ItBottle15
+  file: /materials/wwa/ItBottle15.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: ItFood12
+  file: /materials/wwa/ItFood12.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - アイテム"
+  description: |
+    右下の黒い食品は未だに何なのか分かっていません。しらす？
+- name: ItPhone14
+  file: /materials/wwa/ItPhone14.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - アイテム
+- name: ItSushi15
+  file: /materials/wwa/ItSushi15.gif
+  publishedAt: 2015-11-11
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: ItClock18
+  file: /materials/wwa/ItClock18.gif
+  publishedAt: 2018-02-24
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 18Food
+  file: /materials/wwa/18Food.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: ObFurniture11
+  file: /materials/wwa/ObFurniture11-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 物体
+- name: ObFurniture11
+  file: /materials/wwa/ObFurniture11-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 物体
+- name: ObMachine11
+  file: /materials/wwa/ObMachine11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 物体
+- name: ObMachine12
+  file: /materials/wwa/ObMachine12.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 物体
+- name: ObObject16
+  file: /materials/wwa/ObObject16.gif
+  publishedAt: 2018-01-07
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: ObTreasure11
+  file: /materials/wwa/ObTreasure11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 物体
+- name: ObBed18
+  file: /materials/wwa/ObBed18.gif
+  publishedAt: 2018-02-24
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: 18Furniture
+  file: /materials/wwa/18Furniture.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: 18StoreShelf
+  file: /materials/wwa/18StoreShelf.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: 18Escalator
+  file: /materials/wwa/18Escalator.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: SyCommand10
+  file: /materials/wwa/SyCommand10.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - システム
+- name: SyCommand14-1
+  file: /materials/wwa/SyCommand14-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第3世代
+    - システム
+- name: SyCommand14-2
+  file: /materials/wwa/SyCommand14-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - システム
+- name: SySystem10
+  file: /materials/wwa/SySystem10.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - システム
+- name: 18String
+  file: /materials/wwa/18String.gif
+  publishedAt: 2018-06-19
+  tags:
+    - 標準素材風
+    - システム"
+  description: |
+    数字の１２３４はNAOさんのWWA標準素材を利用しています。問題がありましたら、削除する場合があります。
+- name: VeBus13
+  file: /materials/wwa/VeBus13.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "自動車
+- name: VeCar11
+  file: /materials/wwa/VeCar11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "自動車
+- name: 18Car-Car
+  file: /materials/wwa/18Car-Car.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "自動車
+- name: 18Car-OneBoxCar
+  file: /materials/wwa/18Car-OneBoxCar.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "自動車
+- name: 18Car-Truck
+  file: /materials/wwa/18Car-Truck.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "自動車
+- name: 18Car-CommuterBus
+  file: /materials/wwa/18Car-CommuterBus.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "自動車
+- name: 18Car-HighwayBus
+  file: /materials/wwa/18Car-HighwayBus.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "自動車
+- name: VeTrain11-1
+  file: /materials/wwa/VeTrain11-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrain11-2
+  file: /materials/wwa/VeTrain11-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrain14-1
+  file: /materials/wwa/VeTrain14-1.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrain14-2
+  file: /materials/wwa/VeTrain14-2.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrain14-3
+  file: /materials/wwa/VeTrain14-3.gif
+  publishedAt: 2015-01-05
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrainInterior11
+  file: /materials/wwa/VeTrainInterior11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車内装
+- name: VeTrainSystem11
+  file: /materials/wwa/VeTrainSystem11.gif
+  publishedAt: ''
+  tags:
+    - WWA素材第2世代
+    - 乗り物", "列車
+- name: VeTrain16-1
+  file: /materials/wwa/VeTrain16-1.gif
+  publishedAt: 2017-12-16
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeTrain16-2
+  file: /materials/wwa/VeTrain16-2.gif
+  publishedAt: 2017-12-16
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeTrain16-3
+  file: /materials/wwa/VeTrain16-3.gif
+  publishedAt: 2018-02-09
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeTrain16-4
+  file: /materials/wwa/VeTrain16-4.gif
+  publishedAt: 2018-02-24
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeLocomotive16-1
+  file: /materials/wwa/VeLocomotive16-1.gif
+  publishedAt: 2018-02-09
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeLocomotive16-2
+  file: /materials/wwa/VeLocomotive16-2.gif
+  publishedAt: 2018-02-24
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeLocomotive16-3
+  file: /materials/wwa/VeLocomotive16-3.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: VeFreight16
+  file: /materials/wwa/VeFreight16.gif
+  publishedAt: 2018-01-07
+  tags:
+    - WWA素材第3世代
+    - 乗り物", "列車
+- name: 18AirPlane
+  file: /materials/wwa/18AirPlane.gif
+  publishedAt: 2018-06-19
+  tags:
+    - WWA素材第3世代
+    - 乗り物
