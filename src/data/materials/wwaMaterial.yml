@@ -296,133 +296,155 @@
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: VeCar11
   file: /materials/wwa/VeCar11.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: 18Car-Car
   file: /materials/wwa/18Car-Car.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: 18Car-OneBoxCar
   file: /materials/wwa/18Car-OneBoxCar.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: 18Car-Truck
   file: /materials/wwa/18Car-Truck.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: 18Car-CommuterBus
   file: /materials/wwa/18Car-CommuterBus.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: 18Car-HighwayBus
   file: /materials/wwa/18Car-HighwayBus.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "自動車
+    - 乗り物
+    - 自動車
 - name: VeTrain11-1
   file: /materials/wwa/VeTrain11-1.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain11-2
   file: /materials/wwa/VeTrain11-2.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain14-1
   file: /materials/wwa/VeTrain14-1.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain14-2
   file: /materials/wwa/VeTrain14-2.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain14-3
   file: /materials/wwa/VeTrain14-3.gif
   publishedAt: 2015-01-05
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrainInterior11
   file: /materials/wwa/VeTrainInterior11.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車内装
+    - 乗り物
+    - 列車内装
 - name: VeTrainSystem11
   file: /materials/wwa/VeTrainSystem11.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain16-1
   file: /materials/wwa/VeTrain16-1.gif
   publishedAt: 2017-12-16
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain16-2
   file: /materials/wwa/VeTrain16-2.gif
   publishedAt: 2017-12-16
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain16-3
   file: /materials/wwa/VeTrain16-3.gif
   publishedAt: 2018-02-09
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeTrain16-4
   file: /materials/wwa/VeTrain16-4.gif
   publishedAt: 2018-02-24
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeLocomotive16-1
   file: /materials/wwa/VeLocomotive16-1.gif
   publishedAt: 2018-02-09
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeLocomotive16-2
   file: /materials/wwa/VeLocomotive16-2.gif
   publishedAt: 2018-02-24
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeLocomotive16-3
   file: /materials/wwa/VeLocomotive16-3.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: VeFreight16
   file: /materials/wwa/VeFreight16.gif
   publishedAt: 2018-01-07
   tags:
     - WWA素材第3世代
-    - 乗り物", "列車
+    - 乗り物
+    - 列車
 - name: 18AirPlane
   file: /materials/wwa/18AirPlane.gif
   publishedAt: 2018-06-19
