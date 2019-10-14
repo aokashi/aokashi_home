@@ -6,8 +6,8 @@ import MaterialSidebar from '../../components/MaterialSidebar'
 import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/InfoNote'
 import BoxList from '../../components/BoxList'
-import Modal from '../../components/Modal'
 import ImageMaterialBox from '../../components/ImageMaterialBox'
+import ImageModal from '../../components/ImageModal'
 
 class WWAMaterialPage extends React.Component {
 
@@ -20,7 +20,6 @@ class WWAMaterialPage extends React.Component {
   }
 
   render() {
-
     return (
       <Layout sidebarContent={MaterialSidebar()}>
         <PageHeader>
@@ -35,16 +34,7 @@ class WWAMaterialPage extends React.Component {
         {this.renderMaterialList()}
         {
           this.state.isPreview &&
-            <Modal onOutsideClick={() => this.hidePreview()}>
-              <div style={{overflow: 'auto'}}>
-                <img src={this.state.previewItem.file} alt={this.state.previewItem.name} style={{width: 'auto', height: 'auto'}} />
-              </div>
-              <div>{this.state.previewItem.name}</div>
-              {
-                this.state.previewItem.description &&
-                  <div>{this.state.previewItem.description}</div>
-              }
-            </Modal>
+            this.renderModal()
         }
       </Layout>
     )
@@ -85,6 +75,18 @@ class WWAMaterialPage extends React.Component {
     )
   }
 
+  renderModal() {
+    return (
+      <ImageModal
+        src={this.state.previewItem.file}
+        alt={this.state.previewItem.name}
+        name={this.state.previewItem.name}
+        description={this.state.previewItem.description}
+        onOutsideClick={() => this.hidePreview()}
+      />
+    )
+  }
+
   showPreview(item) {
     this.setState({
       isPreview: true,
@@ -95,6 +97,7 @@ class WWAMaterialPage extends React.Component {
   hidePreview() {
     this.setState({
       isPreview: false,
+      previewItem: {},
     })
   }
 

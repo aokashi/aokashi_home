@@ -5,6 +5,9 @@ const MaterialSidebar = () => (
   <>
     <ul>
       <li>
+        <Link to="/material/">素材トップ</Link>
+      </li>
+      <li>
         <Link to="/material/wwa/">WWA素材</Link>
       </li>
       <li>

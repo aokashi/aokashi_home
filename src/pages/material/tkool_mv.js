@@ -7,7 +7,7 @@ import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/InfoNote'
 import BoxList from '../../components/BoxList'
 import ImageMaterialBox from '../../components/ImageMaterialBox'
-import Modal from '../../components/Modal'
+import ImageModal from '../../components/ImageModal'
 
 class TkoolMvPage extends React.Component {
 
@@ -75,18 +75,14 @@ class TkoolMvPage extends React.Component {
   }
 
   renderModal() {
-    // TODO: 共通化をする
     return (
-      <Modal onOutsideClick={() => this.hidePreview()}>
-        <div style={{overflow: 'auto'}}>
-          <img src={this.state.previewItem.file} alt={this.state.previewItem.name} style={{width: 'auto', height: 'auto'}} />
-        </div>
-        <div>{this.state.previewItem.name}</div>
-        {
-          this.state.previewItem.description &&
-            <div>{this.state.previewItem.description}</div>
-        }
-      </Modal>
+      <ImageModal
+        src={this.state.previewItem.file}
+        alt={this.state.previewItem.name}
+        name={this.state.previewItem.name}
+        description={this.state.previewItem.description}
+        onOutsideClick={() => this.hidePreview()}
+      />
     )
   }
 
