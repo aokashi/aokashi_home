@@ -10,16 +10,6 @@ Aokashiが運営していた過去のサイトを見ることができます。
 ### メインサイト
 メインコンテンツの公開を主としていたサイトです。
 
-#### Coden City
-
-- 公開時期: 2010年2月3日～2011年1月6日
-- <a href="{{< contentslink "restore/coden_1" >}}">1代目</a>
-- <a href="{{< contentslink "restore/coden_2-1" >}}">2代目前期</a>
-- <a href="{{< contentslink "restore/coden_2-2" >}}">2代目後期</a>
-- <a href="{{< contentslink "restore/coden_3" >}}">3代目</a>
-
-私「Aokashi」が最初に公開したウェブサイトに当たります。主にWWAサイトを中心に公開していましたが、レンタルサーバー側の都合上、2011年1月にRoad Works Countyに吸収合併となりました。
-
 #### Zeist City
 
 - 公開時期: 2010年8月3日～2010年11月22日
