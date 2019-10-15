@@ -1,7 +1,8 @@
 ---
-path: '/portfolio/coden_city'
-template: 'portfolio-item'
+path: "/portfolio/coden_city/"
+template: portfolio-item
 title: Coden City (コーデンシティ)
+date: 2010-02-03
 tags:
   - Webページ
   - 自分を表現する

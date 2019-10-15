@@ -1,16 +1,18 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
 import renderAst from '../renderAst'
 
-const PortfolioItem = ({ data }) => {
+const PortfolioItemTemplate = ({
+  data
+}) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
-  // FIXME: markdownRemark is null
   return (
     <Layout>
+      <Link to="/portfolio/">戻る</Link>
       <PageHeader>
         <h1>{frontmatter.title}</h1>
       </PageHeader>
@@ -25,7 +27,16 @@ const PortfolioItem = ({ data }) => {
 
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(
+      frontmatter: {
+        path: {
+          eq: $path
+        }
+        template: {
+          eq: "portfolio-item"
+        }
+      }
+    ) {
       id
       htmlAst
       frontmatter {
@@ -37,4 +48,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default PortfolioItem
+export default PortfolioItemTemplate
