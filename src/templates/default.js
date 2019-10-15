@@ -15,7 +15,7 @@ const DefaultTemplate = ({
       <header className={styles.header}>
         <h1 className={styles.headerTitle}>{frontmatter.title}</h1>
       </header>
-      <div class="content">
+      <div className="content">
         {
           RenderAst(htmlAst)
         }
