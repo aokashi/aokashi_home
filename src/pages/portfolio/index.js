@@ -48,7 +48,7 @@ class PortfolioPage extends React.Component {
           `
         }
         render={ (data) => (
-          <div className="columns">
+          <div className="columns is-multiline">
             {data.allMarkdownRemark.nodes.map((item, itemIndex) => (
               <PortfolioItem
                 position={itemIndex % 2 === 0 ? 'right' : 'left'}
