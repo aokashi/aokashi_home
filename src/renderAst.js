@@ -4,6 +4,7 @@ import rehypeReact from 'rehype-react'
 import WarningNote from './components/Note/WarningNote.js'
 import InfoNote from './components/Note/InfoNote.js'
 import DangerNote from './components/Note/DangerNote.js'
+import AboutNote from './components/Note/AboutNote.js'
 
 /**
  * markdown ファイル内で使用したいコンポーネントがあれば下記の配列に記述してください。
@@ -14,6 +15,7 @@ const availableComponents = {
   'warning-note': WarningNote,
   'info-note': InfoNote,
   'danger-note': DangerNote,
+  'about-note': AboutNote,
 }
 
 const renderAst = new rehypeReact({
