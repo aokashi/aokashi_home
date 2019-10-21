@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../../layouts/page-layout'
 import PageHeader from '../../components/PageHeader'
+import PortfolioList from '../../components/PortfolioList'
 import PortfolioItem from '../../components/PortfolioItem'
 
 class PortfolioPage extends React.Component {
@@ -48,7 +49,7 @@ class PortfolioPage extends React.Component {
           `
         }
         render={ (data) => (
-          <div className="columns is-multiline">
+          <PortfolioList>
             {data.allMarkdownRemark.nodes.map((item, itemIndex) => (
               <PortfolioItem
                 position={itemIndex % 2 === 0 ? 'right' : 'left'}
@@ -56,7 +57,7 @@ class PortfolioPage extends React.Component {
                 key={itemIndex}
               />
             ))}
-          </div>
+          </PortfolioList>
         ) }
       />
     )

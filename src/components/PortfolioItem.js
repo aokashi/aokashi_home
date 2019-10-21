@@ -8,23 +8,25 @@ const PortfolioItem = ({ position, portfolioItem }) => {
   const positionClassName = position === 'left' ? styles.isLeft : styles.isRight
 
   return (
-    <div className={`${styles.item} ${positionClassName} column is-half`}>
-      <h3 className={styles.title}>
-        <Link to={portfolioItem.path}>
-          {portfolioItem.title}
-        </Link>
-      </h3>
-      <div className={styles.dateWrapper}>
-        <time datatime={portfolioItem.date} className={styles.date}>
-          {portfolioItem.date}
-        </time>
-      </div>
-      <div className={styles.tagList}>
-        {
-          portfolioItem.tags.map((tag, tagIndex) => (
-            <span className={styles.tagItem} key={tagIndex}>{tag}</span>
-          ))
-        }
+    <div className={`${positionClassName} column is-half`}>
+      <div className={styles.item}>
+        <h3 className={styles.title}>
+          <Link to={portfolioItem.path}>
+            {portfolioItem.title}
+          </Link>
+        </h3>
+        <div className={styles.dateWrapper}>
+          <time datatime={portfolioItem.date} className={styles.date}>
+            {portfolioItem.date}
+          </time>
+        </div>
+        <div className={styles.tagList}>
+          {
+            portfolioItem.tags.map((tag, tagIndex) => (
+              <span className={styles.tagItem} key={tagIndex}>{tag}</span>
+            ))
+          }
+        </div>
       </div>
     </div>
   )
