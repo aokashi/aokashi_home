@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
+import styles from './portfolio-item.module.sass'
 import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
 import renderAst from '../renderAst'
@@ -15,6 +16,23 @@ const PortfolioItemTemplate = ({
       <Link to="/portfolio/">戻る</Link>
       <PageHeader>
         <h1>{frontmatter.title}</h1>
+        <div className={styles.tags}>
+          {
+            frontmatter.tags.map((tag, tagIndex) => (
+              <span key={tagIndex} className={styles.tag}>{tag}</span>
+            ))
+          }
+        </div>
+        <div className={styles.headerImages}>
+          {
+            frontmatter.images && frontmatter.images.map((image, imageIndex) => (
+              <figure key={imageIndex} className={styles.headerImage}>
+                <img src={image.src} alt={image.alt} />
+                <figcaption>{image.description}</figcaption>
+              </figure>
+            ))
+          }
+        </div>
       </PageHeader>
       <div className="content">
         {
@@ -43,6 +61,11 @@ export const pageQuery = graphql`
         path
         title
         tags
+        images {
+          src
+          alt
+          description
+        }
       }
     }
   }
