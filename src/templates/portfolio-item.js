@@ -5,6 +5,7 @@ import styles from './portfolio-item.module.sass'
 import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
 import renderAst from '../renderAst'
+import Carousel from '../components/Carousel'
 
 const PortfolioItemTemplate = ({
   data
@@ -25,12 +26,8 @@ const PortfolioItemTemplate = ({
         </div>
         <div className={styles.headerImages}>
           {
-            frontmatter.images && frontmatter.images.map((image, imageIndex) => (
-              <figure key={imageIndex} className={styles.headerImage}>
-                <img src={image.src} alt={image.alt} />
-                <figcaption>{image.description}</figcaption>
-              </figure>
-            ))
+            frontmatter.images &&
+              <Carousel items={frontmatter.images} width='800' height='600' />
           }
         </div>
       </PageHeader>
