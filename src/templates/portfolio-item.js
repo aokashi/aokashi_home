@@ -12,9 +12,12 @@ const PortfolioItemTemplate = ({
 }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
+  const backLink = (
+    <Link to="/portfolio/" className={styles.backLink}>戻る</Link>
+  )
   return (
     <Layout>
-      <Link to="/portfolio/">戻る</Link>
+      {backLink}
       <PageHeader>
         <h1>{frontmatter.title}</h1>
         <div className={styles.tags}>
@@ -36,6 +39,7 @@ const PortfolioItemTemplate = ({
           renderAst(htmlAst)
         }
       </div>
+      {backLink}
     </Layout>
   )
 }
