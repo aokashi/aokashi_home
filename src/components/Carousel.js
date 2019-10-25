@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
+import styles from './Carousel.module.sass'
+import ArrowIcon from '../images/button_icon-arrow.svg'
+
 class Carousel extends React.Component {
   render() {
     return (
@@ -10,21 +13,22 @@ class Carousel extends React.Component {
         naturalSlideWidth={this.props.width}
         naturalSlideHeight={this.props.height}
         totalSlides={this.props.items.length}
+        className={styles.carousel}
       >
-        <Slider>
+        <Slider className={styles.items}>
           {
             this.props.items.map((item, itemIndex) => (
-              <Slide index={itemIndex} key={itemIndex}>
+              <Slide index={itemIndex} key={itemIndex} className={styles.item}>
                 <figure>
-                  <img src={item.src} alt={item.alt} />
-                  <figcaption>{item.description}</figcaption>
+                  <img src={item.src} alt={item.alt} className={styles.itemImage} />
+                  <figcaption className={styles.itemCaption}>{item.description}</figcaption>
                 </figure>
               </Slide>
             ))
           }
         </Slider>
-        <ButtonBack></ButtonBack>
-        <ButtonNext></ButtonNext>
+        <ButtonBack className={styles.backButton}><img src={ArrowIcon} alt='前' className={styles.backButtonIcon} /></ButtonBack>
+        <ButtonNext className={styles.nextButton}><img src={ArrowIcon} alt='次' className={styles.nextButtonIcon} /></ButtonNext>
       </CarouselProvider>
     )
   }
