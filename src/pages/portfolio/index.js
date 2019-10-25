@@ -32,6 +32,10 @@ class PortfolioPage extends React.Component {
                     }
                   }
                 }
+                sort: {
+                  fields: [frontmatter___date]
+                  order: ASC
+                }
               ) {
                 nodes {
                   frontmatter {

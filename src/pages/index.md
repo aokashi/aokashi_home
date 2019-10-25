@@ -16,7 +16,7 @@ nav_items:
     color: '#a0e0e0'
   - name: Portfolio
     link: portfolio/
-    icon: 
+    icon: /images/menu_icon-portfolio.png
     color: '#e0a0e0'
   - name: Blog
     link: http://aokashi.hatenablog.jp
