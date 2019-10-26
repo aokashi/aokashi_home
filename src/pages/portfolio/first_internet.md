@@ -3,6 +3,7 @@ path: "/portfolio/first_internet/"
 template: portfolio-item
 title: はじめてのインターネット
 date: 2006-01-01
+season: elementary-school
 tags:
   - 自分を表現する
 ---

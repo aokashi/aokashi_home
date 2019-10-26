@@ -3,6 +3,7 @@ path: "/portfolio/html_template/"
 template: portfolio-item
 title: HTMLテンプレートの制作
 date: 2010-04-02
+season: junior-high-school
 tags:
   - 自分を表現する
 images:
