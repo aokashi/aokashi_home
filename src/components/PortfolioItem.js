@@ -12,20 +12,32 @@ const PortfolioItem = ({ position, portfolioItem }) => {
       <div className={styles.item}>
         <h3 className={styles.title}>
           <Link to={portfolioItem.path}>
-            {portfolioItem.title}
+            {
+              portfolioItem.images &&
+                <img
+                  src={portfolioItem.images[0].src}
+                  alt={portfolioItem.images[0].alt}
+                  className={styles.titleImage}
+                />
+            }
+            <div className={styles.titleText}>
+              {portfolioItem.title}
+            </div>
           </Link>
         </h3>
-        <div className={styles.dateWrapper}>
-          <time datatime={portfolioItem.date} className={styles.date}>
-            {portfolioItem.date}
-          </time>
-        </div>
-        <div className={styles.tagList}>
-          {
-            portfolioItem.tags.map((tag, tagIndex) => (
-              <span className={styles.tagItem} key={tagIndex}>{tag}</span>
-            ))
-          }
+        <div className={styles.content}>
+          <div className={styles.dateWrapper}>
+            <time datatime={portfolioItem.date} className={styles.date}>
+              {portfolioItem.date}
+            </time>
+          </div>
+          <div className={styles.tagList}>
+            {
+              portfolioItem.tags.map((tag, tagIndex) => (
+                <span className={styles.tagItem} key={tagIndex}>{tag}</span>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
@@ -39,6 +51,10 @@ PortfolioItem.propTypes = {
     path: PropTypes.string,
     date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
+    images: PropTypes.arrayOf(PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string,
+    })),
   }).isRequired,
 }
 

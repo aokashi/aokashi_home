@@ -39,6 +39,10 @@ class PortfolioPage extends React.Component {
               ) {
                 nodes {
                   frontmatter {
+                    images {
+                      src
+                      alt
+                    }
                     tags
                     title
                     date(
