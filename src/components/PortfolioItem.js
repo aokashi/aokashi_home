@@ -8,7 +8,7 @@ const PortfolioItem = ({ position, portfolioItem }) => {
   const positionClassName = position === 'left' ? styles.isLeft : styles.isRight
 
   return (
-    <div className={`${positionClassName} column is-half`}>
+    <div className={`${positionClassName} column is-half-tablet is-one-quarter-desktop`}>
       <div className={styles.item}>
         <h3 className={styles.title}>
           <Link to={portfolioItem.path}>
