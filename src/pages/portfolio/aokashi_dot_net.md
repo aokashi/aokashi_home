@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/aokashi_dot_net"
+path: /portfolio/aokashi_dot_net
 template: portfolio-item
 title: Aokashi.net
 date: 2012-03-12

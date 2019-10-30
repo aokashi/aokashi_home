@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/wwa_material/"
+path: /portfolio/wwa_material
 template: portfolio-item
 title: WWA素材の制作
 date: 2008-01-01

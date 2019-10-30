@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/cdl_rpg/"
+path: /portfolio/cdl_rpg
 template: portfolio-item
 title: CDL RPG
 date: 2012-12-25

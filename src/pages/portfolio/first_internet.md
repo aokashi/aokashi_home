@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/first_internet/"
+path: /portfolio/first_internet
 template: portfolio-item
 title: はじめてのインターネット
 date: 2006-01-01

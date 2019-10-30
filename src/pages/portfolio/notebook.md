@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/notebook/"
+path: /portfolio/notebook
 template: portfolio-item
 title: ノートブックに書き残し
 date: 2008-01-01

@@ -19,7 +19,12 @@ const PortfolioItemTemplate = ({
     <Layout>
       {backLink}
       <PageHeader>
-        <h1>{frontmatter.title}</h1>
+        <div className={styles.summary}>
+          <h1>{frontmatter.title}</h1>
+          <div className={styles.date}>
+            {frontmatter.date}
+          </div>
+        </div>
         <div className={styles.tags}>
           {
             frontmatter.tags.map((tag, tagIndex) => (
@@ -62,6 +67,10 @@ export const pageQuery = graphql`
         path
         title
         tags
+        date(
+          formatString: "YYYY年 MM月 DD日"
+          locale: "ja-JP"
+        )
         images {
           src
           alt

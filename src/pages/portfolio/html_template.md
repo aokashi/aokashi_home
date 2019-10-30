@@ -1,5 +1,5 @@
 ---
-path: "/portfolio/html_template/"
+path: /portfolio/html_template
 template: portfolio-item
 title: HTMLテンプレートの制作
 date: 2010-04-02
