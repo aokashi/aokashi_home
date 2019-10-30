@@ -3,20 +3,25 @@
   background-clip: content-box
   position: relative
   padding: 32px 0 128px
+  +mobile
+    background-position-x: left
 
   &:before,
   &:after
+    background: transparent none no-repeat center bottom
     content: ''
     position: absolute
     width: 100%
     display: block
+    +mobile
+      background-position-x: left
 
   &:before
-    background: transparent url('../images/portfolio_items_arrow-start.svg') no-repeat center bottom
+    background-image: url('../images/portfolio_items_arrow-start.svg')
     top: 0
     height: 32px
 
   &:after
-    background: transparent url('../images/portfolio_items_arrow-end.svg') no-repeat center bottom
+    background-image: url('../images/portfolio_items_arrow-end.svg')
     bottom: 0
     height: 128px
