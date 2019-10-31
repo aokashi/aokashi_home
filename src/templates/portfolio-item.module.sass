@@ -10,8 +10,13 @@
     height: 1.5em
     vertical-align: top
 
-.summary
-  margin-bottom: $block-spacing
+.header
+  composes: pageHeader from '../components/PageHeader.module.sass'
+  padding: 0
+
+  .summary
+    padding: .5rem 1rem
+    margin-bottom: $block-spacing
 
 .tags
   margin-bottom: .5rem
@@ -20,6 +25,7 @@
     margin: 0 1rem
 
 .images
-  margin: 0 auto
-  max-width: 1024px
+  margin: 0 auto $block-spacing
   background-color: $grey
+  +tablet
+    max-width: 800px

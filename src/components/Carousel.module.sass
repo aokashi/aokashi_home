@@ -33,8 +33,16 @@
   background-color: rgba(0, 0, 0, .5)
   color: #fff
   border: 0
-  position: absolute
-  top: 50%
+  +mobile
+    width: 50%
+    padding: .25rem
+  +tablet
+    position: absolute
+    top: 50%
+  &Icon
+    width: 48px
+    +tablet
+      width: 64px
 
 .backButton
   left: 0

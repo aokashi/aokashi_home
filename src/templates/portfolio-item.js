@@ -18,7 +18,7 @@ const PortfolioItemTemplate = ({
   return (
     <Layout>
       {backLink}
-      <PageHeader>
+      <PageHeader className={styles.header}>
         <div className={styles.summary}>
           <h1>{frontmatter.title}</h1>
           <div className={styles.date}>
@@ -35,7 +35,7 @@ const PortfolioItemTemplate = ({
         <div className={styles.images}>
           {
             frontmatter.images &&
-              <Carousel items={frontmatter.images} width={16} height={9} />
+              <Carousel items={frontmatter.images} width={4} height={3} />
           }
         </div>
       </PageHeader>
