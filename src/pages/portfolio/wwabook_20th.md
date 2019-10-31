@@ -7,6 +7,13 @@ season: college
 tags:
   - WWA
   - チーム制作
+images:
+  - src: /portfolio/wwabook_20th/page_old_wwamk.png
+    alt: WWAマップ作成ツール Ver 2.0 を動かしてみた
+    description: WWAマップ作成ツール Ver 2.0 を動かした記事です。Point のレイアウトはWWAの公式サイトを参考にしました。
+  - src: /portfolio/wwabook_20th/page_chornology.png
+    alt: WWA年表
+    description: WWAの歴史をまとめた年表です。この年表のデザインも担当しました。
 ---
 
 World Wide Adventure (WWA) が20周年を迎えたことから、記念誌として6人で制作し、コミックマーケット 91 で頒布しました。

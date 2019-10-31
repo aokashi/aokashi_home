@@ -18,8 +18,8 @@ class Carousel extends React.Component {
         <Slider className={styles.items}>
           {
             this.props.items.map((item, itemIndex) => (
-              <Slide index={itemIndex} key={itemIndex} className={styles.item}>
-                <figure>
+              <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
+                <figure className={styles.itemFigure}>
                   <img src={item.src} alt={item.alt} className={styles.itemImage} />
                   <figcaption className={styles.itemCaption}>{item.description}</figcaption>
                 </figure>

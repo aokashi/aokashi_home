@@ -32,10 +32,10 @@ const PortfolioItemTemplate = ({
             ))
           }
         </div>
-        <div className={styles.headerImages}>
+        <div className={styles.images}>
           {
             frontmatter.images &&
-              <Carousel items={frontmatter.images} width='800' height='600' />
+              <Carousel items={frontmatter.images} width={16} height={9} />
           }
         </div>
       </PageHeader>

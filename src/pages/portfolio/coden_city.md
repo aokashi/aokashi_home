@@ -7,6 +7,16 @@ season: junior-high-school
 tags:
   - Webページ
   - 自分を表現する
+images:
+  - src: /portfolio/coden_city/coden_city_first.png
+    alt: Coden City (初代)
+    description: 最初のデザインの Coden City です。復元した状態での撮影になります。
+  - src: /portfolio/coden_city/coden_city_second.png
+    alt: Coden City (2代目)
+    description: 2代目のデザインの Coden City です。ブログの記事向けに作られたため、各部位に数字が充てられています。
+  - src: /portfolio/coden_city/coden_city_last.png
+    alt: Coden City (4代目)
+    description: 4代目のデザインを制作している時のスクリーンショットです。
 ---
 
 - 公開時期: 2010年2月3日～2011年1月6日

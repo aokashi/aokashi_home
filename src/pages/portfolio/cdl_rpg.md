@@ -6,6 +6,10 @@ date: 2012-12-25
 season: high-school
 tags:
   - ゲームエンジン
+images:
+  - src: /portfolio/cdl_rpg/rpg_screen.png
+    alt: CDL_RPG のプレイ画面
+    description: プレイ画面です。青い四角がプレイヤーで、フィールドは画面単位で表示が切り替わります。
 ---
 
 高校に入学し、C言語の仕組みがある程度分かるようになったことから、部活動でゲームエンジンの制作をしていました。

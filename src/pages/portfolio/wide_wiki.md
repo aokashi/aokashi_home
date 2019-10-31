@@ -6,6 +6,10 @@ date: 2017-11-12
 season: college
 tags:
   - Node.js
+images:
+  - src: /portfolio/wide_wiki/edit_page.png
+    alt: Wide Wiki の編集画面
+    description: 編集画面です。
 ---
 
 WWA Maker の制作が中止になり制作したいものが頭の中にない中、 **なんとかして大学時代に成果を残したい、技術力を伸ばしたい** ことから、1週間で制作したWikiシステムです。

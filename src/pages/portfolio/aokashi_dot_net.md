@@ -7,6 +7,19 @@ season: high-school
 tags:
   - Webページ
   - WordPress
+images:
+  - src: /portfolio/aokashi_dot_net/first_sample.png
+    alt: Aokashi.net テーマ (初代)
+    description: 最初に作られた Aokashi.net の WordPress テーマです。
+  - src: /portfolio/aokashi_dot_net/second_sample.png
+    alt: Aokashi.net テーマ (2代目)
+    description: 2代目の Aokashi.net の WordPress テーマです。
+  - src: /portfolio/aokashi_dot_net/third_wordpress_customize.png
+    alt: Aokashi.net テーマ (3代目) のカスタマイズ画面
+    description: 3代目の Aokashi.net の WordPress テーマです。 WordPress のカスタマイズ画面でカスタマイズができます。
+  - src: /portfolio/aokashi_dot_net/fouth_developing.png
+    alt: Aokashi.net テーマ (4代目) の制作途中
+    description: 3代目の次として制作していた4代目の WordPress テーマです。画像は制作途中のものになります。
 ---
 
 Aokashi.net は2012年に公開したブログまたはWebサイトです。
