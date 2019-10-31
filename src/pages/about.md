@@ -1,5 +1,5 @@
 ---
-path: "/about/"
+path: /about
 title: 当サイトについて
 template: default
 ---
