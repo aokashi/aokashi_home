@@ -6,6 +6,10 @@ date: 2010-08-01
 season: junior-high-school
 tags:
   - Webページ
+images:
+  - src: /portfolio/zeist_city/zeist_city_second.png
+    alt: Zeist City (2代目)
+    description: 2代目のデザインの Zeist City です。
 ---
 
 [Coden City](/portfolio/coden_city/) 設立後に設置したWebサイトです。
