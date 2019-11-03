@@ -45,6 +45,12 @@ class PortfolioPage extends React.Component {
   }
 
   renderPortfolioList() {
+    /**
+     * FIXME: date(formatString: "YYYY年 MM月 DD日", locale: "ja-JP") で呼び出すと
+     *     Unknown argument "formatString" on field "date" of type "MarkdownRemarkFrontmatter" が発生する
+     *     現状は諦めて文字列として出力しますが、バージョンアップで修正されていたり、原因が見つかっていたりすれば修正しておきたいです。
+     * @see https://github.com/aokashi/aokashi_home/issues/18
+     */
     return (
       <StaticQuery
         query={
@@ -66,10 +72,7 @@ class PortfolioPage extends React.Component {
                 group(field: frontmatter___season) {
                   nodes {
                     frontmatter {
-                      date(
-                        formatString: "YYYY年 MM月 DD日"
-                        locale: "ja-JP"
-                      )
+                      date
                       images {
                         src
                         alt

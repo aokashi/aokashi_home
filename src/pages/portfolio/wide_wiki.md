@@ -2,7 +2,7 @@
 path: /portfolio/wide_wiki
 template: portfolio-item
 title: Wide Wiki
-date: 2017-11-12
+date: "2017-11-12"
 season: college
 tags:
   - Node.js

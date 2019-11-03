@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import styles from './PortfolioItem.module.sass'
+import convertDate from '../utils/convertDate'
 
 const PortfolioItem = ({ position, portfolioItem }) => {
   const positionClassName = position === 'left' ? styles.isLeft : styles.isRight
@@ -28,7 +29,7 @@ const PortfolioItem = ({ position, portfolioItem }) => {
         <div className={styles.content}>
           <div className={styles.dateWrapper}>
             <time datatime={portfolioItem.date} className={styles.date}>
-              {portfolioItem.date}
+              {convertDate(portfolioItem.date)}
             </time>
           </div>
           <div className={styles.tagList}>

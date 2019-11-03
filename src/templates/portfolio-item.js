@@ -6,6 +6,7 @@ import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
 import renderAst from '../renderAst'
 import Carousel from '../components/Carousel'
+import convertDate from '../utils/convertDate'
 
 const PortfolioItemTemplate = ({
   data
@@ -22,7 +23,7 @@ const PortfolioItemTemplate = ({
         <div className={styles.summary}>
           <h1>{frontmatter.title}</h1>
           <div className={styles.date}>
-            {frontmatter.date}
+            <time datetime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
           </div>
         </div>
         <div className={styles.tags}>
@@ -67,10 +68,7 @@ export const pageQuery = graphql`
         path
         title
         tags
-        date(
-          formatString: "YYYY年 MM月 DD日"
-          locale: "ja-JP"
-        )
+        date
         images {
           src
           alt

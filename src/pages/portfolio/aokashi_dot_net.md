@@ -2,7 +2,7 @@
 path: /portfolio/aokashi_dot_net
 template: portfolio-item
 title: Aokashi.net
-date: 2012-03-12
+date: "2012-03-12"
 season: high-school
 tags:
   - Webページ

@@ -2,7 +2,7 @@
 path: /portfolio/wwa_collection
 template: portfolio-item
 title: Nintendo Switch ソフト WWA COLLECTION の開発協力
-date: 2018-12-20
+date: "2018-12-20"
 season: college
 tags:
   - WWA

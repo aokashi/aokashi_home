@@ -2,7 +2,7 @@
 path: /portfolio/build_pc
 template: portfolio-item
 title: 自作PC
-date: 2013-08-07
+date: "2013-08-07"
 season: high-school
 tags:
   - 自分を表現する

@@ -2,7 +2,7 @@
 path: /portfolio/cdl_rpg
 template: portfolio-item
 title: CDL RPG
-date: 2012-12-25
+date: "2012-12-25"
 season: high-school
 tags:
   - ゲームエンジン

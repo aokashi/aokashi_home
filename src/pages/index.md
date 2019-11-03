@@ -1,6 +1,7 @@
 ---
 title: Aokashi Home
 template: 'index-page'
+date: '0000-00-0000'
 nav_items:
   - name: WWA
     link: wwa/

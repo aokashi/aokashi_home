@@ -2,7 +2,7 @@
 path: /portfolio/notebook
 template: portfolio-item
 title: ノートブックに書き残し
-date: 2008-01-01
+date: "2008-01-01"
 season: elementary-school
 tags:
   - 自分を表現する

@@ -2,7 +2,7 @@
 path: /portfolio/zeist_city
 template: portfolio-item
 title: Zeist City
-date: 2010-08-01
+date: "2010-08-01"
 season: junior-high-school
 tags:
   - Webページ

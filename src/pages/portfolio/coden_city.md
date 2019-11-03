@@ -2,7 +2,7 @@
 path: /portfolio/coden_city
 template: portfolio-item
 title: Coden City (コーデンシティ)
-date: 2010-02-03
+date: "2010-02-03"
 season: junior-high-school
 tags:
   - Webページ
