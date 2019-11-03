@@ -7,6 +7,13 @@ season: college
 tags:
   - WWA
   - ゲームソフト
+images:
+  - src: /portfolio/wwa_collection/return_food.jpg
+    alt: 収録作品「食べ物を取り戻せ!!」の画面
+    description: 自分が制作した収録作品「食べ物を取り戻せ!!」のプレイ画面です。
+links:
+  - href: http://aokashi.hatenablog.jp/entry/2018/12/20/000000
+    title: WWA COLLECTIONを作ったお話 (自分のブログの記事)
 ---
 
 既存のWWA作品もしくは新規に制作したWWA作品を収録して Nintendo Switch のソフトとして発売するプロジェクトです。
@@ -35,6 +42,3 @@ RPGツクールやWOLF RPGエディターといったWindowsでしか動作し�
 
 ## WWA Message Loader
 これに合わせて、WWAのマップデータのすべてのメッセージを確認したいと PLiCy の開発者から連絡を頂き、 WWA Message Loader というWWAのマップデータをすべて確認できるWebアプリケーションを開発しました。このアプリケーションの開発からWWAのマップデータの構造を知ることができました。この知識は後の WWA Maker の開発に反映されることになります。
-
-## 関連リンク
-- [WWA COLLECTIONを作ったお話 (自分のブログの記事)](http://aokashi.hatenablog.jp/entry/2018/12/20/000000)

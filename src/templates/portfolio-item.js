@@ -45,6 +45,19 @@ const PortfolioItemTemplate = ({
           renderAst(htmlAst)
         }
       </div>
+      {
+        frontmatter.links &&
+          <div className={styles.links}>
+            <div className={styles.linksTitle}>関連リンク</div>
+            <div className={styles.linksList}>
+              {
+                frontmatter.links.map((link, linkIndex) => (
+                  <a href={link.href} className={styles.link} target={'_blank'} key={linkIndex}>{link.title}</a>
+                ))
+              }
+            </div>
+          </div>
+      }
       {backLink}
     </Layout>
   )
@@ -73,6 +86,10 @@ export const pageQuery = graphql`
           src
           alt
           description
+        }
+        links {
+          href
+          title
         }
       }
     }

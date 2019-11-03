@@ -14,6 +14,9 @@ images:
   - src: /portfolio/wwa_wing/wwawing_no_cover_img.png
     alt: カバー画像がない WWA Wing の読み込み画面
     description: カバー画像が無い状態の読み込み画面も、自分が実装しました。
+links:
+  - href: http://aokashi.hatenablog.jp/entry/2017/08/12/213232
+    title: 句読点を末尾に持っていける文章表示プログラム (自分のブログの記事)
 ---
 
 2015年から不具合報告のお手伝いをしていましたが、後にインターネットRPG WWAのJavaScript実装である[WWA Wing](https://wwawing.com)の開発をお手伝いしています。
@@ -50,6 +53,3 @@ WWA WingはJavaアプレットではできなかったスマートフォンで�
 CSSのグリッドレイアウトを活用し、レイアウトの構築を省力化しています。
 
 現在はベータ版として稼働していて、問題がなければWebページに設置できるようにするつもりです。
-
-## 関連リンク
-- [句読点を末尾に持っていける文章表示プログラム (自分のブログの記事)](http://aokashi.hatenablog.jp/entry/2017/08/12/213232)
