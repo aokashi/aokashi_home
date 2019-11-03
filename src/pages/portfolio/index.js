@@ -33,6 +33,9 @@ const seasonDetails = {
 
 class PortfolioPage extends React.Component {
 
+  /**
+   * @todo スクリーンショットの中に含まれている提供画像のリンク一覧を作る
+   */
   render() {
     return (
       <Layout>
