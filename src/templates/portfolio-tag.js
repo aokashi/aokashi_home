@@ -13,21 +13,19 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   return (
     <Layout>
       <PageHeader>
-        <h1>タグ {tag} のポートフォリオ項目一覧</h1>
+        <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
         <Link to={'/portfolio/'}>トップへ戻る</Link>
       </PageHeader>
-      <PortfolioList>
-        <PortfolioGroup>
-          {
-            data.allMarkdownRemark.nodes.map((item, itemIndex) => (
-              <PortfolioItem
-                portfolioItem={item.frontmatter}
-                key={itemIndex}
-              />
-            ))
-          }
-        </PortfolioGroup>
-      </PortfolioList>
+      <PortfolioGroup>
+        {
+          data.allMarkdownRemark.nodes.map((item, itemIndex) => (
+            <PortfolioItem
+              portfolioItem={item.frontmatter}
+              key={itemIndex}
+            />
+          ))
+        }
+      </PortfolioGroup>
     </Layout>
   )
 }

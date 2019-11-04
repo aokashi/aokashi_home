@@ -6,6 +6,7 @@ import PageHeader from '../../components/PageHeader'
 import PortfolioList from '../../components/PortfolioList'
 import PortfolioItem from '../../components/PortfolioItem'
 import PortfolioGroup from '../../components/PortfolioGrouo'
+import WarningNote from '../../components/Note/WarningNote'
 
 /**
  * 時期の情報です。スラッグがキーになります。
@@ -43,6 +44,20 @@ class PortfolioPage extends React.Component {
           <h1>ポートフォリオ</h1>
         </PageHeader>
         {this.renderPortfolioList()}
+        <div className="content">
+          <h2>ポートフォリオについて</h2>
+          <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。私自身は変化を好む傾向から、あれこれ手を出していまして、その雰囲気を感じ取れたらいいなと思っています。</p>
+          <WarningNote>
+            <div>
+              <p>URIの禁則文字が含まれるタグについては、含まれないように変更を加えています。予めご了承ください。</p>
+              <ul>
+                <li>C# → C_Sharp</li>
+              </ul>
+            </div>
+          </WarningNote>
+          <h2>Thanks</h2>
+          <p>ポートフォリオの中で含まれている著作物の作者へのリンクを掲載しています。</p>
+        </div>
       </Layout>
     )
   }

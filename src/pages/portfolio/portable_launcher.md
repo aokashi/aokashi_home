@@ -5,7 +5,7 @@ title: Portable Launcher
 date: "2017-06-17"
 season: college
 tags:
-  - C#
+  - C_Sharp
 images:
   - src: /portfolio/portable_launcher/launcher_menu.png
     alt: Portable Launcher のランチャーメニュー
