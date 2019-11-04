@@ -29,7 +29,9 @@ const PortfolioItemTemplate = ({
         <div className={styles.tags}>
           {
             frontmatter.tags.map((tag, tagIndex) => (
-              <span key={tagIndex} className={styles.tag}>{tag}</span>
+              <span key={tagIndex} className={styles.tag}>
+                <Link to={`/portfolio/tag/${tag}`}>{tag}</Link>
+              </span>
             ))
           }
         </div>
