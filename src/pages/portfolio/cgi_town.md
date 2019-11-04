@@ -16,6 +16,9 @@ images:
   - src: /portfolio/cgi_town/fs_town_second.png
     alt: FS TOWN (2015年当時) の画面
     description: FS TOWNの画面です。2015年時点ではここまで変わりました。
+links:
+  - href: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
+    title: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
 ---
 
 [インターネットで遊んでいたTOWN](first_internet) は設置できることから、自分のサイトにも設置しました。

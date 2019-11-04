@@ -14,7 +14,7 @@ tags:
 
 2007年になると Java アプレットのゲームである WWA の存在を知ることになります。
 
-<about-note title="TOWN とは" link="http://shohei.heteml.jp/brassiere/" linkname="brassiere">
+<about-note title="TOWN とは" link="https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/" linkname="brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)">
 
 桑田湘平が開発した生活ゲームの Perl 製 CGI スクリプト。設立者は、複数の街を設けて、それぞれの街をレイアウトし、仮想の街を作ることができる。
 
@@ -22,9 +22,11 @@ tags:
 
 なお、開発時期がかなり古いこともあって、不正スクリプトタグの実行や取引額の変更行為などが散見されていたが、逆にこれが Web アプリケーションのセキュリティを学ぶお手本にもなった。
 
+現在は公式サイトが消失しているため、配布を終了している。
+
 </about-note>
 
-<about-note title="箱庭諸島 とは">
+<about-note title="箱庭諸島 とは" link="https://web.archive.org/web/20070707102159/http://t.pos.to/hako/" linkname="箱庭諸島のページ (サイト消失のため 2007/07/07 当時のアーカイブを表示)">
 
 仮想の島を運営して、手元の資金や物資を活用し、巨大な島へと発展するシミュレーションゲームの Perl 製 CGI スクリプト。自由度は高く、陸を拡張することはもちろん、ミサイル基地を作って他の島にミサイルを打つこともできる。また、島の発展を妨げる要素となる「怪獣」も現れるため、中盤以降では怪獣の退治に悩まされることが多い。
 

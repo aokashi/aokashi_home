@@ -24,7 +24,7 @@ tags:
 
 - **CPU**: Intel Core i5 7600K
 - **マザーボード**: ASUS ROG STRIX Z270-G GAMING
-- **メモリ**: Kingston HYPER-X FURY DDR4-2666 8GB × 2 + Corsair Vengance LPX DDR4-2666 8GB x 2
+- **メモリ**: Kingston HYPER-X FURY DDR4-2666 8GB × 2 + Corsair Vengance LPX DDR4-2666 8GB × 2
  	- 両方ともクロックを変化させるオーバークロックメモリだが、変化範囲が異なっていてこのままでは起動できないため、 2133MHz に引き落としている
 - **GPU**: ELSA GTX 1660Ti S.A.C
 - **CPUクーラー**: サイズ 巽

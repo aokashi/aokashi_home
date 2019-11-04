@@ -14,6 +14,11 @@ images:
   - src: /portfolio/wwabook_20th/page_chornology.png
     alt: WWA年表
     description: WWAの歴史をまとめた年表です。この年表のデザインも担当しました。
+links:
+  - href: https://www.wwafansq.com/works/wwabook_20th/
+    title: WWA FanSquare の紹介ページ
+  - href: https://wwa.fandom.com/ja/wiki/WWA%E3%81%AE%E5%86%92%E9%99%BA%E6%9B%B8_%EF%BD%9E20%E5%B9%B4%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92Quick_Load!!%EF%BD%9E
+    title: WWA Wiki での紹介ページ
 ---
 
 World Wide Adventure (WWA) が20周年を迎えたことから、記念誌として6人で制作し、コミックマーケット 91 で頒布しました。
@@ -31,7 +36,3 @@ World Wide Adventure (WWA) が20周年を迎えたことから、記念誌とし
 - 「WWAのマップデータを人力で読む」のコンテンツはまつゆきが担当していたが、彼は修論執筆の関係で表の作成と Photoshop の反映が進まず、その箇所を自分が代わりに担当することになった
 
 チームワーク力が発揮され、コミックマーケットという大きな市場で提供できたことから、得たものが特に大きかったのですが、これのチームワークをプログラミングでも発揮したかった・・・と翌年後悔を感じたことがあります。
-
-## 関連リンク
-- [WWA FanSquare の紹介ページ](https://www.wwafansq.com/works/wwabook_20th/)
-- [WWA Wiki での紹介ページ](https://wwa.fandom.com/ja/wiki/WWA%E3%81%AE%E5%86%92%E9%99%BA%E6%9B%B8_%EF%BD%9E20%E5%B9%B4%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92Quick_Load!!%EF%BD%9E)
