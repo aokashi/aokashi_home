@@ -7,36 +7,10 @@ import PortfolioList from '../../components/PortfolioList'
 import PortfolioItem from '../../components/PortfolioItem'
 import PortfolioGroup from '../../components/PortfolioGrouo'
 import WarningNote from '../../components/Note/WarningNote'
-
-/**
- * 時期の情報です。スラッグがキーになります。
- *     index: 順番 (同じ数字を指定しないこと)
- *     name: 名前 (ポートフォリオの一覧に表示されます)
- */
-const seasonDetails = {
-  'elementary-school': {
-    index: 1,
-    name: '小学生',
-  },
-  'junior-high-school': {
-    index: 2,
-    name: '中学生',
-  },
-  'high-school': {
-    index: 3,
-    name: '高校生'
-  },
-  'college': {
-    index: 4,
-    name: '大学生'
-  }
-}
+import seasonDetails from '../../data/portfolio/portfolioSeason.yml'
 
 class PortfolioPage extends React.Component {
 
-  /**
-   * @todo スクリーンショットの中に含まれている提供画像のリンク一覧を作る
-   */
   render() {
     return (
       <Layout>
@@ -47,6 +21,7 @@ class PortfolioPage extends React.Component {
         <div className="content">
           <h2>ポートフォリオについて</h2>
           <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。私自身は変化を好む傾向から、あれこれ手を出していまして、その雰囲気を感じ取れたらいいなと思っています。</p>
+          <p>なお、途中の項目から閲覧すると、専門用語の解説が含まれないので、一番最初の古い順から閲覧すると分かりやすいかもしれません。</p>
           <WarningNote>
             <div>
               <p>URIの禁則文字が含まれるタグについては、含まれないように変更を加えています。予めご了承ください。</p>
@@ -55,8 +30,6 @@ class PortfolioPage extends React.Component {
               </ul>
             </div>
           </WarningNote>
-          <h2>Thanks</h2>
-          <p>ポートフォリオの中で含まれている著作物の作者へのリンクを掲載しています。</p>
         </div>
       </Layout>
     )

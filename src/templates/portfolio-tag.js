@@ -4,7 +4,6 @@ import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
 import { graphql, Link } from 'gatsby';
 import PortfolioItem from '../components/PortfolioItem';
-import PortfolioList from '../components/PortfolioList';
 import PortfolioGroup from '../components/PortfolioGrouo';
 
 const PortfolioTagTemplate = ({ pageContext, data }) => {

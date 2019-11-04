@@ -53,9 +53,13 @@ const PortfolioItemTemplate = ({
             <div className={styles.linksTitle}>関連リンク</div>
             <div className={styles.linksList}>
               {
-                frontmatter.links.map((link, linkIndex) => (
-                  <a href={link.href} className={styles.link} target={'_blank'} key={linkIndex}>{link.title}</a>
-                ))
+                frontmatter.links.map((link, linkIndex) => {
+                  if (!link.href) {
+                    return <span className={styles.link} key={linkIndex}>{link.title}</span>
+                  }
+
+                  return <a href={link.href} className={styles.link} target={'_blank'} key={linkIndex}>{link.title}</a>
+                })
               }
             </div>
           </div>
