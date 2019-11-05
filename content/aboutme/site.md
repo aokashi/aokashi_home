@@ -18,17 +18,6 @@ Aokashiが運営していた過去のサイトを見ることができます。
 
 TOWNゲーム「Selt County」のために用意したサイト。3ヶ月しか保たなかったサイトです。
 
-#### Road Works County
-
-- 公開時期: 2010年11月23日～2012年6月8日
-- <a href="{{< contentslink "restore/rwc_1" >}}">Road Works County 1.0</a>
-- <a href="{{< contentslink "restore/rwc_2-0" >}}">Road Works County 2.0</a>
-- <a href="{{< contentslink "restore/rwc_2-1" >}}">Road Works County 2.1</a>
-- <a href="{{< contentslink "restore/rwc_af_2011" >}}">エイプリルフール(2011年)</a>
-- <a href="{{< contentslink "restore/rwc_af_2012" >}}">エイプリルフール(2012年)</a>
-
-前述の「Coden City」と「Zeist City」を併合したサイトです。規模、公開期間が長かったものの、サイト名にスペルミスが確認され、2012年6月に後継の「Aokashi.net」へ引き継ぎました。
-
 #### Aokashi.net
 
 - 公開時期: 2012年6月9日～2015年3月7日
