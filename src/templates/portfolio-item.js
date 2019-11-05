@@ -8,6 +8,9 @@ import renderAst from '../renderAst'
 import Carousel from '../components/Carousel'
 import convertDate from '../utils/convertDate'
 
+import DateIcon from '../images/portfolio_items_icon-date.svg'
+import TagIcon from '../images/portfolio_items_icon-tag.svg'
+
 const PortfolioItemTemplate = ({
   data
 }) => {
@@ -23,10 +26,12 @@ const PortfolioItemTemplate = ({
         <div className={styles.summary}>
           <h1>{frontmatter.title}</h1>
           <div className={styles.date}>
+            <img src={DateIcon} alt={'日付:'} className={styles.dateIcon} />
             <time datetime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
           </div>
         </div>
         <div className={styles.tags}>
+          <img src={TagIcon} alt={'タグ:'} className={styles.tagIcon} />
           {
             frontmatter.tags.map((tag, tagIndex) => (
               <span key={tagIndex} className={styles.tag}>
