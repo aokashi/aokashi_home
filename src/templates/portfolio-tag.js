@@ -1,19 +1,22 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../layouts/page-layout'
 import PageHeader from '../components/PageHeader'
-import { graphql, Link } from 'gatsby';
-import PortfolioItem from '../components/PortfolioItem';
-import PortfolioGroup from '../components/PortfolioGrouo';
+import PortfolioItem from '../components/PortfolioItem'
+import PortfolioGroup from '../components/PortfolioGrouo'
+
+import TagIcon from '../images/portfolio_items_icon-tag.svg'
+import BackLink from '../components/BackLink'
 
 const PortfolioTagTemplate = ({ pageContext, data }) => {
   const tag = pageContext.tag
 
   return (
     <Layout>
-      <PageHeader>
+      <BackLink to="/portfolio">トップへ戻る</BackLink>
+      <PageHeader image={TagIcon} imageType={'icon'}>
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
-        <Link to={'/portfolio/'}>トップへ戻る</Link>
       </PageHeader>
       <PortfolioGroup>
         {
@@ -25,6 +28,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
           ))
         }
       </PortfolioGroup>
+      <BackLink to="/portfolio">トップへ戻る</BackLink>
     </Layout>
   )
 }

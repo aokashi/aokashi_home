@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="16"
-   height="16"
-   viewBox="0 0 4.2333335 4.2333332"
+   width="24"
+   height="24"
+   viewBox="0 0 6.3500002 6.3499998"
    version="1.1"
    id="svg1402"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.4"
-     inkscape:cx="12.755163"
-     inkscape:cy="11.884083"
+     inkscape:zoom="24.789324"
+     inkscape:cx="16.675849"
+     inkscape:cy="13.581706"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -36,7 +36,8 @@
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="321"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false">
     <inkscape:grid
        type="xygrid"
        id="grid1947"
@@ -58,17 +59,18 @@
      inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-292.76668)">
+     transform="translate(0,-290.65001)">
     <path
-       style="fill:#cccccc;stroke:#000080;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 3.7041666,293.29585 v 1.32291 L 1.5650577,296.75787 0.24804687,295.44086 2.38125,293.29585 Z"
+       style="fill:#cccccc;stroke:#000080;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 5.8208334,291.17918 v 1.8884 l -3.4185846,3.43114 -1.87308213,-1.87996 3.41018523,-3.43958 z"
        id="path1949"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
     <circle
-       style="opacity:0.97000002;fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:#000080;stroke-width:0.26458332;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.97000002;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:#000080;stroke-width:0.26458332;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path1957"
-       cx="3.0427084"
-       cy="293.95731"
-       r="0.13229166" />
+       cx="4.7624998"
+       cy="292.23752"
+       r="0.26458332" />
   </g>
 </svg>

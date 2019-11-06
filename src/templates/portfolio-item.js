@@ -7,6 +7,7 @@ import PageHeader from '../components/PageHeader'
 import renderAst from '../renderAst'
 import Carousel from '../components/Carousel'
 import convertDate from '../utils/convertDate'
+import BackLink from '../components/BackLink'
 
 import DateIcon from '../images/portfolio_items_icon-date.svg'
 import TagIcon from '../images/portfolio_items_icon-tag.svg'
@@ -16,12 +17,9 @@ const PortfolioItemTemplate = ({
 }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
-  const backLink = (
-    <Link to="/portfolio/" className={styles.backLink}>戻る</Link>
-  )
   return (
     <Layout>
-      {backLink}
+      <BackLink to="/portfolio">戻る</BackLink>
       <PageHeader className={styles.header}>
         <div className={styles.summary}>
           <h1>{frontmatter.title}</h1>
@@ -40,12 +38,12 @@ const PortfolioItemTemplate = ({
             ))
           }
         </div>
-        <div className={styles.images}>
           {
             frontmatter.images &&
-              <Carousel items={frontmatter.images} width={4} height={3} />
+              <div className={styles.images}>
+                <Carousel items={frontmatter.images} width={4} height={3} />
+              </div>
           }
-        </div>
       </PageHeader>
       <div className="content">
         {
@@ -69,7 +67,7 @@ const PortfolioItemTemplate = ({
             </div>
           </div>
       }
-      {backLink}
+      <BackLink to="/portfolio">戻る</BackLink>
     </Layout>
   )
 }
