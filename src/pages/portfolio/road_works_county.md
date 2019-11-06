@@ -5,7 +5,7 @@ title: Road Works County
 date: "2010-11-23"
 season: junior-high-school
 tags:
-  - Webサイト
+  - Webページ
 images:
   - src: /portfolio/road_works_county/rwc_first.png
     alt: Road Works County (1代目)
