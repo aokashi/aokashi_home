@@ -41,13 +41,48 @@ exports.createPages = async ({ actions, graphql }) => {
     const nodeId = node.id
 
     createPage({
-      path: node.fields.slug,
+      path: trimPath(node.fields.slug),
       component: path.resolve(`./src/templates/${templateName}.js`),
       context: {
         nodeId
       }
     })
   })
+
+  /**
+   * ポートフォリオのタグからページ一覧を生成します
+   * @todo できれば別のページに移行する
+   */
+  graphql(`
+    {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: {
+              glob: "/portfolio/*"
+            }
+          }
+        }
+      ) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allMarkdownRemark.group.map(groupItem => {
+      const tagName = groupItem.fieldValue
+
+      createPage({
+        path: `/portfolio/tag/${tagName}`,
+        component: path.resolve('./src/templates/portfolio-tag.js'),
+        context: {
+          tag: tagName,
+        }
+      })
+    })
+  })
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -61,4 +96,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+/**
+ * パスから末尾のスラッシュを削除します。
+ * @param {string} path 
+ * @return {string}
+ */
+function trimPath(path) {
+  if (path === '/') {
+    return path;
+  }
+
+  return path.replace(/\/$/, ``);
 }
