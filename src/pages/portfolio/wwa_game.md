@@ -6,6 +6,10 @@ title: WWAゲームの制作
 season: junior-high-school
 tags:
   - WWA
+images:
+  - src: /portfolio/wwa_game/making_wwa_2010.png
+    alt: 2010年頃のWWAゲーム制作の様子
+    description: 初期のWWAゲームの制作の様子です。
 ---
 
 2008年からどうしても制作したかったWWAゲームの制作に取り掛かることができました。ゲーム制作におよそ2年間のブランクが生じたため、どのWWAゲームを制作するか、どうやってWWAゲームを制作するかについてはすんなりを覚え、1ヶ月に1作品のペースで制作、公開していました。
