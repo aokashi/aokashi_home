@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './PortfolioGroup.module.sass'
+/**
+ * 親要素が PortfolioList の場合にスタイルシートを付与したいため、CSSはPortfolioListと共用
+ */
+import styles from './PortfolioList.module.sass'
 
 const PortfolioGroup = ({ title, children }) => (
   <div className={`${styles.group}`}>
