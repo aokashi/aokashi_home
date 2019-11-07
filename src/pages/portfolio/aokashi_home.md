@@ -20,7 +20,7 @@ images:
 
 前代のAokashi.netはブログを融合した新しい方法を模索するWebサイトとして考えていましたが、今回のAokashi Homeは単純な個人サイトとして考え方を変えています。そのため、ブログとは切り離し、各コンテンツもコンパクトにまとめています。
 
-CMSはWordPressではなくMODXを採用しました。これは、ページ数が増えるとWordPressでは管理が難しく、一方のMODXは大量のページでも扱いやすく表示が速いためです。ただし、2017年のリニューアルからCMSではなく静的サイトに変更しています。静的サイトの生成は2017年～2019年は[Hugo](https://gohugo.io/)で、現在は[Gatsby](https://www.gatsbyjs.org/)を利用しています。
+CMSはWordPressではなくMODXを採用しました。これは、固定ページの数が増えるとWordPressでは管理が難しく、一方のMODXは大量のページでも扱いやすく表示が速いためです。ただし、2017年のリニューアルからCMSではなく静的サイトに変更しています。静的サイトの生成は2017年～2019年は[Hugo](https://gohugo.io/)で、現在は[Gatsby](https://www.gatsbyjs.org/)を利用しています。
 
 <about-note title="MODX とは" link="http://modx.jp/" linkname="MODX 日本公式サイト">
 
