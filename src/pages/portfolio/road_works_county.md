@@ -18,7 +18,7 @@ links:
     title: まつゆき・ヒラリラーの復元サイト一覧 (代理更新のヒラリラーのMP及びG10-Project Worksのデザインを当サイト制作の参考にしました)
 ---
 
-[Coden City](coden_city) と [Zeist City](zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
+[Coden City](coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
 
 WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。なお、この構造は前代のCoden CityやZeist Cityにも行っていました。
 
@@ -36,7 +36,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 1つのサイトに統合し、より管理しやすいように体制を整えたことで2011年にはそれなりに利用者に見てもらうことができました。
 
-しかし、Road Works Countyは元々「国」をイメージするために設立したWebサイトだったのですが、サイト名を間違えて County(群) にしてしまいました。これはドメイン名にも反映されてしまい、ドメイン名の変更が必要に迫られたことからドメイン aokashi.net を急遽取得し、[Aokashi.net](aokashi_dot_net)を代わりに設立しました。その後、2012年6月8日に役目を終えました。
+しかし、Road Works Countyは元々「国」をイメージするために設立したWebサイトだったのですが、サイト名を間違えて County(群) にしてしまいました。これはドメイン名にも反映されてしまい、ドメイン名の変更が必要に迫られたことからドメイン aokashi.net を急遽取得し、[Aokashi.net](/portfolio/aokashi_dot_net)を代わりに設立しました。その後、2012年6月8日に役目を終えました。
 
 ## おまけ: Road Works SNS
 
