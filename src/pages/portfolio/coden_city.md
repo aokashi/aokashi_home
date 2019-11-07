@@ -50,3 +50,5 @@ Webブラウザ、メールクライアント、ニュースリーダー、オ�
 - [2代目前期](https://contents.aokashi.net/restore/coden_2-1)
 - [2代目後期](https://contents.aokashi.net/restore/coden_2-2)
 - [3代目](https://contents.aokashi.net/restore/coden_3)
+
+(Coden City and Zeist City 共通センターは[Zeist Cityのページ](/portfolio/zeist_city)にあります。)

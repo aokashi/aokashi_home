@@ -8,6 +8,7 @@ import PortfolioItem from '../../components/PortfolioItem'
 import PortfolioGroup from '../../components/PortfolioGrouo'
 import WarningNote from '../../components/Note/WarningNote'
 import seasonDetails from '../../data/portfolio/portfolioSeason.yml'
+import otherPortfolioItems from '../../data/portfolio/otherItem.yml'
 
 class PortfolioPage extends React.Component {
 
@@ -32,14 +33,7 @@ class PortfolioPage extends React.Component {
           </WarningNote>
           <h2>その他のデータ</h2>
           <p>ポートフォリオの項目に載るものではないものの、コンテンツ整理によって行き場を失った作品紹介を掲載しています。</p>
-          <section>
-            <h3>コーデンタウン</h3>
-            <ul>
-              <li><time datetime="2014-12-31">2014年12月31日</time>〜<time datetime="2017-05-20">2017年5月20日</time></li>
-              <li><a href="https://contents.aokashi.net/restore/coden_town/">ページ</a></li>
-            </ul>
-            <p>昔のコンテンツを公開するサイトとして開設しました。Webサイトの設立を考える際に、最初に出した名前をサイト名として利用していました。</p>
-          </section>
+          {this.renderOtherPortfolioList()}
         </div>
       </Layout>
     )
@@ -117,6 +111,31 @@ class PortfolioPage extends React.Component {
           )
         } }
       />
+    )
+  }
+
+  renderOtherPortfolioList() {
+    return (
+      <>
+        {
+          otherPortfolioItems.map((item, itemIndex) => (
+            <section className={'section'} key={itemIndex}>
+              <h3>{item.title}</h3>
+              {
+                item.links &&
+                  <ul>
+                    {
+                      item.links.map((link, linkIndex) => (
+                        <li key={linkIndex}><a href={link.href}>{link.title}</a></li>
+                      ))
+                    }
+                  </ul>
+              }
+              <p>{item.description}</p>
+            </section>
+          ))
+        }
+      </>
     )
   }
 }
