@@ -30,6 +30,16 @@ class PortfolioPage extends React.Component {
               </ul>
             </div>
           </WarningNote>
+          <h2>その他のデータ</h2>
+          <p>ポートフォリオの項目に載るものではないものの、コンテンツ整理によって行き場を失った作品紹介を掲載しています。</p>
+          <section>
+            <h3>コーデンタウン</h3>
+            <ul>
+              <li><time datetime="2014-12-31">2014年12月31日</time>〜<time datetime="2017-05-20">2017年5月20日</time></li>
+              <li><a href="https://contents.aokashi.net/restore/coden_town/">ページ</a></li>
+            </ul>
+            <p>昔のコンテンツを公開するサイトとして開設しました。Webサイトの設立を考える際に、最初に出した名前をサイト名として利用していました。</p>
+          </section>
         </div>
       </Layout>
     )
