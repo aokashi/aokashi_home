@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from '../layouts/index-layout'
 
 import './index-page.sass'
-import Link from '../components/Link'
 import SEO from "../components/seo"
 import Icon from '../images/aokashi-icon.png'
 
@@ -13,11 +12,6 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <nav className="index-nav columns">
-        {
-          frontmatter.nav_items.map((navItem, navIndex) => getNavLink(navItem, navIndex))
-        }
-      </nav>
       <section className="aboutme">
         <h2 className="aboutme__title">{frontmatter.aboutme.heading}</h2>
         <div className="aboutme__introduction">
@@ -62,39 +56,11 @@ const IndexPageTemplate = ({ data }) => {
   )
 }
 
-const getNavLink = (navItem, navIndex) => {
-  const itemStyle = {
-    backgroundColor: navItem.color
-  }
-  
-  return (
-    <div className="index-nav__item nav-item column" key={navIndex}>
-      <Link
-        href={navItem.link}
-        className="nav-item__link"
-        style={itemStyle}
-      >
-        {
-          navItem.icon &&
-            <img src={navItem.icon} alt="" className="nav-item__icon" />
-        }
-        <span className="nav-item__text">{navItem.name}</span>
-      </Link>
-    </div>
-  )
-}
-
 export const pageQuery = graphql`
   query {
     markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
         title
-        nav_items {
-          name
-          link
-          icon
-          color
-        }
         aboutme {
           heading
           description
