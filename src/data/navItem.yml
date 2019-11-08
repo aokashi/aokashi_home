@@ -7,12 +7,12 @@
   type: contents
   link: software/
   icon: /images/menu_icon-software.png
-  color: '#c0ffc0'
+  color: '#e0e0e0'
 - name: Docs
   type: contents
   link: https://contents.aokashi.net/docs
-  icon: ''
-  color: '#c0ffc0'
+  icon: /images/menu_icon-docs.png
+  color: '#c0ffa0'
 - name: Material
   type: contents
   link: material/

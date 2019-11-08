@@ -19,14 +19,11 @@ const IndexLayout = ({ children }) => {
           }
         }
         allNavItemYaml {
-          group(field: type) {
-            nodes {
-              name
-              link
-              color
-              icon
-            }
-            fieldValue
+          nodes {
+            name
+            link
+            color
+            icon
           }
         }
       }
@@ -43,11 +40,9 @@ const IndexLayout = ({ children }) => {
           <img src={Logo} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
         </div>
         <div className={styles.front}>
-          <div className={styles.nav}>
-            {
-              navItems(data.allNavItemYaml)
-            }
-          </div>
+          {
+            navItems(data.allNavItemYaml)
+          }
           <div className={styles.aboutme}>
             <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
             <div className={styles.aboutmeTitle}>Aokashi について</div>
@@ -64,37 +59,26 @@ const IndexLayout = ({ children }) => {
   )
 }
 
+// const navItemsClassName = styles['nav' + toFirstUpperCase(navItems.fieldValue)]
 const navItems = (navData) => (
-  <>
+  <div className={styles.nav}>
     {
-      navData.group.map((navItems, navItemsIndex) => {
-        const navItemsClassName = styles['nav' + toFirstUpperCase(navItems.fieldValue)]
-        return (
-          <div className={`${navItemsClassName} columns is-mobile is-gapless`} key={navItemsIndex}>
+      navData.nodes.map((navItem, navItemIndex) => (
+        <div className={styles.navItem} key={navItemIndex}>
+          <Link
+            href={navItem.link}
+            className={styles.navItemLink}
+          >
             {
-              navItems.nodes.map((navItem, navItemIndex) => (
-                <div className={`${styles.navItem} column`} key={navItemIndex}>
-                  <Link
-                    href={navItem.link}
-                    className={styles.navItemLink}
-                    style={{
-                      backgroundColor: navItem.color
-                    }}
-                  >
-                    {
-                      navItem.icon &&
-                        <img src={navItem.icon} alt={''} className={styles.navItemIcon} />
-                    }
-                    <span className={styles.navItemText}>{navItem.name}</span>
-                  </Link>
-                </div>
-              ))
+              navItem.icon &&
+                <img src={navItem.icon} alt={''} className={styles.navItemIcon} />
             }
-          </div>
-        )
-      })
+            <span className={styles.navItemText}>{navItem.name}</span>
+          </Link>
+        </div>
+      ))
     }
-  </>
+  </div>
 )
 
 /**

@@ -8,36 +8,63 @@ $icon-size: 64px
   height: 100vh
   display: flex
   flex-flow: column nowrap
+  +desktop
+    position: relative
 
   .title
-    flex: 1 1 auto
     display: flex
     flex-flow: column nowrap
     justify-content: center
     align-items: center
     padding: 1rem
+    flex: 1 1 auto
     .titleLogo
       flex: 0 0 auto
   
   .front
-    flex: 0 0 auto
     background: rgba(255, 255, 255, .5)
+    flex: 0 0 auto
 
     .nav
-      padding: 1.5rem 0
+      display: flex
+      +touch
+        flex-flow: row wrap
+        justify-content: center
+      +desktop
+        position: absolute
+        left: 0
+        top: 0
+        max-height: 100vh
+        flex-flow: column nowrap
 
-    .navSite .navItemIcon
-      display: none
+    .navItem
+      flex: 0 1 auto
+      +desktop
+        min-height: 0
+        color: $white
+        &:hover
+          color: $light
+
+    .navItemLink,
+    .navItemIcon
+      +desktop
+        height: 100%
+
+    .navItemIcon
+      vertical-align: middle
+      margin: 0 .5rem
 
     .navItemLink
+      color: inherit
       display: block
-      text-align: center
-      border: 2px solid transparent
-      &:hover
-        border-color: $dark
+      +touch
+        text-align: center
 
     .navItemText
-      display: block
+      +touch
+        display: block
+      +desktop
+        font-size: $size-4
 
     .aboutme
       height: $icon-size
