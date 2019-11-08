@@ -4,7 +4,6 @@ import Layout from '../layouts/index-layout'
 
 import './index-page.sass'
 import SEO from "../components/seo"
-import Icon from '../images/aokashi-icon.png'
 
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -15,9 +14,6 @@ const IndexPageTemplate = ({ data }) => {
       <section className="aboutme">
         <h2 className="aboutme__title">{frontmatter.aboutme.heading}</h2>
         <div className="aboutme__introduction">
-          <div className="aboutme__icon">
-            <img src={Icon} alt="Aokashi"/>
-          </div>
           <div className="aboutme__description">
             <div className="aboutme__socials socials">
               <a className="socials__item socials__item--twitter" href={`https://twitter.com/${frontmatter.aboutme.socials.twitter}`}>@{frontmatter.aboutme.socials.twitter}</a>

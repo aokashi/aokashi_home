@@ -7,6 +7,7 @@ import styles from './index-layout.module.sass'
 import Link from '../components/Link'
 import Footer from '../components/footer.js'
 import Logo from "../images/ah-logo.png"
+import Icon from '../images/aokashi-icon.png'
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
@@ -41,10 +42,16 @@ const IndexLayout = ({ children }) => {
         <div className={styles.title}>
           <img src={Logo} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
         </div>
-        <div className={`${styles.nav}`}>
-          {
-            navItems(data.allNavItemYaml)
-          }
+        <div className={styles.front}>
+          <div className={styles.nav}>
+            {
+              navItems(data.allNavItemYaml)
+            }
+          </div>
+          <div className={styles.aboutme}>
+            <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
+            <div className={styles.aboutmeTitle}>Aokashi について</div>
+          </div>
         </div>
       </div>
       <div className={styles.mainContent}>
@@ -63,7 +70,7 @@ const navItems = (navData) => (
       navData.group.map((navItems, navItemsIndex) => {
         const navItemsClassName = styles['nav' + toFirstUpperCase(navItems.fieldValue)]
         return (
-          <div className={`${navItemsClassName} columns`} key={navItemsIndex}>
+          <div className={`${navItemsClassName} columns is-mobile is-gapless`} key={navItemsIndex}>
             {
               navItems.nodes.map((navItem, navItemIndex) => (
                 <div className={`${styles.navItem} column`} key={navItemIndex}>
