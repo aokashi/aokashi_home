@@ -9,9 +9,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import '../styles/base.sass'
-import styles from './page-layout.module.sass'
 
+import styles from './page-layout.module.sass'
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Sidebar from "../components/Sidebar/Sidebar"

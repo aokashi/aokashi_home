@@ -1,7 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import '../styles/base.sass'
 
 import styles from './index-layout.module.sass'
 import Footer from '../components/footer.js'
