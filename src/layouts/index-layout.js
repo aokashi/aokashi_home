@@ -20,12 +20,15 @@ const IndexLayout = ({ children }) => {
           }
         }
         allNavItemYaml {
-          nodes {
-            name
-            type
-            link
-            icon
-            color
+          group(field: type) {
+            nodes {
+              name
+              type
+              link
+              icon
+              color
+            }
+            fieldValue
           }
         }
         allSocialLinkYaml {
@@ -59,10 +62,8 @@ const IndexLayout = ({ children }) => {
           }
         </div>
       </div>
-      <div className={styles.mainContent}>
-        <div className={styles.container}>
-          {children}
-        </div>
+      <div className={`${styles.mainContent} container`}>
+        {children}
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />
     </>
@@ -70,24 +71,30 @@ const IndexLayout = ({ children }) => {
 }
 
 const navItems = (navData) => (
-  <div className={styles.nav}>
+  <>
     {
-      navData.nodes.map((navItem, navItemIndex) => (
-        <div className={styles.navItem} key={navItemIndex}>
-          <Link
-            href={navItem.link}
-            className={styles.navItemLink}
-          >
-            {
-              navItem.icon &&
-                <img src={navItem.icon} alt={''} className={styles.navItemIcon} />
-            }
-            <span className={styles.navItemText}>{navItem.name}</span>
-          </Link>
+      navData.group.map((group, groupIndex) => (
+        <div className={getNavGroupClassName(group.fieldValue)} key={groupIndex}>
+          {
+            group.nodes.map((navItem, navItemIndex) => (
+              <div className={styles.navItem} key={navItemIndex}>
+                <Link
+                  href={navItem.link}
+                  className={styles.navItemLink}
+                >
+                  {
+                    navItem.icon &&
+                      <img src={navItem.icon} alt={''} className={styles.navItemIcon} />
+                  }
+                  <span className={styles.navItemText}>{navItem.name}</span>
+                </Link>
+              </div>
+            ))
+          }
         </div>
       ))
     }
-  </div>
+  </>
 )
 
 const socialLinks = (socialData) => (
@@ -97,7 +104,9 @@ const socialLinks = (socialData) => (
         <div className={styles.socialItem} key={socialItemIndex}>
           <SocialLink socialItem={socialItem}>
             <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
-            {!socialItem.link && socialItem.text}
+            <span className={styles.socialText}>
+              {socialItem.text}
+            </span>
           </SocialLink>
         </div>
       ))
@@ -106,13 +115,14 @@ const socialLinks = (socialData) => (
 )
 
 const SocialLink = ({ socialItem, children }) => {
+  const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <a href={socialItem.link} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{children}</a>
+      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{children}</a>
     )
   } else {
     return (
-      <span className={styles.socialLink}>{children}</span>
+      <span title={titleText}>{children}</span>
     )
   }
 }
@@ -127,6 +137,10 @@ const SocialIcon = ({ icon, alt }) => {
       <span className={styles.socialIcon}>{alt}</span>
     )
   }
+}
+
+function getNavGroupClassName(groupValue) {
+  return styles[groupValue + 'Nav']
 }
 
 IndexLayout.propTypes = {

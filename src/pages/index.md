@@ -27,15 +27,11 @@ nav_items:
     link: https://www.wwafansq.com
     icon: /images/menu_icon-wwa_fansq.png
     color: '#ff9a31'
-aboutme:
-  heading: Aokashi について
+profile:
   description: >-
     大学院生。
-    個性を見つけることが好きで、誰もが個性が出せる世の中が作れないか模索している。
-    ついでに自分を表現することも好き。
-  socials:
-    twitter: aokashi
-    github: aokashi
+    個性を見つけることが好きで、アイデアをすぐに形にできないか模索している。
+    地形(特に建物の中や地下街)のあちこちを見て回ることも好きで、マップ制作が得意。
   items:
     likes:
       - name: パソコン

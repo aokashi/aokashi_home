@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Layout from '../layouts/index-layout'
 
-import './index-page.sass'
+import styles from './index-page.module.sass'
 import SEO from "../components/seo"
 
 const IndexPageTemplate = ({ data }) => {
@@ -11,43 +11,26 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <section className="aboutme">
-        <h2 className="aboutme__title">{frontmatter.aboutme.heading}</h2>
-        <div className="aboutme__introduction">
-          <div className="aboutme__description">
-            <div className="aboutme__socials socials">
-              <a className="socials__item socials__item--twitter" href={`https://twitter.com/${frontmatter.aboutme.socials.twitter}`}>@{frontmatter.aboutme.socials.twitter}</a>
-              <a className="socials__item socials__item--github" href={`https://github.com/${frontmatter.aboutme.socials.github}`}>{frontmatter.aboutme.socials.github}</a>
-            </div>
-            <p>{frontmatter.aboutme.description}</p>
-          </div>
+      <div className={styles.profile}>
+        <div className={styles.profileDescription}>
+          <p>{frontmatter.profile.description}</p>
         </div>
-        <div className="aboutme__extra">
-          <section className="aboutme__likes">
-            <h3>好きなもの</h3>
+        <div className={`${styles.profileExtra} columns`}>
+          <section className={`${styles.section} ${styles.profileLikes} column is-half`}>
+            <h2 className={styles.sectionTitle}>好きなもの</h2>
             {
-              frontmatter.aboutme.items.likes.map((item, index) => (
-                <section key={index}>
-                  <h4>{item.name}</h4>
-                  <p>{item.text}</p>
-                </section>
-              ))
+              ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
-          <section className="aboutme__environments">
-            <h3>使用環境</h3>
+          <section className={`${styles.section} ${styles.profileEnvironments} column is-half`}>
+            <h2 className={styles.sectionTitle}>使用環境</h2>
             {
-              frontmatter.aboutme.items.environments.map((item, index) => (
-                <section key={index}>
-                  <h4>{item.name}</h4>
-                  <p>{item.text}</p>
-                </section>
-              ))
+              ProfileSection(frontmatter.profile.items.environments)
             }
           </section>
         </div>
-        <p>{frontmatter.aboutme.extra}</p>
-      </section>
+        <p>{frontmatter.profile.extra}</p>
+      </div>
     </Layout>
   )
 }
@@ -56,14 +39,8 @@ export const pageQuery = graphql`
   query {
     markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
-        title
-        aboutme {
-          heading
+        profile {
           description
-          socials {
-            twitter
-            github
-          }
           items {
             likes {
               name
@@ -80,5 +57,14 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const ProfileSection = (data) => {
+  return data.map((item, index) => (
+    <section className={styles.item} key={index}>
+      <h3 className={styles.itemTitle}>{item.name}</h3>
+      <p className={styles.itemText}>{item.text}</p>
+    </section>
+  ))
+}
 
 export default IndexPageTemplate

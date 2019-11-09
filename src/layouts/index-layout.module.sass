@@ -1,6 +1,6 @@
-$icon-size: 64px
 $logo-width: 512px
 $logo-height: 96px
+$content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
 
 .indexBody
   background: #808080 url('../images/ah-background_index.png') repeat 0 0
@@ -8,13 +8,15 @@ $logo-height: 96px
 .firstScreen
   height: 100vh
   display: grid
+  display: -ms-grid
+  grid-gap: $block-spacing
 
   .titleLogo
     width: $logo-width
 
-.nav
+.contentsNav,
+.siteNav
   display: flex
-  justify-content: center
   .navItem
     flex: 0 1 auto
     color: $white
@@ -24,37 +26,68 @@ $logo-height: 96px
     color: inherit
   .navItemIcon
     vertical-align: middle
-  
+
+.siteNav
+  .navItemIcon
+    margin: 0 .5rem
+
 +touch
   .firstScreen
     grid-template-columns: 1fr
-    grid-template-rows: 1fr $logo-height 1fr auto auto
+    -ms-grid-columns:      1fr
+    grid-template-rows: 1fr $logo-height 1fr auto auto auto
+    -ms-grid-rows:      1fr $logo-height 1fr auto auto auto
   .title
     grid-row: 2
+    -ms-grid-row: 2
     text-align: center
-  .nav
+    padding: 0 .5rem
+  .contentsNav,
+  .siteNav
+    justify-content: space-around
+  .contentsNav
     grid-row: 4
-    margin-bottom: $block-spacing
-  .navItemLink
-    text-align: center
-    .navItemText
-      display: block
-  .aboutme
+    -ms-grid-row: 4
+    .navItemLink
+      text-align: center
+      .navItemText
+        display: block
+  .siteNav
     grid-row: 5
+    -ms-grid-row: 5
+  .aboutme
+    grid-row: 6
+    -ms-grid-row: 6
 
 +desktop
   .firstScreen
     grid-template-columns: 1fr $logo-width 1fr
+    -ms-grid-columns:      1fr $logo-width 1fr
     grid-template-rows: 1fr $logo-height 1fr auto
+    -ms-grid-rows:      1fr $logo-height 1fr auto
   .title
     grid-column: 2
+    -ms-grid-column: 2
     grid-row: 2
-  .nav
-    grid-column-start: 1
-    grid-column-end: 2
+    -ms-grid-row: 2
+  .contentsNav
+    grid-column: 1
+    -ms-grid-column: 1
     grid-row-start: 1
-    grid-row-end: 5
+    grid-row-end: 4
+    -ms-grid-row: 1
+    -ms-grid-row-span: 3
     flex-flow: column nowrap
+    justify-content: center
+  .siteNav
+    grid-column: 3
+    -ms-grid-column: 3
+    grid-row-start: 2
+    grid-row-end: 4
+    -ms-grid-row: 2
+    -ms-grid-row-span: 2
+    flex-flow: column nowrap
+    justify-content: flex-end
   .navItem
     min-height: 0
   .navItemLink,
@@ -70,33 +103,41 @@ $logo-height: 96px
       flex: 0 0 auto
       margin: 0 .5rem
   .aboutme
-    grid-column: 2
+    grid-column: 1 / 4
+    -ms-grid-column: 1
+    -ms-grid-column-span: 3
     grid-row: 4
+    -ms-grid-row: 4
 
 .aboutme
-  background: rgba(255, 255, 255, .5)
+  background: $content-bg
+  border-top: 2px solid $primary
   display: flex
   align-items: center
-  +desktop
-    width: $logo-width
-    margin: 0 auto
 
   .aboutmeIcon
-    height: $icon-size
-    flex: 0 0 $icon-size
+    height: 64px
+    flex: 0 0 auto
+    +desktop
+      height: 128px
 
 .social
   .socialItem
     display: inline-block
-    margin: .5rem 1rem
-    +desktop
-      font-size: 1.5rem
+    margin: .5rem 2rem
+  .socialLink
+    color: $grey
+    &:hover
+      color: $black
   .socialIcon
+    font-size: 1.5rem
+    color: $black
     margin-right: .25rem
+    +desktop
+      font-size: 2rem
+  .socialText
+    font-size: 1rem
 
-.mainHeader,
 .mainContent
-  .container
-    background-color: rgba(255, 255, 255, .25)
-    text-align: center
-    padding: $block-spacing 0
+  background: $content-bg
+  padding: 1rem
