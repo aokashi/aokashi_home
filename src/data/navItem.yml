@@ -23,13 +23,3 @@
   link: portfolio/
   icon: /images/menu_icon-portfolio.png
   color: '#e0a0e0'
-- name: Blog
-  type: site
-  link: http://aokashi.hatenablog.jp
-  icon: /images/menu_icon-blog.png
-  color: '#e0e0a0'
-- name: WWA FanSquare
-  type: site
-  link: https://www.wwafansq.com
-  icon: /images/menu_icon-wwa_fansq.png
-  color: '#ff9a31'

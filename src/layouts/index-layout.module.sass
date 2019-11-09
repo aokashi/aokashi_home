@@ -1,83 +1,98 @@
 $icon-size: 64px
+$logo-width: 512px
+$logo-height: 96px
 
 .indexBody
   background: #808080 url('../images/ah-background_index.png') repeat 0 0
 
 .firstScreen
-  width: 100vw
   height: 100vh
+  display: grid
+
+  .titleLogo
+    width: $logo-width
+
+.nav
   display: flex
-  flex-flow: column nowrap
-  +desktop
-    position: relative
-
-  .title
-    display: flex
-    flex-flow: column nowrap
-    justify-content: center
-    align-items: center
-    padding: 1rem
-    flex: 1 1 auto
-    .titleLogo
-      flex: 0 0 auto
+  justify-content: center
+  .navItem
+    flex: 0 1 auto
+    color: $white
+    &:hover
+      color: $light
+  .navItemLink
+    color: inherit
+  .navItemIcon
+    vertical-align: middle
   
-  .front
-    background: rgba(255, 255, 255, .5)
-    flex: 0 0 auto
-
-    .nav
-      display: flex
-      +touch
-        flex-flow: row wrap
-        justify-content: center
-      +desktop
-        position: absolute
-        left: 0
-        top: 0
-        max-height: 100vh
-        flex-flow: column nowrap
-
-    .navItem
-      flex: 0 1 auto
-      +desktop
-        min-height: 0
-        color: $white
-        &:hover
-          color: $light
-
-    .navItemLink,
-    .navItemIcon
-      +desktop
-        height: 100%
-
-    .navItemIcon
-      vertical-align: middle
-      margin: 0 .5rem
-
-    .navItemLink
-      color: inherit
-      display: block
-      +touch
-        text-align: center
-
++touch
+  .firstScreen
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr $logo-height 1fr auto auto
+  .title
+    grid-row: 2
+    text-align: center
+  .nav
+    grid-row: 4
+    margin-bottom: $block-spacing
+  .navItemLink
+    text-align: center
     .navItemText
-      +touch
-        display: block
-      +desktop
-        font-size: $size-4
+      display: block
+  .aboutme
+    grid-row: 5
 
-    .aboutme
-      height: $icon-size
-      display: flex
++desktop
+  .firstScreen
+    grid-template-columns: 1fr $logo-width 1fr
+    grid-template-rows: 1fr $logo-height 1fr auto
+  .title
+    grid-column: 2
+    grid-row: 2
+  .nav
+    grid-column-start: 1
+    grid-column-end: 2
+    grid-row-start: 1
+    grid-row-end: 5
+    flex-flow: column nowrap
+  .navItem
+    min-height: 0
+  .navItemLink,
+  .navItemIcon
+    height: 100%
+  .navItemLink
+    display: flex
+    align-items: center
+    .navItemText
+      flex: 1 1 auto
+      font-size: $size-5
+    .navItemIcon
+      flex: 0 0 auto
+      margin: 0 .5rem
+  .aboutme
+    grid-column: 2
+    grid-row: 4
 
-      .aboutmeIcon
-        height: $icon-size
-        flex: 0 0 $icon-size
+.aboutme
+  background: rgba(255, 255, 255, .5)
+  display: flex
+  align-items: center
+  +desktop
+    width: $logo-width
+    margin: 0 auto
 
-      .aboutmeTitle
-        font-size: $size-5
-        flex: 1 1 auto
-        padding: 1rem
+  .aboutmeIcon
+    height: $icon-size
+    flex: 0 0 $icon-size
+
+.social
+  .socialItem
+    display: inline-block
+    margin: .5rem 1rem
+    +desktop
+      font-size: 1.5rem
+  .socialIcon
+    margin-right: .25rem
 
 .mainHeader,
 .mainContent

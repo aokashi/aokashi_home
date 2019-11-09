@@ -1,7 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './index-layout.module.sass'
 import Link from '../components/Link'
@@ -21,8 +22,17 @@ const IndexLayout = ({ children }) => {
         allNavItemYaml {
           nodes {
             name
+            type
             link
+            icon
             color
+          }
+        }
+        allSocialLinkYaml {
+          nodes {
+            name
+            link
+            text
             icon
           }
         }
@@ -35,22 +45,22 @@ const IndexLayout = ({ children }) => {
       <Helmet>
         <body className={styles.indexBody} />
       </Helmet>
-      <div className={styles.firstScreen}>
+      <div className={`${styles.firstScreen} container`}>
         <div className={styles.title}>
           <img src={Logo} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
         </div>
-        <div className={styles.front}>
+        {
+          navItems(data.allNavItemYaml)
+        }
+        <div className={styles.aboutme}>
+          <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
           {
-            navItems(data.allNavItemYaml)
+            socialLinks(data.allSocialLinkYaml)
           }
-          <div className={styles.aboutme}>
-            <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
-            <div className={styles.aboutmeTitle}>Aokashi について</div>
-          </div>
         </div>
       </div>
       <div className={styles.mainContent}>
-        <div className={`${styles.container} container`}>
+        <div className={styles.container}>
           {children}
         </div>
       </div>
@@ -59,7 +69,6 @@ const IndexLayout = ({ children }) => {
   )
 }
 
-// const navItemsClassName = styles['nav' + toFirstUpperCase(navItems.fieldValue)]
 const navItems = (navData) => (
   <div className={styles.nav}>
     {
@@ -81,13 +90,43 @@ const navItems = (navData) => (
   </div>
 )
 
-/**
- * 文字列の先頭を大文字にします
- * @param {string} string
- */
-function toFirstUpperCase(string) {
-  const firstLetter = string.charAt(0)
-  return firstLetter.toUpperCase() + string.substring(1)
+const socialLinks = (socialData) => (
+  <div className={styles.social}>
+    {
+      socialData.nodes.map((socialItem, socialItemIndex) => (
+        <div className={styles.socialItem} key={socialItemIndex}>
+          <SocialLink socialItem={socialItem}>
+            <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
+            {!socialItem.link && socialItem.text}
+          </SocialLink>
+        </div>
+      ))
+    }
+  </div>
+)
+
+const SocialLink = ({ socialItem, children }) => {
+  if (socialItem.link) {
+    return (
+      <a href={socialItem.link} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{children}</a>
+    )
+  } else {
+    return (
+      <span className={styles.socialLink}>{children}</span>
+    )
+  }
+}
+
+const SocialIcon = ({ icon, alt }) => {
+  if (icon) {
+    return (
+      <FontAwesomeIcon icon={['fab', icon]} className={styles.socialIcon} />
+    )
+  } else {
+    return (
+      <span className={styles.socialIcon}>{alt}</span>
+    )
+  }
 }
 
 IndexLayout.propTypes = {
