@@ -24,6 +24,8 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
       color: $light
   .navItemLink
     color: inherit
+  .navItemText
+    text-transform: uppercase
   .navItemIcon
     vertical-align: middle
 
@@ -124,7 +126,9 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
 .social
   .socialItem
     display: inline-block
-    margin: .5rem 2rem
+    margin: .5rem 1rem
+    +desktop
+      margin: .5rem 2rem
   .socialLink
     color: $grey
     &:hover
@@ -136,7 +140,9 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     +desktop
       font-size: 2rem
   .socialText
-    font-size: 1rem
+    font-size: $size-7
+    +desktop
+      font-size: $size-6
 
 .mainContent
   background: $content-bg
