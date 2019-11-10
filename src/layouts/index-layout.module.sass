@@ -1,5 +1,6 @@
 $logo-width: 512px
 $logo-height: 96px
+$site-icon-width: 64px
 $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
 
 .indexBody
@@ -22,16 +23,26 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     color: $white
     &:hover
       color: $light
-  .navItemLink
-    color: inherit
-  .navItemText
-    text-transform: uppercase
+.navItemLink
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  color: inherit
   .navItemIcon
-    vertical-align: middle
+    flex: 0 0 auto
+  .navItemText
+    flex: 1 1 auto
+    text-transform: uppercase
 
 .siteNav
   .navItemIcon
     margin: 0 .5rem
+
++mobile
+  .siteNav
+    .navItemIcon
+      width: 10vw
+      max-width: $site-icon-width
 
 +touch
   .firstScreen
@@ -51,13 +62,13 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     grid-row: 4
     -ms-grid-row: 4
     .navItemLink
-      text-align: center
-      .navItemText
-        display: block
+      flex-direction: column
   .siteNav
     grid-row: 5
     -ms-grid-row: 5
-  .aboutme
+  .navItemText
+    font-size: 3vw
+  .quickContents
     grid-row: 6
     -ms-grid-row: 6
 
@@ -96,32 +107,39 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
   .navItemIcon
     height: 100%
   .navItemLink
-    display: flex
-    align-items: center
-    .navItemText
-      flex: 1 1 auto
-      font-size: $size-5
+    flex-flow: row nowrap
     .navItemIcon
-      flex: 0 0 auto
       margin: 0 .5rem
-  .aboutme
+    .navItemText
+      font-size: $size-5
+  .quickContents
     grid-column: 1 / 4
     -ms-grid-column: 1
     -ms-grid-column-span: 3
     grid-row: 4
     -ms-grid-row: 4
 
-.aboutme
+.quickContents
   background: $content-bg
   border-top: 2px solid $primary
+
+.information
+  padding: .5rem .5rem .5rem 2rem
+  background: $white
+  position: relative
+  &:before
+    content: "»"
+    position: absolute
+    left: 1rem
+
+.aboutme
   display: flex
   align-items: center
-
-  .aboutmeIcon
-    height: 64px
-    flex: 0 0 auto
-    +desktop
-      height: 128px
+.aboutmeIcon
+  height: 64px
+  flex: 0 0 auto
+  +desktop
+    height: 128px
 
 .social
   .socialItem
@@ -143,6 +161,9 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     font-size: $size-7
     +desktop
       font-size: $size-6
+  +touch
+    .hasLink .socialText
+      display: none
 
 .mainContent
   background: $content-bg

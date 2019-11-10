@@ -39,6 +39,18 @@ const IndexLayout = ({ children }) => {
             icon
           }
         }
+        allInformationYaml(
+          sort: {
+            fields: date,
+            order: DESC
+          },
+          limit: 1
+        ) {
+          nodes {
+            name
+            date
+          }
+        }
       }
     `
   )
@@ -55,11 +67,16 @@ const IndexLayout = ({ children }) => {
         {
           navItems(data.allNavItemYaml)
         }
-        <div className={styles.aboutme}>
-          <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
-          {
-            socialLinks(data.allSocialLinkYaml)
-          }
+        <div className={styles.quickContents}>
+          <div className={styles.information}>
+            {data.allInformationYaml.nodes[0].name}
+          </div>
+          <div className={styles.aboutme}>
+            <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
+            {
+              socialLinks(data.allSocialLinkYaml)
+            }
+          </div>
         </div>
       </div>
       <div className={`${styles.mainContent} container`}>
@@ -118,7 +135,7 @@ const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{children}</a>
+      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={`${styles.socialLink} ${styles.hasLink}`}>{children}</a>
     )
   } else {
     return (
