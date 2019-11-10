@@ -1,17 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Modal.module.sass'
 
-import CloseButtonIcon from '../../images/button_icon-close.svg'
-
+/**
+ * @see https://bulma.io/documentation/components/modal/
+ */
 const Modal = ({ onOutsideClick, children }) => (
-  <div className={styles.modal} onClick={onOutsideClick}>
-    <div className={styles.modalContent}>
-      <div className={styles.closeButtonWrapper}>
-        <img src={CloseButtonIcon} alt="" className={styles.closeButton} onClick={onOutsideClick} />
-      </div>
+  <div className="modal is-active" onClick={onOutsideClick}>
+    <div className="modal-background"></div>
+    <div className="modal-content">
       {children}
     </div>
+    <button className="modal-close is-large" onClick={onOutsideClick}></button>
   </div>
 )
 

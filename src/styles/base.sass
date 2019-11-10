@@ -1,18 +1,17 @@
 /**
- * ベースのスタイルシートファイルです。 layouts 下のコンポーネントでは、必ずこの sass ファイルを import してください。
+ * ベースのスタイルシートファイルです。gatsby-browser.js でこのファイルがインポートされます。
  */
 
 @charset "utf-8"
 
 @import "~bulma/sass/base/_all.sass"
-@import "~bulma/sass/elements/container.sass"
 
 $content-heading-color: $primary
 $content-blockquote-background-color: $light
 $content-blockquote-border-left: 5px solid $grey
-@import "~bulma/sass/elements/content.sass"
-
+@import "~bulma/sass/elements/_all.sass"
 @import "~bulma/sass/grid/_all.sass"
+@import "~bulma/sass/components/_all.sass"
 
 $footer-background-color: $dark
 $footer-color: $white

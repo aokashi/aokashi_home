@@ -28,21 +28,19 @@ const SoftwarePage = () => (
 )
 
 const softwareList = (
-  <BoxList className="software-list list">
+  <BoxList>
     {
       SoftwareData.map((item, index) => (
         <Box
           title={item.name}
-          className="list__item"
+          width="half"
           key={index}
         >
           <p>{item.description}</p>
-          <div className="item__keywords keywords">
-            {
-              item.keywords.map((keyword, keywordIndex) => (
-                <span className="keywords__item" key={keywordIndex}>{keyword}</span>
-              ))
-            }
+          <div>
+            {item.keywords.map((keyword, keywordIndex) => (
+              <span className="tag" key={keywordIndex}>{keyword}</span>
+            ))}
           </div>
           <BoxNav navItems={getLinks(item)} />
         </Box>

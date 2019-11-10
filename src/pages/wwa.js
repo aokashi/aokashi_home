@@ -70,7 +70,7 @@ const WWAPage = () => {
 const WWAList = (data) => data.nodes.map((item, index) => (
   <Box
     title={item.name}
-    className="is-one-third"
+    width="one-third"
     key={index}
   >
     <img src={`/images/wwa_screens/${item.id}.gif`} alt="" />

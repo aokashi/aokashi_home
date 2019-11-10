@@ -3,8 +3,6 @@
   
 .mainContent
   +block
-  +touch
-    padding: 0 $block-spacing
 
 .container
   display: flex
@@ -64,6 +62,8 @@
       background-color: $grey
     &.isActive
       font-weight: bold
+  .navIcon
+    max-width: 64px // 横持ちで閲覧した場合、なるべく閲覧領域を確保するため幅に上限をもたせる
   .navText
     display: block
     font-size: $size-7

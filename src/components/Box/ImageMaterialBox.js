@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './ImageMaterialBox.module.sass'
 import MaterialBox from './MaterialBox'
 
 const ImageMaterialBox = ({ materialItem, onItemClick }) => (
   <MaterialBox
     materialItem={materialItem}
+    width="one-third"
   >
-    <div className={styles.imageWrapper} onClick={onItemClick}>
-      <img src={materialItem.file} alt={materialItem.name} className={styles.image} />
+    <div onClick={onItemClick} className="block">
+      <img src={materialItem.file} alt={materialItem.name} />
     </div>
-    <div className={styles.buttons}>
-      <a download={materialItem.file} href={materialItem.file} className={styles.downloadButton}>ダウンロード</a>
+    <div className="has-text-right block">
+      <a download={materialItem.file} href={materialItem.file} className="button">ダウンロード</a>
     </div>
   </MaterialBox>
 )
