@@ -126,13 +126,13 @@
   tags:
     - WWA素材第3世代
     - 地面
-- name: Road-Road
+- name: 18Road-Road
   file: /materials/wwa/18Road-Road.gif
   publishedAt: 2018-06-19
   tags:
     - WWA素材第3世代
     - 地面
-- name: RoadCarReady-RoadCarReady
+- name: 18Road-RoadCarReady
   file: /materials/wwa/18Road-RoadCarReady.gif
   publishedAt: 2018-06-19
   tags:

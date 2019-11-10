@@ -1,16 +1,18 @@
-import React from 'react'
-import Layout from '../../layouts/page-layout'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react"
+import Layout from "../../layouts/page-layout"
+import { StaticQuery, graphql } from "gatsby"
 
-import MaterialNavItem from '../../data/materials/navItem.json'
-import PageHeader from '../../components/PageHeader'
-import BoxList from '../../components/BoxList'
-import PieceMaterialBox from '../../components/Box/PieceMaterialBox'
+import SEO from "../../components/seo"
+import MaterialNavItem from "../../data/materials/navItem.json"
+import PageHeader from "../../components/PageHeader"
+import BoxList from "../../components/BoxList"
+import PieceMaterialBox from "../../components/Box/PieceMaterialBox"
 
 class IconPage extends React.Component {
   render() {
     return (
       <Layout>
+        <SEO title="アイコン素材" description="Aokashi Homeのアイコン素材は32×32のサイズの建物で取り扱っています。元々CGIゲームのTOWN用に制作したものですが、今でもマップ制作におすすめです。" />
         <PageHeader navItems={MaterialNavItem}>
           <h1>アイコン素材</h1>
         </PageHeader>

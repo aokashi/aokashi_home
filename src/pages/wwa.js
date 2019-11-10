@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../layouts/page-layout"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader"
 import BoxList from "../components/BoxList"
 import Box from "../components/Box/Box"
@@ -38,6 +39,7 @@ const WWAPage = () => {
 
   return (
     <Layout>
+      <SEO title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
       <PageHeader>
       <h1>WWA</h1>
       </PageHeader>

@@ -1,12 +1,14 @@
-import React from 'react'
-import Layout from '../layouts/page-layout'
+import React from "react"
+import Layout from "../layouts/page-layout"
 
-import MaterialNavItem from '../data/materials/navItem.json'
-import PageHeader from '../components/PageHeader'
-import WarningNote from '../components/Note/WarningNote'
+import SEO from "../components/seo"
+import MaterialNavItem from "../data/materials/navItem.json"
+import PageHeader from "../components/PageHeader"
+import WarningNote from "../components/Note/WarningNote"
 
 const MaterialIndexPage = () => (
   <Layout>
+    <SEO title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
     <PageHeader navItems={MaterialNavItem}>
       <h1>素材</h1>
     </PageHeader>

@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../layouts/page-layout"
 
+import SEO from "../components/seo"
 import SoftwareData from "../data/software.json"
 import PageHeader from "../components/PageHeader"
 import BoxList from "../components/BoxList"
@@ -11,6 +12,7 @@ import LinkButton from "../components/LinkButton"
 
 const SoftwarePage = () => (
   <Layout>
+    <SEO title="ソフトウェア" description="Aokashi Homeのソフトウェアページです。あると便利なツールや、創作を手助けするツールの開発をしています。" />
     <PageHeader>
       <h1>ソフトウェア</h1>
     </PageHeader>

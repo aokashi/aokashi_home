@@ -1,13 +1,14 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Layout from '../../layouts/page-layout'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Layout from "../../layouts/page-layout"
 
-import MaterialNavItem from '../../data/materials/navItem.json'
-import PageHeader from '../../components/PageHeader'
-import InfoNote from '../../components/Note/InfoNote'
-import BoxList from '../../components/BoxList'
-import ImageMaterialBox from '../../components/Box/ImageMaterialBox'
-import ImageModal from '../../components/Modal/ImageModal'
+import MaterialNavItem from "../../data/materials/navItem.json"
+import PageHeader from "../../components/PageHeader"
+import InfoNote from "../../components/Note/InfoNote"
+import BoxList from "../../components/BoxList"
+import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
+import ImageModal from "../../components/Modal/ImageModal"
+import SEO from "../../components/seo"
 
 class TkoolMvPage extends React.Component {
 
@@ -22,6 +23,7 @@ class TkoolMvPage extends React.Component {
   render() {
     return (
       <Layout>
+        <SEO title="RPGツクールMV対応素材" description="RPGツクールMV対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <PageHeader navItems={MaterialNavItem}>
           <h1>RPGツクールMV対応素材</h1>
         </PageHeader>
