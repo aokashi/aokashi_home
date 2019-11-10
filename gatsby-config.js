@@ -32,6 +32,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://aokashi.hatenablog.jp/rss`,
+        name: `AokashiRoom`,
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
