@@ -39,6 +39,7 @@ export const pageQuery = graphql`
   query {
     markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
+        title
         profile {
           description
           items {

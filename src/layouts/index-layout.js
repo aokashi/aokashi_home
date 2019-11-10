@@ -40,16 +40,17 @@ const IndexLayout = ({ children }) => {
             icon
           }
         }
-        allInformationYaml(
+        allFeedAokashiRoom(
           sort: {
-            fields: date,
+            fields: isoDate,
             order: DESC
           },
           limit: 1
         ) {
           nodes {
-            name
-            date
+            title
+            link
+            isoDate
           }
         }
       }
@@ -70,7 +71,7 @@ const IndexLayout = ({ children }) => {
         }
         <div className={styles.quickContents}>
           {
-            Information(data.allInformationYaml.nodes[0])
+            Information(data.allFeedAokashiRoom.nodes[0])
           }
           <div className={styles.aboutme}>
             <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
@@ -159,8 +160,11 @@ const SocialIcon = ({ icon, alt }) => {
 
 const Information = (data) => (
   <div className={styles.information}>
-    {data.name}
-    <time datetime={data.date} className={styles.informationDate}>{convertDate(data.date)}</time>
+    <span className={styles.informationTitle}>ブログ記事</span>
+    <a href={data.link} target="_blank" rel="noopener noreferrer" className={styles.informationLink}>
+      {data.title}
+      <time dateTime={data.isoDate} className={styles.informationDate}>{convertDate(data.isoDate)}</time>
+    </a>
   </div>
 )
 
