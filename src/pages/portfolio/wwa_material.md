@@ -7,10 +7,10 @@ season: elementary-school
 tags:
   - WWA
 images:
-  - src: /portfolio/wwa_material/first_material.gif
+  - path: /portfolio/wwa_material/first_material.gif
     alt: 最初に投稿したWWA素材
     description: 最初にインターネットの掲示板に投稿したWWA素材です。
-  - src: /portfolio/wwa_material/second_material.gif
+  - path: /portfolio/wwa_material/second_material.gif
     alt: 次に投稿したWWA素材
     description: 次に投稿したWWA素材です。
 ---

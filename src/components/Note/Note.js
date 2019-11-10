@@ -8,7 +8,9 @@ const Note = ({ name, className, icon, children }) => (
       icon &&
         <img className={styles.noteIcon} src={icon} alt={name}></img>
     }
-    {children}
+    <div>
+      {children}
+    </div>
   </div>
 )
 

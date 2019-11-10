@@ -7,7 +7,7 @@ season: college
 tags:
   - サーバー
 images:
-  - src: /portfolio/minecraft_server/server_world_first.png
+  - path: /portfolio/minecraft_server/server_world_first.png
     alt: Minecraft サーバーで最初に生成されたワールドでプレイしている図
     description: 最初のワールドの駅付近です。
 ---

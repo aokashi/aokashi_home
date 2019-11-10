@@ -1,9 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import RenderAst from '../renderAst'
-import Layout from '../layouts/page-layout'
+import React from "react"
+import { graphql } from "gatsby"
+import RenderAst from "../utils/renderAst"
+import Layout from "../layouts/page-layout"
 
-import styles from './default.module.sass'
+import styles from "./default.module.sass"
 
 const DefaultTemplate = ({
   data

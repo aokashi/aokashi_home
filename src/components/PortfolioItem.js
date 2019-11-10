@@ -16,7 +16,7 @@ const PortfolioItem = ({ position, portfolioItem }) => {
             {
               portfolioItem.images &&
                 <img
-                  src={portfolioItem.images[0].src}
+                  src={portfolioItem.images[0].path}
                   alt={portfolioItem.images[0].alt}
                   className={styles.titleImage}
                 />
@@ -53,7 +53,7 @@ PortfolioItem.propTypes = {
     date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     images: PropTypes.arrayOf(PropTypes.shape({
-      src: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
       alt: PropTypes.string,
     })),
   }).isRequired,

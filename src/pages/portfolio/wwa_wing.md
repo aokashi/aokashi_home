@@ -8,15 +8,15 @@ tags:
   - WWA
   - 継続中
 images:
-  - src: /portfolio/wwa_wing/wwa_classic_mode_compare.png
+  - path: /portfolio/wwa_wing/wwa_classic_mode_compare.png
     alt: クラシックモードとの比較画面
     description: クラシックモードを使用した場合の画面の差異です。
-  - src: /portfolio/wwa_wing/wwawing_no_cover_img.png
+  - path: /portfolio/wwa_wing/wwawing_no_cover_img.png
     alt: カバー画像がない WWA Wing の読み込み画面
     description: カバー画像が無い状態の読み込み画面も、自分が実装しました。
 links:
-  - href: http://aokashi.hatenablog.jp/entry/2017/08/12/213232
-    title: 句読点を末尾に持っていける文章表示プログラム (自分のブログの記事)
+  - link: http://aokashi.hatenablog.jp/entry/2017/08/12/213232
+    name: 句読点を末尾に持っていける文章表示プログラム (自分のブログの記事)
 ---
 
 2015年から不具合報告のお手伝いをしていましたが、後にインターネットRPG WWAのJavaScript実装である[WWA Wing](https://wwawing.com)の開発をお手伝いしています。

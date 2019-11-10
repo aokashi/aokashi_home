@@ -1,14 +1,14 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
-import Layout from '../../layouts/page-layout'
-import PageHeader from '../../components/PageHeader'
-import PortfolioList from '../../components/PortfolioList'
-import PortfolioItem from '../../components/PortfolioItem'
-import PortfolioGroup from '../../components/PortfolioGrouo'
-import WarningNote from '../../components/Note/WarningNote'
-import seasonDetails from '../../data/portfolio/portfolioSeason.yml'
-import otherPortfolioItems from '../../data/portfolio/otherItem.yml'
+import Layout from "../../layouts/page-layout"
+import PageHeader from "../../components/PageHeader"
+import PortfolioList from "../../components/PortfolioList"
+import PortfolioItem from "../../components/PortfolioItem"
+import PortfolioGroup from "../../components/PortfolioGroup"
+import WarningNote from "../../components/Note/WarningNote"
+import seasonDetails from "../../data/portfolio/portfolioSeason.yml"
+import otherPortfolioItems from "../../data/portfolio/otherItem.yml"
 
 class PortfolioPage extends React.Component {
 
@@ -69,7 +69,7 @@ class PortfolioPage extends React.Component {
                     frontmatter {
                       date
                       images {
-                        src
+                        path
                         alt
                       }
                       tags
@@ -93,11 +93,11 @@ class PortfolioPage extends React.Component {
                   const seasonTitle = seasonDetails[season.nodes[0].frontmatter.season].name;
 
                   return (
-                    <PortfolioGroup title={seasonTitle} key={seasonIndex}>
+                    <PortfolioGroup name={seasonTitle} key={seasonIndex}>
                       {
                         season.nodes.map((item, itemIndex) => (
                           <PortfolioItem
-                            position={itemIndex % 2 === 0 ? 'right' : 'left'}
+                            position={itemIndex % 2 === 0 ? "right" : "left"}
                             portfolioItem={item.frontmatter}
                             key={itemIndex}
                           />
@@ -119,14 +119,14 @@ class PortfolioPage extends React.Component {
       <>
         {
           otherPortfolioItems.map((item, itemIndex) => (
-            <section className={'section'} key={itemIndex}>
+            <section className={"section"} key={itemIndex}>
               <h3>{item.title}</h3>
               {
                 item.links &&
                   <ul>
                     {
                       item.links.map((link, linkIndex) => (
-                        <li key={linkIndex}><a href={link.href}>{link.title}</a></li>
+                        <li key={linkIndex}><a href={link.link}>{link.name}</a></li>
                       ))
                     }
                   </ul>

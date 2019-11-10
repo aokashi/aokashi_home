@@ -7,10 +7,10 @@ season: junior-high-school
 tags:
   - 自分を表現する
 images:
-  - src: /portfolio/html_template/3column.png
+  - path: /portfolio/html_template/3column.png
     alt: 3カラム HTMLテンプレート
     description: 最初に制作したHTMLテンプレートです。当時は Composer で制作していました。
-  - src: /portfolio/html_template/tab.png
+  - path: /portfolio/html_template/tab.png
     alt: タブ式HTMLテンプレート
     description: ナビゲーションメニューがタブの見た目をしたHTMLテンプレートです。
 ---

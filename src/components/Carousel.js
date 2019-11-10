@@ -20,7 +20,7 @@ class Carousel extends React.Component {
             this.props.items.map((item, itemIndex) => (
               <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
                 <figure className={styles.itemFigure}>
-                  <img src={item.src} alt={item.alt} className={styles.itemImage} />
+                  <img src={item.path} alt={item.alt} className={styles.itemImage} />
                   <figcaption className={styles.itemCaption}>{item.description}</figcaption>
                 </figure>
               </Slide>
@@ -38,7 +38,7 @@ Carousel.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
-    src: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
     alt: PropTypes.string,
     description: PropTypes.string,
   }))

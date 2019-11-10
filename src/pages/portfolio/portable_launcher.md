@@ -7,12 +7,12 @@ season: college
 tags:
   - C_Sharp
 images:
-  - src: /portfolio/portable_launcher/launcher_menu.png
+  - path: /portfolio/portable_launcher/launcher_menu.png
     alt: Portable Launcher のランチャーメニュー
     description: ランチャーメニューです。
 links:
-  - href: https://github.com/aokashi/PortableLauncher
-    title: Portable Launcher の GitHub リポジトリ
+  - link: https://github.com/aokashi/PortableLauncher
+    name: Portable Launcher の GitHub リポジトリ
 ---
 
 中学と高校のパソコンと自宅のパソコンで手慣れたアプリケーションを簡単に動かすために開発された、USBメモリ上で起動できるランチャーのアプリケーションです。

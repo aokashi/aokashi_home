@@ -23,8 +23,8 @@ const PieceMaterialBox = ({ materialItem }) => {
             }
             return (
               <span key={fileIndex}>
-                <a download={file.src} href={file.src}>
-                  <img src={file.src} alt={file.alt} />
+                <a download={file.path} href={file.path}>
+                  <img src={file.path} alt={file.alt} />
                 </a>
                 {noteSign}
               </span>
@@ -53,7 +53,7 @@ PieceMaterialBox.propTypes = {
   materialItem: PropTypes.shape({
     name: PropTypes.string.isRequired,
     files: PropTypes.arrayOf(PropTypes.shape({
-      src: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
       alt: PropTypes.string,
       note: PropTypes.note,
     })),

@@ -25,7 +25,7 @@ class IconPage extends React.Component {
                     description
                     downloadFile
                     files {
-                      src
+                      path
                       alt
                       note
                     }

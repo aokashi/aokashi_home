@@ -7,7 +7,7 @@ season: high-school
 tags:
   - PHP
 images:
-  - src: /portfolio/word_dic/top_page.png
+  - path: /portfolio/word_dic/top_page.png
     alt: 単語辞書プログラムのトップ画面
     description: トップ画面です。
 ---

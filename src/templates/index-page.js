@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 import { graphql } from "gatsby"
-import Layout from '../layouts/index-layout'
+import Layout from "../layouts/index-layout"
 
-import styles from './index-page.module.sass'
+import styles from "./index-page.module.sass"
 import SEO from "../components/seo"
 
 const IndexPageTemplate = ({ data }) => {

@@ -8,10 +8,10 @@ tags:
   - Webページ
   - 継続中
 images:
-  - src: /portfolio/aokashi_home/ah_first.png
+  - path: /portfolio/aokashi_home/ah_first.png
     alt: Aokashi Home (初代)
     description: 最初のAokashi Homeです。(復元した状態でスクリーンショットを取得)
-  - src: /portfolio/aokashi_home/ah_second.png
+  - path: /portfolio/aokashi_home/ah_second.png
     alt: Aokashi Home (3代目)
     description: 3代目のAokashi Homeです。トップページは2017年11月のリニューアル以前のものです。
 ---

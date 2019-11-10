@@ -13,11 +13,10 @@ const PageHeader = ({ image, imageType, navItems, className, children }) => {
       style={style}
     >
       <div className={styles.container}>
-        {
-          (image && imageType === 'icon') && 
-            <div className={styles.icon}>
-              <img src={image} alt={''} className={styles.iconImage} />
-            </div>
+        {(image && imageType === 'icon') && 
+          <div className={styles.icon}>
+            <img src={image} alt={''} className={styles.iconImage} />
+          </div>
         }
         <div className={styles.content}>
           {children}
@@ -27,7 +26,7 @@ const PageHeader = ({ image, imageType, navItems, className, children }) => {
         <div className={styles.nav}>
           {
             navItems.map((link, linkIndex) => (
-              <Link to={link.href} className={styles.navItem} activeClassName={styles.isActive} key={linkIndex}>{link.title}</Link>
+              <Link to={link.link} className={styles.navItem} activeClassName={styles.isActive} key={linkIndex}>{link.name}</Link>
             ))
           }
         </div>
@@ -41,8 +40,8 @@ PageHeader.propTypes = {
   imageType: PropTypes.oneOf(['background', 'icon']),
   navItems: PropTypes.arrayOf(
     PropTypes.shape({
-      href: PropTypes.string,
-      title: PropTypes.string,
+      link: PropTypes.string,
+      name: PropTypes.string,
     })
   ),
   className: PropTypes.string,

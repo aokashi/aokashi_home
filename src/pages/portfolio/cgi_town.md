@@ -7,18 +7,18 @@ season: junior-high-school
 tags:
   - CGIゲーム
 images:
-  - src: /portfolio/cgi_town/selt_county_second.png
+  - path: /portfolio/cgi_town/selt_county_second.png
     alt: Selt County (2代目)
     description: Selt County(2代目)の画面です。
-  - src: /portfolio/cgi_town/selt_county_loggedin.png
+  - path: /portfolio/cgi_town/selt_county_loggedin.png
     alt: Selt County (2代目) ログイン後の画面
     description: Selt Countyのログイン後の画面です。大掛かりな改造が無いとこのようなレイアウトになります。
-  - src: /portfolio/cgi_town/fs_town_second.png
+  - path: /portfolio/cgi_town/fs_town_second.png
     alt: FS TOWN (2015年当時) の画面
     description: FS TOWNの画面です。2015年時点ではここまで変わりました。
 links:
-  - href: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
-    title: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
+  - link: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
+    name: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
 ---
 
 [インターネットで遊んでいたTOWN](/portfolio/first_internet) は設置できることから、自分のサイトにも設置しました。

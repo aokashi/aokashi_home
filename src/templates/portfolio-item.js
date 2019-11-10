@@ -1,16 +1,16 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import React from "react"
+import { graphql, Link } from "gatsby"
 
-import styles from './portfolio-item.module.sass'
-import Layout from '../layouts/page-layout'
-import PageHeader from '../components/PageHeader'
-import renderAst from '../renderAst'
-import Carousel from '../components/Carousel'
-import convertDate from '../utils/convertDate'
-import BackLink from '../components/BackLink'
+import styles from "./portfolio-item.module.sass"
+import Layout from "../layouts/page-layout"
+import PageHeader from "../components/PageHeader"
+import renderAst from "../utils/renderAst"
+import Carousel from "../components/Carousel"
+import convertDate from "../utils/convertDate"
+import BackLink from "../components/BackLink"
 
-import DateIcon from '../images/portfolio_items_icon-date.svg'
-import TagIcon from '../images/portfolio_items_icon-tag.svg'
+import DateIcon from "../images/portfolio_items_icon-date.svg"
+import TagIcon from "../images/portfolio_items_icon-tag.svg"
 
 const PortfolioItemTemplate = ({
   data
@@ -24,12 +24,12 @@ const PortfolioItemTemplate = ({
         <div className={styles.summary}>
           <h1>{frontmatter.title}</h1>
           <div className={styles.date}>
-            <img src={DateIcon} alt={'日付:'} className={styles.dateIcon} />
+            <img src={DateIcon} alt={"日付:"} className={styles.dateIcon} />
             <time datetime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
           </div>
         </div>
         <div className={styles.tags}>
-          <img src={TagIcon} alt={'タグ:'} className={styles.tagIcon} />
+          <img src={TagIcon} alt={"タグ:"} className={styles.tagIcon} />
           {
             frontmatter.tags.map((tag, tagIndex) => (
               <span key={tagIndex} className={styles.tag}>
@@ -38,11 +38,10 @@ const PortfolioItemTemplate = ({
             ))
           }
         </div>
-          {
-            frontmatter.images &&
-              <div className={styles.images}>
-                <Carousel items={frontmatter.images} width={4} height={3} />
-              </div>
+          {frontmatter.images &&
+            <div className={styles.images}>
+              <Carousel items={frontmatter.images} width={4} height={3} />
+            </div>
           }
       </PageHeader>
       <div className="content">
@@ -56,12 +55,12 @@ const PortfolioItemTemplate = ({
             <div className={styles.linksTitle}>関連リンク</div>
             <div className={styles.linksList}>
               {
-                frontmatter.links.map((link, linkIndex) => {
-                  if (!link.href) {
-                    return <span className={styles.link} key={linkIndex}>{link.title}</span>
+                frontmatter.links.map((linkItem, linkIndex) => {
+                  if (!linkItem.link) {
+                    return <span className={styles.link} key={linkIndex}>{linkItem.name}</span>
                   }
 
-                  return <a href={link.href} className={styles.link} target={'_blank'} key={linkIndex}>{link.title}</a>
+                  return <a href={linkItem.link} className={styles.link} target={"_blank"} key={linkIndex}>{linkItem.name}</a>
                 })
               }
             </div>
@@ -92,13 +91,13 @@ export const pageQuery = graphql`
         tags
         date
         images {
-          src
+          path
           alt
           description
         }
         links {
-          href
-          title
+          link
+          name
         }
       }
     }

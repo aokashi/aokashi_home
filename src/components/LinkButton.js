@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import Link from './Link'
 import styles from './LinkButton.module.sass'
 
 const LinkButton = ({ href, children }) => (
-  <a
+  <Link
     className={styles.linkButton}
     href={href}
-  >{children}</a>
+  >{children}</Link>
 )
 
 LinkButton.propTypes = {

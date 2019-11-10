@@ -7,7 +7,7 @@ season: junior-high-school
 tags:
   - WWA
 images:
-  - src: /portfolio/wwa_game/making_wwa_2010.png
+  - path: /portfolio/wwa_game/making_wwa_2010.png
     alt: 2010年頃のWWAゲーム制作の様子
     description: 初期のWWAゲームの制作の様子です。
 ---

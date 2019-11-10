@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react"
+import { graphql } from "gatsby"
 
-import Layout from '../layouts/page-layout'
-import PageHeader from '../components/PageHeader'
-import PortfolioItem from '../components/PortfolioItem'
-import PortfolioGroup from '../components/PortfolioGrouo'
+import Layout from "../layouts/page-layout"
+import PageHeader from "../components/PageHeader"
+import PortfolioItem from "../components/PortfolioItem"
+import PortfolioGroup from "../components/PortfolioGroup"
 
-import TagIcon from '../images/portfolio_items_icon-tag.svg'
-import BackLink from '../components/BackLink'
+import TagIcon from "../images/portfolio_items_icon-tag.svg"
+import BackLink from "../components/BackLink"
 
 const PortfolioTagTemplate = ({ pageContext, data }) => {
   const tag = pageContext.tag
@@ -15,7 +15,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   return (
     <Layout>
       <BackLink to="/portfolio">トップへ戻る</BackLink>
-      <PageHeader image={TagIcon} imageType={'icon'}>
+      <PageHeader image={TagIcon} imageType={"icon"}>
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
       </PageHeader>
       <PortfolioGroup>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
         frontmatter {
           date
           images {
-            src
+            path
             alt
           }
           tags

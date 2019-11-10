@@ -6,9 +6,11 @@ import PropTypes from 'prop-types'
  */
 import styles from './PortfolioList.module.sass'
 
-const PortfolioGroup = ({ title, children }) => (
+const PortfolioGroup = ({ name, children }) => (
   <div className={`${styles.group}`}>
-    <div className={styles.title}>{title}</div>
+    {name &&
+      <div className={styles.title}>{name}</div>
+    }
     <div className={`${styles.content} columns is-multiline`}>
       {children}
     </div>
@@ -16,7 +18,7 @@ const PortfolioGroup = ({ title, children }) => (
 )
 
 PortfolioGroup.propTypes = {
-  title: PropTypes.string,
+  name: PropTypes.string,
   children: PropTypes.node,
 }
 

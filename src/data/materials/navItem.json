@@ -1,18 +1,18 @@
 [
   {
-    "href": "/material", 
-    "title": "トップ"
+    "link": "/material", 
+    "name": "トップ"
   },
   {
-    "href": "/material/wwa", 
-    "title": "WWA"
+    "link": "/material/wwa", 
+    "name": "WWA"
   },
   {
-    "href": "/material/icon", 
-    "title": "アイコン"
+    "link": "/material/icon", 
+    "name": "アイコン"
   },
   {
-    "href": "/material/tkool_mv", 
-    "title": "ツクールMV"
+    "link": "/material/tkool_mv", 
+    "name": "ツクールMV"
   }
 ]

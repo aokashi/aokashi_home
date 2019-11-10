@@ -7,14 +7,14 @@ season: college
 tags:
   - Node.js
 images:
-  - src: /portfolio/wide_wiki/edit_page.png
+  - path: /portfolio/wide_wiki/edit_page.png
     alt: Wide Wiki の編集画面
     description: 編集画面です。
 links:
-  - href: https://github.com/aokashi/wide-wiki
-    title: Wide Wiki のGitHubリポジトリ
-  - href: http://aokashi.hatenablog.jp/entry/2017/11/12/220925
-    title: Node.js(Express) で動くWikiを作ってました。 (自分のブログの記事)
+  - link: https://github.com/aokashi/wide-wiki
+    name: Wide Wiki のGitHubリポジトリ
+  - link: http://aokashi.hatenablog.jp/entry/2017/11/12/220925
+    name: Node.js(Express) で動くWikiを作ってました。 (自分のブログの記事)
 ---
 
 [WWA Maker](/portfolio/wwa_maker)の制作が中止になり制作したいものが頭の中にない中、 **なんとかして大学時代に成果を残したい、技術力を伸ばしたい** ことから、1週間で制作したWikiシステムです。

@@ -7,15 +7,15 @@ season: junior-high-school
 tags:
   - Webページ
 images:
-  - src: /portfolio/road_works_county/rwc_first.png
+  - path: /portfolio/road_works_county/rwc_first.png
     alt: Road Works County (1代目)
     description: 1代目のスクリーンショットです。
-  - src: /portfolio/road_works_county/rwc_second.png
+  - path: /portfolio/road_works_county/rwc_second.png
     alt: Road Works County (2代目)
     description: 2代目のスクリーンショットです。
 links:
-  - href: https://info.wwawing.com/restore/
-    title: まつゆき・ヒラリラーの復元サイト一覧 (代理更新のヒラリラーのMP及びG10-Project Worksのデザインを当サイト制作の参考にしました)
+  - link: https://info.wwawing.com/restore/
+    name: まつゆき・ヒラリラーの復元サイト一覧 (代理更新のヒラリラーのMP及びG10-Project Worksのデザインを当サイト制作の参考にしました)
 ---
 
 [Coden City](coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。

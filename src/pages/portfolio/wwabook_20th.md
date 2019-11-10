@@ -8,17 +8,17 @@ tags:
   - WWA
   - チーム制作
 images:
-  - src: /portfolio/wwabook_20th/page_old_wwamk.png
+  - path: /portfolio/wwabook_20th/page_old_wwamk.png
     alt: WWAマップ作成ツール Ver 2.0 を動かしてみた
     description: WWAマップ作成ツール Ver 2.0 を動かした記事です。Point のレイアウトはWWAの公式サイトを参考にしました。
-  - src: /portfolio/wwabook_20th/page_chornology.png
+  - path: /portfolio/wwabook_20th/page_chornology.png
     alt: WWA年表
     description: WWAの歴史をまとめた年表です。この年表のデザインも担当しました。
 links:
-  - href: https://www.wwafansq.com/works/wwabook_20th/
-    title: WWA FanSquare の紹介ページ
-  - href: https://wwa.fandom.com/ja/wiki/WWA%E3%81%AE%E5%86%92%E9%99%BA%E6%9B%B8_%EF%BD%9E20%E5%B9%B4%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92Quick_Load!!%EF%BD%9E
-    title: WWA Wiki での紹介ページ
+  - link: https://www.wwafansq.com/works/wwabook_20th/
+    name: WWA FanSquare の紹介ページ
+  - link: https://wwa.fandom.com/ja/wiki/WWA%E3%81%AE%E5%86%92%E9%99%BA%E6%9B%B8_%EF%BD%9E20%E5%B9%B4%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92Quick_Load!!%EF%BD%9E
+    name: WWA Wiki での紹介ページ
 ---
 
 World Wide Adventure (WWA) が20周年を迎えたことから、記念誌として6人で制作し、コミックマーケット 91 で頒布しました。

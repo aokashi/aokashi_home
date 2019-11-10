@@ -1,13 +1,13 @@
-import React from 'react'
-import Layout from '../layouts/page-layout'
+import React from "react"
+import Layout from "../layouts/page-layout"
 
-import SoftwareData from '../data/software.json'
-import PageHeader from '../components/PageHeader'
-import BoxList from '../components/BoxList'
-import Box from '../components/Box/Box'
-import BoxNav from '../components/BoxNav'
-import InfoNote from '../components/Note/InfoNote'
-import LinkButton from '../components/LinkButton'
+import SoftwareData from "../data/software.json"
+import PageHeader from "../components/PageHeader"
+import BoxList from "../components/BoxList"
+import Box from "../components/Box/Box"
+import BoxNav from "../components/BoxNav"
+import InfoNote from "../components/Note/InfoNote"
+import LinkButton from "../components/LinkButton"
 
 const SoftwarePage = () => (
   <Layout>
@@ -59,15 +59,15 @@ function getLinks(softwareItem) {
 
   if (softwareItem.repository) {
     links.push({
-      'link': softwareItem.repository,
-      'name': 'GitHub リポジトリ',
+      "link": softwareItem.repository,
+      "name": "GitHub リポジトリ",
     })
   }
 
   links.concat(softwareItem.references.map((reference) => {
     return {
-      'link': reference.url,
-      'name': reference.name,
+      "link": reference.url,
+      "name": reference.name,
     }
   }))
 
