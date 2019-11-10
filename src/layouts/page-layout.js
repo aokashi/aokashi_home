@@ -13,14 +13,22 @@ import { useStaticQuery, graphql } from "gatsby"
 import styles from './page-layout.module.sass'
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Sidebar from "../components/Sidebar/Sidebar"
+import Link from '../components/Link'
 
 const Layout = ({ sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
+        }
+      }
+      allNavItemYaml {
+        nodes {
+          name
+          type
+          link
+          icon
         }
       }
     }
@@ -33,19 +41,43 @@ const Layout = ({ sidebarContent, children }) => {
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className={styles.mainContent}>
-        <div className="container">
-          <div className="columns">
-            {
-              sidebarContent &&
-                <Sidebar>{sidebarContent}</Sidebar>
-            }
-            <article className={`${styles.mainArticle} column`}>
-              {children}
-            </article>
-          </div>
+        <div className={`${styles.container} container`}>
+          <nav className={styles.nav}>
+            <nav className={styles.navContent}>
+              <Link href="/" className={styles.navItem}>Home</Link>
+              {
+                data.allNavItemYaml.nodes.map((navItem, navIndex) => (
+                  <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
+                ))
+              }
+            </nav>
+          </nav>
+          <article className={`${styles.article} column`}>
+            {children}
+          </article>
+          {sidebarContent &&
+            <aside className={`${styles.rightSidebar} column`}>
+              {sidebarContent}
+            </aside>
+          }
         </div>
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
+      <div className={styles.floatNav}>
+        {
+          data.allNavItemYaml.nodes.map((navItem, navIndex) => {
+            if (navItem.type !== 'contents') {
+              return null
+            }
+            return (
+              <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>
+                <img src={navItem.icon} alt="" className={styles.navIcon} />
+                <span className={styles.navText}>{navItem.name}</span>
+              </Link>
+            )
+          })
+        }
+      </div>
     </>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from '../../layouts/page-layout'
 
-import MaterialSidebar from '../../components/Sidebar/MaterialSidebar'
+import MaterialNavItem from '../../data/materials/navItem.json'
 import PageHeader from '../../components/PageHeader'
 import InfoNote from '../../components/Note/InfoNote'
 import BoxList from '../../components/BoxList'
@@ -21,8 +21,8 @@ class WWAMaterialPage extends React.Component {
 
   render() {
     return (
-      <Layout sidebarContent={MaterialSidebar()}>
-        <PageHeader>
+      <Layout>
+        <PageHeader navItems={MaterialNavItem}>
           <h1>WWA素材</h1>
         </PageHeader>
         <div className="content">

@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../layouts/page-layout'
 
-import MaterialSidebar from '../components/Sidebar/MaterialSidebar'
+import MaterialNavItem from '../data/materials/navItem.json'
 import PageHeader from '../components/PageHeader'
 import WarningNote from '../components/Note/WarningNote'
 
 const MaterialIndexPage = () => (
-  <Layout sidebarContent={MaterialSidebar()}>
-    <PageHeader>
+  <Layout>
+    <PageHeader navItems={MaterialNavItem}>
       <h1>素材</h1>
     </PageHeader>
     <div className="content">

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../../layouts/page-layout'
 import { StaticQuery, graphql } from 'gatsby'
 
-import MaterialSidebar from '../../components/Sidebar/MaterialSidebar'
+import MaterialNavItem from '../../data/materials/navItem.json'
 import PageHeader from '../../components/PageHeader'
 import BoxList from '../../components/BoxList'
 import PieceMaterialBox from '../../components/Box/PieceMaterialBox'
@@ -10,8 +10,8 @@ import PieceMaterialBox from '../../components/Box/PieceMaterialBox'
 class IconPage extends React.Component {
   render() {
     return (
-      <Layout sidebarContent={MaterialSidebar()}>
-        <PageHeader>
+      <Layout>
+        <PageHeader navItems={MaterialNavItem}>
           <h1>アイコン素材</h1>
         </PageHeader>
         <div className="content">

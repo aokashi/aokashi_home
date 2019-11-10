@@ -9,7 +9,7 @@ import styles from './PortfolioList.module.sass'
 const PortfolioGroup = ({ title, children }) => (
   <div className={`${styles.group}`}>
     <div className={styles.title}>{title}</div>
-    <div className={`${styles.content} columns is-multiline is-variable is-8`}>
+    <div className={`${styles.content} columns is-multiline`}>
       {children}
     </div>
   </div>
