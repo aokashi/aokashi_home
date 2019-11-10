@@ -7,7 +7,7 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
   background: #808080 url('../images/ah-background_index.png') repeat 0 0
 
 .firstScreen
-  height: 100vh
+  min-height: 100vh
   display: grid
   display: -ms-grid
   grid-gap: $block-spacing
@@ -131,6 +131,9 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     content: "»"
     position: absolute
     left: 1rem
+  .informationDate
+    color: $grey
+    font-size: $size-7
 
 .aboutme
   display: flex

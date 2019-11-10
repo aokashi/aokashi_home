@@ -9,6 +9,7 @@ import Link from '../components/Link'
 import Footer from '../components/footer.js'
 import Logo from "../images/ah-logo.png"
 import Icon from '../images/aokashi-icon.png'
+import convertDate from '../utils/convertDate'
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
@@ -68,9 +69,9 @@ const IndexLayout = ({ children }) => {
           navItems(data.allNavItemYaml)
         }
         <div className={styles.quickContents}>
-          <div className={styles.information}>
-            {data.allInformationYaml.nodes[0].name}
-          </div>
+          {
+            Information(data.allInformationYaml.nodes[0])
+          }
           <div className={styles.aboutme}>
             <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
             {
@@ -155,6 +156,13 @@ const SocialIcon = ({ icon, alt }) => {
     )
   }
 }
+
+const Information = (data) => (
+  <div className={styles.information}>
+    {data.name}
+    <time datetime={data.date} className={styles.informationDate}>{convertDate(data.date)}</time>
+  </div>
+)
 
 function getNavGroupClassName(groupValue) {
   return styles[groupValue + 'Nav']
