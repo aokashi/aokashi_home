@@ -78,6 +78,7 @@ class PortfolioPage extends React.Component {
                       season
                     }
                   }
+                  fieldValue
                 }
               }
             }
@@ -152,8 +153,8 @@ class PortfolioPage extends React.Component {
  * @see https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
  */
 const seasonSorting = (ownSeasonData, yoursSeasonData) => {
-  return seasonDetails[ownSeasonData.nodes[0].frontmatter.season].index >
-         seasonDetails[yoursSeasonData.nodes[0].frontmatter.season].index
+  return seasonDetails[ownSeasonData.fieldValue].index -
+         seasonDetails[yoursSeasonData.fieldValue].index
 }
 
 export default PortfolioPage
