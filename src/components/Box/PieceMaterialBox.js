@@ -39,7 +39,7 @@ const PieceMaterialBox = ({ materialItem }) => {
         </ol>
         {
           materialItem.downloadFile &&
-            <div className="has-text-right">
+            <div className="buttons is-right">
               <a href={materialItem.downloadFile} className="button">ダウンロード</a>
             </div>
         }

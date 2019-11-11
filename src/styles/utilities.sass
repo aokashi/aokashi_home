@@ -1,10 +1,17 @@
 /**
  * 変数や mixins などを備えたスタイルシートです。 各 CSS ファイルを利用すると、事前にこのファイルが自動的にインポートされます。
  */
+@import "~bulma/sass/utilities/_all.sass"
 
+/**
+ * 1. initial-variables
+ */
 $family-sans-serif: "Noto Sans CJK JP", "Noto Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", -sans-serif
 $text: #000000
 
+/**
+ * 2. derived-variables
+ */
 $primary: #000080
 $light: #c0c0c0
 $dark: #404040
@@ -19,6 +26,10 @@ $danger: hsl(348, 64%, 80%)
 $danger-invert: hsl(348, 64%, 30%)
 
 $scheme-main: $light
-$border: $primary
+$border: $grey
+$link-hover-border: $primary
 
-@import "~bulma/sass/utilities/_all.sass"
+/**
+ * 3. controls
+ */
+$control-border-width: 2px

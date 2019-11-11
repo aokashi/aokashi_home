@@ -6,12 +6,11 @@ import MaterialBox from './MaterialBox'
 const ImageMaterialBox = ({ materialItem, onItemClick }) => (
   <MaterialBox
     materialItem={materialItem}
+    imagePath={materialItem.file}
+    onImageClick={onItemClick}
     width="one-third"
   >
-    <div onClick={onItemClick} className="block">
-      <img src={materialItem.file} alt={materialItem.name} />
-    </div>
-    <div className="has-text-right block">
+    <div className="buttons is-right block">
       <a download={materialItem.file} href={materialItem.file} className="button">ダウンロード</a>
     </div>
   </MaterialBox>

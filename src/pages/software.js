@@ -37,7 +37,7 @@ const softwareList = (
           key={index}
         >
           <p>{item.description}</p>
-          <div>
+          <div className="tags">
             {item.keywords.map((keyword, keywordIndex) => (
               <span className="tag" key={keywordIndex}>{keyword}</span>
             ))}

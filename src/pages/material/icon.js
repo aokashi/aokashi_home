@@ -18,38 +18,38 @@ class IconPage extends React.Component {
         </PageHeader>
         <div className="content">
           <p>アイコンはすべて32×32のサイズに統一しています。</p>
-          <StaticQuery
-            query={graphql`
-              query IconMaterialDataQuery {
-                allIconMaterialYaml {
-                  nodes {
-                    name
-                    description
-                    downloadFile
-                    files {
-                      path
-                      alt
-                      note
-                    }
-                    tags
+        </div>
+        <StaticQuery
+          query={graphql`
+            query IconMaterialDataQuery {
+              allIconMaterialYaml {
+                nodes {
+                  name
+                  description
+                  downloadFile
+                  files {
+                    path
+                    alt
+                    note
                   }
+                  tags
                 }
               }
-            `}
-            render={data => (
-              <BoxList>
-                {
-                  data.allIconMaterialYaml.nodes.map((item, index) => (
-                    <PieceMaterialBox
-                      materialItem={item}
-                      key={index}
-                    />
-                  ))
-                }
-              </BoxList>
-            )}
-          />
-        </div>
+            }
+          `}
+          render={data => (
+            <BoxList>
+              {
+                data.allIconMaterialYaml.nodes.map((item, index) => (
+                  <PieceMaterialBox
+                    materialItem={item}
+                    key={index}
+                  />
+                ))
+              }
+            </BoxList>
+          )}
+        />
       </Layout>
     )
   }

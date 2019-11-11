@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './BoxNav.module.sass'
 import Link from './Link'
 
 const BoxNav = ({ navItems }) => (
-  <div className={styles.boxNav}>
+  <div className="buttons">
     {
       navItems.map((navItem, navIndex) => (
-        <Link href={navItem.link} className={styles.navItem} key={navIndex}>{navItem.name}</Link>
+        <Link href={navItem.link} className="button" key={navIndex}>{navItem.name}</Link>
       ))
     }
   </div>
