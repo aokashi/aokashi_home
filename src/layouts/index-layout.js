@@ -149,11 +149,11 @@ const SocialLink = ({ socialItem, children }) => {
 const SocialIcon = ({ icon, alt }) => {
   if (icon) {
     return (
-      <FontAwesomeIcon icon={['fab', icon]} className={styles.socialIcon} />
+      <FontAwesomeIcon icon={['fab', icon]} className={`${styles.socialIcon} ${styles.isIcon}`} />
     )
   } else {
     return (
-      <span className={styles.socialIcon}>{alt}</span>
+      <span className={`${styles.socialIcon} ${styles.isText}`}>{alt}</span>
     )
   }
 }

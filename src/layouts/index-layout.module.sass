@@ -155,15 +155,17 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     +desktop
       margin: .5rem 2rem
   .socialLink
-    color: $grey
+    color: $grey-darker
     &:hover
       color: $black
   .socialIcon
-    font-size: 1.5rem
     color: $black
     margin-right: .25rem
-    +desktop
+    &.isIcon
       font-size: 2rem
+      vertical-align: middle
+    &.isText
+      font-size: 1rem
   .socialText
     font-size: $size-7
     +desktop
