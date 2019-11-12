@@ -97,7 +97,6 @@ class PortfolioPage extends React.Component {
                       {
                         season.nodes.map((item, itemIndex) => (
                           <PortfolioItem
-                            position={itemIndex % 2 === 0 ? "right" : "left"}
                             portfolioItem={item.frontmatter}
                             key={itemIndex}
                           />
