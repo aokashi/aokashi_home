@@ -15,14 +15,14 @@ const IndexPageTemplate = ({ data }) => {
         <div className={styles.profileDescription}>
           <p>{frontmatter.profile.description}</p>
         </div>
-        <div className={`${styles.profileExtra} columns`}>
-          <section className={`${styles.section} ${styles.profileLikes} column is-half`}>
+        <div className="columns">
+          <section className={`section ${styles.profileLikes} column is-half`}>
             <h2 className={styles.sectionTitle}>好きなもの</h2>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
-          <section className={`${styles.section} ${styles.profileEnvironments} column is-half`}>
+          <section className={`section ${styles.profileEnvironments} column is-half`}>
             <h2 className={styles.sectionTitle}>使用環境</h2>
             {
               ProfileSection(frontmatter.profile.items.environments)
@@ -61,7 +61,7 @@ export const pageQuery = graphql`
 
 export const ProfileSection = (data) => {
   return data.map((item, index) => (
-    <section className={styles.item} key={index}>
+    <section className={styles.sectionItem} key={index}>
       <h3 className={styles.itemTitle}>{item.name}</h3>
       <p className={styles.itemText}>{item.text}</p>
     </section>

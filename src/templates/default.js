@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import RenderAst from "../utils/renderAst"
 import Layout from "../layouts/page-layout"
 
-import styles from "./default.module.sass"
+import PageHeader from "../components/PageHeader"
 
 const DefaultTemplate = ({
   data
@@ -12,9 +12,9 @@ const DefaultTemplate = ({
   const { frontmatter, htmlAst, tableOfContents } = markdownRemark
   return (
     <Layout sidebarContent={renderSidebar(tableOfContents)}>
-      <header className={styles.header}>
-        <h1 className={styles.headerTitle}>{frontmatter.title}</h1>
-      </header>
+      <PageHeader>
+        <h1>{frontmatter.title}</h1>
+      </PageHeader>
       <div className="content">
         {
           RenderAst(htmlAst)
