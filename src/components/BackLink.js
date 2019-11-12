@@ -2,11 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import styles from './BackLink.module.sass'
+import styles from "./BackLink.module.sass"
+import ArrowIcon from "../images/button_icon-arrow.svg"
 
 const BackLink = ({ to, children }) => (
   <div className="block is-size-5">
-    <Link to={to} className={styles.backLink}>{children}</Link>
+    <Link to={to}>
+      <span className={`${styles.arrowIcon} icon`}>
+        <img src={ArrowIcon} alt="" />
+      </span>
+      {children}
+    </Link>
   </div>
 )
 
