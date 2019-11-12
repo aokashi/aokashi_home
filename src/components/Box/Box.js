@@ -6,7 +6,7 @@ const Box = ({ title, link, imagePath, onImageClick, width, className, children 
   <div className={`column ${getWidth(width)}`}>
     <div className={`card ${className}`}>
       {imagePath &&
-        <div className="card-image">
+        <div className="card-image has-text-centered has-background-light">
           <BoxLink href={link}>
             <img src={imagePath} alt="" onClick={onImageClick} />
           </BoxLink>

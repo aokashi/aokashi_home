@@ -11,7 +11,7 @@ const PortfolioItem = ({ portfolioItem }) => {
       title={portfolioItem.title}
       link={portfolioItem.path}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
-      width={["half-tablet", "one-quarter-desktop"]}
+      width={["half-tablet", "one-quarter-widescreen"]}
     >
       <div className="is-size-7">
         <time datatime={portfolioItem.date}>
