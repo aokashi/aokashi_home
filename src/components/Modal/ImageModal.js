@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import Modal from './Modal'
+import Modal from "./Modal"
 
 const ImageModal = ({ src, alt, name, description, onOutsideClick }) => (
   <Modal onOutsideClick={onOutsideClick}>
@@ -26,7 +26,7 @@ ImageModal.propTypes = {
 }
 
 ImageModal.defaultProps = {
-  alt: '',
+  alt: "",
 }
 
 export default ImageModal
