@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from "react"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import styles from './index-layout.module.sass'
-import Link from '../components/Link'
-import Footer from '../components/footer.js'
-import Logo from "../images/ah-logo.png"
-import Icon from '../images/aokashi-icon.png'
-import convertDate from '../utils/convertDate'
+import styles from "./index-layout.module.sass"
+import Link from "../components/Link"
+import Footer from "../components/footer.js"
+import Icon from "../images/aokashi-icon.png"
+import convertDate from "../utils/convertDate"
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
@@ -18,6 +18,13 @@ const IndexLayout = ({ children }) => {
         site {
           siteMetadata {
             title
+          }
+        }
+        file(relativePath: { eq: "ah-logo.png" }) {
+          childImageSharp {
+            fixed(width: 512, height: 96) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
         allNavItemYaml {
@@ -64,7 +71,7 @@ const IndexLayout = ({ children }) => {
       </Helmet>
       <div className={`${styles.firstScreen} container`}>
         <div className={styles.title}>
-          <img src={Logo} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
+          <Img fixed={data.file.childImageSharp.fixed} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
         </div>
         {
           navItems(data.allNavItemYaml)
@@ -103,7 +110,7 @@ const navItems = (navData) => (
                 >
                   {
                     navItem.icon &&
-                      <img src={navItem.icon} alt={''} className={styles.navItemIcon} />
+                      <img src={navItem.icon} alt={""} className={styles.navItemIcon} />
                   }
                   <span className={styles.navItemText}>{navItem.name}</span>
                 </Link>
@@ -149,7 +156,7 @@ const SocialLink = ({ socialItem, children }) => {
 const SocialIcon = ({ icon, alt }) => {
   if (icon) {
     return (
-      <FontAwesomeIcon icon={['fab', icon]} className={`${styles.socialIcon} ${styles.isIcon}`} />
+      <FontAwesomeIcon icon={["fab", icon]} className={`${styles.socialIcon} ${styles.isIcon}`} />
     )
   } else {
     return (
@@ -169,7 +176,7 @@ const Information = (data) => (
 )
 
 function getNavGroupClassName(groupValue) {
-  return styles[groupValue + 'Nav']
+  return styles[groupValue + "Nav"]
 }
 
 IndexLayout.propTypes = {
