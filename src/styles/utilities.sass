@@ -1,7 +1,6 @@
 /**
  * 変数や mixins などを備えたスタイルシートです。 各 CSS ファイルを利用すると、事前にこのファイルが自動的にインポートされます。
  */
-@import "~bulma/sass/utilities/_all.sass"
 
 /**
  * 1. initial-variables
@@ -15,15 +14,20 @@ $text: #000000
 $primary: #000080
 $light: #c0c0c0
 $dark: #404040
+$grey: hsl(0, 0%, 48%)
 
-$warning: hsl(48, 100%, 80%)
-$warning-invert: hsl(48, 100%, 30%)
+// FIXME: *-light を適用しているのに message の背景色が適用されていない
+$warning: hsl(48, 100%, 50%)
+$warning-light: hsl(48, 100%, 80%)
 
-$info: hsl(204, 64%, 80%)
-$info-invert: hsl(204, 64%, 30%)
+$info: hsl(204, 64%, 50%)
+$info-light: hsl(204, 64%, 80%)
 
-$danger: hsl(348, 64%, 80%)
-$danger-invert: hsl(348, 64%, 30%)
+$danger: hsl(348, 64%, 50%)
+$danger-light: hsl(348, 64%, 80%)
+
+$sucess: hsl(120, 100%, 50%)
+$sucess-light: hsl(120, 80%, 80%)
 
 $scheme-main: $light
 $border: $grey
@@ -33,3 +37,5 @@ $link-hover-border: $primary
  * 3. controls
  */
 $control-border-width: 2px
+
+@import "~bulma/sass/utilities/_all.sass"
