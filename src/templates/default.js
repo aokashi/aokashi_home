@@ -24,12 +24,17 @@ const DefaultTemplate = ({
   )
 }
 
+/**
+ * @todo tableOfContents の ul や li にクラスが付与できないか確認する
+ * @see https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
+ */
 const renderSidebar = (tableOfContents) => (
-  <>
+  <aside className="menu">
+    <p className="menu-label">目次</p>
     <div
       dangerouslySetInnerHTML={{ __html: tableOfContents }}
     />
-  </>
+  </aside>
 )
 
 export const pageQuery = graphql`
