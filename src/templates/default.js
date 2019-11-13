@@ -5,6 +5,7 @@ import Layout from "../layouts/page-layout"
 
 import PageHeader from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
+import SEO from "../components/seo"
 
 const DefaultTemplate = ({
   data
@@ -13,6 +14,7 @@ const DefaultTemplate = ({
   const { frontmatter, htmlAst, tableOfContents } = markdownRemark
   return (
     <Layout sidebarContent={<TableOfContents html={tableOfContents} />}>
+      <SEO title={frontmatter.title} />
       <PageHeader>
         <h1>{frontmatter.title}</h1>
       </PageHeader>

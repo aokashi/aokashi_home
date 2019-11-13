@@ -9,12 +9,14 @@ import PortfolioGroup from "../../components/PortfolioGroup"
 import WarningNote from "../../components/Note/WarningNote"
 import seasonDetails from "../../data/portfolio/portfolioSeason.yml"
 import otherPortfolioItems from "../../data/portfolio/otherItem.yml"
+import SEO from "../../components/seo"
 
 class PortfolioPage extends React.Component {
 
   render() {
     return (
       <Layout>
+        <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
         <PageHeader>
           <h1>ポートフォリオ</h1>
         </PageHeader>

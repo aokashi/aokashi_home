@@ -11,6 +11,7 @@ import BackLink from "../components/BackLink"
 
 import DateIcon from "../images/portfolio_items_icon-date.svg"
 import TagIcon from "../images/portfolio_items_icon-tag.svg"
+import SEO from "../components/seo"
 
 const PortfolioItemTemplate = ({
   data
@@ -19,6 +20,7 @@ const PortfolioItemTemplate = ({
   const { frontmatter, htmlAst } = markdownRemark
   return (
     <Layout>
+      <SEO title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <PageHeader className={styles.header}>
         <div className={`${styles.summary} block`}>

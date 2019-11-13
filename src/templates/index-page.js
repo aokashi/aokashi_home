@@ -10,7 +10,7 @@ const IndexPageTemplate = ({ data }) => {
   const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className={styles.profile}>
         <div className={styles.profileDescription}>
           <p>{frontmatter.profile.description}</p>
