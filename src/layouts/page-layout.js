@@ -41,26 +41,24 @@ const Layout = ({ sidebarContent, children }) => {
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className={styles.mainContent}>
-        <div className={`${styles.container} container`}>
-          <nav className={styles.nav}>
-            <nav className={styles.navContent}>
-              <Link href="/" className={styles.navItem}>Home</Link>
-              {
-                data.allNavItemYaml.nodes.map((navItem, navIndex) => (
-                  <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
-                ))
-              }
-            </nav>
+        <nav className={styles.nav}>
+          <nav className={styles.navContent}>
+            <Link href="/" className={styles.navItem}>Home</Link>
+            {
+              data.allNavItemYaml.nodes.map((navItem, navIndex) => (
+                <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
+              ))
+            }
           </nav>
-          <article className={`${styles.article} column`}>
-            {children}
-          </article>
-          {sidebarContent &&
-            <aside className={`${styles.rightSidebar} column`}>
-              {sidebarContent}
-            </aside>
-          }
-        </div>
+        </nav>
+        <article className={`${styles.article} container`}>
+          {children}
+        </article>
+        {sidebarContent &&
+          <aside className={styles.rightSidebar}>
+            {sidebarContent}
+          </aside>
+        }
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
       <div className={styles.floatNav}>

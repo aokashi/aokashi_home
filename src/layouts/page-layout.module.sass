@@ -3,33 +3,40 @@
   
 .mainContent
   +block
-
-.container
-  display: flex
-  flex-wrap: nowrap
+  display: grid
+  display: -ms-grid
   +touch
-    flex-direction: column
+    grid-template-columns: 1fr
+    -ms-grid-columns: 1fr
     .nav
       display: none
     .article
-      order: 2
-      flex: 1 1 auto
+      grid-row: 2
+      -ms-grid-row: 2
     .rightSidebar
-      order: 1
-      flex: 1 1 auto
+      grid-row: 1
+      -ms-grid-row: 1
+      background-color: $grey-lighter
   +desktop
-    flex-direction: row
-    .nav,
-    .rightSidebar
-      flex: 0 0 200px
+    grid-template-columns: 200px 1fr 200px
+    -ms-grid-columns: 200px 1fr 200px
+    .nav
+      grid-column: 1
+      -ms-grid-column: 1
     .article
-      flex: 1 1 auto
+      grid-column: 2
+      -ms-grid-column: 2
+    .rightSidebar
+      grid-column: 3
+      -ms-grid-column: 3
+      margin-left: .5rem
 
 .nav
   background-color: #80c0ff
   .navContent
     position: sticky
-    top: 1rem
+    top: 0
+    padding: 1rem 0
   .navItem
     display: block
     background-color: $light
@@ -42,6 +49,12 @@
     &.isActive
       border-color: $primary
       font-weight: bold
+
+.article
+  padding: 0 .5rem
+
+.rightSidebar
+  padding: 1rem
 
 .floatNav
   background-color: $light
@@ -63,7 +76,7 @@
     &.isActive
       font-weight: bold
   .navIcon
-    max-width: 64px // 横持ちで閲覧した場合、なるべく閲覧領域を確保するため幅に上限をもたせる
+    max-width: 48px // 横持ちで閲覧した場合、なるべく閲覧領域を確保するため幅に上限をもたせる
   .navText
     display: block
     font-size: $size-7
