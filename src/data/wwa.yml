@@ -2,7 +2,7 @@
   name: 依頼生活
   description: 『ハズツ国』にモンスターが来ると言われ、それを阻止するのが目的です。 初めてつくるWWAです。
   publishedAt: 2010-02-27
-  screen_path: /images/wwa_screens/order_life.gif
+  screenPath: /images/wwa_screens/order_life.gif
   links:
     - name: 1章
       link: https://www.aokashi.net/order_life_1.html
@@ -13,7 +13,7 @@
   name: 英棟市
   description: 仮想の街に楽しむシンプルなWWAです。 部屋を作り、永住登録をすることで作った部屋がWWAに出てきます。
   publishedAt: 2010-04-12
-  screen_path: /images/wwa_screens/eito_city.gif
+  screenPath: /images/wwa_screens/eito_city.gif
   links:
     - name: メインページ
       link: https://www.aokashi.net/eito_city/
@@ -22,7 +22,7 @@
   name: 崩れる床
   description: 崩れる床としてはじめて登場した作品。 最後は罠感たっぷりあります。
   publishedAt: 2010-09-12
-  screen_path: /images/wwa_screens/falling_floor.gif
+  screenPath: /images/wwa_screens/falling_floor.gif
   links:
     - link: https://www.aokashi.net/falling_floor.html
   supportWWAWing: true
@@ -30,7 +30,7 @@
   name: 洞窟脱出
   description: ゼルサン鉱山で落盤が発生し、洞窟で迷いました。洞窟を脱出するのが目的です。いわゆるダンジョンです。 最初は難しそうですが、最後は余裕でいけます。
   publishedAt: 2010-09-20
-  screen_path: /images/wwa_screens/escape_cave_1.gif
+  screenPath: /images/wwa_screens/escape_cave_1.gif
   links:
     - link: https://www.aokashi.net/escape_cave_1.html
   supportWWAWing: true
@@ -38,7 +38,7 @@
   name: スライムの逆襲
   description: 「エンズタ内陸地方」に大量のスライムが現れました。数多くの街に被害が出ています。 それを食い止めるために主人公たちが冒険します。 数多くの人に協力をもらい、制圧してください。 長めのゲームです。
   publishedAt: 2011-05-11
-  screen_path: /images/wwa_screens/attack_of_slime.gif
+  screenPath: /images/wwa_screens/attack_of_slime.gif
   links:
     - name: メインページ
       link: https://www.aokashi.net/attack_of_slime/
@@ -47,7 +47,7 @@
   name: Snow Present
   description: 12月24日の夜。クリスマスプレゼントを届けるために外へ出ます。 ゲームと呼べるところ所は「タイミング」のみ。後はストーリーしかないのでとにかく短いです。
   publishedAt: 2010-12-25
-  screen_path: /images/wwa_screens/snow_present.gif
+  screenPath: /images/wwa_screens/snow_present.gif
   links:
     - link: https://www.aokashi.net/snow_present.html
   supportWWAWing: false
@@ -55,7 +55,7 @@
   name: アクション・2D
   description: 2D界を脱出するゲームです。 一部戦闘要素あり。 比較的簡単だと思います。
   publishedAt: 2011-05-07
-  screen_path: /images/wwa_screens/action_2d.gif
+  screenPath: /images/wwa_screens/action_2d.gif
   links:
     - link: https://www.aokashi.net/action_2d.html
   supportWWAWing: true
@@ -63,7 +63,7 @@
   name: 借金返済！株ゲーム
   description: 300万円という莫大な借金を抱える主人公をどうか返済してください。 株の機能はもちろん、鉱山なども揃えています。拡張クラス「WWAX」を使用したWWAです。
   publishedAt: 2011-06-04
-  screen_path: /images/wwa_screens/stock_game.gif
+  screenPath: /images/wwa_screens/stock_game.gif
   links:
     - link: https://www.aokashi.net/stock_game.html
   supportWWAWing: false
@@ -71,7 +71,7 @@
   name: コマンドバトルのテスト
   description: スライムの逆襲でも使っているコマンドバトルのテストです。 戦闘終了後のフィールド復帰部分を除いて簡単に作れます。
   publishedAt: 2011-08-22
-  screen_path: /images/wwa_screens/command.gif
+  screenPath: /images/wwa_screens/command.gif
   links:
     - link: https://www.aokashi.net/command.html
   supportWWAWing: true
@@ -79,7 +79,7 @@
   name: WWAとHTML5
   description: objectタグによるテストです。 なぜobjectタグを使うかということも載っています。 ただの実験と資料。
   publishedAt: 2017-03-28
-  screen_path: /images/wwa_screens/wwa_with_html5.gif
+  screenPath: /images/wwa_screens/wwa_with_html5.gif
   links:
     - link: https://www.aokashi.net/wwa_with_html5.html
   supportWWAWing: true
@@ -87,7 +87,7 @@
   name: WWA Evalで作るコマンドバトル
   description: WWA Evalで作れるコマンドバトル。 死亡判定がより正確になり、コマンドバトルらしくなりました。
   publishedAt: 2011-11-01
-  screen_path: /images/wwa_screens/command_eval.gif
+  screenPath: /images/wwa_screens/command_eval.gif
   links:
     - link: https://www.aokashi.net/command_eval.html
   supportWWAWing: false
@@ -95,7 +95,7 @@
   name: 散策
   description: 敵を倒して金を集めて武器を買うシンプルなアドベンチャーゲーム。 目標は未踏の塔にある魔王を倒すことです。 このゲームは依頼目的ではなく主人公の趣味目的で冒険をはじめます。
   publishedAt: 2012-06-23
-  screen_path: /images/wwa_screens/walking.gif
+  screenPath: /images/wwa_screens/walking.gif
   links:
     - link: https://www.aokashi.net/walking.html
     - name: ランキング
@@ -105,7 +105,7 @@
   name: 洞窟脱出2
   description: 日常的な生活をしている主人公。 ある日、突然洞窟脱出にワープされ、脱出するのが今回の目標です。 洞窟を脱出しただけでは達成しません。 街などを経由し、また洞窟を脱出していきます。
   publishedAt: 2012-12-23
-  screen_path: /images/wwa_screens/escape_cave_2.gif
+  screenPath: /images/wwa_screens/escape_cave_2.gif
   links:
     - link: https://www.aokashi.net/escape_cave_2.html
   supportWWAWing: true
@@ -113,7 +113,7 @@
   name: 要塞脱出
   description: 主人公は突然謎の部屋で起きる。 崩れる床＋脱出ゲームの組み合わせで初のマルチエンディング作品。
   publishedAt: 2014-12-31
-  screen_path: /images/wwa_screens/escape_stronghold.gif
+  screenPath: /images/wwa_screens/escape_stronghold.gif
   links:
     - link: https://www.aokashi.net/escape_stronghold.html
   supportWWAWing: true
@@ -121,7 +121,7 @@
   name: クソネミを倒すゲーム
   description: ある地域で突然眠くなる現象「スヤァ」に襲われています。 このゲームは主人公が「クソネミ」を倒すゲームです。 新型コマンドバトルのテストだったりします。
   publishedAt: 2014-12-31
-  screen_path: /images/wwa_screens/kusonemi.gif
+  screenPath: /images/wwa_screens/kusonemi.gif
   links:
     - link: https://www.aokashi.net/kusonemi.html
   supportWWAWing: false
@@ -129,7 +129,7 @@
   name: ガズトの命令より
   description: 遺跡に湧いたモンスターを倒すために主人公が立ち入ります。 シンプルな構成ですが、トラップも存在します。
   publishedAt: 2015-08-25
-  screen_path: /images/wwa_screens/ghazt.gif
+  screenPath: /images/wwa_screens/ghazt.gif
   links:
     - link: https://www.aokashi.net/ghazt.html
   supportWWAWing: true
@@ -137,7 +137,7 @@
   name: シティーアイランド
   description: あの名作「ファンタジーアイランド」をベースに、近代〜現代風に改造しています。島の都市の象徴であるピースストーンを取り戻しましょう。
   publishedAt: 2015-08-25
-  screen_path: /images/wwa_screens/city_island.gif
+  screenPath: /images/wwa_screens/city_island.gif
   links:
     - link: https://www.aokashi.net/city_island.html
   supportWWAWing: true
@@ -147,7 +147,7 @@
     村や街の大事な食べ物が悪い動物に取られてしまった!! 食べ物を取り戻して食堂を賑やかにしましょう。
     WWA COLLECTIONの収録作品です。
   publishedAt: 2018-12-20
-  screen_path: /images/wwa_screens/return_food.gif
+  screenPath: /images/wwa_screens/return_food.gif
   links:
     - name: WWA COLLECTION のストアページへ
       link: https://ec.nintendo.com/JP/ja/titles/70010000015161

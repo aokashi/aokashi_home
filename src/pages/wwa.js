@@ -20,6 +20,7 @@ const WWAPage = () => {
           name
           description
           publishedAt
+          screenPath
           links {
             name
             link
@@ -70,15 +71,15 @@ const WWAPage = () => {
 const WWAList = (data) => data.nodes.map((item, index) => (
   <Box
     title={item.name}
-    className="is-one-third"
+    imagePath={item.screenPath}
+    width="one-third"
     key={index}
+    footerContent={<BoxNav navItems={getLinks(item.links)} />}
   >
-    <img src={`/images/wwa_screens/${item.id}.gif`} alt="" />
     {item.supportWWAWing &&
       <div className="has-text-right"><img src={WWAWingLogo} alt="WWA Wing対応" /></div>
     }
     <p>{item.description}</p>
-    <BoxNav navItems={getLinks(item.links)} />
   </Box>
 ))
 

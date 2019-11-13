@@ -1,22 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import styles from './ImageModal.module.sass'
-import Modal from './Modal'
+import Modal from "./Modal"
 
 const ImageModal = ({ src, alt, name, description, onOutsideClick }) => (
   <Modal onOutsideClick={onOutsideClick}>
-    <div className={styles.imageWrapper}>
-      <img src={src} alt={alt} className={styles.image} />
+    <div className="has-text-white has-text-centered">
+      <img src={src} alt={alt} />
+      {name &&
+        <p>{name}</p>
+      }
+      {description &&
+        <p>{description}</p>
+      }
     </div>
-    {
-      name &&
-        <div className={styles.name}>{name}</div>
-    }
-    {
-      description &&
-        <div className={styles.description}>{description}</div>
-    }
   </Modal>
 )
 
@@ -29,7 +26,7 @@ ImageModal.propTypes = {
 }
 
 ImageModal.defaultProps = {
-  alt: '',
+  alt: "",
 }
 
 export default ImageModal

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './PieceMaterialBox.module.sass'
 import MaterialBox from './MaterialBox'
 
 const PieceMaterialBox = ({ materialItem }) => {
@@ -40,8 +39,8 @@ const PieceMaterialBox = ({ materialItem }) => {
         </ol>
         {
           materialItem.downloadFile &&
-            <div className={styles.buttons}>
-              <a href={materialItem.downloadFile} className={styles.downloadButton}>ダウンロード</a>
+            <div className="buttons is-right">
+              <a href={materialItem.downloadFile} className="button">ダウンロード</a>
             </div>
         }
       </div>

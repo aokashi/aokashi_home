@@ -28,23 +28,21 @@ const SoftwarePage = () => (
 )
 
 const softwareList = (
-  <BoxList className="software-list list">
+  <BoxList>
     {
       SoftwareData.map((item, index) => (
         <Box
           title={item.name}
-          className="list__item"
+          width="half"
           key={index}
+          footerContent={<BoxNav navItems={getLinks(item)} />}
         >
           <p>{item.description}</p>
-          <div className="item__keywords keywords">
-            {
-              item.keywords.map((keyword, keywordIndex) => (
-                <span className="keywords__item" key={keywordIndex}>{keyword}</span>
-              ))
-            }
+          <div className="tags">
+            {item.keywords.map((keyword, keywordIndex) => (
+              <span className="tag" key={keywordIndex}>{keyword}</span>
+            ))}
           </div>
-          <BoxNav navItems={getLinks(item)} />
         </Box>
       ))
     }
@@ -63,6 +61,7 @@ function getLinks(softwareItem) {
     links.push({
       "link": softwareItem.repository,
       "name": "GitHub リポジトリ",
+      "fa": "github",
     })
   }
 

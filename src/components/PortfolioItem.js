@@ -1,52 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import convertDate from '../utils/convertDate'
+import Box from "./Box/Box"
 import { Link } from 'gatsby'
 
-import styles from './PortfolioItem.module.sass'
-import convertDate from '../utils/convertDate'
-
-const PortfolioItem = ({ position, portfolioItem }) => {
-  const positionClassName = position === 'left' ? styles.isLeft : styles.isRight
-
+const PortfolioItem = ({ portfolioItem }) => {
   return (
-    <div className={`${positionClassName} column is-half-tablet is-one-quarter-desktop`}>
-      <div className={styles.item}>
-        <h3 className={styles.title}>
-          <Link to={portfolioItem.path}>
-            {
-              portfolioItem.images &&
-                <img
-                  src={portfolioItem.images[0].path}
-                  alt={portfolioItem.images[0].alt}
-                  className={styles.titleImage}
-                />
-            }
-            <div className={styles.titleText}>
-              {portfolioItem.title}
-            </div>
-          </Link>
-        </h3>
-        <div className={styles.content}>
-          <div className={styles.dateWrapper}>
-            <time datatime={portfolioItem.date} className={styles.date}>
-              {convertDate(portfolioItem.date)}
-            </time>
-          </div>
-          <div className={styles.tagList}>
-            {
-              portfolioItem.tags.map((tag, tagIndex) => (
-                <span className={styles.tagItem} key={tagIndex}>{tag}</span>
-              ))
-            }
-          </div>
-        </div>
+    <Box
+      title={portfolioItem.title}
+      link={portfolioItem.path}
+      imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
+      width={["half-tablet", "one-quarter-widescreen"]}
+    >
+      <div className="is-size-7">
+        <time datatime={portfolioItem.date}>
+          {convertDate(portfolioItem.date)}
+        </time>
       </div>
-    </div>
+      <div className="tags">
+        {portfolioItem.tags.map((tag, tagIndex) => 
+          <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>{tag}</Link>
+        )}
+      </div>
+    </Box>
   )
 }
 
 PortfolioItem.propTypes = {
-  position: PropTypes.oneOf(['left', 'right']),
   portfolioItem: PropTypes.shape({
     title: PropTypes.string,
     path: PropTypes.string,
@@ -57,10 +38,6 @@ PortfolioItem.propTypes = {
       alt: PropTypes.string,
     })),
   }).isRequired,
-}
-
-PortfolioItem.defaultProps = {
-  position: 'left'
 }
 
 export default PortfolioItem

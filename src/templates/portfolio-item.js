@@ -21,28 +21,30 @@ const PortfolioItemTemplate = ({
     <Layout>
       <BackLink to="/portfolio">戻る</BackLink>
       <PageHeader className={styles.header}>
-        <div className={styles.summary}>
+        <div className={`${styles.summary} block`}>
           <h1>{frontmatter.title}</h1>
-          <div className={styles.date}>
-            <img src={DateIcon} alt={"日付:"} className={styles.dateIcon} />
+          <div>
+            <span className={`${styles.headerIcon} icon is-medium`}>
+              <img src={DateIcon} alt={"日付:"} />
+            </span>
             <time datetime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
           </div>
+          <div className="tags">
+            <span className={`${styles.headerIcon} icon is-medium`}>
+              <img src={TagIcon} alt={"タグ:"} />
+            </span>
+            {frontmatter.tags.map((tag, tagIndex) => 
+              <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
+                {tag}
+              </Link>
+            )}
+          </div>
         </div>
-        <div className={styles.tags}>
-          <img src={TagIcon} alt={"タグ:"} className={styles.tagIcon} />
-          {
-            frontmatter.tags.map((tag, tagIndex) => (
-              <span key={tagIndex} className={styles.tag}>
-                <Link to={`/portfolio/tag/${tag}`}>{tag}</Link>
-              </span>
-            ))
-          }
-        </div>
-          {frontmatter.images &&
-            <div className={styles.images}>
-              <Carousel items={frontmatter.images} width={4} height={3} />
-            </div>
-          }
+        {frontmatter.images &&
+          <div className={styles.images}>
+            <Carousel items={frontmatter.images} width={4} height={3} />
+          </div>
+        }
       </PageHeader>
       <div className="content">
         {
@@ -51,19 +53,23 @@ const PortfolioItemTemplate = ({
       </div>
       {
         frontmatter.links &&
-          <div className={styles.links}>
-            <div className={styles.linksTitle}>関連リンク</div>
-            <div className={styles.linksList}>
+          <div className="content">
+            <h2>関連リンク</h2>
+            <ul>
               {
                 frontmatter.links.map((linkItem, linkIndex) => {
                   if (!linkItem.link) {
-                    return <span className={styles.link} key={linkIndex}>{linkItem.name}</span>
+                    return <li key={linkIndex}>{linkItem.name}</li>
                   }
 
-                  return <a href={linkItem.link} className={styles.link} target={"_blank"} key={linkIndex}>{linkItem.name}</a>
+                  return (
+                    <li key={linkIndex}>
+                      <a href={linkItem.link} className="link" target="_blank" rel="noopener noreferrer">{linkItem.name}</a>
+                    </li>
+                  )
                 })
               }
-            </div>
+            </ul>
           </div>
       }
       <BackLink to="/portfolio">戻る</BackLink>

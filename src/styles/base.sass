@@ -1,16 +1,32 @@
 /**
- * ベースのスタイルシートファイルです。 layouts 下のコンポーネントでは、必ずこの sass ファイルを import してください。
+ * ベースのスタイルシートファイルです。gatsby-browser.js でこのファイルがインポートされます。
  */
 
 @charset "utf-8"
 
 @import "~bulma/sass/base/_all.sass"
-@import "~bulma/sass/elements/container.sass"
 
 $content-heading-color: $primary
 $content-blockquote-background-color: $light
 $content-blockquote-border-left: 5px solid $grey
-@import "~bulma/sass/elements/content.sass"
+$button-color: $primary
+$button-background-color: $scheme-main
+$button-border-color: $border
+$button-border-width: $control-border-width
+$button-hover-border-color: $link-hover-border
+$button-text-color: inherit
+$button-text-hover-background-color: rgba(0, 0, 0, .25)
+$button-text-hover-color: inherit
+$box-shadow: 0 0 0 $control-border-width #000080
+@import "~bulma/sass/elements/_all.sass"
+
+$navbar-background-color: $scheme-main
+$navbar-item-img-max-height: 48px
+$card-shadow: $box-shadow
+$message-body-border-width: $control-border-width
+$message-colors: $colors
+$modal-content-width: 100%
+@import "~bulma/sass/components/_all.sass"
 
 @import "~bulma/sass/grid/_all.sass"
 

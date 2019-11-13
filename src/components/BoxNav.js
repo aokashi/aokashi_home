@@ -1,16 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import styles from './BoxNav.module.sass'
-import Link from './Link'
+import Link from "./Link"
 
 const BoxNav = ({ navItems }) => (
-  <div className={styles.boxNav}>
-    {
-      navItems.map((navItem, navIndex) => (
-        <Link href={navItem.link} className={styles.navItem} key={navIndex}>{navItem.name}</Link>
-      ))
-    }
+  <div className="card-footer">
+    {navItems.map((navItem, navIndex) => (
+        <Link href={navItem.link} className="card-footer-item" key={navIndex}>
+          {navItem.fa &&
+            <span className="icon">
+              <FontAwesomeIcon icon={["fab", navItem.fa]} />
+            </span>
+          }
+          {navItem.name}
+        </Link>
+    ))}
   </div>
 )
 
@@ -19,6 +24,7 @@ BoxNav.propTypes = {
     PropTypes.shape({
       link: PropTypes.string.isRequired,
       name: PropTypes.string,
+      fa: PropTypes.string,
     })
   )
 }

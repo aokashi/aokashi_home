@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import RenderAst from "../utils/renderAst"
 import Layout from "../layouts/page-layout"
 
-import styles from "./default.module.sass"
+import PageHeader from "../components/PageHeader"
+import TableOfContents from "../components/TableOfContents"
 
 const DefaultTemplate = ({
   data
@@ -11,10 +12,10 @@ const DefaultTemplate = ({
   const { markdownRemark } = data
   const { frontmatter, htmlAst, tableOfContents } = markdownRemark
   return (
-    <Layout sidebarContent={renderSidebar(tableOfContents)}>
-      <header className={styles.header}>
-        <h1 className={styles.headerTitle}>{frontmatter.title}</h1>
-      </header>
+    <Layout sidebarContent={<TableOfContents html={tableOfContents} />}>
+      <PageHeader>
+        <h1>{frontmatter.title}</h1>
+      </PageHeader>
       <div className="content">
         {
           RenderAst(htmlAst)
@@ -23,14 +24,6 @@ const DefaultTemplate = ({
     </Layout>
   )
 }
-
-const renderSidebar = (tableOfContents) => (
-  <>
-    <div
-      dangerouslySetInnerHTML={{ __html: tableOfContents }}
-    />
-  </>
-)
 
 export const pageQuery = graphql`
   query ($path: String!) {

@@ -2,27 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from './Box'
 
-import styles from './MaterialBox.module.sass'
-
-const MaterialBox = ({ materialItem, width, title, children }) => (
+const MaterialBox = ({ materialItem, imagePath, onImageClick, width, title, children }) => (
   <Box
     title={title}
-    className={`${styles.materialBox} is-${width}`}
+    imagePath={imagePath}
+    onImageClick={onImageClick}
+    width={width}
   >
     {children}
     {
       materialItem.tags &&
-        <div className={styles.tags}>
+        <div className="tags block">
           {
             materialItem.tags.map((tagItem, tagIndex) => (
-              <span className={styles.tagItem} key={tagIndex}>{tagItem}</span>
+              <span className="tag" key={tagIndex}>{tagItem}</span>
             ))
           }
         </div>
     }
     {
       materialItem.description &&
-        <p className={styles.description}>{materialItem.description}</p>
+        <div className="content">
+          <p>{materialItem.description}</p>
+        </div>
     }
   </Box>
 )
@@ -33,14 +35,11 @@ MaterialBox.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
   }),
+  imagePath: PropTypes.string,
+  onImageClick: PropTypes.func,
   width: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.node,
-}
-
-MaterialBox.defaultProps = {
-  width: 'one-third',
-  onItemClick: () => {},
 }
 
 export default MaterialBox
