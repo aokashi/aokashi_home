@@ -61,6 +61,7 @@ function getLinks(softwareItem) {
     links.push({
       "link": softwareItem.repository,
       "name": "GitHub リポジトリ",
+      "fa": "github",
     })
   }
 
