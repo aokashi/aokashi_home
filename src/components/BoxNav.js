@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import Link from './Link'
 
 const BoxNav = ({ navItems }) => (
-  <div className="buttons">
+  <div className="card-footer">
     {
       navItems.map((navItem, navIndex) => (
-        <Link href={navItem.link} className="button" key={navIndex}>{navItem.name}</Link>
+        <Link href={navItem.link} className="card-footer-item" key={navIndex}>{navItem.name}</Link>
       ))
     }
   </div>

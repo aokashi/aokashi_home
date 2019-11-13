@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
 
-const Box = ({ title, link, imagePath, onImageClick, width, className, children }) => (
+const Box = ({ title, link, imagePath, onImageClick, width, className, children, footerContent }) => (
   <div className={`column ${getWidth(width)}`}>
     <div className={`card ${className}`}>
       {imagePath &&
@@ -22,6 +22,9 @@ const Box = ({ title, link, imagePath, onImageClick, width, className, children 
       <div className="card-content">
         {children}
       </div>
+      {footerContent &&
+        footerContent
+      }
     </div>
   </div>
 )
@@ -59,6 +62,7 @@ Box.propTypes = {
   ]),
   className: PropTypes.string,
   children: PropTypes.node,
+  footerContent: PropTypes.node,
 }
 
 Box.defaultProps = {

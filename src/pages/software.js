@@ -35,6 +35,7 @@ const softwareList = (
           title={item.name}
           width="half"
           key={index}
+          footerContent={<BoxNav navItems={getLinks(item)} />}
         >
           <p>{item.description}</p>
           <div className="tags">
@@ -42,7 +43,6 @@ const softwareList = (
               <span className="tag" key={keywordIndex}>{keyword}</span>
             ))}
           </div>
-          <BoxNav navItems={getLinks(item)} />
         </Box>
       ))
     }

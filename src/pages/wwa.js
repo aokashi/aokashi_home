@@ -74,12 +74,12 @@ const WWAList = (data) => data.nodes.map((item, index) => (
     imagePath={item.screenPath}
     width="one-third"
     key={index}
+    footerContent={<BoxNav navItems={getLinks(item.links)} />}
   >
     {item.supportWWAWing &&
       <div className="has-text-right"><img src={WWAWingLogo} alt="WWA Wing対応" /></div>
     }
     <p>{item.description}</p>
-    <BoxNav navItems={getLinks(item.links)} />
   </Box>
 ))
 
