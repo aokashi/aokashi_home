@@ -22,8 +22,8 @@ const IndexLayout = ({ children }) => {
         }
         file(relativePath: { eq: "ah-logo.png" }) {
           childImageSharp {
-            fixed(width: 512, height: 96) {
-              ...GatsbyImageSharpFixed
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -71,7 +71,7 @@ const IndexLayout = ({ children }) => {
       </Helmet>
       <div className={`${styles.firstScreen} container`}>
         <div className={styles.title}>
-          <Img fixed={data.file.childImageSharp.fixed} alt={data.site.siteMetadata.title} className={styles.titleLogo} />
+          <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
         </div>
         {
           navItems(data.allNavItemYaml)
