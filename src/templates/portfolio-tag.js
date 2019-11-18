@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../layouts/page-layout"
-import PageHeader from "../components/PageHeader"
+import { IconPageHeader } from "../components/PageHeader"
 import PortfolioItem from "../components/PortfolioItem"
 import PortfolioGroup from "../components/PortfolioGroup"
 
@@ -15,9 +15,9 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   return (
     <Layout>
       <BackLink to="/portfolio">トップへ戻る</BackLink>
-      <PageHeader image={TagIcon} imageType={"icon"}>
+      <IconPageHeader image={TagIcon}>
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
-      </PageHeader>
+      </IconPageHeader>
       <PortfolioGroup>
         {
           data.allMarkdownRemark.nodes.map((item, itemIndex) => (

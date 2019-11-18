@@ -1,8 +1,14 @@
 .pageHeader
-  background-color: $light
+  background-color: $white-bis
   color: $primary
   font-weight: $weight-bold
-  padding: .5rem 1rem
+  /**
+   * 上部のメニューと一体化するように見せるため、親要素についている余白を削除します。
+   * @see ../layouts/page-layout.module.sass
+   */
+  margin: 0 -.5rem $block-spacing
+  .content
+    padding: .5rem 1rem
   h1
     font-size: $size-3
   h2

@@ -7,14 +7,18 @@
  */
 $family-sans-serif: "Noto Sans CJK JP", "Noto Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", -sans-serif
 $text: #000000
+$grey-lightest: #c0c0c0
+$white-ter: #d0d0d0
+$white-bis: #e0e0e0
+$grey: hsl(0, 0%, 48%)
+$grey-darker: #404040
 
 /**
  * 2. derived-variables
  */
 $primary: #000080
-$light: #c0c0c0
-$dark: #404040
-$grey: hsl(0, 0%, 48%)
+$light: $grey-lightest
+$scheme-main: $light
 
 // FIXME: *-light を適用しているのに message の背景色が適用されていない
 $warning: hsl(48, 100%, 50%)
@@ -29,7 +33,6 @@ $danger-light: hsl(348, 64%, 80%)
 $sucess: hsl(120, 100%, 50%)
 $sucess-light: hsl(120, 80%, 80%)
 
-$scheme-main: $light
 $border: $grey
 $link-hover-border: $primary
 

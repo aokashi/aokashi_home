@@ -9,6 +9,14 @@
 .footer
   border-top: $control-border-width solid $primary
 
+/**
+ * Bulma のタブでは、スマートフォンで閲覧すると幅が画面を超える不具合が発生しています。
+ *     原因は不明ですが、当面の間 white-space のプロパティをオフにして対処します。
+ * @see https://bulma.io/documentation/components/tabs/
+ */
+.tabs ul
+  white-space: initial
+
 .content
   h2
     background: transparent linear-gradient(to right, $light, transparent)
