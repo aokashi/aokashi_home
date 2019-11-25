@@ -33,19 +33,25 @@ const Layout = ({ sidebarContent, children }) => {
       }
     }
   `)
+  const navItems = data.allNavItemYaml.nodes
+  const siteNavItems = navItems.filter(item => item.type === "site")
+  const contentsNavItems = navItems.filter(item => item.type === "contents")
 
   return (
     <>
       <Helmet>
         <body className={styles.pageBody} />
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        siteNavItems={siteNavItems}
+      />
       <main className={styles.mainContent}>
         <nav className={styles.nav}>
           <nav className={styles.navContent}>
             <Link href="/" className={styles.navItem}>Home</Link>
             {
-              data.allNavItemYaml.nodes.map((navItem, navIndex) => (
+              contentsNavItems.map((navItem, navIndex) => (
                 <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
               ))
             }

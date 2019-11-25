@@ -2,7 +2,6 @@
   background: $white url('../images/ah-background_content.png') repeat 0 0
   
 .mainContent
-  +block
   display: grid
   display: -ms-grid
   +touch
@@ -52,6 +51,9 @@
 
 .article
   padding: 0 .5rem
+  \:global
+    .content
+      padding: $block-spacing 0
 
 .rightSidebar
   padding: 1rem
