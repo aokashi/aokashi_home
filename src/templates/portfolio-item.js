@@ -30,7 +30,6 @@ const PortfolioItemTemplate = ({
   return (
     <Layout>
       <SEO title={`ポートフォリオ ${frontmatter.title}`} />
-      <BackLink to="/portfolio">戻る</BackLink>
       <PageHeader className={styles.header}>
         <div className={`${styles.summary} block`}>
           <h1>{frontmatter.title}</h1>
@@ -57,9 +56,28 @@ const PortfolioItemTemplate = ({
           </div>
         }
       </PageHeader>
+      <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
         {
           renderAst(htmlAst)
+        }
+        {frontmatter.links &&
+          <>
+            <h2>関連リンク</h2>
+            <ul>
+              {frontmatter.links.map((linkItem, linkIndex) => {
+                if (!linkItem.link) {
+                  return <li key={linkIndex}>{linkItem.name}</li>
+                }
+  
+                return (
+                  <li key={linkIndex}>
+                    <a href={linkItem.link} className="link" target="_blank" rel="noopener noreferrer">{linkItem.name}</a>
+                  </li>
+                )
+              })}
+            </ul>
+          </>
         }
       </div>
       {frontmatter.words &&
@@ -78,24 +96,6 @@ const PortfolioItemTemplate = ({
               }
             </AboutNote>
           )}
-        </div>
-      }
-      {frontmatter.links &&
-        <div className="content">
-          <h2>関連リンク</h2>
-          <ul>
-            {frontmatter.links.map((linkItem, linkIndex) => {
-              if (!linkItem.link) {
-                return <li key={linkIndex}>{linkItem.name}</li>
-              }
-
-              return (
-                <li key={linkIndex}>
-                  <a href={linkItem.link} className="link" target="_blank" rel="noopener noreferrer">{linkItem.name}</a>
-                </li>
-              )
-            })}
-          </ul>
         </div>
       }
       <BackLink to="/portfolio">戻る</BackLink>
