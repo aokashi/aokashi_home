@@ -10,6 +10,8 @@ images:
   - path: /portfolio/cdl_rpg/rpg_screen.png
     alt: CDL_RPG のプレイ画面
     description: プレイ画面です。青い四角がプレイヤーで、フィールドは画面単位で表示が切り替わります。
+words:
+  - dx_library
 ---
 
 2012年4月から、情報技術を扱う高校に入学しました。この頃になるとC言語の仕組みがある程度分かるようになったことから、部活動でゲームエンジンの制作をしていました。CDLは **C** **D**irectX **L**ibrary から来ています。

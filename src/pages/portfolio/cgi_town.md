@@ -19,6 +19,8 @@ images:
 links:
   - link: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
     name: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
+words:
+  - town
 ---
 
 [インターネットで遊んでいたTOWN](/portfolio/first_internet) は設置できることから、自分のサイトにも設置しました。

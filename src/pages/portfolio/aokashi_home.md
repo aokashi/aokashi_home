@@ -14,6 +14,9 @@ images:
   - path: /portfolio/aokashi_home/ah_second.png
     alt: Aokashi Home (3代目)
     description: 3代目のAokashi Homeです。トップページは2017年11月のリニューアル以前のものです。
+words:
+  - modx
+  - hugo
 ---
 
 [Aokashi.net](aokashi_dot_net) に代わる個人サイトとして設立しました。Webサイトとしては5代目となり、もうこれ以上サイト名を変える必要が無いように、サイト名はシンプルな形で済ませました。
