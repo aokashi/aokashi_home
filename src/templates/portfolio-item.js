@@ -24,9 +24,6 @@ const PortfolioItemTemplate = ({
       return frontmatter.words.includes(aboutWord.name)
     })
     : []
-  /**
-   * @todo aboutWords の description が Markdown に対応していないので対応できるように修正する
-   */
   return (
     <Layout>
       <SEO title={`ポートフォリオ ${frontmatter.title}`} />
