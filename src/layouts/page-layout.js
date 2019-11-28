@@ -10,10 +10,10 @@ import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import styles from './page-layout.module.sass'
+import styles from "./page-layout.module.sass"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Link from '../components/Link'
+import Link from "../components/Link"
 
 const Layout = ({ sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
@@ -70,7 +70,7 @@ const Layout = ({ sidebarContent, children }) => {
       <div className={styles.floatNav}>
         {
           data.allNavItemYaml.nodes.map((navItem, navIndex) => {
-            if (navItem.type !== 'contents') {
+            if (navItem.type !== "contents") {
               return null
             }
             return (

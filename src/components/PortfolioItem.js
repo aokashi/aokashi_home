@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import convertDate from '../utils/convertDate'
+import convertDate from "../utils/convertDate"
 import Box from "./Box/Box"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 const PortfolioItem = ({ portfolioItem }) => {
   return (

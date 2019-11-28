@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import MaterialBox from './MaterialBox'
+import MaterialBox from "./MaterialBox"
 
 const PieceMaterialBox = ({ materialItem }) => {
   let notes = []
@@ -15,7 +15,7 @@ const PieceMaterialBox = ({ materialItem }) => {
       <div className="block">
         {
           materialItem.files.map((file, fileIndex) => {
-            let noteSign = ''
+            let noteSign = ""
             if (file.note) {
               notes.push(file.note)
               noteSign = <sup>{notes.length}</sup>

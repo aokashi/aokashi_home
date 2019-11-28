@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const BoxList = ({ className, children }) => (
   <div className={`columns is-multiline ${className}`}>
@@ -7,7 +7,7 @@ const BoxList = ({ className, children }) => (
 )
 
 BoxList.defaultProps = {
-  className: ''
+  className: ""
 }
 
 export default BoxList

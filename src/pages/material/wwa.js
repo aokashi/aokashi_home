@@ -1,14 +1,14 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Layout from '../../layouts/page-layout'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Layout from "../../layouts/page-layout"
 
 import SEO from "../../components/seo"
-import MaterialNavItem from '../../data/materials/navItem.json'
-import PageHeader from '../../components/PageHeader'
-import InfoNote from '../../components/Note/InfoNote'
-import BoxList from '../../components/BoxList'
-import ImageMaterialBox from '../../components/Box/ImageMaterialBox'
-import ImageModal from '../../components/Modal/ImageModal'
+import MaterialNavItem from "../../data/materials/navItem.json"
+import PageHeader from "../../components/PageHeader"
+import InfoNote from "../../components/Note/InfoNote"
+import BoxList from "../../components/BoxList"
+import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
+import ImageModal from "../../components/Modal/ImageModal"
 
 class WWAMaterialPage extends React.Component {
 

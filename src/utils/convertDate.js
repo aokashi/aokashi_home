@@ -6,7 +6,7 @@
 export default function convertDate(date) {
   const matches = date.match(/([0-9]{4})-([0-9]{2})-([0-9]{2})/);
   if (!Array.isArray(matches)) {
-    return '';
+    return "";
   }
 
   const [, year, month, day] = matches;

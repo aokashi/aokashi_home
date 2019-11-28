@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import Link from './Link'
+import Link from "./Link"
 
 const LinkButton = ({ href, children }) => (
   <div className="buttons is-centered block">

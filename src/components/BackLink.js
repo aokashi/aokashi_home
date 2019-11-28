@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import styles from "./BackLink.module.sass"
 import ArrowIcon from "../images/button_icon-arrow.svg"

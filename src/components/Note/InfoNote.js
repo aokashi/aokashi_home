@@ -1,6 +1,6 @@
-import React from 'react'
-import Note from './Note'
-import InfoIcon from '../../images/note_icon-info.png'
+import React from "react"
+import Note from "./Note"
+import InfoIcon from "../../images/note_icon-info.png"
 
 const InfoNote = ({ children }) => (
   <Note

@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Box from './Box'
+import React from "react"
+import PropTypes from "prop-types"
+import Box from "./Box"
 
 const MaterialBox = ({ materialItem, imagePath, onImageClick, width, title, children }) => (
   <Box

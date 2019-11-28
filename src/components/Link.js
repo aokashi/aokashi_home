@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 const LinkComponent = ({ href, className, activeClassName, style, children }) => {
   if (isExternalLink(href)) {
@@ -27,8 +27,8 @@ LinkComponent.propTypes = {
 }
 
 LinkComponent.defaultProp = {
-  className: '',
-  activeClassName: '',
+  className: "",
+  activeClassName: "",
   style: {},
 }
 
