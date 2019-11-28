@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../layouts/page-layout"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -12,6 +12,10 @@ import InfoNote from "../components/Note/InfoNote"
 import WWAWingLogo from "../images/wwawing-logo.png"
 
 const WWAPage = () => {
+  /**
+   * WWA Wing対応の絞り込みに使用するステートです。
+   */
+  const [onlyWWAWing, checkOnlyWWAWing] = useState(false);
   const data = useStaticQuery(graphql`
     query {
       allWwaYaml {
@@ -37,6 +41,7 @@ const WWAPage = () => {
       }
     }
   `)
+  const WWAData = data.allWwaYaml.nodes.filter(node => !onlyWWAWing || node.supportWWAWing)
 
   return (
     <Layout>
@@ -49,11 +54,14 @@ const WWAPage = () => {
         <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
         <InfoNote>
           <p>WWA Wing(JavaScript)ではなくJavaアプレットで動作したい場合はWWA作品のプレイページから <q>Javaアプレットの動作に切り替える</q> のリンクで変更できます。</p>
-          <p>WWA Wing 未対応のWWAをプレイする場合は JavaアプレットのWWAを動作するには で設定をお願いします。</p>
         </InfoNote>
+        <label><input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} /> <img src={WWAWingLogo} alt="WWA Wing" /> 対応のWWAのみ表示する </label>
+        <WarningNote>
+          <p>WWA Wing 未対応のWWAをプレイする場合は <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
+        </WarningNote>
       </div>
       <BoxList>
-        {WWAList(data.allWwaYaml)}
+        {WWAList(WWAData)}
       </BoxList>
       <div className="content">
         <h2>Thanks</h2>
@@ -68,7 +76,7 @@ const WWAPage = () => {
   )
 }
 
-const WWAList = (data) => data.nodes.map((item, index) => (
+const WWAList = nodes => nodes.map((item, index) =>
   <Box
     title={item.name}
     imagePath={item.screenPath}
@@ -81,7 +89,7 @@ const WWAList = (data) => data.nodes.map((item, index) => (
     }
     <p>{item.description}</p>
   </Box>
-))
+)
 
 const WWALicenseList = (data) => data.nodes.map((license, licenseIndex) => (
   <div className="column is-one-third" key={licenseIndex}>

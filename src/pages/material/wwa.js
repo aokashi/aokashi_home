@@ -17,6 +17,7 @@ class WWAMaterialPage extends React.Component {
     this.state = {
       isPreview: false,
       previewItem: {},
+      tagBy: "",
     }
   }
 
@@ -31,9 +32,35 @@ class WWAMaterialPage extends React.Component {
           <p>WWAで利用できる素材です。</p>
           <InfoNote>
             <p>セット以外のWWA素材はWWA制作に使う画像ファイルに埋め込む必要があります。</p>
+            <ul>
+              <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial">埋め込み方は当サイトの資料集で知ることができます。</a></li>
+            </ul>
           </InfoNote>
+          <StaticQuery
+            query={graphql`
+              query WWAMaterialDataQuery {
+                allWwaMaterialYaml {
+                  nodes {
+                    name
+                    file
+                    description
+                    publishedAt
+                    tags
+                  }
+                  group(field: tags) {
+                    fieldValue
+                  }
+                }
+              }
+            `}
+            render={data =>
+              <>
+                {this.renderTagList(data.allWwaMaterialYaml.group)}
+                {this.renderMaterialList(data.allWwaMaterialYaml.nodes)}
+              </>
+            }
+          />
         </div>
-        {this.renderMaterialList()}
         {
           this.state.isPreview &&
             this.renderModal()
@@ -42,37 +69,53 @@ class WWAMaterialPage extends React.Component {
     )
   }
 
-  renderMaterialList() {
+  renderTagList(tagGroups) {
+    return (
+      <div className="message is-primary">
+        <div className="message-header">
+          <p>タグで絞り込み</p>
+        </div>
+        <div className="message-body">
+          <div className="tags">
+            {tagGroups.map(function (tagGroup, tagIndex) {
+              const tagValue = tagGroup.fieldValue
+              const activeClassName = tagValue === this.state.tagBy ? "is-dark" : ""
+              return <span className={`tag ${activeClassName}`} onClick={() => this.setTag(tagValue)} key={tagIndex}>{tagValue}</span>
+            }.bind(this))}
+          </div>
+          <div className="buttons">
+            {this.state.tagBy !== "" &&
+              <button className="button" onClick={() => this.setTag("")}>絞り込みを解除</button>
+            }
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  /**
+   * 絞り込みに使用するタグを設定します。
+   * @param {string} tag 設定したいタグ (空文字列で解除)
+   */
+  setTag(tag) {
+    this.setState({
+      tagBy: tag
+    })
+  }
+
+  renderMaterialList(materialNodes) {
+    const materialData = this.state.tagBy !== ""
+      ? materialNodes.filter(node => node.tags.includes(this.state.tagBy))
+      : materialNodes
     return (
       <BoxList>
-        <StaticQuery
-          query={graphql`
-            query WWAMaterialDataQuery {
-              allWwaMaterialYaml {
-                nodes {
-                  name
-                  file
-                  description
-                  publishedAt
-                  tags
-                }
-              }
-            }
-          `}
-          render={data => (
-            <>
-              {
-                data.allWwaMaterialYaml.nodes.map((item, itemIndex) => (
-                  <ImageMaterialBox
-                    materialItem={item}
-                    key={itemIndex}
-                    onItemClick={() => this.showPreview(item)}
-                  />
-                ))
-              }
-            </>
-          )}
-        />
+        {materialData.map((item, itemIndex) => (
+          <ImageMaterialBox
+            materialItem={item}
+            key={itemIndex}
+            onItemClick={() => this.showPreview(item)}
+          />
+        ))}
       </BoxList>
     )
   }
