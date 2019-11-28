@@ -10,6 +10,8 @@ tags:
 links:
   - link: https://github.com/WWAWing/WWAMaker
     name: WWA Maker のGitHubリポジトリ
+words:
+  - wwa
 ---
 
 WWAのマップデータを制作できるアプリケーションです。WWAのマップデータを制作するツールとして「WWAマップ作成ツール」が存在していましたが、今の時代に対応できるように開発し直したアプリケーションとなります。

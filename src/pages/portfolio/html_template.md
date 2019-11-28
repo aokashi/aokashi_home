@@ -6,6 +6,7 @@ date: "2010-04-02"
 season: junior-high-school
 tags:
   - 自分を表現する
+  - Webページ
 images:
   - path: /portfolio/html_template/3column.png
     alt: 3カラム HTMLテンプレート
@@ -13,6 +14,8 @@ images:
   - path: /portfolio/html_template/tab.png
     alt: タブ式HTMLテンプレート
     description: ナビゲーションメニューがタブの見た目をしたHTMLテンプレートです。
+words:
+  - hugo
 ---
 
 [Coden City の制作以降](/portfolio/coden_city/)、様々なWebサイトのレイアウトを見て自分が作ったらどんなサイトになるのか確かめたくなり、HTMLテンプレートの制作をしていました。
@@ -33,4 +36,4 @@ HTML5を取り入れたものの、当時はHTML5の仕様をよく知らず、d
 
 最初は簡易版という位置づけで利用してもらいましたが、後の2014年4月22日にサイト全体にも反映されました。
 
-現在、Bootstrapを利用してリニューアルしようという計画があるとか、無いとか・・・。
+現在、HUGOを利用してリニューアルしようという計画があるとか、無いとか・・・。

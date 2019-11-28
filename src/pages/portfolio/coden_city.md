@@ -17,6 +17,8 @@ images:
   - path: /portfolio/coden_city/coden_city_last.png
     alt: Coden City (4代目)
     description: 4代目のデザインを制作している時のスクリーンショットです。
+words:
+  - seamonkey
 ---
 
 2010年より、ノートPCの購入によりホームページ構築の準備が整ったところで、ホームページを2月3日に設立しました。
@@ -26,24 +28,6 @@ images:
 
 ホームページのコンテンツの増加に合わせてリニューアルを進め、2010年の8月頃には、 HTML をそのまま編集出来るようになるまでスキルが身につきました。
 2010年末には、ある程度欲しいコンテンツが揃う形となります。それ以降はコンテンツ整理のために Web サイトの整理が続き、Coden Cityは2011年1月6日に役目を終えることになります。
-
-<about-note title="@PAGES とは">
-
-[アットウィキ](https://atwiki.jp/) の有限会社アットフリークスが運営していたレンタルサーバー。
-
-無料で利用することができて、1GBの容量の中に CGI(Perl, PHP) や MySQL が利用することができた。ただし、ページ内に広告が配置されていた。
-
-2018年2月28日にサービスを終了。
-
-</about-note>
-
-<about-note title="SeaMonkey とは" link="http://www.seamonkey-project.org/" linkname="SeaMonkey Project">
-
-Webブラウザ、メールクライアント、ニュースリーダー、オーサリングツール、IRCチャットの機能を1つにしたアプリケーション。
-
-これだけ便利な機能を持っていたのだが、元々 @PAGES のマニュアルを頼りにしていた関係でオーサリングツール以外は使用せず、メインで使用するオーサリングツールは後に Composer(サイト消失) に移行した。
-
-</about-note>
 
 ## 見てみる
 - [1代目](https://contents.aokashi.net/restore/coden_1)

@@ -26,14 +26,6 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 2011年中頃になると、HTMLのベストプラクティスやSEOを学び始めたことから、それらに強いQuick Homepage Makerを利用してWebサイトをリニューアルしました。CMSを利用してWebサイトを運営するのはこれが初めてになります。
 
-<about-note title="Quick Homepage Maker とは" link="https://haik-cms.jp/" linkname="HAIK (旧: Quick Homepage Maker)">
-
-簡単にWebサイトが構築できる [Pukiwiki](https://pukiwiki.osdn.jp/) ベースのCMS。Webページの設立を補助する機能が充実していて、ページ編集にマーカーや線を引いたり、WordPressのテーマをインポートしたりできる。
-
-現在はHAIKという名前でリニューアルされている。
-
-</about-note>
-
 1つのサイトに統合し、より管理しやすいように体制を整えたことで2011年にはそれなりに利用者に見てもらうことができました。
 
 しかし、Road Works Countyは元々「国」をイメージするために設立したWebサイトだったのですが、サイト名を間違えて County(群) にしてしまいました。これはドメイン名にも反映されてしまい、ドメイン名の変更が必要に迫られたことからドメイン aokashi.net を急遽取得し、[Aokashi.net](/portfolio/aokashi_dot_net)を代わりに設立しました。その後、2012年6月8日に役目を終えました。
