@@ -14,10 +14,10 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <BackLink to="/portfolio">トップへ戻る</BackLink>
       <IconPageHeader image={TagIcon}>
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
       </IconPageHeader>
+      <BackLink to="/portfolio">トップへ戻る</BackLink>
       <PortfolioGroup>
         {
           data.allMarkdownRemark.nodes.map((item, itemIndex) => (

@@ -19,6 +19,8 @@ images:
 links:
   - link: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
     name: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
+  - link: http://www.propel.ne.jp/~yysky/gallery/
+    name: 箱庭諸島の素材屋さん (Selt Countyの建物画像に使用)
 words:
   - town
 ---

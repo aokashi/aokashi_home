@@ -81,7 +81,9 @@ const PortfolioItemTemplate = ({
         <div className="content">
           {aboutWords.map((aboutWordItem, aboutWordIndex) => 
             <AboutNote title={aboutWordItem.title} key={aboutWordIndex}>
-              <p>{aboutWordItem.description}</p>
+              {aboutWordItem.description.split("\n").map((line, lineIndex) =>
+                <p key={lineIndex}>{line}</p>
+              )}
               {aboutWordItem.links &&
                 <ul>
                   {aboutWordItem.links.map((wordLink, wordLinkIndex) =>
