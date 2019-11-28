@@ -11,7 +11,7 @@ const PortfolioGroup = ({ name, children }) => (
     {name &&
       <div className="has-text-grey is-size-5 block">{name}</div>
     }
-    <div className="columns is-multiline">
+    <div className="columns is-multiline is-variable is-0-mobile is-5-tablet">
       {children}
     </div>
   </div>
