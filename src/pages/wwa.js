@@ -44,11 +44,8 @@ const WWAPage = () => {
   const WWAData = data.allWwaYaml.nodes.filter(node => !onlyWWAWing || node.supportWWAWing)
 
   return (
-    <Layout>
+    <Layout headerContent={<PageHeader><h1>WWA</h1></PageHeader>}>
       <SEO title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
-      <PageHeader>
-      <h1>WWA</h1>
-      </PageHeader>
       <div className="content">
         <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
         <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>

@@ -4,7 +4,7 @@ import styles from "./PageHeader.module.sass"
 
 const PageHeaderBase = (styleFunction, contentFunction) => {
   const Component = ({ image, bottomContent, children }) => (
-    <header
+    <div
       style={styleFunction(image)}
       className={styles.pageHeader}
     >
@@ -12,7 +12,7 @@ const PageHeaderBase = (styleFunction, contentFunction) => {
         { contentFunction(children, image) }
       </div>
       {bottomContent}
-    </header>
+    </div>
   )
 
   Component.propTypes = {

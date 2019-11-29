@@ -15,7 +15,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
 
-const Layout = ({ sidebarContent, children }) => {
+const Layout = ({ headerContent, sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -58,7 +58,10 @@ const Layout = ({ sidebarContent, children }) => {
           </nav>
         </nav>
         <article className={`${styles.article} container`}>
-          {children}
+          {headerContent &&
+            <header className={styles.header}>{headerContent}</header>
+          }
+          <div className={styles.content}>{children}</div>
         </article>
         {sidebarContent &&
           <aside className={styles.rightSidebar}>
@@ -94,6 +97,7 @@ const backToTop = () => {
 }
 
 Layout.propTypes = {
+  headerContent: PropTypes.node,
   sidebarContent: PropTypes.node,
   children: PropTypes.node.isRequired,
 }

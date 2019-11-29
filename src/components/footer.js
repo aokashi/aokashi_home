@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const Footer = ({ siteTitle }) => (
-  <footer className={`footer`}>
+  <footer className="footer">
     <div className="content has-text-centered">
       <nav className="buttons is-centered">
         <Link to="/" className="button is-dark">Home</Link>
@@ -18,7 +18,7 @@ const Footer = ({ siteTitle }) => (
         <div>
           Built with
             {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a>
         </div>
       </div>
     </div>

@@ -25,34 +25,8 @@ const PortfolioItemTemplate = ({
     })
     : []
   return (
-    <Layout>
+    <Layout headerContent={<ItemHeader frontmatter={frontmatter} />}>
       <SEO title={`ポートフォリオ ${frontmatter.title}`} />
-      <PageHeader className={styles.header}>
-        <div className={`${styles.summary} block`}>
-          <h1>{frontmatter.title}</h1>
-          <div>
-            <span className={`${styles.headerIcon} icon is-medium`}>
-              <img src={DateIcon} alt={"日付:"} />
-            </span>
-            <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
-          </div>
-          <div className="tags">
-            <span className={`${styles.headerIcon} icon is-medium`}>
-              <img src={TagIcon} alt={"タグ:"} />
-            </span>
-            {frontmatter.tags.map((tag, tagIndex) => 
-              <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
-                {tag}
-              </Link>
-            )}
-          </div>
-        </div>
-        {frontmatter.images &&
-          <div className={styles.images}>
-            <Carousel items={frontmatter.images} width={4} height={3} />
-          </div>
-        }
-      </PageHeader>
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
         {
@@ -101,6 +75,34 @@ const PortfolioItemTemplate = ({
     </Layout>
   )
 }
+
+const ItemHeader = ({ frontmatter }) =>
+  <PageHeader className={styles.header}>
+    <div className={`${styles.summary} block`}>
+      <h1>{frontmatter.title}</h1>
+      <div>
+        <span className={`${styles.headerIcon} icon is-medium`}>
+          <img src={DateIcon} alt={"日付:"} />
+        </span>
+        <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
+      </div>
+      <div className="tags">
+        <span className={`${styles.headerIcon} icon is-medium`}>
+          <img src={TagIcon} alt={"タグ:"} />
+        </span>
+        {frontmatter.tags.map((tag, tagIndex) => 
+          <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
+            {tag}
+          </Link>
+        )}
+      </div>
+    </div>
+    {frontmatter.images &&
+      <div className={styles.images}>
+        <Carousel items={frontmatter.images} width={4} height={3} />
+      </div>
+    }
+  </PageHeader>
 
 /**
  * @todo allPortfolioAboutWordYaml についてはcontextにwordsを含めた形で gatsby-node.js に移行する

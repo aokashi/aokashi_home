@@ -24,11 +24,12 @@ class WWAMaterialPage extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <SEO title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
+      <Layout headerContent={
         <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
           <h1>WWA素材</h1>
         </PageHeader>
+      }>
+        <SEO title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
         <div className="content">
           <p>WWAで利用できる素材です。</p>
           <InfoNote>
@@ -37,31 +38,31 @@ class WWAMaterialPage extends React.Component {
               <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial">埋め込み方は当サイトの資料集で知ることができます。</a></li>
             </ul>
           </InfoNote>
-          <StaticQuery
-            query={graphql`
-              query WWAMaterialDataQuery {
-                allWwaMaterialYaml {
-                  nodes {
-                    name
-                    file
-                    description
-                    publishedAt
-                    tags
-                  }
-                  group(field: tags) {
-                    fieldValue
-                  }
+        </div>
+        <StaticQuery
+          query={graphql`
+            query WWAMaterialDataQuery {
+              allWwaMaterialYaml {
+                nodes {
+                  name
+                  file
+                  description
+                  publishedAt
+                  tags
+                }
+                group(field: tags) {
+                  fieldValue
                 }
               }
-            `}
-            render={data =>
-              <>
-                {this.renderTagList(data.allWwaMaterialYaml.group)}
-                {this.renderMaterialList(data.allWwaMaterialYaml.nodes)}
-              </>
             }
-          />
-        </div>
+          `}
+          render={data =>
+            <>
+              {this.renderTagList(data.allWwaMaterialYaml.group)}
+              {this.renderMaterialList(data.allWwaMaterialYaml.nodes)}
+            </>
+          }
+        />
         {
           this.state.isPreview &&
             this.renderModal()

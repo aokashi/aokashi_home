@@ -13,11 +13,15 @@ const DefaultTemplate = ({
   const { markdownRemark } = data
   const { frontmatter, htmlAst, tableOfContents } = markdownRemark
   return (
-    <Layout sidebarContent={<TableOfContents html={tableOfContents} />}>
+    <Layout
+      sidebarContent={<TableOfContents html={tableOfContents} />}
+      headerContent={
+        <PageHeader>
+          <h1>{frontmatter.title}</h1>
+        </PageHeader>
+      }
+    >
       <SEO title={frontmatter.title} />
-      <PageHeader>
-        <h1>{frontmatter.title}</h1>
-      </PageHeader>
       <div className="content">
         {
           RenderAst(htmlAst)

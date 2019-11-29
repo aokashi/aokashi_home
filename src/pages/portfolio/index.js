@@ -15,11 +15,12 @@ class PortfolioPage extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
+      <Layout headerContent={
         <PageHeader>
           <h1>ポートフォリオ</h1>
         </PageHeader>
+      }>
+        <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
         {this.renderPortfolioList()}
         <div className="content">
           <h2>ポートフォリオについて</h2>

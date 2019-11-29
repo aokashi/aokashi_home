@@ -13,10 +13,11 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   const tag = pageContext.tag
 
   return (
-    <Layout>
+    <Layout headerContent={
       <IconPageHeader image={TagIcon}>
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
       </IconPageHeader>
+    }>
       <BackLink to="/portfolio">トップへ戻る</BackLink>
       <PortfolioGroup>
         {

@@ -23,11 +23,12 @@ class TkoolMvPage extends React.Component {
   
   render() {
     return (
-      <Layout>
-        <SEO title="RPGツクールMV対応素材" description="RPGツクールMV対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
+      <Layout headerContent={
         <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
           <h1>RPGツクールMV対応素材</h1>
         </PageHeader>
+      }>
+        <SEO title="RPGツクールMV対応素材" description="RPGツクールMV対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <div className="content">
           <p>1マス48×48ピクセルの画像素材です。RPGツクールMVに対応しています。</p>
           <InfoNote>

@@ -8,11 +8,12 @@ import WarningNote from "../components/Note/WarningNote"
 import PageHeaderNav from "../components/PageHeaderNav"
 
 const MaterialIndexPage = () => (
-  <Layout>
-    <SEO title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
+  <Layout headerContent={
     <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
       <h1>素材</h1>
     </PageHeader>
+  }>
+    <SEO title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
     <div className="content">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <section className="section">

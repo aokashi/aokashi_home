@@ -11,11 +11,8 @@ import InfoNote from "../components/Note/InfoNote"
 import LinkButton from "../components/LinkButton"
 
 const SoftwarePage = () => (
-  <Layout>
+  <Layout headerContent={<PageHeader><h1>ソフトウェア</h1></PageHeader>}>
     <SEO title="ソフトウェア" description="Aokashi Homeのソフトウェアページです。あると便利なツールや、創作を手助けするツールの開発をしています。" />
-    <PageHeader>
-      <h1>ソフトウェア</h1>
-    </PageHeader>
     <div className="content">
       <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
       <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
