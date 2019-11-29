@@ -66,7 +66,7 @@ const Layout = ({ sidebarContent, children }) => {
           </aside>
         }
         <div className={styles.bottomLink}>
-          <div className={styles.backTop} onClick={backToTop}>トップへ戻る</div>
+          <button className="button is-fullwidth is-light" onClick={backToTop}>トップへ戻る</button>
         </div>
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
