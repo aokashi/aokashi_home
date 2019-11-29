@@ -77,7 +77,15 @@ const PortfolioItemTemplate = ({
 }
 
 const ItemHeader = ({ frontmatter }) =>
-  <PageHeader className={styles.header}>
+  <PageHeader className={styles.header} bottomContent={
+    <>
+      {frontmatter.images &&
+        <div className={styles.images}>
+          <Carousel items={frontmatter.images} width={4} height={3} />
+        </div>
+      }
+    </>
+  }>
     <div className={`${styles.summary} block`}>
       <h1>{frontmatter.title}</h1>
       <div>
@@ -97,11 +105,6 @@ const ItemHeader = ({ frontmatter }) =>
         )}
       </div>
     </div>
-    {frontmatter.images &&
-      <div className={styles.images}>
-        <Carousel items={frontmatter.images} width={4} height={3} />
-      </div>
-    }
   </PageHeader>
 
 /**

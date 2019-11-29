@@ -20,6 +20,6 @@ words:
 
 2019年11月7日現在まで、WWA作品は[WWA COLLECTION](/portfolio/wwa_collection)の収録作品も含めて19作品を公開しました。
 
-<link-button href="/wwa">現在公開しているWWAゲームを見てみる</link-button>
+<link-button href="/wwa">現在公開中のWWAゲームを見てみる</link-button>
 
 なお、WWAと同じくWebブラウザですぐに遊べるゲームの制作ツールとして**スーパー正男 (正男コンストラクション)**がありまして、こちらも[Zeist City](/portfolio/zeist_city)の設立とともに公開しましたが、後に公開を取りやめています。
