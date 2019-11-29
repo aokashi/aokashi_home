@@ -65,6 +65,9 @@ const Layout = ({ sidebarContent, children }) => {
             {sidebarContent}
           </aside>
         }
+        <div className={styles.bottomLink}>
+          <div className={styles.backTop} onClick={backToTop}>トップへ戻る</div>
+        </div>
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
       <div className={styles.floatNav}>
@@ -84,6 +87,10 @@ const Layout = ({ sidebarContent, children }) => {
       </div>
     </>
   )
+}
+
+const backToTop = () => {
+  window.scroll(0, 0)
 }
 
 Layout.propTypes = {

@@ -9,6 +9,7 @@ import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
 import ImageModal from "../../components/Modal/ImageModal"
 import SEO from "../../components/seo"
+import PageHeaderNav from "../../components/PageHeaderNav"
 
 class TkoolMvPage extends React.Component {
 
@@ -24,7 +25,7 @@ class TkoolMvPage extends React.Component {
     return (
       <Layout>
         <SEO title="RPGツクールMV対応素材" description="RPGツクールMV対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
-        <PageHeader navItems={MaterialNavItem}>
+        <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
           <h1>RPGツクールMV対応素材</h1>
         </PageHeader>
         <div className="content">

@@ -9,6 +9,7 @@ import InfoNote from "../../components/Note/InfoNote"
 import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
 import ImageModal from "../../components/Modal/ImageModal"
+import PageHeaderNav from "../../components/PageHeaderNav"
 
 class WWAMaterialPage extends React.Component {
 
@@ -25,7 +26,7 @@ class WWAMaterialPage extends React.Component {
     return (
       <Layout>
         <SEO title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
-        <PageHeader navItems={MaterialNavItem}>
+        <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
           <h1>WWA素材</h1>
         </PageHeader>
         <div className="content">
