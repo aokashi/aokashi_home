@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import MaterialBox from "./MaterialBox"
+import getFileName from "../../utils/getFileName"
 
 const PieceMaterialBox = ({ materialItem }) => {
   let notes = []
@@ -22,7 +23,7 @@ const PieceMaterialBox = ({ materialItem }) => {
             }
             return (
               <span key={fileIndex}>
-                <a download={file.path} href={file.path}>
+                <a download={getFileName(file.path)} href={file.path}>
                   <img src={file.path} alt={file.alt} />
                 </a>
                 {noteSign}

@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import MaterialBox from "./MaterialBox"
+import getFileName from "../../utils/getFileName"
 
 const ImageMaterialBox = ({ materialItem, onItemClick }) => (
   <MaterialBox
@@ -11,7 +12,7 @@ const ImageMaterialBox = ({ materialItem, onItemClick }) => (
     width="one-third"
   >
     <div className="buttons is-right block">
-      <a download={materialItem.file} href={materialItem.file} className="button">ダウンロード</a>
+      <a download={getFileName(materialItem.file)} href={materialItem.file} className="button">ダウンロード</a>
     </div>
   </MaterialBox>
 )
