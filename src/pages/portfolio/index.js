@@ -122,7 +122,7 @@ class PortfolioPage extends React.Component {
       <>
         {
           otherPortfolioItems.map((item, itemIndex) => (
-            <section className={"section"} key={itemIndex}>
+            <section key={itemIndex}>
               <h3>{item.title}</h3>
               {
                 item.links &&

@@ -18,7 +18,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
         <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
       </IconPageHeader>
     }>
-      <BackLink to="/portfolio">トップへ戻る</BackLink>
+      <BackLink to="/portfolio">ポートフォリオ トップ</BackLink>
       <PortfolioGroup>
         {
           data.allMarkdownRemark.nodes.map((item, itemIndex) => (
@@ -29,7 +29,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
           ))
         }
       </PortfolioGroup>
-      <BackLink to="/portfolio">トップへ戻る</BackLink>
+      <BackLink to="/portfolio">ポートフォリオ トップ</BackLink>
     </Layout>
   )
 }

@@ -61,7 +61,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
           {headerContent &&
             <header className={styles.header}>{headerContent}</header>
           }
-          <div className={styles.content}>{children}</div>
+          <div className="section">{children}</div>
         </article>
         {sidebarContent &&
           <aside className={styles.rightSidebar}>

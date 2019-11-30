@@ -11,18 +11,16 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
-      <div className={styles.profile}>
-        <div className={styles.profileDescription}>
-          <p>{frontmatter.profile.description}</p>
-        </div>
+      <div className="section">
+        <p>{frontmatter.profile.description}</p>
         <div className="columns">
-          <section className={`section ${styles.profileLikes} column is-half`}>
+          <section className="column is-half">
             <h2 className={styles.sectionTitle}>好きなもの</h2>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
-          <section className={`section ${styles.profileEnvironments} column is-half`}>
+          <section className="column is-half">
             <h2 className={styles.sectionTitle}>使用環境</h2>
             {
               ProfileSection(frontmatter.profile.items.environments)

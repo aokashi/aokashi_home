@@ -77,7 +77,7 @@ const PortfolioItemTemplate = ({
 }
 
 const ItemHeader = ({ frontmatter }) =>
-  <PageHeader className={styles.header} bottomContent={
+  <PageHeader bottomContent={
     <>
       {frontmatter.images &&
         <div className={styles.images}>
