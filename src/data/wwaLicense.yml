@@ -1,0 +1,74 @@
+- name: キャラバンサークル
+  author: NAO
+  url: http://www.wwajp.com/
+  items:
+    - program
+    - image
+    - sound
+- name: WWA Wing
+  author: WWA Wing Team
+  url: http://wwawing.com/
+  items:
+    - program
+- name: 天使の血 悪魔の涙
+  author: Merino
+  url: http://tenaku.sakura.ne.jp/
+  items:
+    - program
+  remark: ドメイン失効のため、リンク先を変更
+- name: 福田直人のホームページ
+  author: 福田直人
+  url: http://www.t3.rim.or.jp/~naoto/naoto.html
+  items:
+    - image
+- name: ヒラリラーのMP
+  author: ヒラリラー
+  url: http://hirarira.net/
+  items:
+    - image
+- name: 万色の宙
+  author: yuhiro
+  url: http://c-lr.net/touch/
+  items:
+    - image
+- name: まてるある～ん
+  author: えふ・けー
+  url: http://ameblo.jp/msrr-material/
+  items:
+    - image
+- name: G-Eden
+  author: げおるぐ
+  url: http://geo.kesagiri.net/
+  items:
+    - image
+- name: TAM Music Factory
+  author: 多夢
+  url: http://www.tam-music.com/
+  items:
+    - sound
+- name: FREEDOM House 2nd
+  author: 氷石彩亜
+  url: http://fhouse.s17.xrea.com/
+  items:
+    - sound
+- name: MusMus
+  author: watson
+  url: http://musmus.main.jp/
+  items:
+    - sound
+- name: 魔王魂
+  author: KOUICHI
+  url: http://maoudamashii.jokersounds.com/
+  items:
+    - sound
+- name: WEB WAVE LIB
+  author: WEB WAVE LIB 運営委員会
+  url: https://web.archive.org/web/20150905100650/http://wwl.s-t-t.com:80/
+  items:
+    - sound
+  remark: サイト紛失のため、2015年9月5日のアーカイブを表示
+- name: 般若's MIDIの里
+  author: 般若
+  url: http://hannya.nce.buttobi.net/
+  items:
+    - sound

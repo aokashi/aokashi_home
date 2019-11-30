@@ -1,0 +1,103 @@
+- name: modx
+  title: MODX とは
+  description: |
+    Webサイトの制作に特化したPHPで動作するCMS。最初はEtomiteという名前でリリースされた。
+    ブラウザだけでページの追加や編集ができることはもちろん、特定のHTML要素をすぐに呼び出せるスニペットや各ページに特定のフィールドが付与できるカスタムフィールドなど、自由度と扱いやすさを両立している。
+    現在は従来からあるEvolutionと新しいRevolutionの2バージョンで扱っている。Aokashi HomeではEvolutionを使用していた。
+  links:
+    - name: MODX 日本公式サイト
+      link: http://modx.jp/
+- name: dx_library
+  title: DXライブラリ とは
+  description: |
+    WindowsのDirectXをC言語の知識だけで利用できるように関数をまとめたライブラリ。
+    近年ではスマートフォンやゲーム機でも動作できるようになっている。
+  links:
+  - name: DXライブラリ置き場
+    link: https://dxlib.xsrv.jp/
+- name: seamonkey
+  title: SeaMonkey とは
+  description: |
+    Webブラウザ、メールクライアント、ニュースリーダー、オーサリングツール、IRCチャットの機能を1つにしたアプリケーション。
+    これだけ便利な機能を持っていたのだが、元々 @PAGES のマニュアルを頼りにしていた関係でオーサリングツール以外は使用せず、メインで使用するオーサリングツールは後に Composer(サイト消失) に移行した。
+  links:
+  - name: SeaMonkey Project
+    link: http://www.seamonkey-project.org/
+- name: atpages
+  title: "@PAGES とは"
+  description: |
+    アットウィキの有限会社アットフリークスが運営していたレンタルサーバー。
+    無料で利用することができて、1GBの容量の中に CGI(Perl, PHP) や MySQL が利用することができた。ただし、ページ内に広告が配置されていた。
+    2018年2月28日にサービスを終了。
+  links:
+    - name: アットウィキ
+      link: https://atwiki.jp/
+- name: town
+  title: TOWN とは
+  description: |
+    桑田湘平が開発した生活ゲームの Perl 製 CGI スクリプト。設立者は、複数の街を設けて、それぞれの街をレイアウトし、仮想の街を作ることができる。
+    参加者は、その TOWN に参加し、掲示板に参加してコミュニケーションを取ったり、仕事をして所持金を稼いだりすることが出来る。好評だったこともあって、後に たっちゃん が改良、改造を行ったものを頒布していた時期もあった。
+    なお、開発時期がかなり古いこともあって、不正スクリプトタグの実行や取引額の変更行為などが散見されていたが、逆にこれが Web アプリケーションのセキュリティを学ぶお手本にもなった。
+    現在は公式サイトが消失しているため、配布を終了している。
+  links:
+  - name: brassiere (サイト消失のため 2016/10/03 当時のアーカイブを表示)
+    link: https://web.archive.org/web/20161003132948/http://shohei.heteml.jp/brassiere/
+- name: hakoniwa
+  title: 箱庭諸島 とは
+  description: |
+    仮想の島を運営して、手元の資金や物資を活用し、巨大な島へと発展するシミュレーションゲームの Perl 製 CGI スクリプト。自由度は高く、陸を拡張することはもちろん、ミサイル基地を作って他の島にミサイルを打つこともできる。また、島の発展を妨げる要素となる「怪獣」も現れるため、中盤以降では怪獣の退治に悩まされることが多い。
+    こちらも好評だったこともあって、究想の箱庭や Hakoniwa.R.A. といった派生の箱庭諸島も存在した。
+  links:
+  - name: 箱庭諸島のページ (サイト消失のため 2007/07/07 当時のアーカイブを表示)
+    link: https://web.archive.org/web/20070707102159/http://t.pos.to/hako/
+- name: wwa
+  title: WWA とは
+  description: |
+    World Wide Adventure の略で、ブラウザで遊ぶことが出来る RPG システム。開発当初は珍しかった Java 言語を採用しており、簡単に制作出来ることもあって、ホームページのお供として普及していった。
+    なお、採用している Java アプレットはブラウザが対応しなくなったため、システムそのものは WWA Wing へと移行されている。
+  links:
+  - name: キャラバンサークル
+    link: https://www.wwajp.com
+  - name: WWA Wing
+    link: https://wwawing.com
+- name: qhm
+  title: Quick Homepage Maker とは
+  description: |
+    簡単にWebサイトが構築できる Pukiwiki ベースのCMS。Webページの設立を補助する機能が充実していて、ページ編集にマーカーや線を引いたり、WordPressのテーマをインポートしたりできる。
+    現在はHAIKという名前でリニューアルされている。
+  links:
+  - name: "HAIK (旧: Quick Homepage Maker)"
+    link: https://haik-cms.jp/
+  - name: Pukiwiki
+    link: https://pukiwiki.osdn.jp/
+- name: plicy
+  title: PLiCy とは
+  description: |
+    浮田建設株式会社が運営するインターネットサービス。RPGツクールやWOLF RPGエディター、WWA Wingを始めとしたゲームシステムのゲームが投稿できる他、PLiCyオリジナルとしてアクションゲームやノベルゲーム、RPGが作成できるシステムも提供されている。
+    RPGツクールやWOLF RPGエディターといったWindowsでしか動作しないゲームでは、FlashやJavaScript(WebGL)上で動作するように調整されていて、ゲームシステムに関係なくダウンロード作業なしにすぐに遊ぶことができる。
+  links:
+  - name: PLiCy
+    link: https://plicy.net
+- name: photostudio
+  title: ArcSoft PhotoStudio とは
+  description: |
+    ArcSoft が開発してた写真編集ソフト。Canonのプリンターに同梱していた可能性が高いが、どのようにして入手したかは不明。現在正規の方法で入手できる方法も不明である。
+    写真編集ソフトのため、GIF形式での保存ができない。幸いPNG形式で保存することは可能なため、普段はPNG形式で保存していた。
+- name: edge
+  title: EDGE とは
+  description: |
+    TAKABO SOFT で公開されている画像編集ソフト。ドット絵の制作に特化していることが特徴で、256色のGIF画像やPNG画像を開くことができる。
+    後継のソフトウェアであるEDGE2が公開されているが、こちらは有料である。
+  links:
+  - name: EDGEのページ
+    link: http://takabosoft.com/edge
+  - name: EDGE2のページ
+    link: http://takabosoft.com/edge2
+- name: hugo
+  title: HUGO とは
+  description: |
+    CMSの代わりとして注目を集めている静的サイトジェネレーターの一種。
+    他の静的サイトジェネレーターと比べて手軽に利用でき、サイトのビルドも高速で終わることが特徴。
+  links:
+  - name: HUGOのページ
+    link: https://gohugo.io

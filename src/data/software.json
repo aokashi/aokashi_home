@@ -1,0 +1,52 @@
+[
+  {
+    "id": "portable_launcher",
+    "name": "Portable Launcher",
+    "description": "USBメモリ上で起動できるWindowsアプリケーションです。",
+    "repository": "https://github.com/aokashi/PortableLauncher",
+    "keywords": ["Windows", "C#"],
+    "references": []
+  }, {
+    "id": "word_dictionary",
+    "name": "単語辞書プログラム",
+    "description": "単語を見やすく整理するPHPのプログラムです。増えていく(と思われる)流行語とかの言葉をまとめる目的で制作しました。",
+    "repository": "https://github.com/aokashi/word-dic",
+    "keywords": ["PHP"],
+    "references": [
+      {
+        "name": "サンプル",
+        "url": "https://contents.aokashi.net/works/word-dic/word_dictionary.php"
+      }
+    ]
+  }, {
+    "id": "name_maker",
+    "name": "名前自動生成機",
+    "description": "ヒラリラーさんの名前自動生成機をベースに改造したJavaScriptプログラムです。",
+    "repository": "https://github.com/aokashi/NameMaker",
+    "keywords": ["JavaScript"],
+    "references": [
+      {
+        "name": "サンプル",
+        "url": "https://contents.aokashi.net/works/name-maker/namemaker.html"
+      }, {
+        "name": "参考元",
+        "url": "http://www.hirarira.net/namemaker/"
+      }
+    ]
+  }, {
+    "id": "playlist_js",
+    "name": "プレイリストJS",
+    "description": "勉強会で制作したJavaScriptで音声を選んで再生できるプログラムです。",
+    "repository": "https://github.com/aokashi/PlayListJs",
+    "keywords": ["JavaScript"],
+    "references": [
+      {
+        "name": "サンプル",
+        "url": "https://contents.aokashi.net/works/playlist-js"
+      }, {
+        "name": "Musmus (音楽提供元)",
+        "url": "http://musmus.main.jp/"
+      }
+    ]
+  }
+]

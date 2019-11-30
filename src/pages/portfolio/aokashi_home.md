@@ -1,0 +1,29 @@
+---
+path: /portfolio/aokashi_home
+template: portfolio-item
+title: Aokashi Home
+date: "2015-03-08"
+season: college
+tags:
+  - Webページ
+  - 継続中
+images:
+  - path: /portfolio/aokashi_home/ah_first.png
+    alt: Aokashi Home (初代)
+    description: 最初のAokashi Homeです。(復元した状態でスクリーンショットを取得)
+  - path: /portfolio/aokashi_home/ah_second.png
+    alt: Aokashi Home (3代目)
+    description: 3代目のAokashi Homeです。トップページは2017年11月のリニューアル以前のものです。
+words:
+  - modx
+  - hugo
+---
+
+[Aokashi.net](aokashi_dot_net) に代わる個人サイトとして設立しました。Webサイトとしては5代目となり、もうこれ以上サイト名を変える必要が無いように、サイト名はシンプルな形で済ませました。
+
+前代のAokashi.netはブログを融合した新しい方法を模索するWebサイトとして考えていましたが、今回のAokashi Homeは単純な個人サイトとして考え方を変えています。そのため、ブログとは切り離し、各コンテンツもコンパクトにまとめています。
+
+CMSはWordPressではなくMODXを採用しました。これは、固定ページの数が増えるとWordPressでは管理が難しく、一方のMODXは大量のページでも扱いやすく表示が速いためです。ただし、2017年のリニューアルからCMSではなく静的サイトに変更しています。静的サイトの生成は2017年～2019年は[Hugo](https://gohugo.io/)で、現在は[Gatsby](https://www.gatsbyjs.org/)を利用しています。
+
+## 見てみる
+- [Aokashi Home 2代目 (2015年7月25日～2017年3月24日)](https://contents.aokashi.net/restore/ah_1-2/)

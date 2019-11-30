@@ -1,0 +1,12 @@
+elementary-school:
+  index: 1
+  name: 小学生
+junior-high-school:
+  index: 2
+  name: 中学生
+high-school:
+  index: 3
+  name: 高校生
+college:
+  index: 4
+  name: 大学生
