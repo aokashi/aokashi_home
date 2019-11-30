@@ -53,7 +53,7 @@
     - WWA素材第2世代
     - 建物
 - name: BuBuilding11
-  file: /materials/wwa/BuBUilding11.gif
+  file: /materials/wwa/BuBuilding11.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
@@ -142,7 +142,7 @@
     当サイトの自動車素材に対応した道路素材です。
     配置しづらいため、自動車を配置する予定がない場合は対応していない素材のご利用をおすすめします。
 - name: HuPeople10
-  file: /materials/wwa/HuPeoPle10.gif
+  file: /materials/wwa/HuPeople10.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
