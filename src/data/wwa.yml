@@ -5,9 +5,9 @@
   screenPath: /images/wwa_screens/order_life.gif
   links:
     - name: 1章
-      link: https://www.aokashi.net/order_life_1.html
+      link: https://www.aokashi.net/wwa/order_life_1.html
     - name: 2章
-      link: https://www.aokashi.net/order_life_2.html
+      link: https://www.aokashi.net/wwa/order_life_2.html
   supportWWAWing: true
 - id: eito_city
   name: 英棟市
@@ -16,7 +16,7 @@
   screenPath: /images/wwa_screens/eito_city.gif
   links:
     - name: メインページ
-      link: https://www.aokashi.net/eito_city/
+      link: https://www.aokashi.net/wwa/eito_city/
   supportWWAWing: true
 - id: falling_floor
   name: 崩れる床
@@ -24,7 +24,7 @@
   publishedAt: 2010-09-12
   screenPath: /images/wwa_screens/falling_floor.gif
   links:
-    - link: https://www.aokashi.net/falling_floor.html
+    - link: https://www.aokashi.net/wwa/falling_floor.html
   supportWWAWing: true
 - id: escape_cave_1
   name: 洞窟脱出
@@ -32,7 +32,7 @@
   publishedAt: 2010-09-20
   screenPath: /images/wwa_screens/escape_cave_1.gif
   links:
-    - link: https://www.aokashi.net/escape_cave_1.html
+    - link: https://www.aokashi.net/wwa/escape_cave_1.html
   supportWWAWing: true
 - id: attack_of_slime
   name: スライムの逆襲
@@ -41,7 +41,7 @@
   screenPath: /images/wwa_screens/attack_of_slime.gif
   links:
     - name: メインページ
-      link: https://www.aokashi.net/attack_of_slime/
+      link: https://www.aokashi.net/wwa/attack_of_slime/
   supportWWAWing: false
 - id: snow_present
   name: Snow Present
@@ -49,7 +49,7 @@
   publishedAt: 2010-12-25
   screenPath: /images/wwa_screens/snow_present.gif
   links:
-    - link: https://www.aokashi.net/snow_present.html
+    - link: https://www.aokashi.net/wwa/snow_present.html
   supportWWAWing: false
 - id: action_2d
   name: アクション・2D
@@ -57,7 +57,7 @@
   publishedAt: 2011-05-07
   screenPath: /images/wwa_screens/action_2d.gif
   links:
-    - link: https://www.aokashi.net/action_2d.html
+    - link: https://www.aokashi.net/wwa/action_2d.html
   supportWWAWing: true
 - id: stock_game
   name: 借金返済！株ゲーム
@@ -65,7 +65,7 @@
   publishedAt: 2011-06-04
   screenPath: /images/wwa_screens/stock_game.gif
   links:
-    - link: https://www.aokashi.net/stock_game.html
+    - link: https://www.aokashi.net/wwa/stock_game.html
   supportWWAWing: false
 - id: command
   name: コマンドバトルのテスト
@@ -73,7 +73,7 @@
   publishedAt: 2011-08-22
   screenPath: /images/wwa_screens/command.gif
   links:
-    - link: https://www.aokashi.net/command.html
+    - link: https://www.aokashi.net/wwa/command.html
   supportWWAWing: true
 - id: wwa_with_html5
   name: WWAとHTML5
@@ -81,7 +81,7 @@
   publishedAt: 2017-03-28
   screenPath: /images/wwa_screens/wwa_with_html5.gif
   links:
-    - link: https://www.aokashi.net/wwa_with_html5.html
+    - link: https://www.aokashi.net/wwa/wwa_with_html5.html
   supportWWAWing: true
 - id: command_eval
   name: WWA Evalで作るコマンドバトル
@@ -89,7 +89,7 @@
   publishedAt: 2011-11-01
   screenPath: /images/wwa_screens/command_eval.gif
   links:
-    - link: https://www.aokashi.net/command_eval.html
+    - link: https://www.aokashi.net/wwa/command_eval.html
   supportWWAWing: false
 - id: walking
   name: 散策
@@ -97,9 +97,9 @@
   publishedAt: 2012-06-23
   screenPath: /images/wwa_screens/walking.gif
   links:
-    - link: https://www.aokashi.net/walking.html
+    - link: https://www.aokashi.net/wwa/walking.html
     - name: ランキング
-      link: https://www.aokashi.net/walking_ranking/wwarank.cgi?mode=rank
+      link: https://www.aokashi.net/wwa/walking_ranking/wwarank.cgi?mode=rank
   supportWWAWing: true
 - id: escape_cave_2
   name: 洞窟脱出2
@@ -107,7 +107,7 @@
   publishedAt: 2012-12-23
   screenPath: /images/wwa_screens/escape_cave_2.gif
   links:
-    - link: https://www.aokashi.net/escape_cave_2.html
+    - link: https://www.aokashi.net/wwa/escape_cave_2.html
   supportWWAWing: true
 - id: escape_stronghold
   name: 要塞脱出
@@ -115,7 +115,7 @@
   publishedAt: 2014-12-31
   screenPath: /images/wwa_screens/escape_stronghold.gif
   links:
-    - link: https://www.aokashi.net/escape_stronghold.html
+    - link: https://www.aokashi.net/wwa/escape_stronghold.html
   supportWWAWing: true
 - id: kusonemi
   name: クソネミを倒すゲーム
@@ -123,7 +123,7 @@
   publishedAt: 2014-12-31
   screenPath: /images/wwa_screens/kusonemi.gif
   links:
-    - link: https://www.aokashi.net/kusonemi.html
+    - link: https://www.aokashi.net/wwa/kusonemi.html
   supportWWAWing: false
 - id: ghazt
   name: ガズトの命令より
@@ -131,7 +131,7 @@
   publishedAt: 2015-08-25
   screenPath: /images/wwa_screens/ghazt.gif
   links:
-    - link: https://www.aokashi.net/ghazt.html
+    - link: https://www.aokashi.net/wwa/ghazt.html
   supportWWAWing: true
 - id: city_island
   name: シティーアイランド
@@ -139,7 +139,7 @@
   publishedAt: 2015-08-25
   screenPath: /images/wwa_screens/city_island.gif
   links:
-    - link: https://www.aokashi.net/city_island.html
+    - link: https://www.aokashi.net/wwa/city_island.html
   supportWWAWing: true
 - id: return_food
   name: 食べ物を取り戻せ!!
