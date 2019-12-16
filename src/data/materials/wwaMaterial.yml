@@ -451,3 +451,30 @@
   tags:
     - WWA素材第3世代
     - 乗り物
+- name: 19Tram-1
+  file: /materials/wwa/19Tram-1.gif
+  publishedAt: 2019-12-17
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 路面電車
+- name: 19Tram-2
+  file: /materials/wwa/19Tram-2.gif
+  publishedAt: 2019-12-17
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 路面電車
+- name: 19Tram-3
+  file: /materials/wwa/19Tram-3.gif
+  publishedAt: 2019-12-17
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 路面電車
+- name: 19Road
+  file: /materials/wwa/19Road.gif
+  publishedAt: 2019-12-17
+  tags:
+    - WWA素材第3世代
+    - 地面

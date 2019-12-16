@@ -15,6 +15,7 @@
   url: http://tenaku.sakura.ne.jp/
   items:
     - program
+    - image
   remark: ドメイン失効のため、リンク先を変更
 - name: 福田直人のホームページ
   author: 福田直人
@@ -66,7 +67,7 @@
   url: https://web.archive.org/web/20150905100650/http://wwl.s-t-t.com:80/
   items:
     - sound
-  remark: サイト紛失のため、2015年9月5日のアーカイブを表示
+  remark: サイト消失のため、2015年9月5日のアーカイブを表示
 - name: 般若's MIDIの里
   author: 般若
   url: http://hannya.nce.buttobi.net/
