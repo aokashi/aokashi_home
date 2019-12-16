@@ -52,7 +52,10 @@ const WWAPage = () => {
         <InfoNote>
           <p>WWA Wing(JavaScript)ではなくJavaアプレットで動作したい場合はWWA作品のプレイページから <q>Javaアプレットの動作に切り替える</q> のリンクで変更できます。</p>
         </InfoNote>
-        <label><input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} /> <img src={WWAWingLogo} alt="WWA Wing" /> 対応のWWAのみ表示する </label>
+        <label className="checkbox">
+          <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
+          <img src={WWAWingLogo} alt="WWA Wing" /> 対応のWWAのみ表示する
+        </label>
         <WarningNote>
           <p>WWA Wing 未対応のWWAをプレイする場合は <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
         </WarningNote>
