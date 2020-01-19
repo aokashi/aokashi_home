@@ -12,8 +12,14 @@ images:
     alt: 収録作品「食べ物を取り戻せ!!」の画面
     description: 自分が制作した収録作品「食べ物を取り戻せ!!」のプレイ画面です。
 links:
+  - link: https://ec.nintendo.com/JP/ja/titles/70010000015161
+    name: WWA COLLECTION のマイニンテンドーストアのページ
   - link: http://aokashi.hatenablog.jp/entry/2018/12/20/000000
     name: WWA COLLECTIONを作ったお話 (自分のブログの記事)
+  - link: https://github.com/aokashi/WWAMessageLoader
+    name: WWA Message Loader のリポジトリ
+  - link: https://ec.nintendo.com/JP/ja/titles/70010000018564
+    name: WWA COLLECTION 2 のマイニンテンドーストアのページ
 words:
   - wwa
   - plicy
@@ -37,3 +43,15 @@ words:
 
 ## WWA Message Loader
 これに合わせて、WWAのマップデータのすべてのメッセージを確認したいと PLiCy の開発者から連絡を頂き、 WWA Message Loader というWWAのマップデータをすべて確認できるWebアプリケーションを開発しました。このアプリケーションの開発からWWAのマップデータの構造を知ることができました。この知識は後の[WWA Maker](/portfolio/wwa_maker)の開発に反映されることになります。
+
+## WWA COLLECTION 2 の開発協力
+また、翌年の2019年には WWA COLLECTION の次のゲームソフト「WWA COLLECTION 2」にも開発協力を行いました。
+
+作業内容は前述の WWA COLLECTION のものと大して変わりませんでした。
+
+- 収録作品「謎めいた機械を追い求めて」の制作担当
+- 収録作品「Final Stock Game 2」の画像周りの修正担当
+- 各収録作品のデバッグ
+- [紹介ページ](https://www.wwafansq.com/works/wwa_collection_2) の制作担当
+
+収録作品である「謎めいた機械を追い求めて」は9年近く制作してきたWWA作品の集大成という位置付けのため、前編と後編にゲームを分けたゲーム作品になりました。

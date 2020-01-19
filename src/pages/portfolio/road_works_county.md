@@ -16,6 +16,8 @@ images:
 links:
   - link: https://info.wwawing.com/restore/
     name: まつゆき・ヒラリラーの復元サイト一覧 (代理更新のヒラリラーのMP及びG10-Project Worksのデザインを当サイト制作の参考にしました)
+words:
+  - qhm
 ---
 
 [Coden City](coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
