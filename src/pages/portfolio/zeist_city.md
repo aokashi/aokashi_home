@@ -10,6 +10,9 @@ images:
   - path: /portfolio/zeist_city/zeist_city_second.png
     alt: Zeist City (2代目)
     description: 2代目のデザインの Zeist City です。
+words:
+  - town
+  - masao
 ---
 
 [Coden City](/portfolio/coden_city) 設立後に設置したWebサイトです。

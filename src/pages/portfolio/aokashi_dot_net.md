@@ -24,7 +24,7 @@ images:
 
 Aokashi.net は2012年に公開したブログまたはWebサイトです。
 
-元々は、Webサイト「Road Works County」とブログ「青き樫の家」で運営していましたが、下記の理由から、Aokashi.netの設立が決まりました。
+元々は、Webサイト「[Road Works County](/portfolio/road_works_county/)」とブログ「青き樫の家」で運営していましたが、下記の理由から、Aokashi.netの設立が決まりました。
 
 - Webサイトの名前を変更する構想があった
 - WordPressの機能を見て「Webサイトとして使えるんじゃないか」と思った
