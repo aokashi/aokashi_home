@@ -10,12 +10,6 @@
   tags:
     - WWA素材第2世代
     - セット
-- name: Set16
-  file: /materials/wwa/Set16.gif
-  publishedAt: ''
-  tags:
-    - WWA素材第3世代
-    - セット
 - name: BuHouse10
   file: /materials/wwa/BuHouse10.gif
   publishedAt: ''
@@ -475,6 +469,37 @@
 - name: 19Road
   file: /materials/wwa/19Road.gif
   publishedAt: 2019-12-17
+  tags:
+    - WWA素材第3世代
+    - 地面
+- name: 16People-Player
+  file: /materials/wwa/16People-Player.gif
+  publishedAt: 2020-01-25
+  tags:
+    - WWA素材第3世代
+    - プレイヤー
+- name: 19Set
+  file: /materials/wwa/19Set.gif
+  publishedAt: 2020-01-25
+  tags:
+    - WWA素材第3世代
+    - セット
+- name: 18TreasureBox
+  file: /materials/wwa/18TreasureBox.gif
+  publishedAt: 2020-01-25
+  tags:
+    - WWA素材第3世代
+    - 物体
+    - ダンジョン
+- name: 18Door
+  file: /materials/wwa/18Door.gif
+  publishedAt: 2020-01-25
+  tags:
+    - WWA素材第3世代
+    - ダンジョン
+- name: 18Floor
+  file: /materials/wwa/18Floor.gif
+  publishedAt: 2020-01-25
   tags:
     - WWA素材第3世代
     - 地面
