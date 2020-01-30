@@ -4,7 +4,7 @@ $site-icon-width: 64px
 $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
 
 .indexBody
-  background: #808080 url('../images/ah-background_index.png') repeat 0 0
+  background: $grey-lightest url('../images/ah-background_coden.png') repeat 0 0
 
 .firstScreen
   min-height: 100vh
@@ -23,9 +23,9 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
   display: flex
   .navItem
     flex: 0 1 auto
-    color: $white
+    color: $primary
     &:hover
-      color: $light
+      font-weight: bold
 .navItemLink
   display: flex
   flex-flow: row nowrap
@@ -110,6 +110,10 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
       margin: 0 .5rem
     .navItemText
       font-size: $size-5
+      border-image: url('../images/ah-menu_background.png') 10 30 fill / 10px 30px 10px 30px;
+      padding: 10px 30px
+      font-style: italic
+      text-align: center
   .quickContents
     grid-column: 1 / 4
     -ms-grid-column: 1
@@ -122,7 +126,6 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
   border-top: 2px solid $primary
 
 .information
-  padding: .5rem
   background: $white
   display: flex
   flex-flow: row nowrap
@@ -130,7 +133,11 @@ $content-bg: $light url('../images/ah-background_profile.png') repeat 0 0
     font-weight: bold
     flex: 0 0 auto
     margin-right: .5rem
+    border-image: url('../images/ah-comment_background.png') 6 fill / 6px;
+    font-style: italic
+    padding: .5rem 1rem;
   .informationLink
+    padding: .5rem
     flex: 1 1 auto
   .informationDate
     color: $grey
