@@ -5,6 +5,7 @@ title: 自作PC
 date: "2013-08-07"
 season: high-school
 tags:
+  - パソコン
   - 自分を表現する
 ---
 
