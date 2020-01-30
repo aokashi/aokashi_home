@@ -125,8 +125,9 @@
 - name: ubuntu
   title: Ubuntu とは
   description: |
-    PC上で動作するOSの一種。 Windows や Mac と大きく違うところは Linux をベースにしていることで、インターネット上で無償で利用することができる。
-    自分の環境でも、自宅のサーバーで Ubuntu Server を使用している。
+    PC上で動作するOSの一種。 Windows や Mac と大きく違うところは Linux カーネルを使用している Linux ディストリビューションであることで、ソースコードも含めてインターネット上で無償で入手することができる。
+    Linux ディストリビューションは様々あるが、中で Ubuntu は利用者数が多く、分からなかったときの情報収集がしやすい。
+    自分の環境でも、自宅のサーバーやVPSで Ubuntu Server を使用している。
   links:
   - name: Ubuntu の公式サイト (英語)
     link: https://ubuntu.com/
@@ -135,5 +136,5 @@
 - name: knoppix
   title: Knoppix とは
   description: |
-    PC上で動作するOSの一種。 Ubuntu と同様に Linux をベースにしているが、こちらは CD や DVD にインストールすることを前提に設計されている。
+    PC上で動作するOSの一種。 Ubuntu と同様に Linux ディストリビューションであるが、こちらは CD や DVD にインストールすることを前提に設計されている。
     OSが起動しなくなったPCに、この Knoppix をインストールした CD や DVD をセットして起動するとファイルの救出ができるので、場合によっては便利なツールだったりする。
