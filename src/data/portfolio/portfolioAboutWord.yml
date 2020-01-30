@@ -112,3 +112,29 @@
     link: http://www.t3.rim.or.jp/~naoto/naoto.html
   - name: JSまさお置き場
     link: http://ryo-9399.github.io/
+- name: a_train
+  title: A列車で行こう とは
+  description: |
+    株式会社アートディンクが開発しているシミュレーションゲーム。プレイヤーが鉄道会社の社長となって、鉄道路線を敷設したり、子会社を経営したりすることができる。
+    A列車で行こう9(A列車で行こうexp) は鉄道模型の再現に力を入れていて、ゲームモードでは資金が10兆円を超えるとゲームクリアとなる。
+    A列車で行こう3D NEO(みんなのA列車で行こうPC) は鉄道会社の経営に力を入れていて、予め与えられた課題をもとに手元の資金を活用して解決していくシナリオモードがメインとなる。
+    両者とも、資金の縛りがなく好きな建物が建てられるコンストラクションモードが用意されている。
+  links:
+  - name: A列車で行こう ポータルサイト
+    link: http://www.atrain.jp/
+- name: ubuntu
+  title: Ubuntu とは
+  description: |
+    PC上で動作するOSの一種。 Windows や Mac と大きく違うところは Linux カーネルを使用している Linux ディストリビューションであることで、ソースコードも含めてインターネット上で無償で入手することができる。
+    Linux ディストリビューションは様々あるが、中で Ubuntu は利用者数が多く、分からなかったときの情報収集がしやすい。
+    自分の環境でも、自宅のサーバーやVPSで Ubuntu Server を使用している。
+  links:
+  - name: Ubuntu の公式サイト (英語)
+    link: https://ubuntu.com/
+  - name: Ubuntu Japanese Team
+    link: https://www.ubuntulinux.jp/
+- name: knoppix
+  title: Knoppix とは
+  description: |
+    PC上で動作するOSの一種。 Ubuntu と同様に Linux ディストリビューションであるが、こちらは CD や DVD にインストールすることを前提に設計されている。
+    OSが起動しなくなったPCに、この Knoppix をインストールした CD や DVD をセットして起動するとファイルの救出ができるので、場合によっては便利なツールだったりする。
