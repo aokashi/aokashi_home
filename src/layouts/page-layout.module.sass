@@ -52,20 +52,20 @@
     padding: 1rem 0
   .navItem
     display: block
-    background-color: $light
+    background: $light linear-gradient(to bottom, $white-bis, $grey-lightest)
     color: $primary
-    border-left: 2px solid $grey
+    border: 1px solid $grey
     margin: .5rem
     padding: .5rem
     &:hover
-      background-color: $grey
+      background: $grey linear-gradient(to bottom, $grey-lightest, $grey)
     &.isActive
       border-color: $primary
       font-weight: bold
 
 .article
   .header
-    background-color: $white-bis
+    border-left: 2em solid $primary
 
 .rightSidebar
   padding: 1rem
