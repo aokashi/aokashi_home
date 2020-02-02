@@ -1,6 +1,5 @@
 .pageBody
-  background: $grey-lightest url('../images/ah-backcity.png') no-repeat right bottom
-  background-attachment: fixed
+  background: $white url('../images/ah-background_content.png') repeat 0 0
   
 .mainContent
   display: grid
@@ -52,20 +51,20 @@
     padding: 1rem 0
   .navItem
     display: block
-    background: $light linear-gradient(to bottom, $white-bis, $grey-lightest)
+    background-color: $light
     color: $primary
-    border: 1px solid $grey
+    border-left: 2px solid $grey
     margin: .5rem
     padding: .5rem
     &:hover
-      background: $grey linear-gradient(to bottom, $grey-lightest, $grey)
+      background-color: $grey
     &.isActive
       border-color: $primary
       font-weight: bold
 
 .article
   .header
-    border-left: 2em solid $primary
+    background-color: $white-bis
 
 .rightSidebar
   padding: 1rem

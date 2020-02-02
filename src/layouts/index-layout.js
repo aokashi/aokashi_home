@@ -70,9 +70,8 @@ const IndexLayout = ({ children }) => {
         <body className={styles.indexBody} />
       </Helmet>
       <div className={`${styles.firstScreen} container`}>
-        <div className={`${styles.title} has-text-centered`}>
+        <div className={styles.title}>
           <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
-          <strong className="is-size-4">10周年!</strong>
         </div>
         {
           navItems(data.allNavItemYaml)
