@@ -9,7 +9,7 @@ import styles from "./PortfolioList.module.sass"
 const PortfolioGroup = ({ name, children }) => (
   <div className={styles.group}>
     {name &&
-      <div className="has-text-grey is-size-5 block">{name}</div>
+      <div className="has-text-grey-darker is-size-5 block">{name}</div>
     }
     <div className="columns is-multiline is-variable is-0-mobile is-5-tablet">
       {children}
