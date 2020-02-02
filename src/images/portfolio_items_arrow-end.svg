@@ -59,7 +59,7 @@
      id="layer1"
      transform="translate(0,-263.1333)">
     <path
-       style="fill:#c0c0c0;fill-opacity:1;stroke:#000080;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#8080ff;fill-opacity:1;stroke:#000080;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 24,0 V 70 H 3.1328125 L 32,120 61,70 H 40 V 0"
        transform="matrix(0.26458334,0,0,0.26458334,0,263.1333)"
        id="path817"
