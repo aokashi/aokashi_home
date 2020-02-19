@@ -32,6 +32,15 @@ profile:
     大学院生。
     個性を見つけることが好きで、アイデアをすぐに形にできないか模索している。
     地形(特に街中や地下街)のあちこちを見て回ることも好きで、2DRPGのマップ制作が得意。
+  skills:
+    - HTML/CSS
+    - JavaScript
+    - PHP
+    - C
+    - C#
+    - Docker
+    - React
+    - Vue
   items:
     likes:
       - name: パソコン

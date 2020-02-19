@@ -13,6 +13,11 @@ const IndexPageTemplate = ({ data }) => {
       <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className="section">
         <p>{frontmatter.profile.description}</p>
+        <div className="tags">
+          {frontmatter.profile.skills.map((skill, skillIndex) =>
+            <span className="tag" key={skillIndex}>{skill}</span>
+          )}
+        </div>
         <div className="columns">
           <section className="column is-half">
             <h2 className={styles.sectionTitle}>好きなもの</h2>
@@ -40,6 +45,7 @@ export const pageQuery = graphql`
         title
         profile {
           description
+          skills
           items {
             likes {
               name
