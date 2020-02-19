@@ -32,6 +32,29 @@ profile:
     大学院生。
     個性を見つけることが好きで、アイデアをすぐに形にできないか模索している。
     地形(特に街中や地下街)のあちこちを見て回ることも好きで、2DRPGのマップ制作が得意。
+  skills:
+    - name: HTML/CSS
+      color: '#c08000'
+    - name: JavaScript
+      color: '#808000'
+    - name: TypeScript
+      color: '#2020a0'
+    - name: PHP
+      color: '#8000a0'
+    - name: C
+      color: '#00a000'
+    - name: C#
+      color: '#00a000'
+    - name: sass
+      color: '#a00080'
+    - name: Docker
+      color: '#00a0a0'
+    - name: Node.js
+      color: '#408040'
+    - name: React
+      color: '#00a0a0'
+    - name: Vue
+      color: '#20a060'
   items:
     likes:
       - name: パソコン
@@ -46,6 +69,9 @@ profile:
       - name: ドット絵
         text: >-
           イラストと違って、色数や描き方をしっかり制限しているところがプログラミングに近いと思っている。
+      - name: 地図
+        text: >-
+          家から各地までのルートを市販の地図に描いたことから始まり、架空世界の表現にまで発展。現在は架空地図を作るツールが無く管理しにくいところが課題である。
     environments:
       - name: 自作PC (第2世代)
         text: >-
