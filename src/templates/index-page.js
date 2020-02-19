@@ -12,20 +12,27 @@ const IndexPageTemplate = ({ data }) => {
     <Layout>
       <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className="section">
-        <p>{frontmatter.profile.description}</p>
-        <div className="tags">
-          {frontmatter.profile.skills.map((skill, skillIndex) =>
-            <span className="tag" key={skillIndex}>{skill}</span>
-          )}
+        <p className="block">{frontmatter.profile.description}</p>
+        <div className="message">
+          <div className="message-header">
+            <p>スキル</p>
+          </div>
+          <div className="message-body">
+            <p className="level-item tags is-block">
+              {frontmatter.profile.skills.map((skill, skillIndex) =>
+                <span className="tag is-black" style={ { backgroundColor: skill.color } } key={skillIndex}>{skill.name}</span>
+              )}
+            </p>
+          </div>
         </div>
         <div className="columns">
-          <section className="column is-half">
+          <section className="column is-two-thirds">
             <h2 className={styles.sectionTitle}>好きなもの</h2>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
-          <section className="column is-half">
+          <section className="column is-one-third">
             <h2 className={styles.sectionTitle}>使用環境</h2>
             {
               ProfileSection(frontmatter.profile.items.environments)
@@ -45,7 +52,10 @@ export const pageQuery = graphql`
         title
         profile {
           description
-          skills
+          skills {
+            name
+            color
+          }
           items {
             likes {
               name
