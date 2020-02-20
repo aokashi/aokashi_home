@@ -1,18 +1,20 @@
 - id: order_life
   name: 依頼生活
   description: 『ハズツ国』にモンスターが来ると言われ、それを阻止するのが目的です。 初めてつくるWWAです。
-  publishedAt: 2010-02-27
+  publishedAt: 2010-02-21
   screenPath: /images/wwa_screens/order_life.gif
   links:
     - name: 1章
       link: https://www.aokashi.net/wwa/order_life_1.html
     - name: 2章
       link: https://www.aokashi.net/wwa/order_life_2.html
+    - name: 3章
+      link: https://www.aokashi.net/wwa/order_life_3.html
   supportWWAWing: true
 - id: eito_city
   name: 英棟市
   description: 仮想の街に楽しむシンプルなWWAです。 部屋を作り、永住登録をすることで作った部屋がWWAに出てきます。
-  publishedAt: 2010-04-12
+  publishedAt: 2010-03-28
   screenPath: /images/wwa_screens/eito_city.gif
   links:
     - name: メインページ
@@ -151,3 +153,13 @@
   links:
     - name: WWA COLLECTION のストアページへ
       link: https://ec.nintendo.com/JP/ja/titles/70010000015161
+- id: strange_machine
+  name: 謎めいた機械を追い求めて
+  description: |
+    繁栄を築いたこの都市で、とんでもないものが見つかった！！ 現場近くで働く主人公は、この機械を探し出すことになるのだが...
+    WWA COLLECTION 2の収録作品ですが、当サイト公開に向けて調整中です。
+  publishedAt: 2019-12-19
+  screenPath: /images/wwa_screens/strange_machine.gif
+  links:
+    - name: WWA COLLECTION 2 のストアページへ
+      link: https://ec.nintendo.com/JP/ja/titles/70010000018564
