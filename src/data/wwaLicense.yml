@@ -1,75 +1,115 @@
 - name: キャラバンサークル
-  author: NAO
+  authors:
+  - NAO
+  - ピースピース
+  - スギケン
   url: http://www.wwajp.com/
   items:
     - program
     - image
     - sound
 - name: WWA Wing
-  author: WWA Wing Team
+  authors:
+  - WWA Wing Team
   url: http://wwawing.com/
   items:
     - program
 - name: 天使の血 悪魔の涙
-  author: Merino
+  authors:
+  - Merino
   url: http://tenaku.sakura.ne.jp/
   items:
     - program
     - image
   remark: ドメイン失効のため、リンク先を変更
 - name: 福田直人のホームページ
-  author: 福田直人
+  authors:
+  - 福田直人
   url: http://www.t3.rim.or.jp/~naoto/naoto.html
   items:
     - image
 - name: ヒラリラーのMP
-  author: ヒラリラー
+  authors:
+  - ヒラリラー
   url: http://hirarira.net/
   items:
     - image
 - name: 万色の宙
-  author: yuhiro
+  authors:
+  - yuhiro
   url: http://c-lr.net/touch/
   items:
     - image
 - name: まてるある～ん
-  author: えふ・けー
+  authors:
+  - えふ・けー
   url: http://ameblo.jp/msrr-material/
   items:
     - image
 - name: G-Eden
-  author: げおるぐ
+  authors:
+  - げおるぐ
   url: http://geo.kesagiri.net/
   items:
     - image
 - name: TAM Music Factory
-  author: 多夢
+  authors:
+  - 多夢
   url: http://www.tam-music.com/
   items:
     - sound
 - name: FREEDOM House 2nd
-  author: 氷石彩亜
+  authors:
+  - 氷石彩亜
   url: http://fhouse.s17.xrea.com/
   items:
     - sound
 - name: MusMus
-  author: watson
+  authors:
+  - watson
   url: http://musmus.main.jp/
   items:
     - sound
 - name: 魔王魂
-  author: KOUICHI
+  authors:
+  - KOUICHI
   url: http://maoudamashii.jokersounds.com/
   items:
     - sound
 - name: WEB WAVE LIB
-  author: WEB WAVE LIB 運営委員会
+  authors:
+  - WEB WAVE LIB 運営委員会
   url: https://web.archive.org/web/20150905100650/http://wwl.s-t-t.com:80/
   items:
     - sound
   remark: サイト消失のため、2015年9月5日のアーカイブを表示
 - name: 般若's MIDIの里
-  author: 般若
+  authors:
+  - 般若
   url: http://hannya.nce.buttobi.net/
   items:
     - sound
+- name: 龍的交響楽
+  authors:
+  - 藤村ほわん
+  url: http://d-symphony.com/
+  items:
+    - sound
+- name: ぼうけんのきろく
+  authors:
+  - ひかる
+  url: https://tabinokiroku20xx.blogspot.com/
+  items:
+    - image
+- name: PLiCy
+  authors:
+  - ラルフ
+  url: https://plicy.net/
+  items:
+    - image
+- name: Merlin Soundfont Banks
+  authors:
+  - Saphyr 2000 enr. Canada
+  url: http://www.soundfonts.gonet.biz/
+  items:
+    - soundfont

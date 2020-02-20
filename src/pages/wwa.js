@@ -35,8 +35,10 @@ const WWAPage = () => {
       allWwaLicenseYaml {
         nodes {
           name
+          authors
           url
           items
+          remark
         }
       }
     }
@@ -93,9 +95,26 @@ const WWAList = nodes => nodes.map((item, index) =>
 
 const WWALicenseList = (data) => data.nodes.map((license, licenseIndex) => (
   <div className="column is-one-third" key={licenseIndex}>
-    <div><strong><a href={license.url} target="_blank" rel="noopener noreferrer">{license.name}</a></strong></div>
-    <div>{license.author}</div>
-    {license.items.join(", ")}
+    <div className="card">
+      <div className="card-content">
+        <div className="title is-5">
+          <a href={license.url} target="_blank" rel="noopener noreferrer">{license.name}</a>
+        </div>
+        <div className="subtitle is-6">
+          {license.authors.join(", ")}
+        </div>
+        <div className="tags">
+          {license.items.map((item, index) =>
+            <span className="tag" key={index}>{item}</span>
+          )}
+        </div>
+        {license.remark &&
+          <div className="block">
+            <p>{license.remark}</p>
+          </div>
+        }
+      </div>
+    </div>
   </div>
 ))
 
