@@ -187,12 +187,6 @@
   tags:
     - WWA素材第3世代
     - アイテム
-- name: 18Food
-  file: /materials/wwa/18Food.gif
-  publishedAt: 2018-06-19
-  tags:
-    - WWA素材第3世代
-    - アイテム
 - name: ObFurniture11
   file: /materials/wwa/ObFurniture11-1.gif
   publishedAt: ''
@@ -503,3 +497,27 @@
   tags:
     - WWA素材第3世代
     - 地面
+- name: 18food-cuisine
+  file: /materials/wwa/18food-cuisine.gif
+  publishedAt: 2020-02-25
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 18food-fruit
+  file: /materials/wwa/18food-fruit.gif
+  publishedAt: 2020-02-25
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 18food-material_pack
+  file: /materials/wwa/18food-material_pack.gif
+  publishedAt: 2020-02-25
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 18food-vegetable
+  file: /materials/wwa/18food-vegetable.gif
+  publishedAt: 2020-02-25
+  tags:
+    - WWA素材第3世代
+    - アイテム
