@@ -521,3 +521,51 @@
   tags:
     - WWA素材第3世代
     - アイテム
+- name: 18train_interior-commuter1
+  file: /materials/wwa/18train_interior-commuter1.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-commuter2
+  file: /materials/wwa/18train_interior-commuter2.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-commuter3
+  file: /materials/wwa/18train_interior-commuter3.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-express1
+  file: /materials/wwa/18train_interior-express1.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-express2
+  file: /materials/wwa/18train_interior-express2.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-express3
+  file: /materials/wwa/18train_interior-express3.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 18train_interior-express4
+  file: /materials/wwa/18train_interior-express4.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 20bus_interior
+  file: /materials/wwa/20bus_interior.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - バス内装
