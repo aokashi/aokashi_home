@@ -539,6 +539,12 @@
   tags:
     - WWA素材第3世代
     - 列車内装
+- name: 18train_interior-handstrap
+  file: /materials/wwa/18train_interior-handstrap.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
 - name: 18train_interior-express1
   file: /materials/wwa/18train_interior-express1.gif
   publishedAt: 2020-03-01
