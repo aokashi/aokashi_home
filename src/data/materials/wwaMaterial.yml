@@ -569,3 +569,9 @@
   tags:
     - WWA素材第3世代
     - バス内装
+- name: 18train_interior-tarp
+  file: /materials/wwa/18train_interior-tarp.gif
+  publishedAt: 2020-03-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
