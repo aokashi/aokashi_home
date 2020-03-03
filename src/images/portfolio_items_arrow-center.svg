@@ -60,14 +60,14 @@
      id="layer1"
      transform="translate(0,-263.1333)">
     <rect
-       style="opacity:1;fill:#8080ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#c0c0c0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect833"
        width="4.2333336"
        height="33.866669"
        x="6.3500004"
        y="263.1333" />
     <path
-       style="fill:#8080ff;fill-opacity:1;stroke:#000080;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#c0c0c0;fill-opacity:1;stroke:#000080;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 6.3500002,263.1333 v 33.86667 m 4.2333338,0 V 263.1333"
        id="path829"
        inkscape:connector-curvature="0"

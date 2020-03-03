@@ -10,9 +10,6 @@ const Header = ({ siteTitle, siteNavItems }) => (
         <Link to="/" className="navbar-item">
           <img src={AokashiHomeLogo} alt={siteTitle} width="256" height="48" />
         </Link>
-        <span className="navbar-item">
-          <strong>10周年!</strong>
-        </span>
       </div>
       <div className="navbar-menu">
         <div className="navbar-end">
