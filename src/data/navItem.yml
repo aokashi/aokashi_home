@@ -33,3 +33,8 @@
   link: https://www.wwafansq.com
   icon: /images/menu_icon-wwa_fansq.png
   color: '#ff9a31'
+- name: Scrapbox
+  type: site
+  link: https://scrapbox.io/aokashi
+  icon: /images/menu_icon-scrapbox.png
+  color: '#27e0c0'

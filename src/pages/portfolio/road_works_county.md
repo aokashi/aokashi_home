@@ -40,6 +40,8 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。
 
+ちなみに、PNE.jp から Slack への移行は2015年3月頃でした。当時 Slack の言葉を聞いたのはこれが初めてでしたが、使用してみるとリアクション機能やサイドバーのテーマ変更など、自分にとって「あ、これ良い！」と思った機能があって衝撃を与えました。これ以降、 Slack が導入されている組織 ＝ 新しいことに挑戦している組織 という考えが自分の頭の中に入ってきました。
+
 ## 見てみる
 - [Road Works County 1.0](https://contents.aokashi.net/restore/rwc_1)
 - [Road Works County 2.0](https://contents.aokashi.net/restore/rwc_2-0)
