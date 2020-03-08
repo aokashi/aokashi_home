@@ -10,6 +10,7 @@ const Footer = ({ siteTitle }) => (
         <Link to="/about/" className="button is-dark">当サイトについて</Link>
         <a href="http://aokashi.hatenablog.jp" className="button is-dark">Blog</a>
         <a href="https://www.wwafansq.com" className="button is-dark">WWA FanSquare</a>
+        <a href="https://scrapbox.io/aokashi" className="button is-dark">Scrapbox</a>
       </nav>
       <div>
         <div>
