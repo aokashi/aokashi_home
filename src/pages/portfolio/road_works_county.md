@@ -15,14 +15,16 @@ images:
     description: 2代目のスクリーンショットです。
 links:
   - link: https://info.wwawing.com/restore/
-    name: まつゆき・ヒラリラーの復元サイト一覧 (代理更新のヒラリラーのMP及びG10-Project Worksのデザインを当サイト制作の参考にしました)
+    name: まつゆき・ヒラリラーの復元サイト一覧
 words:
   - qhm
 ---
 
-[Coden City](coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
+[Coden City](/portfolio/coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
 
 WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。なお、この構造は前代のCoden CityやZeist Cityにも行っていました。
+
+デザイン面では、知り合いのサイトである [G10-Project Works のデザイン](https://info.wwawing.com/restore/) を参考にし、プルダウンメニューを取り入れた形となりました。プルダウンメニューは、各項目にカーソルが触れるとその中の項目が出る仕組みを CSS だけで再現しました。
 
 ![Road Works Countyの構成図](/portfolio/road_works_county/site_structure.png)
 
@@ -38,7 +40,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 当時ユーザー同士との連絡手段はTwitterかレンタルチャットを利用していましたが、ブログを書いたりプロジェクトを作ったりできる多機能なSNSとして[OpenPNE](https://www.openpne.jp/)を設立しました。WordPressよりも更に複雑な設立方法でしたが、設立後の機能の多さに感動したことを覚えています。
 
-後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](slack_community) 。
+後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](/portfolio/slack_community) 。
 
 ## 見てみる
 - [Road Works County 1.0](https://contents.aokashi.net/restore/rwc_1)
