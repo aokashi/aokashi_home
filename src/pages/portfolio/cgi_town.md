@@ -6,6 +6,7 @@ date: "2010-02-24"
 season: junior-high-school
 tags:
   - CGIゲーム
+  - コミュニティ
 images:
   - path: /portfolio/cgi_town/selt_county_second.png
     alt: Selt County (2代目)
