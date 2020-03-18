@@ -6,6 +6,7 @@ date: "2008-11-01"
 season: elementary-school
 tags:
   - WWA
+  - 継続中
 images:
   - path: /portfolio/wwa_material/first_material.gif
     alt: 最初に投稿したWWA素材
