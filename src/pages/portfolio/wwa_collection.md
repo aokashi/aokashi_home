@@ -16,6 +16,8 @@ links:
     name: WWA COLLECTION のマイニンテンドーストアのページ
   - link: http://aokashi.hatenablog.jp/entry/2018/12/20/000000
     name: WWA COLLECTIONを作ったお話 (自分のブログの記事)
+  - link: https://aokashi.hatenablog.jp/entry/2019/03/02/000000
+    name: WWA Message Loader を作ってました (自分のブログの記事)
   - link: https://github.com/aokashi/WWAMessageLoader
     name: WWA Message Loader のリポジトリ
   - link: https://ec.nintendo.com/JP/ja/titles/70010000018564
@@ -42,7 +44,12 @@ words:
 しかし、ソフトウェア内部については PLiCy が取り掛かっていた関係で手を出すことはありませんでした。
 
 ## WWA Message Loader
-これに合わせて、WWAのマップデータのすべてのメッセージを確認したいと PLiCy の開発者から連絡を頂き、 WWA Message Loader というWWAのマップデータをすべて確認できるWebアプリケーションを開発しました。このアプリケーションの開発からWWAのマップデータの構造を知ることができました。この知識は後の[WWA Maker](/portfolio/wwa_maker)の開発に反映されることになります。
+
+![WWA Message Loader でメッセージ内容を表示している画面](/portfolio/wwa_collection/wwa_message_loader.png)
+
+これに合わせて、WWAのマップデータのすべてのメッセージを確認したいと PLiCy の開発者から連絡を頂き、 WWA Message Loader というWWAのマップデータをすべて確認できるWebアプリケーションを開発しました。
+
+このアプリケーションの開発からWWAのマップデータの構造や Vue.js のコンポーネントの設計方法についてを理解することができました。この知識は後の [WWA Maker](/portfolio/wwa_maker) の開発に反映されることになります。
 
 ## WWA COLLECTION 2 の開発協力
 また、翌年の2019年には WWA COLLECTION の次のゲームソフト「WWA COLLECTION 2」にも開発協力を行いました。
