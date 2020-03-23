@@ -7,6 +7,10 @@ season: college
 tags:
   - WWA
   - 継続中
+images:
+  - path: /portfolio/wwa_maker/wwa_maker_map_view_and_parts_list.png
+    alt: マップ表示とパーツ一覧を含めた WWA Maker の画面
+    description: 2019年5月30日現在の WWA Maker の画面です。
 links:
   - link: https://github.com/WWAWing/WWAMaker
     name: WWA Maker のGitHubリポジトリ
