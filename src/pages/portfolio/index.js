@@ -10,6 +10,8 @@ import WarningNote from "../../components/Note/WarningNote"
 import seasonDetails from "../../data/portfolio/portfolioSeason.yml"
 import otherPortfolioItems from "../../data/portfolio/otherItem.yml"
 import SEO from "../../components/seo"
+import BoxList from "../../components/BoxList"
+import Box from "../../components/Box/Box"
 
 class PortfolioPage extends React.Component {
 
@@ -22,7 +24,7 @@ class PortfolioPage extends React.Component {
       }>
         <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
         {this.renderPortfolioList()}
-        <div className="content">
+      <div className="content">
           <h2>ポートフォリオについて</h2>
           <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。私自身は変化を好む傾向から、あれこれ手を出していまして、その雰囲気を感じ取れたらいいなと思っています。</p>
           <WarningNote>
@@ -34,6 +36,22 @@ class PortfolioPage extends React.Component {
               <p>また、各ページ内で表示されている人物名はすべて敬称略となります。</p>
             </div>
           </WarningNote>
+          <h3>おおまかに行ったこと</h3>
+          <BoxList>
+            <Box title="中学生">
+              <p><strong>ホームページの運営や CGI プログラムの設営</strong></p>
+              <p>パソコンを扱う職に就きたいと思うようになった。</p>
+              <p>知人の影響を受けて、知人のものよりももっと良いものを作ろうと努力し始めた。</p>
+            </Box>
+            <Box title="高校生">
+              <p><strong>プログラミングの学習や自作パソコンの構築</strong></p>
+              <p>高校で学習したプログラミングの知識を元に、自分の趣味の間でなにか作れないか模索を開始。ただし、自作パソコンにハマりすぎて思ったとおりのプログラムを作ることはできなかった。</p>
+            </Box>
+            <Box title="大学生">
+              <p><strong>近年の開発手法に関する調査</strong></p>
+              <p>高校時代の反省をきっかけに、近年のツールやライブラリ、フレームワークを活用してみるも、機能が多すぎて断念。その後今までの開発方法に制限をかけたり、改修のタスクを頼んだりすることでメリットを実感した。</p>
+            </Box>
+          </BoxList>
           <h2>その他のデータ</h2>
           <p>ポートフォリオの項目に載るものではないものの、コンテンツ整理によって行き場を失った作品紹介を掲載しています。</p>
           {this.renderOtherPortfolioList()}
