@@ -147,3 +147,12 @@
   links:
   - name: 無料レンタルチャット(chatx)
     link: https://www.whocares.jp/chatx.jsp
+- name: gatsby
+  title: GatsbyJS とは
+  description: |
+    HUGO と同じく静的サイトジェネレーターの一種。HUGO と明確に違うのは、 React を使用したページが生成できることで、これによってページ間の移動を高速化している。
+    ページデータや画像データの取得には Web アプリケーション開発のデータ取得で最近使用されている GraphQL を採用している。
+    近年の Web フロントエンドの最新技術を集めた Web サイトを、できる限り少ないコストで作ることが可能である。
+  links:
+  - name: GatsbyJS
+    link: https://www.gatsbyjs.org/
