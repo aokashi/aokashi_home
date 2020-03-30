@@ -6,11 +6,25 @@ import PropTypes from "prop-types"
  */
 import styles from "./PortfolioList.module.sass"
 
-const PortfolioGroup = ({ name, children }) => (
+const PortfolioGroup = ({ name, descriptionTitle, description, children }) => (
   <div className={styles.group}>
     {name &&
-      <div className="has-text-grey is-size-5 block">{name}</div>
+      <div className="columns has-text-grey is-variable is-0-mobile is-5-tablet block">
+
+        <div className="column is-half is-size-5">{name}</div>
+
+        {description &&
+          <div className="column is-half">
+            {descriptionTitle &&
+              <div className="has-text-weight-bold">{descriptionTitle}</div>
+            }
+            <p>{description}</p>
+          </div>
+        }
+
+      </div>
     }
+
     <div className="columns is-multiline is-variable is-0-mobile is-5-tablet">
       {children}
     </div>
