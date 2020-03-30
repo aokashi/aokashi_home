@@ -9,7 +9,7 @@ import styles from "./PortfolioList.module.sass"
 const PortfolioGroup = ({ name, descriptionTitle, description, children }) => (
   <div className={styles.group}>
     {name &&
-      <div className="columns has-text-grey is-variable is-0-mobile is-5-tablet block">
+      <div className="columns has-text-dark is-variable is-0-mobile is-5-tablet block">
 
         <div className="column is-half is-size-5">{name}</div>
 
@@ -18,7 +18,9 @@ const PortfolioGroup = ({ name, descriptionTitle, description, children }) => (
             {descriptionTitle &&
               <div className="has-text-weight-bold">{descriptionTitle}</div>
             }
-            <p>{description}</p>
+            {description.split("\n").map((line, lineIndex) =>
+              <p key={lineIndex}>{line}</p>
+            )}
           </div>
         }
 
