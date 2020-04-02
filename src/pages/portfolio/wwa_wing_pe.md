@@ -12,7 +12,7 @@ images:
     alt: font プロパティを使用して文字を描画した例
     description: フォントを描画するように設定を加えた画面です。
 links:
-  - link:　https://github.com/aokashi/WWAWingPE
+  - link: https://github.com/aokashi/WWAWingPE
     name: WWA Wing PE の GitHub リポジトリ (現在開発停止中)
   - link: https://twitter.com/aokashi/status/981893803362496513
     name: イメージを動かす機能を活用した例 (自分の Twitter ツイート)
@@ -100,6 +100,7 @@ const propertyTable: { [key: string]: (property: StringMacro) => void } = {
     }
 };
 
+// 実際の処理では、メッセージから各 property を読み取り、それぞれ上記の propertyTable に対応した処理を実行させています。
 propertyTable[property.macroName](property);
 ```
 

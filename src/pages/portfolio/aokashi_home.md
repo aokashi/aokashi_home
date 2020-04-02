@@ -7,6 +7,7 @@ season: college
 tags:
   - Webページ
   - 継続中
+  - JavaScript
 images:
   - path: /portfolio/aokashi_home/ah_first.png
     alt: Aokashi Home (初代)

@@ -7,6 +7,7 @@ season: college
 tags:
   - WWA
   - ゲームソフト
+  - JavaScript
 images:
   - path: /portfolio/wwa_collection/return_food.jpg
     alt: 収録作品「食べ物を取り戻せ!!」の画面

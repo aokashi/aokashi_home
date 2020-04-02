@@ -6,6 +6,7 @@ date: "2017-11-12"
 season: college
 tags:
   - Node.js
+  - JavaScript
 images:
   - path: /portfolio/wide_wiki/edit_page.png
     alt: Wide Wiki の編集画面

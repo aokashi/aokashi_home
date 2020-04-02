@@ -8,6 +8,7 @@ tags:
   - WWA
   - ゲームエンジン
   - 継続中
+  - JavaScript
 images:
   - path: /portfolio/wwa_wing/wwa_classic_mode_compare.png
     alt: クラシックモードとの比較画面
