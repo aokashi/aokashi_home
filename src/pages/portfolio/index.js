@@ -13,16 +13,24 @@ import SEO from "../../components/seo"
 
 class PortfolioPage extends React.Component {
 
+  jumpSeason(seasonId) {
+    window.location.hash = seasonId
+  }
+
   render() {
     return (
-      <Layout headerContent={
-        <PageHeader>
-          <h1>ポートフォリオ</h1>
-        </PageHeader>
-      }>
+      <Layout
+        headerContent={
+          <PageHeader>
+            <h1>ポートフォリオ</h1>
+          </PageHeader>
+        }
+        sidebarContent={this.renderSidebar()}
+      >
         <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
+        <button onClick={() => this.jumpSeason("elementary-school")}>小学生</button>
         {this.renderPortfolioList()}
-      <div className="content">
+        <div className="content">
           <h2>ポートフォリオについて</h2>
           <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。私自身は変化を好む傾向から、あれこれ手を出していまして、その雰囲気を感じ取れたらいいなと思っています。</p>
           <WarningNote>
@@ -39,6 +47,18 @@ class PortfolioPage extends React.Component {
           {this.renderOtherPortfolioList()}
         </div>
       </Layout>
+    )
+  }
+
+  renderSidebar() {
+    return (
+      <aside className="menu">
+        <ul className="menu-list">
+          {Object.keys(seasonDetails).map((seasonId) => (
+            <li key={seasonId}><a onClick={() => this.jumpSeason(seasonId)}>{seasonDetails[seasonId].name}</a></li>
+          ))}
+        </ul>
+      </aside> 
     )
   }
 
@@ -94,24 +114,26 @@ class PortfolioPage extends React.Component {
             <PortfolioList>
               {
                 sortedData.map((season, seasonIndex) => {
-                  const seasonData = seasonDetails[season.nodes[0].frontmatter.season];
+                  const seasonId = season.nodes[0].frontmatter.season;
+                  const seasonData = seasonDetails[seasonId];
 
                   return (
-                    <PortfolioGroup
-                      name={seasonData.name}
-                      descriptionTitle={seasonData.theme}
-                      description={seasonData.description}
-                      key={seasonIndex}
-                    >
-                      {
-                        season.nodes.map((item, itemIndex) => (
+                    <>
+                      <a id={seasonId}></a>
+                      <PortfolioGroup
+                        name={seasonData.name}
+                        descriptionTitle={seasonData.theme}
+                        description={seasonData.description}
+                        key={seasonIndex}
+                      >
+                        {season.nodes.map((item, itemIndex) => (
                           <PortfolioItem
                             portfolioItem={item.frontmatter}
                             key={itemIndex}
                           />
-                        ))
-                      }
-                    </PortfolioGroup>
+                        ))}
+                      </PortfolioGroup>
+                    </>
                   )
                 })
               }
