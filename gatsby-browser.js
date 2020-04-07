@@ -9,5 +9,6 @@
 import './src/styles/base.sass'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import 'prismjs/themes/prism-tomorrow.css'
 
 library.add(fab)

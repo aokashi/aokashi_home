@@ -49,6 +49,12 @@ module.exports = {
             }
           },
           `gatsby-remark-component`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: `language-`
+            }
+          }
         ]
       }
     },

@@ -27,3 +27,15 @@
     background: transparent linear-gradient(to right, $light, transparent)
     border-left: 1em solid $primary
     padding: .5rem
+
+/**
+ * prismjs のハイライトで数字だけ大きく表示されているため、レイアウトを整える目的でフォントサイズや余白を初期化します。
+ */
+.gatsby-highlight
+  .number
+    font-size: initial
+    height: initial
+    background-color: transparent
+    margin: 0
+    padding: 0
+    min-width: initial
