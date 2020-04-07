@@ -12,6 +12,8 @@ images:
     alt: font プロパティを使用して文字を描画した例
     description: フォントを描画するように設定を加えた画面です。
 links:
+  - link: https://github.com/aokashi/WWAWingPE
+    name: WWA Wing PE の GitHub リポジトリ (現在開発停止中)
   - link: https://twitter.com/aokashi/status/981893803362496513
     name: イメージを動かす機能を活用した例 (自分の Twitter ツイート)
   - link: https://web.archive.org/web/20161202052323/http://asobiba.cocolog-nifty.com/game/wwa/wwaeval/
@@ -56,6 +58,52 @@ WWA Wing PE は WWA Wing をベースに、ピクチャを表示するための�
 
 開発にあたっては専用のモジュールを用意することで、 WWA Wing 本体に追加するソースコードの行数を抑えています。
 
+その他にも、与えられた変数によって渡す処理内容が異なる場面では、下記のように連想配列を活用しました。
+
+```typescript
+/**
+ * 文字列 property はピクチャの表示方法です。
+ *     propertyTable ではその property から値を受け取り、その値をピクチャを管理しているクラスのプロパティに設定しています。
+ */
+const propertyTable: { [key: string]: (property: StringMacro) => void } = {
+    pos: (property) => { // 表示位置
+        this._pos.x = property.getIntValue(0, 0);
+        this._pos.y = property.getIntValue(1, 0);
+    },
+    time: (property) => { // 表示時間
+        let time = property.getIntValue(0, 0);
+        this._displayTime.setTime(time);
+    },
+    time_anim: (property) => { // 表示時間 (アニメーションがある場合)
+        let startTime = property.getIntValue(0, 0);
+        let endTime = property.getIntValue(1, 0);
+        this._delayAnimationTime.setTime(startTime);
+        this._animationTime.setTime(endTime);
+    },
+    // 省略
+    font: (property) => { // 文字
+        let fontSize = property.getIntValue(0, FONT_DEFAULT_SIZE);
+        if (fontSize <= 0) {
+            throw new Error("フォントサイズの指定が不正です");
+        }
+        this._displayTextSize = fontSize;
+        this._displayTextBoldMode = property.getBooleanValue(1, false);
+        this._displayTextItalicMode = property.getBooleanValue(2, false);
+        this._displayTextFont = property.getStringValue(3, "");
+    },
+    color: (property) => { // 文字色
+        let r = property.getIntValue(0, 0);
+        let g = property.getIntValue(1, 0);
+        let b = property.getIntValue(2, 0);
+
+        this._displayTextColor = new wwa_data.Color(r, g, b);
+    }
+};
+
+// 実際の処理では、メッセージから各 property を読み取り、それぞれ上記の propertyTable に対応した処理を実行させています。
+propertyTable[property.macroName](property);
+```
+
 ## 問題点
 
 しかしながら、開発を進めると、画像を表示したり動かしたりするため、座標といった WWA Wing の基礎部分の改修が必要になりました。
@@ -66,6 +114,6 @@ WWA Wing PE では開発が完了すると、その WWA Wing PE で追加され�
 
 このままではちゃんとした形で完成することが難しく、開発は中止になりました。
 
-ただ、今回の開発を通じて、文字列から処理を判定する文字列解析が開発できたいい機会でした。
+ただ、 TypeScript や JavaScript では **関数を変数のように振る舞うことが可能** ということが今回の開発で知ることができました。これにより、入門書や仕様書にはあまり載っていないテクニックを見つけて応用することができました。
 
 今後はなるべく前述のリファクタリングと干渉しない形で WWA Wing にピクチャを表示する追加機能を開発したり、 [WWA Wing の開発](/portfolio/wwa_wing) で説明されている「全く新しいゲームシステムの開発」のところで WWA Wing PE と同様の機能を加えたりしようと考えています。

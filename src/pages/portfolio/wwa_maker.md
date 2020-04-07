@@ -7,6 +7,7 @@ season: college
 tags:
   - WWA
   - 継続中
+  - JavaScript
 images:
   - path: /portfolio/wwa_maker/wwa_maker_map_view_and_parts_list.png
     alt: マップ表示とパーツ一覧を含めた WWA Maker の画面

@@ -8,6 +8,7 @@ tags:
   - WWA
   - ゲームエンジン
   - 継続中
+  - JavaScript
 images:
   - path: /portfolio/wwa_wing/wwa_classic_mode_compare.png
     alt: クラシックモードとの比較画面
@@ -37,7 +38,7 @@ words:
 
 この他にも、 [WWAWing PE](/portfolio/wwa_wing_pe/) という WWA Wing をフォークした WWA Wing を開発していましたが、基礎部分の改修が必要になる関係で現在は開発を中止しています。
 
-現在もWWA Wingの開発は続けていますが、これと併せて今の時代に合わせた全く新しいゲームシステムを構想しています。
+現在もWWA Wingの開発は続けていて、今の時代に合わせた全く新しいゲームシステムになるように、問題点を自分たちで見つけて自分たちで実装するように進めています。
 
 ## クラシックモードの実装
 

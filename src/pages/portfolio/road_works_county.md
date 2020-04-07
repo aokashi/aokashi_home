@@ -6,6 +6,7 @@ date: "2010-11-23"
 season: junior-high-school
 tags:
   - Webページ
+  - PHP
 images:
   - path: /portfolio/road_works_county/rwc_first.png
     alt: Road Works County (1代目)
@@ -24,9 +25,9 @@ words:
 
 WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。なお、この構造は前代のCoden CityやZeist Cityにも行っていました。
 
-デザイン面では、知り合いのサイトである [G10-Project Works のデザイン](https://info.wwawing.com/restore/) を参考にし、プルダウンメニューを取り入れた形となりました。プルダウンメニューは、各項目にカーソルが触れるとその中の項目が出る仕組みを CSS だけで再現しました。
-
 ![Road Works Countyの構成図](/portfolio/road_works_county/site_structure.png)
+
+デザイン面では、知り合いのサイトである [G10-Project Works のデザイン](https://info.wwawing.com/restore/) を参考にし、プルダウンメニューを取り入れた形となりました。プルダウンメニューは、各項目にカーソルが触れるとその中の項目が出る仕組みを CSS だけで再現しました。
 
 2011年中頃になると、HTMLのベストプラクティスやSEOを学び始めたことから、それらに強いQuick Homepage Makerを利用してWebサイトをリニューアルしました。CMSを利用してWebサイトを運営するのはこれが初めてになります。
 
