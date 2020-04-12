@@ -39,7 +39,7 @@ const BoxLink = ({ href, onClick, children }) => {
   }
   if (onClick) {
     // TODO: 本当に role="presentation" で大丈夫なのか確かめる
-    return <div role="presentation" onClick={onClick}>{children}</div>
+    return <div role="button" tabIndex="0" onClick={onClick} onKeyDown={onClick}>{children}</div>
   }
   return <>{children}</>
 }

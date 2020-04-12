@@ -78,11 +78,17 @@ class WWAMaterialPage extends React.Component {
           <p>タグで絞り込み</p>
         </div>
         <div className="message-body">
-          <div className="tags">
+          <div className="buttons are-small">
             {tagGroups.map(function (tagGroup, tagIndex) {
               const tagValue = tagGroup.fieldValue
-              const activeClassName = tagValue === this.state.tagBy ? "is-dark" : ""
-              return <span className={`tag ${activeClassName}`} onClick={() => this.setTag(tagValue)} key={tagIndex}>{tagValue}</span>
+              const activeClassName = tagValue === this.state.tagBy ? "is-dark is-active" : ""
+              return (
+                <button
+                  className={`button ${activeClassName}`}
+                  onClick={() => this.setTag(tagValue)}
+                  key={tagIndex}
+                >{tagValue}</button>
+              )
             }.bind(this))}
           </div>
           <div className="buttons">

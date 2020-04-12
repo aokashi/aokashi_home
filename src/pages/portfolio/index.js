@@ -116,22 +116,20 @@ class PortfolioPage extends React.Component {
                   const seasonData = seasonDetails[seasonId];
 
                   return (
-                    <>
-                      <a id={seasonId}></a>
-                      <PortfolioGroup
-                        name={seasonData.name}
-                        descriptionTitle={seasonData.theme}
-                        description={seasonData.description}
-                        key={seasonIndex}
-                      >
-                        {season.nodes.map((item, itemIndex) => (
-                          <PortfolioItem
-                            portfolioItem={item.frontmatter}
-                            key={itemIndex}
-                          />
-                        ))}
-                      </PortfolioGroup>
-                    </>
+                    <PortfolioGroup
+                      name={seasonData.name}
+                      descriptionTitle={seasonData.theme}
+                      description={seasonData.description}
+                      key={seasonIndex}
+                    >
+                      <div id={seasonId}></div>
+                      {season.nodes.map((item, itemIndex) => (
+                        <PortfolioItem
+                          portfolioItem={item.frontmatter}
+                          key={itemIndex}
+                        />
+                      ))}
+                    </PortfolioGroup>
                   )
                 })
               }
