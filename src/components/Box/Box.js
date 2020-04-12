@@ -7,8 +7,8 @@ const Box = ({ title, link, imagePath, onImageClick, width, className, children,
     <div className={`card ${className}`}>
       {imagePath &&
         <div className="card-image has-text-centered has-background-light">
-          <BoxLink href={link}>
-            <img src={imagePath} alt="" onClick={onImageClick} />
+          <BoxLink href={link} onClick={onImageClick}>
+            <img src={imagePath} alt="" />
           </BoxLink>
         </div>
       }
@@ -31,10 +31,14 @@ const Box = ({ title, link, imagePath, onImageClick, width, className, children,
 
 /**
  * Box 内でリンクの出力が必要な際に利用するコンポーネントです。
+ * @param {Object} props href: リンク先, onClick: クリックイベント
  */
-const BoxLink = ({ href, children }) => {
+const BoxLink = ({ href, onClick, children }) => {
   if (href) {
     return <Link href={href}>{children}</Link>
+  }
+  if (onClick) {
+    return <div role="button" tabIndex="0" onClick={onClick} onKeyDown={onClick}>{children}</div>
   }
   return <>{children}</>
 }
