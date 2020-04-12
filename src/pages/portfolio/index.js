@@ -13,10 +13,6 @@ import SEO from "../../components/seo"
 
 class PortfolioPage extends React.Component {
 
-  jumpSeason(seasonId) {
-    window.location.hash = seasonId
-  }
-
   render() {
     return (
       <Layout
@@ -28,7 +24,7 @@ class PortfolioPage extends React.Component {
         sidebarContent={this.renderSidebar()}
       >
         <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
-        <button onClick={() => this.jumpSeason("elementary-school")}>小学生</button>
+
         {this.renderPortfolioList()}
         <div className="content">
           <h2>ポートフォリオについて</h2>
@@ -55,7 +51,9 @@ class PortfolioPage extends React.Component {
       <aside className="menu">
         <ul className="menu-list">
           {Object.keys(seasonDetails).map((seasonId) => (
-            <li key={seasonId}><a onClick={() => this.jumpSeason(seasonId)}>{seasonDetails[seasonId].name}</a></li>
+            <li key={seasonId}>
+              <a href={`#${seasonId}`}>{seasonDetails[seasonId].name}</a>
+            </li>
           ))}
         </ul>
       </aside> 
