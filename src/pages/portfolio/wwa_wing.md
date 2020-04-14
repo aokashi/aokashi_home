@@ -28,7 +28,13 @@ words:
   - wwa
 ---
 
-2015年からインターネットRPG WWAのシステムを、古いJavaアプレットからJavaScriptに作り直す[WWA Wing](https://wwawing.com)のプロジェクトが開始されました。WWA Wingは[まつゆき](https://matsuyuki.dev)がほぼ全体を開発していて、自分は不具合報告のお手伝いをしていましたが、後に開発をお手伝いすることになりました。
+インターネットRPG WWA のJavaScript実装である [WWA Wing](https://wwawing.com) の新機能追加や不具合の修正をしています。
+
+WWA Wing はブラウザで遊べる RPG 実行システム「World Wide Adventure」を HTML5 (+ JavaScript Canvas2D) で動かすことを目標に [まつゆき](https://matsuyuki.dev)がほぼ全体を開発しました。
+
+- [WWA Wing の開発の経緯や内容については、まつゆきのポートフォリオ記事からご覧になれます。](https://portfolio.rmn-web.net/post/wwawing/)
+
+自分は不具合報告のお手伝いをしていましたが、後に開発をお手伝いすることになりました。
 
 2019年11月3日までに、下記の内容を担当しました。
 
