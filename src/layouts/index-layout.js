@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
@@ -64,12 +64,17 @@ const IndexLayout = ({ children }) => {
     `
   )
 
+  const [screenHeight, setScreenHeight] = useState(0)
+  useEffect(() => {
+    setScreenHeight(window.innerHeight);
+  })
+
   return (
     <>
       <Helmet>
         <body className={styles.indexBody} />
       </Helmet>
-      <div className={`${styles.firstScreen} container`}>
+      <div className={`${styles.firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
         <div className={styles.title}>
           <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
         </div>
