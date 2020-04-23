@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
@@ -64,17 +64,17 @@ const IndexLayout = ({ children }) => {
     `
   )
 
-  // スマートフォンではスクロール操作でアドレスバーが隠れてしまい、 UX 的に良くないので先に高さを設定して割り当てる
-  const firstScreenStyle = window !== undefined ? {
-    minHeight: `${window.innerHeight}px`
-  } : {}
+  const [screenHeight, setScreenHeight] = useState(0)
+  useEffect(() => {
+    setScreenHeight(window.innerHeight);
+  })
 
   return (
     <>
       <Helmet>
         <body className={styles.indexBody} />
       </Helmet>
-      <div className={`${styles.firstScreen} container`} style={firstScreenStyle}>
+      <div className={`${styles.firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
         <div className={styles.title}>
           <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
         </div>
