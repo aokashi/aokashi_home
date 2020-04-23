@@ -64,12 +64,17 @@ const IndexLayout = ({ children }) => {
     `
   )
 
+  // スマートフォンではスクロール操作でアドレスバーが隠れてしまい、 UX 的に良くないので先に高さを設定して割り当てる
+  const firstScreenStyle = {
+    minHeight: `${window.innerHeight}px`
+  }
+
   return (
     <>
       <Helmet>
         <body className={styles.indexBody} />
       </Helmet>
-      <div className={`${styles.firstScreen} container`}>
+      <div className={`${styles.firstScreen} container`} style={firstScreenStyle}>
         <div className={styles.title}>
           <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
         </div>
