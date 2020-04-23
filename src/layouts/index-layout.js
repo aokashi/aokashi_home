@@ -65,9 +65,9 @@ const IndexLayout = ({ children }) => {
   )
 
   // スマートフォンではスクロール操作でアドレスバーが隠れてしまい、 UX 的に良くないので先に高さを設定して割り当てる
-  const firstScreenStyle = {
+  const firstScreenStyle = window !== undefined ? {
     minHeight: `${window.innerHeight}px`
-  }
+  } : {}
 
   return (
     <>
