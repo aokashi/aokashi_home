@@ -48,6 +48,7 @@ WWA Maker はこの「WWAマップ作成ツール」を参考に、今の時代�
 
 - TypeScript ... WWA Wing で提供されている型定義の活用
   - [WWA Wing PE](/portfolio/wwa_wing_pe) で得られたスキルを活用
+  - 構造については、ソフトウェア工学の知識を活用
 - monorepo ... 保存機能といったコードが長く分割可能な処理を独立する事によるメンテナンス向上
   - [WWA Wing の開発](/portfolio/wwa_wing) で得られたスキルを活用
 - React ... WWA Maker のエディタのビュー制御や、コンポーネントのエコシステムの活用

@@ -41,7 +41,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 当時ユーザー同士との連絡手段はTwitterかレンタルチャットを利用していましたが、ブログを書いたりプロジェクトを作ったりできる多機能なSNSとして[OpenPNE](https://www.openpne.jp/)を設立しました。WordPressよりも更に複雑な設立方法でしたが、設立後の機能の多さに感動したことを覚えています。
 
-後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](/portfolio/slack_community) 。
+後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](/portfolio/slack_community)。
 
 ## 見てみる
 - [Road Works County 1.0](https://contents.aokashi.net/restore/rwc_1)
