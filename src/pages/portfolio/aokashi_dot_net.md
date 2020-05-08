@@ -20,6 +20,11 @@ images:
   - path: /portfolio/aokashi_dot_net/fouth_developing.png
     alt: Aokashi.net テーマ (4代目) の制作途中
     description: 3代目の次として制作していた4代目の WordPress テーマです。画像は制作途中のものになります。
+links:
+  - link: https://wpdocs.osdn.jp/Version_3.4
+    name: Version 3.4 - WordPress Codex 日本語版
+  - link: https://aokashi.hatenablog.jp/entry/release-vertical-blog-theme
+    name: はてなブログのデザインテーマ「Vertical BlogTheme」をテーマストアに投稿しました (自分のブログの記事)
 ---
 
 Aokashi.net は2012年に公開したブログまたはWebサイトです。
@@ -36,6 +41,15 @@ Aokashi.net は2012年に公開したブログまたはWebサイトです。
 そして、翌年2015年からはより効率的にWebサイトが構築できるMODXの存在を知り、2015年3月6日に「Aokashi Home」として設立しました。その2日後の3月8日に、ブログだけを残し「Aokashi Log」に名前を変更し、Aokashi.netの名前がここで消えることになりました。
 
 このWebサイトの運営によって、 **WordPressの機能をあれこれ試すことができましたが** 、頻繁なデザイン変更が原因で利用者が減ってしまいました。
+
+## WordPress のテーマ制作について
+Aokashi.net の運用と並行して、 WordPress のテーマを5つほど制作していました。
+
+[HTMLテンプレートの制作](/portfolio/html_template) と同じように、様々なWebサイトのレイアウトに影響を受けて自分も制作したい思いから変わったデザインをいくつか制作していました。
+
+また、 WordPress の最新情報を追うこともあり、自分のテーマに最新機能を取り入れることもありました。WordPress 3.4 で追加されたカスタマイズ画面 に対応したことによって [PSO2 のチームサイト](/portfolio/pso2_team_site) の完成が実現しました。
+
+現在は WordPress のテーマを制作することはありませんが、テーマ制作で得られたノウハウを活用してはてなブログのテーマを制作したことがあります (関連リンク参照)。
 
 ## 見てみる
 - [エイプリルフール (2013年)](https://contents.aokashi.net/restore/adn_af_2013)

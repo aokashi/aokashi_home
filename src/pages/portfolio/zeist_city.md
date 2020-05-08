@@ -21,7 +21,7 @@ Coden CityはWWAのコンテンツを取り扱う一方で、Zeist CityはTOWN�
 
 掲示板やリンクといった、両サイトとも取り扱うコンテンツについては、別途共通センターというサイトを設立して、そこにコンテンツを配置していました。
 
-**複数のサイトを扱う試み** でしたが、利用者からは扱いにくいことから後に両サイトとも[Road Works County](/portfolio/road_works_county)というサイトに統合されました。
+**複数のサイトを扱う試み** でしたが、利用者からは扱いにくいことから後に両サイトとも [Road Works County](/portfolio/road_works_county) に統合されました。
 
 ## 見てみる
 - [Zeist City (1代目)](https://contents.aokashi.net/restore/zeist_1)
