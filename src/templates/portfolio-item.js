@@ -13,19 +13,23 @@ import DateIcon from "../images/portfolio_items_icon-date.svg"
 import TagIcon from "../images/portfolio_items_icon-tag.svg"
 import SEO from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
+import TableOfContents from "../components/TableOfContents"
 
 const PortfolioItemTemplate = ({
   data
 }) => {
   const { markdownRemark } = data
-  const { frontmatter, htmlAst } = markdownRemark
+  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
   const aboutWords = frontmatter.words
     ? data.allPortfolioAboutWordYaml.nodes.filter(aboutWord => {
       return frontmatter.words.includes(aboutWord.name)
     })
     : []
   return (
-    <Layout headerContent={<ItemHeader frontmatter={frontmatter} />}>
+    <Layout
+      sidebarContent={<TableOfContents html={tableOfContents} />}
+      headerContent={<ItemHeader frontmatter={frontmatter} />}
+    >
       <SEO title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
@@ -124,6 +128,7 @@ export const pageQuery = graphql`
     ) {
       id
       htmlAst
+      tableOfContents
       frontmatter {
         path
         title

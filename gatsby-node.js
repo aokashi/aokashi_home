@@ -74,7 +74,7 @@ exports.createPages = async ({ actions, graphql }) => {
       const tagName = groupItem.fieldValue
 
       createPage({
-        path: `/portfolio/tag/${tagName}`,
+        path: `/portfolio/tag/${tagName}/`,
         component: path.resolve('./src/templates/portfolio-tag.js'),
         context: {
           tag: tagName,
