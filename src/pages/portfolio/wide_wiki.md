@@ -18,7 +18,7 @@ links:
     name: Node.js(Express) で動くWikiを作ってました。 (自分のブログの記事)
 ---
 
-[WWA Maker](/portfolio/wwa_maker) の制作が中止になり制作したいものが頭の中にない中、 **なんとかして大学時代に成果を残したい、技術力を伸ばして周りに追いつきたい** ことから、1週間で制作したWikiシステムです。
+[WWA Maker](/portfolio/wwa_maker/) の制作が中止になり制作したいものが頭の中にない中、 **なんとかして大学時代に成果を残したい、技術力を伸ばして周りに追いつきたい** ことから、1週間で制作したWikiシステムです。
 
 ページの表示と編集、一覧表示が可能で、編集には markdown が利用できます。フレームワークには Express を使用していて、ディレクトリ構造はシンプルに留めました。
 
@@ -32,4 +32,4 @@ links:
 
 このようにツールの扱い方が分からない場合には **「初心に戻って基礎から学ぼう！」** と思いました。
 
-こうして得られた知識は [WWASAVE.js の改修](/portfolio/wwa_save_js) で活用され、その改修で得られた知識を [WWA Message Loader の開発](/portfolio/wwa_collection) で活用され・・・と地道に進み、現在は [WWA Maker の開発](/portfolio/wwa_maker) へとたどり着けるようになりました。
+こうして得られた知識は [WWASAVE.js の改修](/portfolio/wwa_save_js/) で活用され、その改修で得られた知識を [WWA Message Loader の開発](/portfolio/wwa_collection/) で活用され・・・と地道に進み、現在は WWA Maker の開発へとたどり着けるようになりました。

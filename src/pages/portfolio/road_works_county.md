@@ -23,7 +23,7 @@ words:
   - qhm
 ---
 
-[Coden City](/portfolio/coden_city) と [Zeist City](/portfolio/zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
+[Coden City](/portfolio/coden_city/) と [Zeist City](/portfolio/zeist_city/) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
 
 WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。この構造は [ネットマニア](http://www.netmania.jp/) のノウハウ (関連リンク参照) に影響を受けて、前代のCoden CityやZeist Cityにも行っていました。
 
@@ -35,7 +35,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 1つのサイトに統合し、より管理しやすいように体制を整えたことで2011年にはそれなりに利用者に見てもらうことができました。
 
-しかし、Road Works Countyは元々「国」をイメージするために設立したWebサイトだったのですが、サイト名を間違えて County(群) にしてしまいました。これはドメイン名にも反映されてしまい、ドメイン名の変更が必要に迫られたことからドメイン aokashi.net を急遽取得し、[Aokashi.net](/portfolio/aokashi_dot_net)を代わりに設立しました。その後、2012年6月8日に役目を終えました。
+しかし、Road Works Countyは元々「国」をイメージするために設立したWebサイトだったのですが、サイト名を間違えて County(群) にしてしまいました。これはドメイン名にも反映されてしまい、ドメイン名の変更が必要に迫られたことからドメイン aokashi.net を急遽取得し、[Aokashi.net](/portfolio/aokashi_dot_net/)を代わりに設立しました。その後、2012年6月8日に役目を終えました。
 
 ## おまけ: Road Works SNS
 
@@ -43,7 +43,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 当時ユーザー同士との連絡手段はTwitterかレンタルチャットを利用していましたが、ブログを書いたりプロジェクトを作ったりできる多機能なSNSとして[OpenPNE](https://www.openpne.jp/)を設立しました。WordPressよりも更に複雑な設立方法でしたが、設立後の機能の多さに感動したことを覚えています。
 
-後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](/portfolio/slack_community)。
+後に知人のまつゆきが同じOpenPNEを設立した関係で、このSNSは1年後運用を終了しました。その後、知人同士との連絡手段はOpenPNEからPNE.JP、Slack、Discordへと移ってきました。 [Slack への移行については本ポートフォリオの記事で解説しています](/portfolio/slack_community/)。
 
 ## 見てみる
 - [Road Works County 1.0](https://contents.aokashi.net/restore/rwc_1)

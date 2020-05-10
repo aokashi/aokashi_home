@@ -24,7 +24,7 @@ words:
 
 Coden City自体も、このHTMLテンプレートの制作で得た知識を反映したことが多く、知人のWebサイトのデザインを担当したこともありました(後述)。
 
-HTMLテンプレートの制作を通じて得られたスキルは [Aokashi.net の WordPress テーマの制作](/portfolio/aokashi_dot_net) に活用されるようになりました。
+HTMLテンプレートの制作を通じて得られたノウハウは [Aokashi.net の WordPress テーマの制作](/portfolio/aokashi_dot_net/) に活用されるようになりました。
 
 このおかげで、CSSの知識はかなり上達したと感じました (ただ、 `transition` プロパティやプリプロセッサーの扱いは今でも慣れていませんが...)。
 
