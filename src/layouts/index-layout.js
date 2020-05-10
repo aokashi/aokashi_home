@@ -67,7 +67,7 @@ const IndexLayout = ({ children }) => {
   const [screenHeight, setScreenHeight] = useState(0)
   useEffect(() => {
     setScreenHeight(window.innerHeight);
-  })
+  }, [])
 
   return (
     <>
