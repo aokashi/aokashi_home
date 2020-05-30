@@ -588,3 +588,22 @@
     - WWA素材第3世代
     - 乗り物
     - 列車
+- name: VeLocomotive16-4
+  file: /materials/wwa/VeLocomotive16-4.gif
+  publishedAt: 2020-05-31
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 列車
+- name: VeLocomotive16-5
+  file: /materials/wwa/VeLocomotive16-5.gif
+  publishedAt: 2020-05-31
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 列車
+- name: 18Rail
+  file: /materials/wwa/18Rail.gif
+  tags:
+    - WWA素材第3世代
+    - 地面
