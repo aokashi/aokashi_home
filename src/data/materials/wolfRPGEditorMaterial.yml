@@ -1,0 +1,12 @@
+- name: 16Ground-GravelRoad
+  file: /materials/wolf_rpg_editor/16Ground-GravelRoad.png
+  tags:
+    - オートタイル
+- name: 16Ground-River
+  file: /materials/wolf_rpg_editor/16Ground-River.png
+  tags:
+    - オートタイル
+- name: 16Ground-SandRoad
+  file: /materials/wolf_rpg_editor/16Ground-SandRoad.png
+  tags:
+    - オートタイル
