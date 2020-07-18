@@ -10,3 +10,7 @@
   file: /materials/wolf_rpg_editor/16Ground-SandRoad.png
   tags:
     - オートタイル
+- name: 16MapChip
+  file: /materials/wolf_rpg_editor/16MapChip.png
+  tags:
+    - マップチップ
