@@ -14,5 +14,9 @@
   {
     "link": "/material/tkool_mv", 
     "name": "ツクールMV"
+  },
+  {
+    "link": "/material/wolf_rpg_editor",
+    "name": "WOLFRPGエディター"
   }
 ]
