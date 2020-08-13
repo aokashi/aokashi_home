@@ -19,6 +19,7 @@ function SEO({ description, image, lang, meta, title }) {
             title
             description
             author
+            siteUrl
             openGraphImage
           }
         }
@@ -28,6 +29,7 @@ function SEO({ description, image, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || site.siteMetadata.openGraphImage
+  const metaImageUrl = site.siteMetadata.siteUrl + metaImage
   const metaTitle = title === site.siteMetadata.title ? site.siteMetadata.title : `%s - ${site.siteMetadata.title}`
 
   return (
@@ -56,7 +58,7 @@ function SEO({ description, image, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: metaImageUrl,
         },
         {
           name: `twitter:card`,
@@ -76,7 +78,7 @@ function SEO({ description, image, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: metaImage
+          content: metaImageUrl,
         },
       ].concat(meta)}
     />
