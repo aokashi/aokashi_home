@@ -78,6 +78,9 @@ profile:
         text: >-
           2017年に組み立て。性能よりも各パーツの付加価値を重視している。
           2019年には REALFORCE と GTX 1660Ti の導入で更に強くなった。
+        link:
+          url: https://pasotan.com/s/WRvRDQ
+          text: パソ探.com で構成を見る
       - name: MacBook Air (Early 2020)
         text: >-
           モバイルPC。家で作業する際は USB Type-C 接続ができる DELL の P2720DC に接続している。

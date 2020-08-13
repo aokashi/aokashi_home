@@ -30,25 +30,10 @@ tags:
 - 大学2学年に母の実家に PC を譲渡した後に故障が発生 → マザーボードに原因があると判断しマザーボードを交換 → 原因は電源だった
 - 大学2学年にノートPCを購入したが翌年に SSD が読めないといった故障が発生 → 何度かサポートに連絡して修理を頼むも再び故障 → 原因不明・・・
 
-## 使用しているデスクトップPCの仕様 (2020年4月7日現在)
+## 使用しているデスクトップPCの仕様
 
 現在使用しているデスクトップPCは2017年に構築しました。
 
 選定するパーツのメーカーや製品にとことん拘れる自作 PC は、まさに **自分を表現するにはうってつけであります**。
 
-- **CPU**: Intel Core i5 7600K
-- **マザーボード**: ASUS ROG STRIX Z270-G GAMING
-- **メモリ**: Kingston HYPER-X FURY DDR4-2666 8GB × 2 + Corsair Vengance LPX DDR4-2666 8GB × 2
-  - 両方ともクロックを変化させるオーバークロックメモリだが、変化範囲が異なっていてこのままでは起動できないため、 2133MHz に引き落としている
-- **GPU**: ELSA GTX 1660Ti S.A.C
-- **CPUクーラー**: サイズ 巽
-- **PCケース**: Antec P5
-- **SSD**: Western Digital WD Black 512GB NVMe SSD
-- **HDD**: 東芝 DT01ACA200 2TB
-- **電源ユニット**: Seasonic Xseries SS-XP2S 660W
-- **その他**:
-  - Akasa マグネットLED ストラップライト (PCケース内部に取り付けて光らせることができる)
-  - Akasa VEGAS TL 140mm (フロントファン)
-- **モニター**: DELL P2720DC, 飯山 ProLite XUB2390HS
-- **キーボード**: 東プレ RELAFORCE R2
-- **マウス**: Logicool MX ERGO
+<pasotan-iframe elementId="8a6vvf" id="X6qKB/2">
