@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const LinkComponent = ({ href, className, activeClassName, style, children }) => {
   if (isExternalLink(href)) {
     return (
-      <a href={href} className={className} style={style}>{children}</a>
+      <a href={href} className={className} style={style} target="_blank" rel="noopener noreferrer">{children}</a>
     )
   } else {
     return (

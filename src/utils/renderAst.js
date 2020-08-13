@@ -6,6 +6,7 @@ import InfoNote from "../components/Note/InfoNote.js"
 import DangerNote from "../components/Note/DangerNote.js"
 import AboutNote from "../components/Note/AboutNote.js"
 import LinkButton from "../components/LinkButton.js"
+import PasotanIframe from "../components/PasotanIframe.js"
 
 /**
  * markdown ファイル内で使用したいコンポーネントがあれば下記の配列に記述してください。
@@ -18,6 +19,7 @@ const availableComponents = {
   "danger-note": DangerNote,
   "about-note": AboutNote,
   "link-button": LinkButton,
+  "pasotan-iframe": PasotanIframe,
 }
 
 const renderAst = new rehypeReact({

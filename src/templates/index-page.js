@@ -4,6 +4,7 @@ import Layout from "../layouts/index-layout"
 
 import styles from "./index-page.module.sass"
 import SEO from "../components/seo"
+import Link from "../components/Link"
 
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -64,6 +65,10 @@ export const pageQuery = graphql`
             environments {
               name
               text
+              link {
+                url
+                text
+              }
             }
           }
           extra
@@ -78,6 +83,11 @@ export const ProfileSection = (data) => {
     <section className={styles.sectionItem} key={index}>
       <h3 className={styles.itemTitle}>{item.name}</h3>
       <p className={styles.itemText}>{item.text}</p>
+      {item.link &&
+        <p className={styles.itemText}>
+          <Link href={item.link.url} className="button is-primary">{item.link.text}</Link>
+        </p>
+      }
     </section>
   ))
 }
