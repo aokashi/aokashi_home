@@ -5,6 +5,7 @@ module.exports = {
     title: `Aokashi Home`,
     description: `Aokashi の個人サイトです。`,
     author: `@aokashi`,
+    openGraphImage: `/images/ah-ogp_image.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
