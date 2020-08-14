@@ -34,3 +34,4 @@ CMS は WordPress ではなく MODX を採用しました。これは、固定�
 
 ## 見てみる
 - [Aokashi Home 2代目 (2015年7月25日～2017年3月24日)](https://contents.aokashi.net/restore/ah_1-2/)
+- [Aokashi Home 3代目 (2017年3月24日～2019年11月30日)](https://contents.aokashi.net/restore/ah_2-1/)
