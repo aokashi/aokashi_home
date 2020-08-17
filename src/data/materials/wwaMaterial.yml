@@ -607,3 +607,8 @@
   tags:
     - WWA素材第3世代
     - 地面
+- name: 20minecart
+  file: /materials/wwa/20minecart.gif
+  tags:
+    - WWA素材第3世代
+    - 乗り物
