@@ -1,15 +1,16 @@
 import React, { useState } from "react"
-import Layout from "../layouts/page-layout"
+import Layout from "../../layouts/page-layout"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SEO from "../components/seo"
-import PageHeader from "../components/PageHeader"
-import BoxList from "../components/BoxList"
-import Box from "../components/Box/Box"
-import BoxNav from "../components/BoxNav"
-import WarningNote from "../components/Note/WarningNote"
-import InfoNote from "../components/Note/InfoNote"
-import WWAWingLogo from "../images/wwawing-logo.png"
+import Img from "gatsby-image"
+
+import SEO from "../../components/seo"
+import PageHeader from "../../components/PageHeader"
+import BoxList from "../../components/BoxList"
+import Box from "../../components/Box/Box"
+import BoxNav from "../../components/BoxNav"
+import WarningNote from "../../components/Note/WarningNote"
+import InfoNote from "../../components/Note/InfoNote"
 
 const WWAPage = () => {
   /**
@@ -17,7 +18,7 @@ const WWAPage = () => {
    */
   const [onlyWWAWing, checkOnlyWWAWing] = useState(false);
   const data = useStaticQuery(graphql`
-    query {
+    query WWADataQuery {
       allWwaYaml {
         nodes {
           id
@@ -41,6 +42,13 @@ const WWAPage = () => {
           remark
         }
       }
+      file(relativePath: {eq: "wwawing-logo.png"}) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
   const WWAData = data.allWwaYaml.nodes.filter(node => !onlyWWAWing || node.supportWWAWing)
@@ -56,14 +64,14 @@ const WWAPage = () => {
         </InfoNote>
         <label className="checkbox">
           <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
-          <img src={WWAWingLogo} alt="WWA Wing" /> 対応のWWAのみ表示する
+          <Img fixed={data.file.childImageSharp.fixed} alt="WWA Wing" /> 対応のWWAのみ表示する
         </label>
         <WarningNote>
           <p>WWA Wing 未対応のWWAをプレイする場合は <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
         </WarningNote>
       </div>
       <BoxList>
-        {WWAList(WWAData)}
+        <WWAList wwaData={WWAData} wwaWingLogo={data.file} />
       </BoxList>
       <div className="content">
         <h2>Thanks</h2>
@@ -78,7 +86,7 @@ const WWAPage = () => {
   )
 }
 
-const WWAList = nodes => nodes.map((item, index) =>
+const WWAList = ({ wwaData, wwaWingLogo }) => wwaData.map((item, index) =>
   <Box
     title={item.name}
     imagePath={item.screenPath}
@@ -87,7 +95,7 @@ const WWAList = nodes => nodes.map((item, index) =>
     footerContent={<BoxNav navItems={getLinks(item.links)} />}
   >
     {item.supportWWAWing &&
-      <div className="has-text-right"><img src={WWAWingLogo} alt="WWA Wing対応" /></div>
+      <div className="has-text-right"><Img fixed={wwaWingLogo.childImageSharp.fixed} alt="WWA Wing 対応" /></div>
     }
     <p>{item.description}</p>
   </Box>
