@@ -1,14 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
+import Img from "gatsby-image"
 
-const Box = ({ title, link, imagePath, onImageClick, width, className, children, footerContent }) => (
+const Box = ({ title, link, imageFixed, imageFluid, imagePath, onImageClick, width, className, children, footerContent }) => (
   <div className={`column ${getWidth(width)}`}>
     <div className={`card ${className}`}>
-      {imagePath &&
+      {(imageFixed || imageFluid || imagePath) &&
         <div className="card-image has-text-centered has-background-light">
           <BoxLink href={link} onClick={onImageClick}>
-            <img src={imagePath} alt="" />
+            <BoxImage imageFixed={imageFixed} imageFluid={imageFluid} imagePath={imagePath} />
           </BoxLink>
         </div>
       }
@@ -55,9 +56,22 @@ function getWidth(width) {
   return `is-${width}`
 }
 
+/**
+ * Box コンポーネントで掲載するイメージ画像です。
+ */
+const BoxImage = ({ imageFixed, imageFluid, imagePath }) => {
+  if (imageFixed || imageFluid) {
+    return <Img fixed={imageFixed} fluid={imageFluid} alt="" />
+  } else {
+    return <img src={imagePath} alt="" />
+  }
+}
+
 Box.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
+  imageFixed: PropTypes.shape(Img.fixed),
+  imageFluid: PropTypes.shape(Img.fluid),
   imagePath: PropTypes.string,
   onImageClick: PropTypes.func,
   width: PropTypes.oneOfType([
@@ -72,6 +86,8 @@ Box.propTypes = {
 Box.defaultProps = {
   title: "",
   link: "",
+  imageFixed: null,
+  imageFluid: null,
   imagePath: "",
   onImageClick: () => {},
   width: "one-quater",

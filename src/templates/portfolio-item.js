@@ -136,7 +136,13 @@ export const pageQuery = graphql`
         date
         words
         images {
-          path
+          path {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           alt
           description
         }

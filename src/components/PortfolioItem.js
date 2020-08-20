@@ -4,13 +4,16 @@ import PropTypes from "prop-types"
 import convertDate from "../utils/convertDate"
 import Box from "./Box/Box"
 import { Link } from "gatsby"
+import GatsbyImage from "gatsby-image"
 
 const PortfolioItem = ({ portfolioItem }) => {
+  console.log(portfolioItem.images);
   return (
     <Box
       title={portfolioItem.title}
       link={`${portfolioItem.path}/`}
-      imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
+      // FIXME: portfolioItem.images[0].path.childImageSharp is null
+      //imageFluid={portfolioItem.images ? portfolioItem.images[0].path.childImageSharp.fluid : null}
       width={["half-tablet", "one-quarter-widescreen"]}
     >
       <div className="is-size-7">
@@ -34,7 +37,7 @@ PortfolioItem.propTypes = {
     date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     images: PropTypes.arrayOf(PropTypes.shape({
-      path: PropTypes.string.isRequired,
+      path: PropTypes.shape(GatsbyImage.fluid).isRequired,
       alt: PropTypes.string,
     })),
   }).isRequired,

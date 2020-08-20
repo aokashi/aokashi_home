@@ -90,7 +90,13 @@ class PortfolioPage extends React.Component {
                     frontmatter {
                       date
                       images {
-                        path
+                        path {
+                          childImageSharp {
+                            fluid {
+                              ...GatsbyImageSharpFluid
+                            }
+                          }
+                        }
                         alt
                       }
                       tags
