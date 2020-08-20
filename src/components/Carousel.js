@@ -5,7 +5,7 @@ import "pure-react-carousel/dist/react-carousel.es.css"
 
 import styles from "./Carousel.module.sass"
 import ArrowIcon from "../images/button_icon-arrow.svg"
-import Img from "gatsby-image"
+import Image from "./Image"
 
 const Carousel = ({ width, height, items }) => (
   <CarouselProvider
@@ -18,7 +18,7 @@ const Carousel = ({ width, height, items }) => (
       {items.map((item, itemIndex) => (
         <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
           <figure className={styles.itemFigure}>
-            <Img fluid={item.path.childImageSharp.fluid} alt={item.alt} className={styles.itemImage} />
+            <Image src={item.path} alt={item.alt} className={styles.itemImage} />
             <figcaption className={styles.itemCaption}>{item.description}</figcaption>
           </figure>
         </Slide>
@@ -33,7 +33,7 @@ Carousel.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
-    path: Img.propTypes.fluid,
+    path: PropTypes.object,
     alt: PropTypes.string,
     description: PropTypes.string,
   }))
