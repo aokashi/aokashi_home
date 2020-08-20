@@ -7,13 +7,11 @@ import { Link } from "gatsby"
 import GatsbyImage from "gatsby-image"
 
 const PortfolioItem = ({ portfolioItem }) => {
-  console.log(portfolioItem.images);
   return (
     <Box
       title={portfolioItem.title}
       link={`${portfolioItem.path}/`}
-      // FIXME: portfolioItem.images[0].path.childImageSharp is null
-      //imageFluid={portfolioItem.images ? portfolioItem.images[0].path.childImageSharp.fluid : null}
+      imageFluid={portfolioItem.images ? portfolioItem.images[0].path : null}
       width={["half-tablet", "one-quarter-widescreen"]}
     >
       <div className="is-size-7">
@@ -37,7 +35,7 @@ PortfolioItem.propTypes = {
     date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     images: PropTypes.arrayOf(PropTypes.shape({
-      path: PropTypes.shape(GatsbyImage.fluid).isRequired,
+      path: GatsbyImage.propTypes.fluid.isRequired,
       alt: PropTypes.string,
     })),
   }).isRequired,

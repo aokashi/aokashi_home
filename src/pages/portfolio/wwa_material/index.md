@@ -8,10 +8,10 @@ tags:
   - WWA
   - 継続中
 images:
-  - path: ./first_material.gif
+  - path: ./first_material.png
     alt: 最初に投稿したWWA素材
     description: 最初にインターネットの掲示板に投稿したWWA素材です。
-  - path: ./second_material.gif
+  - path: ./second_material.png
     alt: 次に投稿したWWA素材
     description: 次に投稿したWWA素材です。
 links:

@@ -3,32 +3,35 @@ import PropTypes from "prop-types"
 import Link from "../Link"
 import Img from "gatsby-image"
 
-const Box = ({ title, link, imageFixed, imageFluid, imagePath, onImageClick, width, className, children, footerContent }) => (
-  <div className={`column ${getWidth(width)}`}>
-    <div className={`card ${className}`}>
-      {(imageFixed || imageFluid || imagePath) &&
-        <div className="card-image has-text-centered has-background-light">
-          <BoxLink href={link} onClick={onImageClick}>
-            <BoxImage imageFixed={imageFixed} imageFluid={imageFluid} imagePath={imagePath} />
-          </BoxLink>
+const Box = ({ title, link, imagePath, imageFluid, onImageClick, width, className, children, footerContent }) => {
+  const hasImage = (imageFluid && imageFluid.childImageSharp !== null) || imagePath
+  return (
+    <div className={`column ${getWidth(width)}`}>
+      <div className={`card ${className}`}>
+        {hasImage &&
+          <div className="card-image has-text-centered has-background-light">
+            <BoxLink href={link} onClick={onImageClick}>
+              <BoxImage staticImage={imagePath} fluidObject={imageFluid} alt="" />
+            </BoxLink>
+          </div>
+        }
+        {title &&
+          <header className="card-header">
+            <BoxLink href={link}>
+              <h3 className="card-header-title">{title}</h3>
+            </BoxLink>
+          </header>
+        }
+        <div className="card-content">
+          {children}
         </div>
-      }
-      {title &&
-        <header className="card-header">
-          <BoxLink href={link}>
-            <h3 className="card-header-title">{title}</h3>
-          </BoxLink>
-        </header>
-      }
-      <div className="card-content">
-        {children}
+        {footerContent &&
+          footerContent
+        }
       </div>
-      {footerContent &&
-        footerContent
-      }
     </div>
-  </div>
-)
+  )
+}
 
 /**
  * Box 内でリンクの出力が必要な際に利用するコンポーネントです。
@@ -59,20 +62,20 @@ function getWidth(width) {
 /**
  * Box コンポーネントで掲載するイメージ画像です。
  */
-const BoxImage = ({ imageFixed, imageFluid, imagePath }) => {
-  if (imageFixed || imageFluid) {
-    return <Img fixed={imageFixed} fluid={imageFluid} alt="" />
-  } else {
-    return <img src={imagePath} alt="" />
+const BoxImage = ({ staticImage, fluidObject }) => {
+  if (fluidObject) {
+    return <Img fluid={fluidObject.childImageSharp.fluid} alt="" />
+  } else if (staticImage) {
+    return <img src={staticImage} alt="" />
   }
+  return <></>
 }
 
 Box.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
-  imageFixed: PropTypes.shape(Img.fixed),
-  imageFluid: PropTypes.shape(Img.fluid),
   imagePath: PropTypes.string,
+  imageFluid: Img.propTypes.fluid,
   onImageClick: PropTypes.func,
   width: PropTypes.oneOfType([
     PropTypes.string,
@@ -86,9 +89,8 @@ Box.propTypes = {
 Box.defaultProps = {
   title: "",
   link: "",
-  imageFixed: null,
-  imageFluid: null,
   imagePath: "",
+  imageFluid: null,
   onImageClick: () => {},
   width: "one-quater",
   className: "",

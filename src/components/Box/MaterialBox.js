@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Box from "./Box"
+import GatsbyImage from "gatsby-image"
 
-const MaterialBox = ({ materialItem, imagePath, onImageClick, width, title, children }) => (
+const MaterialBox = ({ materialItem, imageFluid, onImageClick, width, title, children }) => (
   <Box
     title={title}
-    imagePath={imagePath}
+    imageFluid={imageFluid}
     onImageClick={onImageClick}
     width={width}
   >
@@ -35,7 +36,7 @@ MaterialBox.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
   }),
-  imagePath: PropTypes.string,
+  imageFluid: GatsbyImage.propTypes.fluid,
   onImageClick: PropTypes.func,
   width: PropTypes.string,
   title: PropTypes.string,

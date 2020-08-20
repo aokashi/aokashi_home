@@ -7,7 +7,7 @@ import getFileName from "../../utils/getFileName"
 const ImageMaterialBox = ({ materialItem, onItemClick }) => (
   <MaterialBox
     materialItem={materialItem}
-    imagePath={materialItem.file}
+    imageFluid={materialItem.file}
     onImageClick={onItemClick}
     width="one-third"
   >
