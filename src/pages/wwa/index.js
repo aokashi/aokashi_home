@@ -29,6 +29,7 @@ const WWAPage = () => {
           name
           description
           publishedAt
+          screenPath
           links {
             name
             link
@@ -54,7 +55,6 @@ const WWAPage = () => {
       }
       allFile(filter: {
         sourceInstanceName: {eq: "data"},
-        relativeDirectory: {eq: "wwa"},
         ext: {eq: ".png"}
       }) {
         nodes {
@@ -63,7 +63,7 @@ const WWAPage = () => {
               ...GatsbyImageSharpFluid
             }
           }
-          name
+          relativePath
         }
       }
     }
@@ -105,7 +105,7 @@ const WWAPage = () => {
 
 const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item, index) => {
   // TODO: この処理はビルド時にしか動かないのか？ もしそうであれば、 find メソッドで簡潔にできるかもしれない
-  const foundScreenImages = screenImages.filter(screenImageItem => screenImageItem.name === item.id)
+  const foundScreenImages = screenImages.filter(screenImageItem => screenImageItem.relativePath === item.screenPath)
   const screenImage = foundScreenImages.length > 0 ? foundScreenImages[0] : null
   return (
     <Box
