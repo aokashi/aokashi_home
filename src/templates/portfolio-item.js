@@ -113,12 +113,12 @@ const PortfolioCarousel = ({ images }) => {
   /**
    * @param {function} getCurrentSize Gatsby Image オブジェクトから現在のイメージのサイズを取得するメソッド
    */
-  const findMaxSize = (getCurrentSize) => (currentMaxSize, image) => {
-    const currentSize = getCurrentSize(image.path)
-    if (currentSize > currentMaxSize) {
-      return currentSize
+  const findMaxSize = (getCurrentSize) => {
+    return (currentMaxSize, image) => {
+      console.log(image);
+      const currentSize = getCurrentSize(image.path)
+      return Math.max(currentMaxSize, currentSize)
     }
-    return currentMaxSize
   }
   const maxWidth = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationWidth), 0)
   const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationHeight), 0)
