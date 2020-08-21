@@ -12,6 +12,10 @@ import BoxNav from "../../components/BoxNav"
 import WarningNote from "../../components/Note/WarningNote"
 import InfoNote from "../../components/Note/InfoNote"
 
+/**
+ * WWAページのコンポーネントです。
+ *     各ゲームのスクリーンショットは /src/data/wwa/(ゲームのアイテムのid).png でご用意ください
+ */
 const WWAPage = () => {
   /**
    * WWA Wing対応の絞り込みに使用するステートです。
@@ -25,7 +29,6 @@ const WWAPage = () => {
           name
           description
           publishedAt
-          screenPath
           links {
             name
             link
@@ -47,6 +50,20 @@ const WWAPage = () => {
           fixed {
             ...GatsbyImageSharpFixed
           }
+        }
+      }
+      allFile(filter: {
+        sourceInstanceName: {eq: "data"},
+        relativeDirectory: {eq: "wwa"},
+        ext: {eq: ".png"}
+      }) {
+        nodes {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          name
         }
       }
     }
@@ -71,7 +88,7 @@ const WWAPage = () => {
         </WarningNote>
       </div>
       <BoxList>
-        <WWAList wwaData={WWAData} wwaWingLogo={data.file} />
+        <WWAList wwaData={WWAData} screenImages={data.allFile.nodes} wwaWingLogo={data.file} />
       </BoxList>
       <div className="content">
         <h2>Thanks</h2>
@@ -86,20 +103,25 @@ const WWAPage = () => {
   )
 }
 
-const WWAList = ({ wwaData, wwaWingLogo }) => wwaData.map((item, index) =>
-  <Box
-    title={item.name}
-    imagePath={item.screenPath}
-    width="one-third"
-    key={index}
-    footerContent={<BoxNav navItems={getLinks(item.links)} />}
-  >
-    {item.supportWWAWing &&
-      <div className="has-text-right"><Img fixed={wwaWingLogo.childImageSharp.fixed} alt="WWA Wing 対応" /></div>
-    }
-    <p>{item.description}</p>
-  </Box>
-)
+const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item, index) => {
+  // TODO: この処理はビルド時にしか動かないのか？ もしそうであれば、 find メソッドで簡潔にできるかもしれない
+  const foundScreenImages = screenImages.filter(screenImageItem => screenImageItem.name === item.id)
+  const screenImage = foundScreenImages.length > 0 ? foundScreenImages[0] : null
+  return (
+    <Box
+      title={item.name}
+      imagePath={screenImage}
+      width="one-third"
+      key={index}
+      footerContent={<BoxNav navItems={getLinks(item.links)} />}
+    >
+      {item.supportWWAWing &&
+        <div className="has-text-right"><Img fixed={wwaWingLogo.childImageSharp.fixed} alt="WWA Wing 対応" /></div>
+      }
+      <p>{item.description}</p>
+    </Box>
+  )
+})
 
 const WWALicenseList = (data) => data.nodes.map((license, licenseIndex) => (
   <div className="column is-one-third" key={licenseIndex}>
