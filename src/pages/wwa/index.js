@@ -48,7 +48,7 @@ const WWAPage = () => {
       }
       file(relativePath: {eq: "wwawing-logo.png"}) {
         childImageSharp {
-          fixed {
+          fixed(width: 100) {
             ...GatsbyImageSharpFixed
           }
         }
