@@ -81,28 +81,8 @@ const PortfolioItemTemplate = ({
 }
 
 const ItemHeader = ({ frontmatter }) => {
-  /**
-   * @param {function} getCurrentSize Gatsby Image オブジェクトから現在のイメージのサイズを取得するメソッド
-   */
-  const findMaxSize = (getCurrentSize) => (currentMaxSize, image) => {
-    const currentSize = getCurrentSize(image.path)
-    if (currentSize > currentMaxSize) {
-      return currentSize
-    }
-    return currentMaxSize
-  }
-  const maxWidth = frontmatter.images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationWidth), 0)
-  const maxHeight = frontmatter.images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationHeight), 0)
   return (
-    <PageHeader bottomContent={
-      <>
-        {frontmatter.images &&
-          <div className={styles.images}>
-            <Carousel items={frontmatter.images} width={maxWidth} height={maxHeight} />
-          </div>
-        }
-      </>
-    }>
+    <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
       <div className={`${styles.summary} block`}>
         <h1>{frontmatter.title}</h1>
         <div>
@@ -123,6 +103,30 @@ const ItemHeader = ({ frontmatter }) => {
         </div>
       </div>
     </PageHeader>
+  )
+}
+
+const PortfolioCarousel = ({ images }) => {
+  if (!images) {
+    return null
+  }
+  /**
+   * @param {function} getCurrentSize Gatsby Image オブジェクトから現在のイメージのサイズを取得するメソッド
+   */
+  const findMaxSize = (getCurrentSize) => (currentMaxSize, image) => {
+    const currentSize = getCurrentSize(image.path)
+    if (currentSize > currentMaxSize) {
+      return currentSize
+    }
+    return currentMaxSize
+  }
+  const maxWidth = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationWidth), 0)
+  const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationHeight), 0)
+
+  return (
+    <div className={styles.images}>
+      <Carousel items={images} width={maxWidth} height={maxHeight} />
+    </div>
   )
 }
 
