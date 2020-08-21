@@ -24,6 +24,13 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      }
+    },
     `gatsby-transformer-json`,
     `gatsby-transformer-yaml`,
     {
@@ -55,6 +62,12 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: `language-`
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1280
             }
           }
         ]

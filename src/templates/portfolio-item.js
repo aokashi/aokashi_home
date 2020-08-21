@@ -80,36 +80,55 @@ const PortfolioItemTemplate = ({
   )
 }
 
-const ItemHeader = ({ frontmatter }) =>
-  <PageHeader bottomContent={
-    <>
-      {frontmatter.images &&
-        <div className={styles.images}>
-          <Carousel items={frontmatter.images} width={4} height={3} />
+const ItemHeader = ({ frontmatter }) => {
+  return (
+    <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
+      <div className={`${styles.summary} block`}>
+        <h1>{frontmatter.title}</h1>
+        <div>
+          <span className={`${styles.headerIcon} icon is-medium`}>
+            <img src={DateIcon} alt={"日付:"} />
+          </span>
+          <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
         </div>
-      }
-    </>
-  }>
-    <div className={`${styles.summary} block`}>
-      <h1>{frontmatter.title}</h1>
-      <div>
-        <span className={`${styles.headerIcon} icon is-medium`}>
-          <img src={DateIcon} alt={"日付:"} />
-        </span>
-        <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
+        <div className="tags">
+          <span className={`${styles.headerIcon} icon is-medium`}>
+            <img src={TagIcon} alt={"タグ:"} />
+          </span>
+          {frontmatter.tags.map((tag, tagIndex) => 
+            <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
+              {tag}
+            </Link>
+          )}
+        </div>
       </div>
-      <div className="tags">
-        <span className={`${styles.headerIcon} icon is-medium`}>
-          <img src={TagIcon} alt={"タグ:"} />
-        </span>
-        {frontmatter.tags.map((tag, tagIndex) => 
-          <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
-            {tag}
-          </Link>
-        )}
-      </div>
+    </PageHeader>
+  )
+}
+
+const PortfolioCarousel = ({ images }) => {
+  if (!images) {
+    return null
+  }
+  /**
+   * @param {function} getCurrentSize Gatsby Image オブジェクトから現在のイメージのサイズを取得するメソッド
+   */
+  const findMaxSize = (getCurrentSize) => (currentMaxSize, image) => {
+    const currentSize = getCurrentSize(image.path)
+    if (currentSize > currentMaxSize) {
+      return currentSize
+    }
+    return currentMaxSize
+  }
+  const maxWidth = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationWidth), 0)
+  const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.fluid.presentationHeight), 0)
+
+  return (
+    <div className={styles.images}>
+      <Carousel items={images} width={maxWidth} height={maxHeight} />
     </div>
-  </PageHeader>
+  )
+}
 
 /**
  * @todo allPortfolioAboutWordYaml についてはcontextにwordsを含めた形で gatsby-node.js に移行する
@@ -136,7 +155,15 @@ export const pageQuery = graphql`
         date
         words
         images {
-          path
+          path {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+                presentationHeight
+                presentationWidth
+              }
+            }
+          }
           alt
           description
         }

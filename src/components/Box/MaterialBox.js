@@ -35,7 +35,7 @@ MaterialBox.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.string,
   }),
-  imagePath: PropTypes.string,
+  imagePath: Box.propTypes.imagePath,
   onImageClick: PropTypes.func,
   width: PropTypes.string,
   title: PropTypes.string,

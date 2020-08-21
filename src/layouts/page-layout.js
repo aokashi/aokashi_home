@@ -31,6 +31,13 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
           icon
         }
       }
+      file(relativePath: {eq: "ah-logo_mini.png"}) {
+        childImageSharp {
+          fixed (width: 256) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
   const navItems = data.allNavItemYaml.nodes
@@ -45,6 +52,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
       <Header
         siteTitle={data.site.siteMetadata.title}
         siteNavItems={siteNavItems}
+        logoImage={data.file}
       />
       <main className={styles.mainContent}>
         <nav className={styles.nav}>

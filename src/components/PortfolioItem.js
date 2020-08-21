@@ -34,7 +34,7 @@ PortfolioItem.propTypes = {
     date: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     images: PropTypes.arrayOf(PropTypes.shape({
-      path: PropTypes.string.isRequired,
+      path: PropTypes.object,
       alt: PropTypes.string,
     })),
   }).isRequired,

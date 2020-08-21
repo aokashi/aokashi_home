@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
+import Image from "../Image"
 
 const Box = ({ title, link, imagePath, onImageClick, width, className, children, footerContent }) => (
   <div className={`column ${getWidth(width)}`}>
@@ -8,7 +9,7 @@ const Box = ({ title, link, imagePath, onImageClick, width, className, children,
       {imagePath &&
         <div className="card-image has-text-centered has-background-light">
           <BoxLink href={link} onClick={onImageClick}>
-            <img src={imagePath} alt="" />
+            <Image src={imagePath} />
           </BoxLink>
         </div>
       }
@@ -58,7 +59,7 @@ function getWidth(width) {
 Box.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
-  imagePath: PropTypes.string,
+  imagePath: Image.propTypes.src,
   onImageClick: PropTypes.func,
   width: PropTypes.oneOfType([
     PropTypes.string,
@@ -72,7 +73,7 @@ Box.propTypes = {
 Box.defaultProps = {
   title: "",
   link: "",
-  imagePath: "",
+  imagePath: null,
   onImageClick: () => {},
   width: "one-quater",
   className: "",

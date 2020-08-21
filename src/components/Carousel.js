@@ -5,40 +5,35 @@ import "pure-react-carousel/dist/react-carousel.es.css"
 
 import styles from "./Carousel.module.sass"
 import ArrowIcon from "../images/button_icon-arrow.svg"
+import Image from "./Image"
 
-class Carousel extends React.Component {
-  render() {
-    return (
-      <CarouselProvider
-        naturalSlideWidth={this.props.width}
-        naturalSlideHeight={this.props.height}
-        totalSlides={this.props.items.length}
-        className={styles.carousel}
-      >
-        <Slider className={styles.items}>
-          {
-            this.props.items.map((item, itemIndex) => (
-              <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
-                <figure className={styles.itemFigure}>
-                  <img src={item.path} alt={item.alt} className={styles.itemImage} />
-                  <figcaption className={styles.itemCaption}>{item.description}</figcaption>
-                </figure>
-              </Slide>
-            ))
-          }
-        </Slider>
-        <ButtonBack className={styles.backButton}><img src={ArrowIcon} alt="前" className={styles.backButtonIcon} /></ButtonBack>
-        <ButtonNext className={styles.nextButton}><img src={ArrowIcon} alt="次" className={styles.nextButtonIcon} /></ButtonNext>
-      </CarouselProvider>
-    )
-  }
-}
+const Carousel = ({ width, height, items }) => (
+  <CarouselProvider
+    naturalSlideWidth={width}
+    naturalSlideHeight={height}
+    totalSlides={items.length}
+    className={styles.carousel}
+  >
+    <Slider className={styles.items}>
+      {items.map((item, itemIndex) => (
+        <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
+          <figure className={styles.itemFigure}>
+            <Image src={item.path} alt={item.alt} className={styles.itemImage} />
+            <figcaption className={styles.itemCaption}>{item.description}</figcaption>
+          </figure>
+        </Slide>
+      ))}
+    </Slider>
+    <ButtonBack className={styles.backButton}><img src={ArrowIcon} alt="前" className={styles.backButtonIcon} /></ButtonBack>
+    <ButtonNext className={styles.nextButton}><img src={ArrowIcon} alt="次" className={styles.nextButtonIcon} /></ButtonNext>
+  </CarouselProvider>
+)
 
 Carousel.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({
-    path: PropTypes.string.isRequired,
+    path: PropTypes.object,
     alt: PropTypes.string,
     description: PropTypes.string,
   }))

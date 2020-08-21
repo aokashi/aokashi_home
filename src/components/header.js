@@ -1,14 +1,15 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import AokashiHomeLogo from "../images/ah-logo_mini.png"
 
-const Header = ({ siteTitle, siteNavItems }) => (
+import Img from "gatsby-image"
+
+const Header = ({ siteTitle, siteNavItems, logoImage }) => (
   <header className="navbar">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          <img src={AokashiHomeLogo} alt={siteTitle} width="256" height="48" />
+          <Img fixed={logoImage.childImageSharp.fixed} alt={siteTitle} />
         </Link>
       </div>
       <div className="navbar-menu">

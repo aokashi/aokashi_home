@@ -58,7 +58,13 @@ export const pageQuery = graphql`
         frontmatter {
           date
           images {
-            path
+            path {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             alt
           }
           tags
