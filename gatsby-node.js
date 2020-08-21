@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      defaultPages: allMarkdownRemark {
         edges {
           node {
             id
@@ -25,6 +25,19 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
+      portfolioTags: allMarkdownRemark(
+        filter: {
+          frontmatter: {
+            path: {
+              glob: "/portfolio/*"
+            }
+          }
+        }
+      ) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `)
   if (result.errors) {
@@ -32,8 +45,8 @@ exports.createPages = async ({ actions, graphql }) => {
     return Promise.reject(result.errors)
   }
 
-  const pages = result.data.allMarkdownRemark.edges
-  pages.forEach(({ node }) => {
+  const defaultPages = result.data.defaultPages.edges
+  defaultPages.forEach(({ node }) => {
     
     const templateName = node.frontmatter.template
       ? String(node.frontmatter.template)
@@ -49,37 +62,16 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  /**
-   * ポートフォリオのタグからページ一覧を生成します
-   * @todo できれば別のページに移行する
-   */
-  graphql(`
-    {
-      allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            path: {
-              glob: "/portfolio/*"
-            }
-          }
-        }
-      ) {
-        group(field: frontmatter___tags) {
-          fieldValue
-        }
-      }
-    }
-  `).then(result => {
-    result.data.allMarkdownRemark.group.map(groupItem => {
-      const tagName = groupItem.fieldValue
+  const portfolioTags = result.data.portfolioTags.group
+  portfolioTags.forEach(groupItem => {
+    const tagName = groupItem.fieldValue
 
-      createPage({
-        path: `/portfolio/tag/${tagName}/`,
-        component: path.resolve('./src/templates/portfolio-tag.js'),
-        context: {
-          tag: tagName,
-        }
-      })
+    createPage({
+      path: `/portfolio/tag/${tagName}/`,
+      component: path.resolve('./src/templates/portfolio-tag.js'),
+      context: {
+        tag: tagName,
+      }
     })
   })
 
