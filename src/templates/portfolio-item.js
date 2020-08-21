@@ -122,8 +122,8 @@ const PortfolioCarousel = ({ images }) => {
       return Math.max(currentMaxSize, currentSize)
     }
   }
-  const maxWidth = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.width), 0)
-  const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 0)
+  const maxWidth = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.width), 1)
+  const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 1)
 
   return (
     <div className={styles.images}>
