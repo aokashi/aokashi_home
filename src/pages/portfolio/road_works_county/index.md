@@ -27,7 +27,7 @@ words:
 
 WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。この構造は [ネットマニア](http://www.netmania.jp/) のノウハウ (関連リンク参照) に影響を受けて、前代のCoden CityやZeist Cityにも行っていました。
 
-![Road Works Countyの構成図](/portfolio/road_works_county/site_structure.png)
+![Road Works Countyの構成図](./site_structure.png)
 
 デザイン面では、知り合いのサイトである [G10-Project Works のデザイン](https://info.wwawing.com/restore/) を参考にし、プルダウンメニューを取り入れた形となりました。プルダウンメニューは、各項目にカーソルが触れるとその中の項目が出る仕組みを CSS だけで再現しました。
 
@@ -39,7 +39,7 @@ WWAやTOWNなどの複数のコンテンツがあっても管理しやすいよ�
 
 ## おまけ: Road Works SNS
 
-![Road Works SNSの画面](/portfolio/road_works_county/road_works_sns.png)
+![Road Works SNSの画面](./road_works_sns.png)
 
 当時ユーザー同士との連絡手段はTwitterかレンタルチャットを利用していましたが、ブログを書いたりプロジェクトを作ったりできる多機能なSNSとして[OpenPNE](https://www.openpne.jp/)を設立しました。WordPressよりも更に複雑な設立方法でしたが、設立後の機能の多さに感動したことを覚えています。
 
