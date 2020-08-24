@@ -16,8 +16,6 @@ npm run develop
 
 ## ディレクトリ構成について
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
     .
     ├── content
     ├── data
@@ -47,7 +45,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ## ライセンスについて
 **Apache 2.0** ライセンスが適用されます。
 
-ただし、下記のファイルは他人の著作物が含まれておりライセンス適用対象外のため、 **自由に使用することができません**。
+ただし、下記のファイルは他人の著作物が含まれておりライセンス適用対象外のため、 **本リポジトリ外では自由に使用することができません**。
 
 - /static/materials/site_banner-takabo_edge2.png (EDGE2 のバナー)
+    - [EDGE2](http://takabosoft.com/edge2) のライセンス購入方法よりご利用ください
+    - 当サイトでは Mixed Contents を防止するためリポジトリ内にファイルを配置しています
 - /src/data/wwa/ 内のスクリーンショット画像
+    - 使用したい場合は [ご連絡ください](https://www.aokashi.net/about)
