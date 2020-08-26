@@ -27,7 +27,7 @@ const MaterialIndexPage = () => (
       </WarningNote>
       <h2>使用ツール</h2>
       <ul>
-        <li><a href="http://takabosoft.com/edge2" target="_blank" rel="noopener noreferrer"><img src="/materials/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" /></a></li>
+        <li><a href="http://takabosoft.com/edge2" target="_blank" rel="noopener noreferrer"><img src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" /></a></li>
         <li><a href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer">Aseprite</a></li>
         <li><a href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
       </ul>

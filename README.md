@@ -14,6 +14,19 @@ npm install
 npm run develop
 ```
 
+## contents.aokashi.net で必要なファイル
+本サイトを機能するには、 contents.aokashi.net に下記のファイルを配置する必要があります。 * のファイルは必須になります。
+
+```
+contents.aokashi.net
+|- banner *
+|  `- site_banner-takabo_edge2.png (EDGE2 のバナー)
+|- docs
+|  `- (Aokashi Home 資料集)
+`- restore
+   `- (各復元サイトのディレクトリ)
+```
+
 ## ディレクトリ構成について
 
     .
@@ -47,8 +60,5 @@ npm run develop
 
 ただし、下記のファイルは他人の著作物が含まれておりライセンス適用対象外のため、 **本リポジトリ外では自由に使用することができません**。
 
-- /static/materials/site_banner-takabo_edge2.png (EDGE2 のバナー)
-    - [EDGE2](http://takabosoft.com/edge2) のライセンス購入方法よりご利用ください
-    - 当サイトでは Mixed Contents を防止するためリポジトリ内にファイルを配置しています
 - /src/data/wwa/ 内のスクリーンショット画像
     - 使用したい場合は [ご連絡ください](https://www.aokashi.net/about)
