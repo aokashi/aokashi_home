@@ -1,41 +1,24 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../layouts/page-layout"
 import renderAst from "../utils/renderAst"
 
 import SEO from "../components/seo"
 import TableOfContents from "../components/TableOfContents"
 import PageHeader from "../components/PageHeader"
+import Breadcrumb from "../components/Breadcrumb"
 
 const DocsTemplate = ({
   data
 }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst, tableOfContents } = markdownRemark
-  const pathItems = frontmatter.path.split("/")
-  const breadCrumbs = pathItems.reduce((currentBreadCrumbs, currentPathName, currentPageIndex) => {
-    if (currentPathName === "") {
-      return currentBreadCrumbs;
-    }
-    return currentBreadCrumbs.concat([{
-      path: pathItems.slice(0, currentPageIndex + 1).join("/"),
-      text: currentPathName,
-    }])
-  }, [])
 
   return (
     <Layout
       sidebarContent={<TableOfContents html={tableOfContents} />}
       headerContent={
-        <PageHeader bottomContent={
-          <nav className="breadcrumb">
-            <ul>
-              {breadCrumbs.map(item => (
-                <li key={item.path}><Link to={item.path}>{item.text}</Link></li>
-              ))}
-            </ul>
-          </nav>
-        }>
+        <PageHeader bottomContent={<Breadcrumb path={frontmatter.path} />}>
           <h1>{frontmatter.title}</h1>
         </PageHeader>
       }
