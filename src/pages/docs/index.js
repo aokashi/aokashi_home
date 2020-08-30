@@ -4,6 +4,7 @@ import Layout from "../../layouts/page-layout"
 import PageHeader from "../../components/PageHeader"
 import SEO from "../../components/seo"
 import WarningNote from "../../components/Note/WarningNote"
+import { Link } from "gatsby"
 
 const DocsIndexPage = () => (
   <Layout headerContent={
@@ -17,6 +18,10 @@ const DocsIndexPage = () => (
       <WarningNote>
         <p>世界観の設定資料については、特別な表記をのぞき <strong>すべて架空です</strong>。表記している人物や地域は実在しません。</p>
       </WarningNote>
+      <h2>ページ一覧</h2>
+      <ul>
+        <li><Link to="world">世界観のページ</Link></li>
+      </ul>
     </div>
   </Layout>
 )
