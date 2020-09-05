@@ -90,8 +90,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        data: `@import utilities.sass`,
-        includePaths: [path.resolve(__dirname, 'src/styles')],
+        data: `@import 'utilities.sass'`,
+        includePaths: [path.resolve(__dirname, 'src/styles/')],
       }
     },
     {
