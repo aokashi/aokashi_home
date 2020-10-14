@@ -277,8 +277,6 @@
   tags:
     - 標準素材風
     - システム
-  description: |
-    数字の１２３４はNAOさんのWWA標準素材を利用しています。問題がありましたら、削除する場合があります。
 - name: VeBus13
   file: /materials/wwa/VeBus13.gif
   publishedAt: ''
@@ -612,3 +610,8 @@
   tags:
     - WWA素材第3世代
     - 乗り物
+- name: 20wwa_house
+  file: /materials/wwa/20wwa_house.gif
+  tags:
+    - 標準素材風
+    - 建物
