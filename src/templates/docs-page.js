@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import TableOfContents from "../components/TableOfContents"
 import PageHeader from "../components/PageHeader"
 import Breadcrumb from "../components/Breadcrumb"
+import DocsNav from "../components/DocsNav"
 
 const DocsTemplate = ({
   data
@@ -16,6 +17,7 @@ const DocsTemplate = ({
 
   return (
     <Layout
+      navbarContent={<DocsNav />}
       sidebarContent={<TableOfContents html={tableOfContents} />}
       headerContent={
         <PageHeader bottomContent={<Breadcrumb path={frontmatter.path} />}>
