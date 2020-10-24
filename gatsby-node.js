@@ -52,12 +52,14 @@ exports.createPages = async ({ actions, graphql }) => {
       ? String(node.frontmatter.template)
       : 'default'
     const nodeId = node.id
+    const slug = trimPath(node.fields.slug)
 
     createPage({
-      path: trimPath(node.fields.slug),
+      path: slug,
       component: path.resolve(`./src/templates/${templateName}.js`),
       context: {
-        nodeId
+        nodeId,
+        childPageGlob: `${slug}/*`
       }
     })
   })

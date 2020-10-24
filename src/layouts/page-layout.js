@@ -15,7 +15,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
 
-const Layout = ({ headerContent, navbarContent, sidebarContent, children }) => {
+const Layout = ({ headerContent, sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -56,11 +56,6 @@ const Layout = ({ headerContent, navbarContent, sidebarContent, children }) => {
       />
       <main className={styles.mainContent}>
           <nav className={styles.nav}>
-            {navbarContent &&
-              <nav className={styles.navContent}>
-                {navbarContent}
-              </nav>
-            }
             <nav className={styles.navContent}>
               <Link href="/" className={styles.navItem}>Home</Link>
               {

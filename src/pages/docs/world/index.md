@@ -1,6 +1,6 @@
 ---
 path: /docs/world
-template: docs-page
+template: docs-index-page
 title: 世界観のページ
 ---
 
