@@ -30,6 +30,7 @@ title: 世界観のページ
     - [サズア大陸](world/sotha)
         - [東南陸国](world/eastsouth_countries)
     - [デトラル大陸](world/detral)
+    - [リギート大陸](world/ligeat)
     - [富蔵大陸](world/fusashi)
 
 ### アース系
