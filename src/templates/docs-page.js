@@ -12,13 +12,13 @@ const DocsTemplate = ({
   data
 }) => {
   const { markdownRemark } = data
-  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
+  const { fields, frontmatter, htmlAst, tableOfContents } = markdownRemark
 
   return (
     <Layout
       sidebarContent={<TableOfContents html={tableOfContents} />}
       headerContent={
-        <PageHeader bottomContent={<Breadcrumb path={frontmatter.path} />}>
+        <PageHeader bottomContent={<Breadcrumb path={fields.slug} />}>
           <h1>{frontmatter.title}</h1>
         </PageHeader>
       }
@@ -35,7 +35,10 @@ const DocsTemplate = ({
 
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
+      fields {
+        slug
+      }
       id
       htmlAst
       tableOfContents
