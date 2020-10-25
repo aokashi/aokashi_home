@@ -1,6 +1,6 @@
 - name: WWA
   type: contents
-  link: /wwa/
+  link: /wwa
   icon: /images/menu_icon-wwa.png
   color: '#ffc0c0'
 - name: Software
@@ -10,7 +10,7 @@
   color: '#e0e0e0'
 - name: Docs
   type: contents
-  link: https://contents.aokashi.net/docs
+  link: /docs
   icon: /images/menu_icon-docs.png
   color: '#c0ffa0'
 - name: Material

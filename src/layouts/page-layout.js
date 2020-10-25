@@ -55,16 +55,16 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
         logoImage={data.file}
       />
       <main className={styles.mainContent}>
-        <nav className={styles.nav}>
-          <nav className={styles.navContent}>
-            <Link href="/" className={styles.navItem}>Home</Link>
-            {
-              contentsNavItems.map((navItem, navIndex) => (
-                <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
-              ))
-            }
+          <nav className={styles.nav}>
+            <nav className={styles.navContent}>
+              <Link href="/" className={styles.navItem}>Home</Link>
+              {
+                contentsNavItems.map((navItem, navIndex) => (
+                  <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
+                ))
+              }
+            </nav>
           </nav>
-        </nav>
         <article className={`${styles.article} container`}>
           {headerContent &&
             <header className={styles.header}>{headerContent}</header>

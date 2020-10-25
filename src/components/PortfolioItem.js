@@ -9,7 +9,7 @@ const PortfolioItem = ({ portfolioItem }) => {
   return (
     <Box
       title={portfolioItem.title}
-      link={`${portfolioItem.path}/`}
+      link={`${portfolioItem.path}`}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
       width={["half-tablet", "one-quarter-widescreen"]}
     >
