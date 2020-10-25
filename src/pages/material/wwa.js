@@ -6,6 +6,7 @@ import SEO from "../../components/seo"
 import MaterialNavItem from "../../data/materials/navItem.json"
 import PageHeader from "../../components/PageHeader"
 import InfoNote from "../../components/Note/InfoNote"
+import WarningNote from "../../components/Note/WarningNote"
 import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
 import ImageModal from "../../components/Modal/ImageModal"
@@ -38,6 +39,9 @@ class WWAMaterialPage extends React.Component {
               <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial">埋め込み方は当サイトの資料集で知ることができます。</a></li>
             </ul>
           </InfoNote>
+          <WarningNote>
+            <p>タグ「標準素材風」の一部素材には、ＮＡＯさんのＷＷＡ標準素材を使用しています。問題がありましたら、削除する場合があります。</p>
+          </WarningNote>
         </div>
         <StaticQuery
           query={graphql`
