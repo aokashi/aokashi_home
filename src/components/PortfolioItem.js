@@ -5,11 +5,11 @@ import convertDate from "../utils/convertDate"
 import Box from "./Box/Box"
 import { Link } from "gatsby"
 
-const PortfolioItem = ({ portfolioItem }) => {
+const PortfolioItem = ({ portfolioItem, slug }) => {
   return (
     <Box
       title={portfolioItem.title}
-      link={`${portfolioItem.path}/`}
+      link={slug}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
       width={["half-tablet", "one-quarter-widescreen"]}
     >
@@ -38,6 +38,7 @@ PortfolioItem.propTypes = {
       alt: PropTypes.string,
     })),
   }).isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default PortfolioItem

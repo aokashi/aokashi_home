@@ -74,8 +74,8 @@ class PortfolioPage extends React.Component {
             query AllPortfolioItemQuery {
               allMarkdownRemark(
                 filter: {
-                  frontmatter: {
-                    path: {
+                  fields: {
+                    slug: {
                       glob: "/portfolio/*"
                     }
                   }
@@ -87,6 +87,9 @@ class PortfolioPage extends React.Component {
               ) {
                 group(field: frontmatter___season) {
                   nodes {
+                    fields {
+                      slug
+                    }
                     frontmatter {
                       date
                       images {
@@ -101,7 +104,6 @@ class PortfolioPage extends React.Component {
                       }
                       tags
                       title
-                      path
                       season
                     }
                   }
@@ -132,6 +134,7 @@ class PortfolioPage extends React.Component {
                       {season.nodes.map((item, itemIndex) => (
                         <PortfolioItem
                           portfolioItem={item.frontmatter}
+                          slug={item.fields.slug}
                           key={itemIndex}
                         />
                       ))}
