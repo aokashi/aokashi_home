@@ -69,7 +69,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const tagName = groupItem.fieldValue
 
     createPage({
-      path: `/portfolio/tag/${tagName}/`,
+      path: `/portfolio/tag/${tagName}`,
       component: path.resolve('./src/templates/portfolio-tag.js'),
       context: {
         tag: tagName,
@@ -83,7 +83,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === 'MarkdownRemark') {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode,
+      trailingSlash: false,
+    })
     createNodeField({
       name: `slug`,
       node,

@@ -1,26 +1,26 @@
 - name: WWA
   type: contents
-  link: /wwa/
+  link: /wwa
   icon: /images/menu_icon-wwa.png
   color: '#ffc0c0'
 - name: Software
   type: contents
-  link: /software/
+  link: /software
   icon: /images/menu_icon-software.png
   color: '#e0e0e0'
 - name: Docs
   type: contents
-  link: /docs/
+  link: /docs
   icon: /images/menu_icon-docs.png
   color: '#c0ffa0'
 - name: Material
   type: contents
-  link: /material/
+  link: /material
   icon: /images/menu_icon-material.png
   color: '#a0e0e0'
 - name: Portfolio
   type: contents
-  link: /portfolio/
+  link: /portfolio
   icon: /images/menu_icon-portfolio.png
   color: '#e0a0e0'
 - name: Blog
