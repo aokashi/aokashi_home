@@ -31,6 +31,7 @@ contents.aokashi.net
 
     .
     ├── content
+    ├── cms
     ├── data
     ├── node_modules
     ├── src
@@ -47,6 +48,7 @@ contents.aokashi.net
     └── README.md
 
 - `content`: 旧サイトの記事ファイルです。旧サイトの内容の移植のために残していますが、移植なしに削除する場合もあります。
+- `cms`: Strapi のソースファイルです。詳細は後述します。
 - `data`: 旧サイトのデータファイルです。現サイトに含まれていないデータが含まれています。
 - `src`: ソースファイルです。詳しくは中の README.md をご確認ください。
 - `static`: ビルド時に配置されるファイルです。 `src` ディレクトリ内の画像ファイルでは最適化が行われますが、本ディレクトリ内では行われません。
@@ -54,6 +56,13 @@ contents.aokashi.net
 - `gatsby-config.js`: Gatsby.js の設定ファイルです。
 - `gatsby-node.js`: Aokashi Home ビルド時に実行されている JavaScript ソースファイルです。
 - `gatsby-ssr.js`: SSR(サーバーサイドレンダリング) 技術に関する設定が含まれている JavaScript ソースファイルです。
+
+## Strapi について
+本サイトではヘッドレスCMSとして Strapi を使用しています。
+
+資料集のページはこの Strapi のデータベースに格納されており、表示の度に Strapi のデータから取得しています。
+
+現在は資料集のページしか格納していませんが、他にも WWA ゲームの情報やソフトウェアの情報なども移行する予定です。
 
 ## ライセンスについて
 **Apache 2.0** ライセンスが適用されます。
