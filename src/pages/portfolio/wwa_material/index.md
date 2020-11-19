@@ -44,7 +44,7 @@ WWA のイメージ素材を制作しています。 WWA そのものを制作�
 
 2016年以降ではWWA Wingの開発が進んだことで、WWA作品の制作に利用されるようになりました。
 
-<link-button href="/material/wwa/">WWA素材を見てみる</link-button>
+<link-button href="/material/wwa">WWA素材を見てみる</link-button>
 
 このWWA素材は制作を始めた2008年から現在まで続けています。元々はゲーム制作の代替として始まったのですが、他者の WWA 画像素材に影響を受けたこともあって画像素材の制作は長続きし、完成度は高まっていきました。 **自分が一番深く取り組んだものとしては、おそらくこのWWA素材の制作が正しいかもしれません**。
 
@@ -52,6 +52,6 @@ WWA のイメージ素材を制作しています。 WWA そのものを制作�
 
 この他にも、 RPG ツクールMV 対応の素材も制作しました。この時期になると、「視点の角度」や「光の当たり方」などといった立体的な考えを考慮しながら制作してきました。
 
-<link-button href="/material/tkool_mv/">RPGツクールMV 対応素材を見てみる</link-button>
+<link-button href="/material/tkool_mv">RPGツクールMV 対応素材を見てみる</link-button>
 
 詳細については下記関連リンクから自分のブログの記事をご確認ください。

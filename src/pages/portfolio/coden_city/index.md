@@ -33,7 +33,7 @@ words:
 
 ホームページのコンテンツの増加に合わせてリニューアルを進めました。最初はよくわからない文字列が並んでいた HTML ソースも次第に理解し、2010年の8月頃には、 **HTML をそのまま編集出来るようになるまでスキルが身につきました**。
 
-2010年末には、ある程度欲しいコンテンツが揃う形となります。それ以降はコンテンツ整理のために Web サイトの整理が続き、Coden Cityは2011年1月6日 [Road Works County](/portfolio/road_works_county/) に統合され役目を終えることになります。
+2010年末には、ある程度欲しいコンテンツが揃う形となります。それ以降はコンテンツ整理のために Web サイトの整理が続き、Coden Cityは2011年1月6日 [Road Works County](road_works_county) に統合され役目を終えることになります。
 
 ホームページの制作を通じて、下記のことが理解できました。
 
@@ -51,4 +51,4 @@ words:
 - [2代目後期](https://contents.aokashi.net/restore/coden_2-2)
 - [3代目](https://contents.aokashi.net/restore/coden_3)
 
-(Coden City and Zeist City 共通センターは[Zeist Cityのページ](/portfolio/zeist_city/)にあります。)
+(Coden City and Zeist City 共通センターは[Zeist Cityのページ](zeist_city)にあります。)
