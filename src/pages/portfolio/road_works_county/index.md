@@ -14,8 +14,8 @@ images:
     alt: Road Works County (2代目)
     description: 2代目のスクリーンショットです。
 links:
-  - link: http://www.netmania.jp/technique/hp/hp001.php
-    name: PHPを使って更新をラクにする - ネットマニア
+  - link: https://web.archive.org/web/20171216191415/http://www.netmania.jp/technique/hp/hp001.php
+    name: PHPを使って更新をラクにする - ネットマニア (サイト消失のため 2017/12/16 当時のアーカイブを表示)
   - link: https://info.wwawing.com/restore/
     name: まつゆき・ヒラリラーの復元サイト一覧
 words:
@@ -24,7 +24,7 @@ words:
 
 [Coden City](coden_city) と [Zeist City](zeist_city) の2つに分かれていたWebサイトを1つにするために設立したWebサイトです。Zeist Cityの改装により開設し、後にCoden Cityを統合しました。
 
-WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。この構造は [ネットマニア](http://www.netmania.jp/) のノウハウ (関連リンク参照) に影響を受けて、前代のCoden CityやZeist Cityにも行っていました。
+WWAやTOWNなどの複数のコンテンツがあっても管理しやすいように、下記画像のように共通部分をテキストファイルにまとめて、PHPでWebページを出力しています。この構造はネットマニアのノウハウ (関連リンク参照) に影響を受けて、前代のCoden CityやZeist Cityにも行っていました。
 
 ![Road Works Countyの構成図](./site_structure.png)
 
