@@ -41,10 +41,12 @@ export const pageQuery = graphql`
   ) {
     allMarkdownRemark(
       filter: {
-        frontmatter: {
-          path: {
+        fields: {
+          slug: {
             glob: "/portfolio/*"
           }
+        }
+        frontmatter: {
           tags: {
             in: [$tag]
           }
@@ -73,7 +75,6 @@ export const pageQuery = graphql`
           }
           tags
           title
-          path
           season
         }
       }

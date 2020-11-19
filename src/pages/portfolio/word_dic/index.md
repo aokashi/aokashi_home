@@ -1,5 +1,4 @@
 ---
-path: /portfolio/word_dic
 template: portfolio-item
 title: 単語辞書プログラム
 date: "2014-08-30"

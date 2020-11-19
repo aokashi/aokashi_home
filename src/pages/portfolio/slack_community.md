@@ -1,5 +1,4 @@
 ---
-path: /portfolio/slack_community
 template: portfolio-item
 title: Slack を使用した新たなコミュニティ作り
 date: "2015-08-22"

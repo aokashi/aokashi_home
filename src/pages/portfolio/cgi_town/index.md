@@ -1,5 +1,4 @@
 ---
-path: /portfolio/cgi_town
 template: portfolio-item
 title: CGIゲーム「TOWN」の運営
 date: "2010-02-24"

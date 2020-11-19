@@ -1,5 +1,4 @@
 ---
-path: /portfolio/zeist_city
 template: portfolio-item
 title: Zeist City
 date: "2010-08-01"

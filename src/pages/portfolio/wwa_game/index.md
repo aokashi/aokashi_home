@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_game
 template: portfolio-item
 date: "2010-02-21"
 title: WWAゲームの制作

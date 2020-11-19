@@ -1,5 +1,4 @@
 ---
-path: /portfolio/coden_city
 template: portfolio-item
 title: Coden City (コーデンシティ)
 date: "2010-02-03"

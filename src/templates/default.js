@@ -33,12 +33,14 @@ const DefaultTemplate = ({
 
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       id
       htmlAst
       tableOfContents
+      fields {
+        slug
+      }
       frontmatter {
-        path
         title
       }
     }

@@ -1,5 +1,4 @@
 ---
-path: /portfolio/compaq_broken
 template: portfolio-item
 title: ノートPCが壊れた
 date: "2010-12-01"

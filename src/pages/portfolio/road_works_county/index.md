@@ -1,5 +1,4 @@
 ---
-path: /portfolio/road_works_county
 template: portfolio-item
 title: Road Works County
 date: "2010-11-23"

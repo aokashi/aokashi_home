@@ -138,10 +138,12 @@ const PortfolioCarousel = ({ images }) => {
 export const pageQuery = graphql`
   query ($path: String!) {
     markdownRemark(
-      frontmatter: {
-        path: {
+      fields: {
+        slug: {
           eq: $path
         }
+      }
+      frontmatter: {
         template: {
           eq: "portfolio-item"
         }
@@ -150,8 +152,10 @@ export const pageQuery = graphql`
       id
       htmlAst
       tableOfContents
+      fields {
+        slug
+      }
       frontmatter {
-        path
         title
         tags
         date

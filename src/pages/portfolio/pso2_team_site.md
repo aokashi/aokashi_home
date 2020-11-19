@@ -1,5 +1,4 @@
 ---
-path: /portfolio/pso2_team_site
 template: portfolio-item
 title: PSO2 チームサイトの制作
 date: "2013-04-13"

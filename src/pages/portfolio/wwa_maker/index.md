@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_maker
 title: WWA Maker
 template: portfolio-item
 date: "2019-05-09"

@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_save_js
 template: portfolio-item
 title: WWASAVE.js の改修
 date: "2018-04-19"

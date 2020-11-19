@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_wing_pe
 template: portfolio-item
 title: WWA Wing PE
 date: "2017-12-09"

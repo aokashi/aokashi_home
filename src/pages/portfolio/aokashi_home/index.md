@@ -1,5 +1,4 @@
 ---
-path: /portfolio/aokashi_home
 template: portfolio-item
 title: Aokashi Home
 date: "2015-03-08"

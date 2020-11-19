@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_wing
 template: portfolio-item
 title: WWA Wing の開発
 date: "2017-08-24"

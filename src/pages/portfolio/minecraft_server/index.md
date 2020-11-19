@@ -1,5 +1,4 @@
 ---
-path: /portfolio/minecraft_server
 template: portfolio-item
 title: 自宅で Minecraft サーバー
 date: "2018-05-04"

@@ -1,5 +1,4 @@
 ---
-path: /portfolio/a_train
 template: portfolio-item
 title: A列車で行こうで街づくり
 date: "2009-05-01"
