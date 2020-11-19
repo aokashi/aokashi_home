@@ -24,6 +24,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
           data.allMarkdownRemark.nodes.map((item, itemIndex) => (
             <PortfolioItem
               portfolioItem={item.frontmatter}
+              slug={item.fields.slug}
               key={itemIndex}
             />
           ))
@@ -55,6 +56,9 @@ export const pageQuery = graphql`
       }
     ) {
       nodes {
+        fields {
+          slug
+        }
         frontmatter {
           date
           images {
