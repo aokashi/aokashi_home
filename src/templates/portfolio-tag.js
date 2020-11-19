@@ -24,6 +24,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
           data.allMarkdownRemark.nodes.map((item, itemIndex) => (
             <PortfolioItem
               portfolioItem={item.frontmatter}
+              slug={item.fields.slug}
               key={itemIndex}
             />
           ))
@@ -40,10 +41,12 @@ export const pageQuery = graphql`
   ) {
     allMarkdownRemark(
       filter: {
-        frontmatter: {
-          path: {
+        fields: {
+          slug: {
             glob: "/portfolio/*"
           }
+        }
+        frontmatter: {
           tags: {
             in: [$tag]
           }
@@ -55,6 +58,9 @@ export const pageQuery = graphql`
       }
     ) {
       nodes {
+        fields {
+          slug
+        }
         frontmatter {
           date
           images {
@@ -69,7 +75,6 @@ export const pageQuery = graphql`
           }
           tags
           title
-          path
           season
         }
       }

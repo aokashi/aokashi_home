@@ -1,5 +1,4 @@
 ---
-path: /portfolio/aokashi_home
 template: portfolio-item
 title: Aokashi Home
 date: "2015-03-08"
@@ -24,7 +23,7 @@ words:
   - gatsby
 ---
 
-[Aokashi.net](/portfolio/aokashi_dot_net/) に代わる個人サイトとして設立しました。Webサイトとしては5代目となり、もうこれ以上サイト名を変える必要が無いように、サイト名はシンプルな形で済ませました。
+[Aokashi.net](aokashi_dot_net) に代わる個人サイトとして設立しました。Webサイトとしては5代目となり、もうこれ以上サイト名を変える必要が無いように、サイト名はシンプルな形で済ませました。
 
 前代のAokashi.netはブログを融合した新しい方法を模索するWebサイトとして考えていましたが、今回の Aokashi Home は単純な個人サイトとして考え方を変えています。そのため、ブログとは切り離し、各コンテンツもコンパクトにまとめています。
 

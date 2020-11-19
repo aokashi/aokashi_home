@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwa_wing_pe
 template: portfolio-item
 title: WWA Wing PE
 date: "2017-12-09"
@@ -24,7 +23,7 @@ words:
   - wwa
 ---
 
-[WWA Wing の開発](/portfolio/wwa_wing/) がある程度進んだことで、 WWA Wing をベースに新しい機能を追加した WWA Wing PE を開発しました。
+[WWA Wing の開発](wwa_wing) がある程度進んだことで、 WWA Wing をベースに新しい機能を追加した WWA Wing PE を開発しました。
 
 ## 開発の経緯
 

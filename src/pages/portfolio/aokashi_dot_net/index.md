@@ -1,5 +1,4 @@
 ---
-path: /portfolio/aokashi_dot_net
 template: portfolio-item
 title: Aokashi.net
 date: "2012-03-12"
@@ -29,7 +28,7 @@ links:
 
 Aokashi.net は2012年に公開したブログまたはWebサイトです。
 
-元々は、Webサイト「[Road Works County](/portfolio/road_works_county/)」とブログ「青き樫の家」で運営していましたが、下記の理由から、Aokashi.netの設立が決まりました。
+元々は、Webサイト「[Road Works County](road_works_county)」とブログ「青き樫の家」で運営していましたが、下記の理由から、Aokashi.netの設立が決まりました。
 
 - Webサイトの名前を変更する構想があった
 - WordPressの機能を見て「Webサイトとして使えるんじゃないか」と思った
@@ -45,7 +44,7 @@ Aokashi.net は2012年に公開したブログまたはWebサイトです。
 ## WordPress のテーマ制作について
 Aokashi.net の運用と並行して、 WordPress のテーマを7個制作していました (さらに WordPress のテーマにしなかった HTML テンプレートの段階も含めると 10個)。
 
-[HTMLテンプレートの制作](/portfolio/html_template/) と同じように、様々なWebサイトのレイアウトに影響を受けて自分も制作したい思いと、「これなら見やすくて使いやすいレイアウトになるだろう」と再現したい思いから変わったデザインをいくつか制作していました。
+[HTMLテンプレートの制作](html_template) と同じように、様々なWebサイトのレイアウトに影響を受けて自分も制作したい思いと、「これなら見やすくて使いやすいレイアウトになるだろう」と再現したい思いから変わったデザインをいくつか制作していました。
 
 また、 WordPress の最新情報を追うこともあり、自分のテーマに最新機能を取り入れることもありました。WordPress 3.4 ではテーマカスタマイザー機能が追加されましたが、自分のテーマでもいち早く取り入れたことで [PSO2 のチームサイト](/portfolio/pso2_team_site/) の完成が実現しました。
 

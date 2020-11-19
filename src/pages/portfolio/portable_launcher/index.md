@@ -1,5 +1,4 @@
 ---
-path: /portfolio/portable_launcher
 template: portfolio-item
 title: Portable Launcher
 date: "2017-06-17"

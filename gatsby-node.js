@@ -27,8 +27,8 @@ exports.createPages = async ({ actions, graphql }) => {
       }
       portfolioTags: allMarkdownRemark(
         filter: {
-          frontmatter: {
-            path: {
+          fields: {
+            slug: {
               glob: "/portfolio/*"
             }
           }
@@ -81,7 +81,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === 'MarkdownRemark') {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode,
+      trailingSlash: false,
+    })
     createNodeField({
       name: `slug`,
       node,

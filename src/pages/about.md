@@ -1,5 +1,4 @@
 ---
-path: /about
 title: 当サイトについて
 template: default
 date: "2019-10-01"

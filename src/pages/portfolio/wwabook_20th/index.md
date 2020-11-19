@@ -1,5 +1,4 @@
 ---
-path: /portfolio/wwabook_20th
 template: portfolio-item
 title: WWAの冒険書 ～20年の軌跡をQuick Load!!～
 date: "2016-12-29"

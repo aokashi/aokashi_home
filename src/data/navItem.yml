@@ -1,6 +1,6 @@
 - name: WWA
   type: contents
-  link: /wwa/
+  link: /wwa
   icon: /images/menu_icon-wwa.png
   color: '#ffc0c0'
 - name: Software
