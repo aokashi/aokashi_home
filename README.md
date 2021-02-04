@@ -21,8 +21,6 @@ npm run develop
 contents.aokashi.net
 |- banner *
 |  `- site_banner-takabo_edge2.png (EDGE2 のバナー)
-|- docs
-|  `- (Aokashi Home 資料集)
 `- restore
    `- (各復元サイトのディレクトリ)
 ```
