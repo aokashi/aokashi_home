@@ -16,7 +16,7 @@ images:
 links:
   - link: http://www.artdink.co.jp/japanese/title/ads/
     name: A列車で行こうDS 公式サイト
-  - link: https://contents.aokashi.net/docs/?World
+  - link: https://docs.aokashi.net/wiki/Portal:%E4%B8%96%E7%95%8C%E8%A6%B3
     name: 自分の資料集の世界観に関するページ
 words:
   - a_train

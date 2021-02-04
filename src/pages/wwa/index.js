@@ -84,7 +84,7 @@ const WWAPage = () => {
           <Img fixed={data.file.childImageSharp.fixed} alt="WWA Wing" /> 対応のWWAのみ表示する
         </label>
         <WarningNote>
-          <p>WWA Wing 未対応のWWAをプレイする場合は <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
+          <p>WWA Wing 未対応のWWAをプレイする場合は旧資料集の <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA" title="WWA/HowToLaunchWWA - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
         </WarningNote>
       </div>
       <BoxList>

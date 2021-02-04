@@ -8,9 +8,9 @@ const Footer = ({ siteTitle }) => (
       <nav className="buttons is-centered">
         <Link to="/" className="button is-dark">Home</Link>
         <Link to="/about/" className="button is-dark">当サイトについて</Link>
-        <a href="http://aokashi.hatenablog.jp" className="button is-dark">Blog</a>
-        <a href="https://www.wwafansq.com" className="button is-dark">WWA FanSquare</a>
-        <a href="https://scrapbox.io/aokashi" className="button is-dark">Scrapbox</a>
+        <a href="http://aokashi.hatenablog.jp" className="button is-dark" target="_blank" rel="noopener noreferrer">Blog</a>
+        <a href="https://docs.aokashi.net" className="button is-dark" target="_blank" rel="noopener noreferrer">Docs</a>
+        <a href="https://www.wwafansq.com" className="button is-dark" target="_blank" rel="noopener noreferrer">WWA FanSquare</a>
       </nav>
       <div>
         <div>

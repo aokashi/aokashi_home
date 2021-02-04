@@ -36,7 +36,7 @@ class WWAMaterialPage extends React.Component {
           <InfoNote>
             <p>セット以外のWWA素材はWWA制作に使う画像ファイルに埋め込む必要があります。</p>
             <ul>
-              <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial">埋め込み方は当サイトの資料集で知ることができます。</a></li>
+              <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial" title="WWA/HowToUseMaterial - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">埋め込み方は当サイトの旧資料集で知ることができます。</a></li>
             </ul>
           </InfoNote>
           <WarningNote>
