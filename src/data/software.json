@@ -1,12 +1,5 @@
 [
   {
-    "id": "portable_launcher",
-    "name": "Portable Launcher",
-    "description": "USBメモリ上で起動できるWindowsアプリケーションです。",
-    "repository": "https://github.com/aokashi/PortableLauncher",
-    "keywords": ["Windows", "C#"],
-    "references": []
-  }, {
     "id": "word_dictionary",
     "name": "単語辞書プログラム",
     "description": "単語を見やすく整理するPHPのプログラムです。増えていく(と思われる)流行語とかの言葉をまとめる目的で制作しました。",
@@ -30,7 +23,7 @@
         "url": "https://contents.aokashi.net/works/name-maker/namemaker.html"
       }, {
         "name": "参考元",
-        "url": "http://www.hirarira.net/namemaker/"
+        "url": "https://github.com/hirarira/RandomName"
       }
     ]
   }, {
@@ -46,6 +39,51 @@
       }, {
         "name": "Musmus (音楽提供元)",
         "url": "http://musmus.main.jp/"
+      }
+    ]
+  }, {
+    "id": "aokashi_box",
+    "name": "aokashi-box",
+    "description": "スマートフォンでも見れる Pukiwiki テーマです。",
+    "repository": "https://github.com/aokashi/aokashi-box",
+    "keywords": ["PHP"],
+    "references": []
+  }, {
+    "id": "portable_launcher",
+    "name": "Portable Launcher",
+    "description": "USBメモリ上で起動できるWindowsアプリケーションです。",
+    "repository": "https://github.com/aokashi/PortableLauncher",
+    "keywords": ["Windows", "C#"],
+    "references": []
+  }, {
+    "id": "wide_wiki",
+    "name": "Wide Wiki",
+    "description": "タイトルからURLで探せるWikiシステムです。",
+    "repository": "https://github.com/aokashi/wide-wiki",
+    "keywords": ["JavaScriot", "Node.js"],
+    "references": []
+  }, {
+    "id": "wwa_message_loader",
+    "name": "WWA Message Loader",
+    "description": "WWAのマップデータからすべてのメッセージを表示したり検索したりできるツールです。",
+    "repository": "https://github.com/aokashi/WWAMessageLoader",
+    "keywords": ["JavaScript", "Vue.js"],
+    "references": [
+      {
+        "name": "ポートフォリオのページ",
+        "url": "https://www.aokashi.net/portfolio/wwa_collection"
+      }
+    ]
+  }, {
+    "id": "vertical_blog_theme",
+    "name": "Vertical BlogTheme",
+    "description": "はてなブログのテーマです。",
+    "repository": "https://github.com/aokashi/vertical-blogtheme",
+    "keywords": ["sass"],
+    "references": [
+      {
+        "name": "テーマストアのページ",
+        "url": "https://blog.hatena.ne.jp/-/store/theme/26006613497175020"
       }
     ]
   }
