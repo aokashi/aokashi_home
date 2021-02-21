@@ -48,5 +48,29 @@
         "url": "http://musmus.main.jp/"
       }
     ]
+  }, {
+    "id": "wwa_message_loader",
+    "name": "WWA Message Loader",
+    "description": "WWAのマップデータからすべてのメッセージを表示したり検索したりできるツールです。",
+    "repository": "https://github.com/aokashi/WWAMessageLoader",
+    "keywords": ["JavaScript", "Vue.js"],
+    "references": [
+      {
+        "name": "ポートフォリオのページ",
+        "url": "https://www.aokashi.net/portfolio/wwa_collection"
+      }
+    ]
+  }, {
+    "id": "vertical_blog_theme",
+    "name": "Vertical BlogTheme",
+    "description": "はてなブログのテーマです。",
+    "repository": "https://github.com/aokashi/vertical-blogtheme",
+    "keywords": ["sass"],
+    "references": [
+      {
+        "name": "テーマストアのページ",
+        "url": "https://blog.hatena.ne.jp/-/store/theme/26006613497175020"
+      }
+    ]
   }
 ]

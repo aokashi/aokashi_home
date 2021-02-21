@@ -62,14 +62,14 @@ function getLinks(softwareItem) {
     })
   }
 
-  links.concat(softwareItem.references.map((reference) => {
-    return {
+  softwareItem.references.forEach((reference) => {
+    links.push({
       "link": reference.url,
       "name": reference.name,
-    }
-  }))
+    })
+  })
 
-  return links;
+  return links
 }
 
 export default SoftwarePage
