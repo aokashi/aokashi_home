@@ -31,7 +31,11 @@ words:
 
 WWA Wing はブラウザで遊べる RPG 実行システム「World Wide Adventure」を HTML5 (+ JavaScript Canvas2D) で動かすことを目標に [まつゆき](https://matsuyuki.dev)がほぼ全体を開発しました。
 
-- [WWA Wing の開発の経緯や内容については、まつゆきのポートフォリオ記事からご覧になれます。](https://portfolio.rmn-web.net/post/wwawing/)
+<info-note>
+
+WWA Wing の開発の経緯や内容については、 [まつゆきのポートフォリオ記事](https://portfolio.matsuyuki.dev/post/wwawing/) からご覧になれます。
+
+</info-note>
 
 WWA Wing がリリースされて間もない頃、自分は不具合報告のお手伝いをしていましたが、後に開発をお手伝いすることになりました。
 
