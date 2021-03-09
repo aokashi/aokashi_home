@@ -44,7 +44,7 @@
   }, {
     "id": "aokashi_box",
     "name": "aokashi-box",
-    "description": "スマートフォンでも見れる Pukiwiki スキンです。",
+    "description": "スマートフォンでも見れる Pukiwiki のスキンです。",
     "repository": "https://github.com/aokashi/aokashi-box",
     "keywords": ["PHP"],
     "references": []
