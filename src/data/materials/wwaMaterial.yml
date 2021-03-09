@@ -615,3 +615,13 @@
   tags:
     - 標準素材風
     - 建物
+- name: 18Car-LightCar
+  file: /materials/wwa/18Car-LightCar.gif
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+- name: 18Car-SedanCar
+  file: /materials/wwa/18Car-SedanCar.gif
+  tags:
+    - WWA素材第3世代
+    - 乗り物
