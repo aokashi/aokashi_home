@@ -639,3 +639,9 @@
     - WWA素材第3世代
     - 乗り物
     - 列車
+- name: VeBicycle17
+  file: /materials/wwa/VeBicycle17.gif
+  publishedAt: 2021-03-12
+  tags:
+    - WWA素材第3世代
+    - 乗り物
