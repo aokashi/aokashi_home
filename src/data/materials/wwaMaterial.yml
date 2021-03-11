@@ -602,28 +602,40 @@
     - 列車
 - name: 18Rail
   file: /materials/wwa/18Rail.gif
+  publishedAt: 2020-05-31
   tags:
     - WWA素材第3世代
     - 地面
 - name: 20minecart
   file: /materials/wwa/20minecart.gif
+  publishedAt: 2020-08-18
   tags:
     - WWA素材第3世代
     - 乗り物
 - name: 20wwa_house
   file: /materials/wwa/20wwa_house.gif
+  publishedAt: 2021-03-09
   tags:
     - 標準素材風
     - 建物
 - name: 18Car-LightCar
   file: /materials/wwa/18Car-LightCar.gif
+  publishedAt: 2021-03-09
   tags:
     - WWA素材第3世代
     - 乗り物
     - 自動車
 - name: 18Car-SedanCar
   file: /materials/wwa/18Car-SedanCar.gif
+  publishedAt: 2021-03-09
   tags:
     - WWA素材第3世代
     - 乗り物
     - 自動車
+- name: VeLocomotive16-6
+  file: /materials/wwa/VeLocomotive16-6.gif
+  publishedAt: 2021-03-12
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+    - 列車
