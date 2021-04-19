@@ -3,7 +3,7 @@
   tags:
     - 線路
   description: |
-    線路を敷く地面を先に設置してください。バラストは後に追加予定です。
+    線路を敷く地面を先に設置してください。
 - name: VeCommuterTrain17-1
   file: /materials/tkool_mv/VeCommuterTrain17-1.png
   tags:
