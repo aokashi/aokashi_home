@@ -30,9 +30,9 @@ class TkoolMvPage extends React.Component {
       }>
         <SEO title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <div className="content">
-          <p>1マス48×48ピクセルの画像素材です。RPGツクールMVに対応しています。</p>
+          <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>
-            <p>RPGツクールMVとRPGツクールMZに対応していますが、RTP素材は含まれていません。RPGツクールMV以外でもご利用できます。</p>
+            <p>RPGツクールMVとRPGツクールMZに対応していますが、RTP素材は含まれていません。RPGツクール以外でもご利用できます。</p>
           </InfoNote>
         </div>
         {this.renderMaterialList()}
