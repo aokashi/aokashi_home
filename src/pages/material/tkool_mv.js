@@ -25,14 +25,17 @@ class TkoolMvPage extends React.Component {
     return (
       <Layout headerContent={
         <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-          <h1>RPGツクールMV対応素材</h1>
+          <h1>RPGツクールMV/MZ対応素材</h1>
         </PageHeader>
       }>
-        <SEO title="RPGツクールMV対応素材" description="RPGツクールMV対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
+        <SEO title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <div className="content">
-          <p>1マス48×48ピクセルの画像素材です。RPGツクールMVに対応しています。</p>
+          <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>
-            <p>RPGツクールMVに対応していますが、RTP素材は含まれていません。RPGツクールMV以外でもご利用できます。</p>
+            <p>特に表記がない場合は、画像素材のコピーとペーストでゲームの素材に組み込む必要があります。</p>
+          </InfoNote>
+          <InfoNote>
+            <p>RPGツクールMVとRPGツクールMZに対応していますが、RTP素材は含まれていません。RPGツクール以外でもご利用できます。</p>
           </InfoNote>
         </div>
         {this.renderMaterialList()}
