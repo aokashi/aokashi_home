@@ -32,6 +32,9 @@ class TkoolMvPage extends React.Component {
         <div className="content">
           <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>
+            <p>特に表記がない場合は、画像素材のコピーとペーストでゲームの素材に組み込む必要があります。</p>
+          </InfoNote>
+          <InfoNote>
             <p>RPGツクールMVとRPGツクールMZに対応していますが、RTP素材は含まれていません。RPGツクール以外でもご利用できます。</p>
           </InfoNote>
         </div>
