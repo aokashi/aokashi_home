@@ -1,24 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const PasotanIframe = ({ elementId, id }) => {
+const JisakuIframe = ({ elementId, id }) => {
   return (
     <>
       <iframe
         title={`pasotan_${elementId}`}
         id={`pasotan_${elementId}`}
         width="680"
-        src={`https://pasotan.com/tools/builder/widget/partlist/v2/${id}`}
+        src={`https://jisaku.com/widget/partlist/${id}/l`}
         frameborder="0">
       </iframe>
-      <script src={`https://pasotan.com/tools/builder/widget/js?id=pasotan_${elementId}`} async></script>
+      <script src={`https://jisaku.com/tools/builder/widget/js?id=pasotan_${elementId}`} async></script>
     </>
   )
 }
 
-PasotanIframe.propTypes = {
+JisakuIframe.propTypes = {
   elementId: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired
 }
 
-export default PasotanIframe
+export default JisakuIframe

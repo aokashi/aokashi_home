@@ -35,4 +35,4 @@ tags:
 
 選定するパーツのメーカーや製品にとことん拘れる自作 PC は、まさに **自分を表現するにはうってつけであります**。
 
-<pasotan-iframe elementId="8a6vvf" id="X6qKB/2">
+<jisaku-iframe elementId="qbk8hn" id="YUvgFoED2yipZ6sett89Q2">
