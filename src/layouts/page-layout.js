@@ -16,15 +16,12 @@ import {
   nav,
   navContent,
   navItem,
-  navItem,
   isActive,
   article,
   header,
   rightSidebar,
   bottomLink,
   floatNav,
-  navItem,
-  isActive,
   navIcon,
   navText
 } from "./page-layout.module.sass"

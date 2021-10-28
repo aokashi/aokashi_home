@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import RenderAst from "../utils/renderAst"
 import Layout from "../layouts/page-layout"
 
 import PageHeader from "../components/PageHeader"
@@ -11,7 +10,7 @@ const DefaultTemplate = ({
   data
 }) => {
   const { markdownRemark } = data
-  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
+  const { frontmatter, html, tableOfContents } = markdownRemark
   return (
     <Layout
       sidebarContent={<TableOfContents html={tableOfContents} />}
@@ -22,11 +21,10 @@ const DefaultTemplate = ({
       }
     >
       <SEO title={frontmatter.title} />
-      <div className="content">
-        {
-          RenderAst(htmlAst)
-        }
-      </div>
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Layout>
   )
 }
@@ -35,7 +33,7 @@ export const pageQuery = graphql`
   query ($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       id
-      htmlAst
+      html
       tableOfContents
       fields {
         slug

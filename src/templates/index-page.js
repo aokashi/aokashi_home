@@ -6,7 +6,6 @@ import {
   sectionTitle,
   sectionItem,
   itemTitle,
-  itemText,
   itemText
 } from "./index-page.module.sass"
 import SEO from "../components/seo"

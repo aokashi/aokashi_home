@@ -57,7 +57,6 @@ module.exports = {
               icon: false,
             }
           },
-          `gatsby-remark-component`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -103,7 +102,8 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-mdx`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -24,7 +24,6 @@ import {
   hasLink,
   socialIcon,
   isIcon,
-  socialIcon,
   isText,
   information,
   informationTitle,

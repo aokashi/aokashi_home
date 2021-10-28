@@ -4,12 +4,10 @@ import { graphql, Link } from "gatsby"
 import {
   summary,
   headerIcon,
-  headerIcon,
   images as styleImages
 } from "./portfolio-item.module.sass"
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"
-import renderAst from "../utils/renderAst"
 import Carousel from "../components/Carousel"
 import convertDate from "../utils/convertDate"
 import BackLink from "../components/BackLink"
@@ -24,7 +22,7 @@ const PortfolioItemTemplate = ({
   data
 }) => {
   const { markdownRemark } = data
-  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
+  const { frontmatter, html, tableOfContents } = markdownRemark
   const aboutWords = frontmatter.words
     ? data.allPortfolioAboutWordYaml.nodes.filter(aboutWord => {
       return frontmatter.words.includes(aboutWord.name)
@@ -38,9 +36,9 @@ const PortfolioItemTemplate = ({
       <SEO title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
-        {
-          renderAst(htmlAst)
-        }
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         {frontmatter.links &&
           <>
             <h2>関連リンク</h2>
@@ -155,7 +153,7 @@ export const pageQuery = graphql`
       }
     ) {
       id
-      htmlAst
+      html
       tableOfContents
       fields {
         slug
