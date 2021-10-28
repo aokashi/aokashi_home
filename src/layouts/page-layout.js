@@ -15,7 +15,7 @@ import {
   mainContent,
   nav,
   navContent,
-  navItem,
+  navItem as styleNavItem,
   isActive,
   article,
   header,
@@ -71,10 +71,10 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
       <main className={mainContent}>
         <nav className={nav}>
           <nav className={navContent}>
-            <Link href="/" className={navItem}>Home</Link>
+            <Link href="/" className={styleNavItem}>Home</Link>
             {
               contentsNavItems.map((navItem, navIndex) => (
-                <Link href={navItem.link} className={navItem} activeClassName={isActive} key={navIndex}>{navItem.name}</Link>
+                <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>{navItem.name}</Link>
               ))
             }
           </nav>
@@ -102,7 +102,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
               return null
             }
             return (
-              <Link href={navItem.link} className={navItem} activeClassName={isActive} key={navIndex}>
+              <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>
                 <img src={navItem.icon} alt="" className={navIcon} />
                 <span className={navText}>{navItem.name}</span>
               </Link>
