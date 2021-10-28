@@ -1,7 +1,12 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import styles from "./portfolio-item.module.sass"
+import {
+  summary,
+  headerIcon,
+  headerIcon,
+  images as styleImages
+} from "./portfolio-item.module.sass"
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"
 import renderAst from "../utils/renderAst"
@@ -83,16 +88,16 @@ const PortfolioItemTemplate = ({
 const ItemHeader = ({ frontmatter }) => {
   return (
     <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
-      <div className={`${styles.summary} block`}>
+      <div className={`${summary} block`}>
         <h1>{frontmatter.title}</h1>
         <div>
-          <span className={`${styles.headerIcon} icon is-medium`}>
+          <span className={`${headerIcon} icon is-medium`}>
             <img src={DateIcon} alt={"日付:"} />
           </span>
           <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
         </div>
         <div className="tags">
-          <span className={`${styles.headerIcon} icon is-medium`}>
+          <span className={`${headerIcon} icon is-medium`}>
             <img src={TagIcon} alt={"タグ:"} />
           </span>
           {frontmatter.tags.map((tag, tagIndex) => 
@@ -126,7 +131,7 @@ const PortfolioCarousel = ({ images }) => {
   const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 1)
 
   return (
-    <div className={styles.images}>
+    <div className={styleImages}>
       <Carousel items={images} width={maxWidth} height={maxHeight} />
     </div>
   )

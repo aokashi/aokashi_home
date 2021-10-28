@@ -1,14 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styles from "./PageHeader.module.sass"
+import { pageHeader, content } from "./PageHeader.module.sass"
 
 const PageHeaderBase = (styleFunction, contentFunction) => {
   const Component = ({ image, bottomContent, children }) => (
     <div
       style={styleFunction(image)}
-      className={styles.pageHeader}
+      className={pageHeader}
     >
-      <div className={styles.content}>
+      <div className={content}>
         { contentFunction(children, image) }
       </div>
       {bottomContent}

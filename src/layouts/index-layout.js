@@ -5,7 +5,32 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import styles from "./index-layout.module.sass"
+import {
+  indexBody,
+  firstScreen,
+  title,
+  quickContents,
+  aboutme,
+  aboutmeIcon,
+  mainContent,
+  navItem as styleNavItem,
+  navItemLink as styleNavItemLink,
+  navItemIcon as styleNavItemIcon,
+  navItemText as styleNavItemText,
+  social,
+  socialItem as styleSocialItem,
+  socialText as styleSocialText,
+  socialLink,
+  hasLink,
+  socialIcon,
+  isIcon,
+  socialIcon,
+  isText,
+  information,
+  informationTitle,
+  informationLink,
+  informationDate
+} from "./index-layout.module.sass"
 import Link from "../components/Link"
 import Footer from "../components/footer.js"
 import Icon from "../images/aokashi-icon.png"
@@ -72,28 +97,28 @@ const IndexLayout = ({ children }) => {
   return (
     <>
       <Helmet>
-        <body className={styles.indexBody} />
+        <body className={indexBody} />
       </Helmet>
-      <div className={`${styles.firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
-        <div className={styles.title}>
+      <div className={`${firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
+        <div className={title}>
           <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
         </div>
         {
           navItems(data.allNavItemYaml)
         }
-        <div className={styles.quickContents}>
+        <div className={quickContents}>
           {
             Information(data.allFeedAokashiRoom.nodes[0])
           }
-          <div className={styles.aboutme}>
-            <img src={Icon} alt="Aokashi" className={styles.aboutmeIcon}/>
+          <div className={aboutme}>
+            <img src={Icon} alt="Aokashi" className={aboutmeIcon}/>
             {
               socialLinks(data.allSocialLinkYaml)
             }
           </div>
         </div>
       </div>
-      <div className={`${styles.mainContent} container`}>
+      <div className={`${mainContent} container`}>
         {children}
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />
@@ -108,16 +133,16 @@ const navItems = (navData) => (
         <div className={getNavGroupClassName(group.fieldValue)} key={groupIndex}>
           {
             group.nodes.map((navItem, navItemIndex) => (
-              <div className={styles.navItem} key={navItemIndex}>
+              <div className={styleNavItem} key={navItemIndex}>
                 <Link
                   href={navItem.link}
-                  className={styles.navItemLink}
+                  className={styleNavItemLink}
                 >
                   {
                     navItem.icon &&
-                      <img src={navItem.icon} alt={""} className={styles.navItemIcon} />
+                      <img src={navItem.icon} alt={""} className={styleNavItemIcon} />
                   }
-                  <span className={styles.navItemText}>{navItem.name}</span>
+                  <span className={styleNavItemText}>{navItem.name}</span>
                 </Link>
               </div>
             ))
@@ -129,13 +154,13 @@ const navItems = (navData) => (
 )
 
 const socialLinks = (socialData) => (
-  <div className={styles.social}>
+  <div className={social}>
     {
       socialData.nodes.map((socialItem, socialItemIndex) => (
-        <div className={styles.socialItem} key={socialItemIndex}>
+        <div className={styleSocialItem} key={socialItemIndex}>
           <SocialLink socialItem={socialItem}>
             <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
-            <span className={styles.socialText}>
+            <span className={styleSocialText}>
               {socialItem.text}
             </span>
           </SocialLink>
@@ -149,7 +174,7 @@ const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={`${styles.socialLink} ${styles.hasLink}`}>{children}</a>
+      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={`${socialLink} ${hasLink}`}>{children}</a>
     )
   } else {
     return (
@@ -161,21 +186,21 @@ const SocialLink = ({ socialItem, children }) => {
 const SocialIcon = ({ icon, alt }) => {
   if (icon) {
     return (
-      <FontAwesomeIcon icon={["fab", icon]} className={`${styles.socialIcon} ${styles.isIcon}`} />
+      <FontAwesomeIcon icon={["fab", icon]} className={`${socialIcon} ${isIcon}`} />
     )
   } else {
     return (
-      <span className={`${styles.socialIcon} ${styles.isText}`}>{alt}</span>
+      <span className={`${socialIcon} ${isText}`}>{alt}</span>
     )
   }
 }
 
 const Information = (data) => (
-  <div className={styles.information}>
-    <span className={styles.informationTitle}>ブログ記事</span>
-    <a href={data.link} target="_blank" rel="noopener noreferrer" className={styles.informationLink}>
+  <div className={information}>
+    <span className={informationTitle}>ブログ記事</span>
+    <a href={data.link} target="_blank" rel="noopener noreferrer" className={informationLink}>
       {data.title}
-      <time dateTime={data.isoDate} className={styles.informationDate}>{convertDate(data.isoDate)}</time>
+      <time dateTime={data.isoDate} className={informationDate}>{convertDate(data.isoDate)}</time>
     </a>
   </div>
 )

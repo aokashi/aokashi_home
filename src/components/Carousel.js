@@ -3,7 +3,18 @@ import PropTypes from "prop-types"
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
-import styles from "./Carousel.module.sass"
+import {
+  carousel,
+  items as styleItems,
+  item as styleItem,
+  itemFigure,
+  itemImage,
+  itemCaption,
+  backButton,
+  backButtonIcon,
+  nextButton,
+  nextButtonIcon
+} from "./Carousel.module.sass"
 import ArrowIcon from "../images/button_icon-arrow.svg"
 import Image from "./Image"
 
@@ -12,20 +23,20 @@ const Carousel = ({ width, height, items }) => (
     naturalSlideWidth={width}
     naturalSlideHeight={height}
     totalSlides={items.length}
-    className={styles.carousel}
+    className={carousel}
   >
-    <Slider className={styles.items}>
+    <Slider className={styleItems}>
       {items.map((item, itemIndex) => (
-        <Slide index={itemIndex} key={itemIndex} innerClassName={styles.item}>
-          <figure className={styles.itemFigure}>
-            <Image src={item.path} alt={item.alt} className={styles.itemImage} />
-            <figcaption className={styles.itemCaption}>{item.description}</figcaption>
+        <Slide index={itemIndex} key={itemIndex} innerClassName={styleItem}>
+          <figure className={itemFigure}>
+            <Image src={item.path} alt={item.alt} className={itemImage} />
+            <figcaption className={itemCaption}>{item.description}</figcaption>
           </figure>
         </Slide>
       ))}
     </Slider>
-    <ButtonBack className={styles.backButton}><img src={ArrowIcon} alt="前" className={styles.backButtonIcon} /></ButtonBack>
-    <ButtonNext className={styles.nextButton}><img src={ArrowIcon} alt="次" className={styles.nextButtonIcon} /></ButtonNext>
+    <ButtonBack className={backButton}><img src={ArrowIcon} alt="前" className={backButtonIcon} /></ButtonBack>
+    <ButtonNext className={nextButton}><img src={ArrowIcon} alt="次" className={nextButtonIcon} /></ButtonNext>
   </CarouselProvider>
 )
 

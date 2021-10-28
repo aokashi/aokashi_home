@@ -10,7 +10,24 @@ import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import styles from "./page-layout.module.sass"
+import {
+  pageBody,
+  mainContent,
+  nav,
+  navContent,
+  navItem,
+  navItem,
+  isActive,
+  article,
+  header,
+  rightSidebar,
+  bottomLink,
+  floatNav,
+  navItem,
+  isActive,
+  navIcon,
+  navText
+} from "./page-layout.module.sass"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
@@ -47,50 +64,50 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
   return (
     <>
       <Helmet>
-        <body className={styles.pageBody} />
+        <body className={pageBody} />
       </Helmet>
       <Header
         siteTitle={data.site.siteMetadata.title}
         siteNavItems={siteNavItems}
         logoImage={data.file}
       />
-      <main className={styles.mainContent}>
-        <nav className={styles.nav}>
-          <nav className={styles.navContent}>
-            <Link href="/" className={styles.navItem}>Home</Link>
+      <main className={mainContent}>
+        <nav className={nav}>
+          <nav className={navContent}>
+            <Link href="/" className={navItem}>Home</Link>
             {
               contentsNavItems.map((navItem, navIndex) => (
-                <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>{navItem.name}</Link>
+                <Link href={navItem.link} className={navItem} activeClassName={isActive} key={navIndex}>{navItem.name}</Link>
               ))
             }
           </nav>
         </nav>
-        <article className={`${styles.article} container`}>
+        <article className={`${article} container`}>
           {headerContent &&
-            <header className={styles.header}>{headerContent}</header>
+            <header className={header}>{headerContent}</header>
           }
           <div className="section">{children}</div>
         </article>
         {sidebarContent &&
-          <aside className={styles.rightSidebar}>
+          <aside className={rightSidebar}>
             {sidebarContent}
           </aside>
         }
-        <div className={styles.bottomLink}>
+        <div className={bottomLink}>
           <button className="button is-fullwidth is-light" onClick={backToTop}>トップへ戻る</button>
         </div>
       </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
-      <div className={styles.floatNav}>
+      <div className={floatNav}>
         {
           data.allNavItemYaml.nodes.map((navItem, navIndex) => {
             if (navItem.type !== "contents") {
               return null
             }
             return (
-              <Link href={navItem.link} className={styles.navItem} activeClassName={styles.isActive} key={navIndex}>
-                <img src={navItem.icon} alt="" className={styles.navIcon} />
-                <span className={styles.navText}>{navItem.name}</span>
+              <Link href={navItem.link} className={navItem} activeClassName={isActive} key={navIndex}>
+                <img src={navItem.icon} alt="" className={navIcon} />
+                <span className={navText}>{navItem.name}</span>
               </Link>
             )
           })
