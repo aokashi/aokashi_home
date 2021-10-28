@@ -8,7 +8,7 @@ import {
   itemTitle,
   itemText
 } from "./index-page.module.sass"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Link from "../components/Link"
 
 const IndexPageTemplate = ({ data }) => {
@@ -16,7 +16,7 @@ const IndexPageTemplate = ({ data }) => {
   const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
+      <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className="section">
         <p className="block">{frontmatter.profile.description}</p>
         <div className="message">
@@ -83,7 +83,7 @@ export const pageQuery = graphql`
   }
 `
 
-export const ProfileSection = (data) => {
+const ProfileSection = (data) => {
   return data.map((item, index) => (
     <section className={sectionItem} key={index}>
       <h3 className={itemTitle}>{item.name}</h3>

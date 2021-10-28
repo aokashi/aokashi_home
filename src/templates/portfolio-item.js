@@ -14,7 +14,7 @@ import BackLink from "../components/BackLink"
 
 import DateIcon from "../images/portfolio_items_icon-date.svg"
 import TagIcon from "../images/portfolio_items_icon-tag.svg"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
 import TableOfContents from "../components/TableOfContents"
 
@@ -33,7 +33,7 @@ const PortfolioItemTemplate = ({
       sidebarContent={<TableOfContents html={tableOfContents} />}
       headerContent={<ItemHeader frontmatter={frontmatter} />}
     >
-      <SEO title={`ポートフォリオ ${frontmatter.title}`} />
+      <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
         <div

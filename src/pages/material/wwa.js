@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Layout from "../../layouts/page-layout"
 
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import MaterialNavItem from "../../data/materials/navItem.json"
 import PageHeader from "../../components/PageHeader"
 import InfoNote from "../../components/Note/InfoNote"
@@ -30,7 +30,7 @@ class WWAMaterialPage extends React.Component {
           <h1>WWA素材</h1>
         </PageHeader>
       }>
-        <SEO title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
+        <Seo title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
         <div className="content">
           <p>WWAで利用できる素材です。</p>
           <InfoNote>

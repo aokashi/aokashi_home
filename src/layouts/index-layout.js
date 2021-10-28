@@ -5,7 +5,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import {
+import * as styles from "./index-layout.module.sass"
+import Link from "../components/Link"
+import Footer from "../components/footer.js"
+import Icon from "../images/aokashi-icon.png"
+import convertDate from "../utils/convertDate"
+
+const {
   indexBody,
   firstScreen,
   title,
@@ -13,13 +19,13 @@ import {
   aboutme,
   aboutmeIcon,
   mainContent,
-  navItem as styleNavItem,
-  navItemLink as styleNavItemLink,
-  navItemIcon as styleNavItemIcon,
-  navItemText as styleNavItemText,
+  navItem: styleNavItem,
+  navItemLink: styleNavItemLink,
+  navItemIcon: styleNavItemIcon,
+  navItemText: styleNavItemText,
   social,
-  socialItem as styleSocialItem,
-  socialText as styleSocialText,
+  socialItem: styleSocialItem,
+  socialText: styleSocialText,
   socialLink,
   hasLink,
   socialIcon,
@@ -29,11 +35,7 @@ import {
   informationTitle,
   informationLink,
   informationDate
-} from "./index-layout.module.sass"
-import Link from "../components/Link"
-import Footer from "../components/footer.js"
-import Icon from "../images/aokashi-icon.png"
-import convertDate from "../utils/convertDate"
+} = styles;
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(

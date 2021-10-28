@@ -8,7 +8,7 @@ import InfoNote from "../../components/Note/InfoNote"
 import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
 import ImageModal from "../../components/Modal/ImageModal"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import PageHeaderNav from "../../components/PageHeaderNav"
 
 class TkoolMvPage extends React.Component {
@@ -28,7 +28,7 @@ class TkoolMvPage extends React.Component {
           <h1>RPGツクールMV/MZ対応素材</h1>
         </PageHeader>
       }>
-        <SEO title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
+        <Seo title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <div className="content">
           <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../layouts/page-layout"
 
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import MaterialNavItem from "../data/materials/navItem.json"
 import PageHeader from "../components/PageHeader"
 import WarningNote from "../components/Note/WarningNote"
@@ -13,7 +13,7 @@ const MaterialIndexPage = () => (
       <h1>素材</h1>
     </PageHeader>
   }>
-    <SEO title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
+    <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
     <div className="content">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <h2>ご利用について</h2>

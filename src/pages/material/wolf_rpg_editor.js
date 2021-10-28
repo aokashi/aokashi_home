@@ -5,7 +5,7 @@ import Layout from "../../layouts/page-layout";
 import PageHeader from "../../components/PageHeader";
 import PageHeaderNav from "../../components/PageHeaderNav"
 import MaterialNavItem from "../../data/materials/navItem.json"
-import SEO from "../../components/seo";
+import Seo from "../../components/seo";
 import WarningNote from "../../components/Note/WarningNote"
 import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
@@ -31,7 +31,7 @@ export default function WolfRPGEditorMaterialPage() {
         <h1>WOLF RPG エディター素材</h1>
       </PageHeader>
     }>
-      <SEO title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
+      <Seo title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
       <div className="content">
         <p>WOLF RPG エディターで利用できる素材です。</p>
         <WarningNote>

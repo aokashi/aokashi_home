@@ -4,7 +4,7 @@ import Layout from "../layouts/page-layout"
 
 import PageHeader from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const DefaultTemplate = ({
   data
@@ -20,7 +20,7 @@ const DefaultTemplate = ({
         </PageHeader>
       }
     >
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div
         className="content"
         dangerouslySetInnerHTML={{ __html: html }}

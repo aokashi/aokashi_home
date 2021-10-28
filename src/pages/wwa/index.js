@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
 
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import PageHeader from "../../components/PageHeader"
 import BoxList from "../../components/BoxList"
 import Box from "../../components/Box/Box"
@@ -72,7 +72,7 @@ const WWAPage = () => {
 
   return (
     <Layout headerContent={<PageHeader><h1>WWA</h1></PageHeader>}>
-      <SEO title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
+      <Seo title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
       <div className="content">
         <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
         <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
