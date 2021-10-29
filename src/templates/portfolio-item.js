@@ -17,12 +17,13 @@ import TagIcon from "../images/portfolio_items_icon-tag.svg"
 import Seo from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
 import TableOfContents from "../components/TableOfContents"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const PortfolioItemTemplate = ({
   data
 }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html, tableOfContents } = markdownRemark
+  const { mdx } = data
+  const { frontmatter, body, tableOfContents } = mdx
   const aboutWords = frontmatter.words
     ? data.allPortfolioAboutWordYaml.nodes.filter(aboutWord => {
       return frontmatter.words.includes(aboutWord.name)
@@ -36,9 +37,7 @@ const PortfolioItemTemplate = ({
       <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <MDXRenderer>{body}</MDXRenderer>
         {frontmatter.links &&
           <>
             <h2>関連リンク</h2>
@@ -140,7 +139,7 @@ const PortfolioCarousel = ({ images }) => {
  */
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $path

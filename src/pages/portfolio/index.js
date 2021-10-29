@@ -72,7 +72,7 @@ class PortfolioPage extends React.Component {
         query={
           graphql`
             query AllPortfolioItemQuery {
-              allMarkdownRemark(
+              allMdx(
                 filter: {
                   fields: {
                     slug: {
@@ -114,7 +114,7 @@ class PortfolioPage extends React.Component {
           `
         }
         render={ (data) => {
-          const sortedData = data.allMarkdownRemark.group.sort(seasonSorting);
+          const sortedData = data.allMdx.group.sort(seasonSorting);
 
           return (
             <PortfolioList>

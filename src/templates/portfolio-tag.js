@@ -21,7 +21,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
       <BackLink to="/portfolio">ポートフォリオ トップ</BackLink>
       <PortfolioGroup>
         {
-          data.allMarkdownRemark.nodes.map((item, itemIndex) => (
+          data.allMdx.nodes.map((item, itemIndex) => (
             <PortfolioItem
               portfolioItem={item.frontmatter}
               slug={item.fields.slug}
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
   query PortfolioItemsQueryByTag(
     $tag: String
   ) {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         fields: {
           slug: {

@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      defaultPages: allMarkdownRemark {
+      defaultPages: allMdx {
         edges {
           node {
             id
@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
-      portfolioTags: allMarkdownRemark(
+      portfolioTags: allMdx(
         filter: {
           fields: {
             slug: {
@@ -80,7 +80,7 @@ exports.createPages = async ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     const value = createFilePath({
       node,
       getNode,

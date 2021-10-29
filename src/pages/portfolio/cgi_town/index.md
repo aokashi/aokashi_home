@@ -28,6 +28,7 @@ links:
 words:
   - town
 ---
+import LinkButton from "../../../components/LinkButton"
 
 [インターネットで遊んでいたTOWN](first_internet) は設置できることから、自分のサイトにも設置しました。
 
@@ -47,5 +48,6 @@ CGIゲームの運営と並行して、建物のアイコン画像の制作に�
 
 当初はそっくりそのまま制作するのはどうかと思っていました。しかし、提供元が消失した場合の唯一の入手手段である [Wayback Machine](https://web.archive.org/) から探す方法でも見つからず、自分で作る他ないと判断しました。同様の理由で自分で制作にこぎつけたものとして [Portable Launcher](portable_launcher) があります。
 
-<link-button href="/material/icon">アイコン素材を見てみる</link-button>
+<LinkButton href="/material/icon">アイコン素材を見てみる</LinkButton>
+
 前述の説明の中で制作したアイコン素材は hp2, hp2b, hp3b になります。

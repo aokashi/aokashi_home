@@ -12,8 +12,8 @@ import Seo from "../components/seo"
 import Link from "../components/Link"
 
 const IndexPageTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+  const { mdx } = data
+  const { frontmatter } = mdx
   return (
     <Layout>
       <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
@@ -53,7 +53,7 @@ const IndexPageTemplate = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
+    mdx( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
         title
         profile {
