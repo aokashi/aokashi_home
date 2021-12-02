@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const nodeId = node.id
 
     createPage({
-      path: trimPath(node.fields.slug),
+      path: node.fields.slug,
       component: path.resolve(`./src/templates/${templateName}.js`),
       context: {
         nodeId
@@ -92,17 +92,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
-}
-
-/**
- * パスから末尾のスラッシュを削除します。
- * @param {string} path 
- * @return {string}
- */
-function trimPath(path) {
-  if (path === '/') {
-    return path;
-  }
-
-  return path.replace(/\/$/, ``);
 }

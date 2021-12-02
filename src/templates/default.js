@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import PageHeader from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
 import Seo from "../components/seo"
+import { MDXProvider } from "@mdx-js/react"
 
 const DefaultTemplate = ({
   data
@@ -23,7 +24,11 @@ const DefaultTemplate = ({
     >
       <Seo title={frontmatter.title} />
       <div className="content">
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXProvider>
+          <MDXRenderer frontmatter={frontmatter}>
+            {body}
+          </MDXRenderer>
+        </MDXProvider>
       </div>
     </Layout>
   )
@@ -33,7 +38,7 @@ export const pageQuery = graphql`
   query ($path: String!) {
     mdx(fields: { slug: { eq: $path } }) {
       id
-      html
+      body
       tableOfContents
       fields {
         slug

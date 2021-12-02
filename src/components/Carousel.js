@@ -6,7 +6,6 @@ import "pure-react-carousel/dist/react-carousel.es.css"
 import {
   carousel,
   items as styleItems,
-  item as styleItem,
   itemFigure,
   itemImage,
   itemCaption,
@@ -27,7 +26,7 @@ const Carousel = ({ width, height, items }) => (
   >
     <Slider className={styleItems}>
       {items.map((item, itemIndex) => (
-        <Slide index={itemIndex} key={itemIndex} innerClassName={styleItem}>
+        <Slide index={itemIndex} key={itemIndex}>
           <figure className={itemFigure}>
             <Image src={item.path} alt={item.alt} className={itemImage} />
             <figcaption className={itemCaption}>{item.description}</figcaption>

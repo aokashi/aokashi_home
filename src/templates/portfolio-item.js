@@ -17,6 +17,7 @@ import TagIcon from "../images/portfolio_items_icon-tag.svg"
 import Seo from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
 import TableOfContents from "../components/TableOfContents"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const PortfolioItemTemplate = ({
@@ -31,13 +32,15 @@ const PortfolioItemTemplate = ({
     : []
   return (
     <Layout
-      sidebarContent={<TableOfContents html={tableOfContents} />}
+      sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={<ItemHeader frontmatter={frontmatter} />}
     >
       <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXProvider>
+          <MDXRenderer>{body}</MDXRenderer>
+        </MDXProvider>
         {frontmatter.links &&
           <>
             <h2>関連リンク</h2>
@@ -152,7 +155,7 @@ export const pageQuery = graphql`
       }
     ) {
       id
-      html
+      body
       tableOfContents
       fields {
         slug
