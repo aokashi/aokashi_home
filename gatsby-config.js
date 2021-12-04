@@ -48,6 +48,7 @@ module.exports = {
         name: `AokashiRoom`,
       }
     },
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
