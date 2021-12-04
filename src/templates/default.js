@@ -15,7 +15,7 @@ const DefaultTemplate = ({
   const { frontmatter, body, tableOfContents } = mdx
   return (
     <Layout
-      sidebarContent={<TableOfContents html={tableOfContents} />}
+      sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={
         <PageHeader>
           <h1>{frontmatter.title}</h1>

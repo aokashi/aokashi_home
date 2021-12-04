@@ -168,9 +168,7 @@ export const pageQuery = graphql`
         images {
           path {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData
               original {
                 height
                 width

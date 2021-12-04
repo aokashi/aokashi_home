@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import * as styles from "./index-layout.module.sass"
@@ -48,9 +48,7 @@ const IndexLayout = ({ children }) => {
         }
         file(relativePath: { eq: "ah-logo.png" }) {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData
           }
         }
         allNavItemYaml {
@@ -102,7 +100,7 @@ const IndexLayout = ({ children }) => {
       </Helmet>
       <div className={`${firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
         <div className={title}>
-          <Img fluid={data.file.childImageSharp.fluid} alt={data.site.siteMetadata.title} />
+          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
         </div>
         {
           navItems(data.allNavItemYaml)

@@ -47,9 +47,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
       }
       file(relativePath: {eq: "ah-logo_mini.png"}) {
         childImageSharp {
-          fixed (width: 256) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }

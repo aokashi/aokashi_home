@@ -95,9 +95,7 @@ class PortfolioPage extends React.Component {
                       images {
                         path {
                           childImageSharp {
-                            fluid {
-                              ...GatsbyImageSharpFluid
-                            }
+                            gatsbyImageData
                           }
                         }
                         alt

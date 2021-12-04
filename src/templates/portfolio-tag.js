@@ -66,9 +66,7 @@ export const pageQuery = graphql`
           images {
             path {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData
               }
             }
             alt

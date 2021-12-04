@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Layout from "../../layouts/page-layout"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
 import PageHeader from "../../components/PageHeader"
@@ -48,9 +48,7 @@ const WWAPage = () => {
       }
       file(relativePath: {eq: "wwawing-logo.png"}) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       allFile(filter: {
@@ -59,9 +57,7 @@ const WWAPage = () => {
       }) {
         nodes {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData
           }
           relativePath
         }
@@ -81,7 +77,7 @@ const WWAPage = () => {
         </InfoNote>
         <label className="checkbox">
           <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
-          <Img fixed={data.file.childImageSharp.fixed} alt="WWA Wing" /> 対応のWWAのみ表示する
+          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /> 対応のWWAのみ表示する
         </label>
         <WarningNote>
           <p>WWA Wing 未対応のWWAをプレイする場合は旧資料集の <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA" title="WWA/HowToLaunchWWA - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
@@ -116,7 +112,7 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item, i
       footerContent={<BoxNav navItems={getLinks(item.links)} />}
     >
       {item.supportWWAWing &&
-        <div className="has-text-right"><Img fixed={wwaWingLogo.childImageSharp.fixed} alt="WWA Wing 対応" /></div>
+        <div className="has-text-right"><GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" /></div>
       }
       <p>{item.description}</p>
     </Box>
