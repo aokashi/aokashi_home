@@ -90,14 +90,7 @@ module.exports = {
         icon: `src/images/ah-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        sassOptions: {
-          indentedSyntax: true
-        },
-      }
-    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
