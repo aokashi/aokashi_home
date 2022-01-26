@@ -4,10 +4,10 @@ import PropTypes from "prop-types"
 /**
  * 親要素が PortfolioList の場合にスタイルシートを付与したいため、CSSはPortfolioListと共用
  */
-import styles from "./PortfolioList.module.sass"
+import { group } from "./PortfolioList.module.sass"
 
 const PortfolioGroup = ({ name, descriptionTitle, description, children }) => (
-  <div className={styles.group}>
+  <div className={group}>
     {name &&
       <div className="columns has-text-dark is-variable is-0-mobile is-5-tablet block">
 

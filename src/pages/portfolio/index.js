@@ -9,7 +9,7 @@ import PortfolioGroup from "../../components/PortfolioGroup"
 import WarningNote from "../../components/Note/WarningNote"
 import seasonDetails from "../../data/portfolio/portfolioSeason.yml"
 import otherPortfolioItems from "../../data/portfolio/otherItem.yml"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 
 class PortfolioPage extends React.Component {
 
@@ -23,7 +23,7 @@ class PortfolioPage extends React.Component {
         }
         sidebarContent={this.renderSidebar()}
       >
-        <SEO title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
+        <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
 
         {this.renderPortfolioList()}
         <div className="content">
@@ -72,7 +72,7 @@ class PortfolioPage extends React.Component {
         query={
           graphql`
             query AllPortfolioItemQuery {
-              allMarkdownRemark(
+              allMdx(
                 filter: {
                   fields: {
                     slug: {
@@ -95,9 +95,7 @@ class PortfolioPage extends React.Component {
                       images {
                         path {
                           childImageSharp {
-                            fluid {
-                              ...GatsbyImageSharpFluid
-                            }
+                            gatsbyImageData
                           }
                         }
                         alt
@@ -114,7 +112,7 @@ class PortfolioPage extends React.Component {
           `
         }
         render={ (data) => {
-          const sortedData = data.allMarkdownRemark.group.sort(seasonSorting);
+          const sortedData = data.allMdx.group.sort(seasonSorting);
 
           return (
             <PortfolioList>

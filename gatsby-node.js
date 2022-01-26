@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      defaultPages: allMarkdownRemark {
+      defaultPages: allMdx {
         edges {
           node {
             id
@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         }
       }
-      portfolioTags: allMarkdownRemark(
+      portfolioTags: allMdx(
         filter: {
           fields: {
             slug: {
@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const nodeId = node.id
 
     createPage({
-      path: trimPath(node.fields.slug),
+      path: node.fields.slug,
       component: path.resolve(`./src/templates/${templateName}.js`),
       context: {
         nodeId
@@ -80,7 +80,7 @@ exports.createPages = async ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     const value = createFilePath({
       node,
       getNode,
@@ -92,17 +92,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
-}
-
-/**
- * パスから末尾のスラッシュを削除します。
- * @param {string} path 
- * @return {string}
- */
-function trimPath(path) {
-  if (path === '/') {
-    return path;
-  }
-
-  return path.replace(/\/$/, ``);
 }

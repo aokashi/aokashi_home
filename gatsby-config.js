@@ -1,3 +1,4 @@
+const { resolve } = require('path');
 const path = require('path');
 
 module.exports = {
@@ -20,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `contents`,
+        path: `${__dirname}/src/contents/`,
       }
     },
     {
@@ -47,17 +48,20 @@ module.exports = {
         name: `AokashiRoom`,
       }
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               icon: false,
             }
           },
-          `gatsby-remark-component`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -73,8 +77,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -87,14 +89,7 @@ module.exports = {
         icon: `src/images/ah-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        sassOptions: {
-          indentedSyntax: true
-        },
-      }
-    },
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
@@ -103,7 +98,7 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

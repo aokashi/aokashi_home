@@ -3,6 +3,8 @@ title: 当サイトについて
 template: default
 date: "2019-10-01"
 ---
+import DangerNote from "../components/Note/DangerNote"
+import WarningNote from "../components/Note/WarningNote"
 
 Aokashi Home は、Aokashiが運営するWebサイトです。主にゲームやプログラムと、それらに役立つ素材を公開しています。
 
@@ -16,9 +18,9 @@ Aokashi Home は、Aokashiが運営するWebサイトです。主にゲームや
 
 画像についても、引用の範囲内であれば転載に利用できます。
 
-<danger-note>
+<DangerNote>
 素材を除き、画像だけの転載(飾り用途で利用する、とか)はおやめください。
-</danger-note>
+</DangerNote>
 
 ## お問い合わせ
 
@@ -28,10 +30,10 @@ Aokashi Home は、Aokashiが運営するWebサイトです。主にゲームや
  - Twitter: [@aokashi](https://twitter.com/aokashi)
  - askfm: [@aokashi](https://ask.fm/aokashi)
 
-<warning-note>
+<WarningNote>
 サーバーの移転により、メールサーバーがまだ用意していません。このため、リニューアル前に利用していたメールアドレスは利用できなくなっています。ご不便をおかけしますが、ご協力の程お願いします。
-</warning-note>
+</WarningNote>
 
-<danger-note>
+<DangerNote>
 脆弱性の悪用防止の為、脆弱性の報告目的でのご連絡は、メールをご利用ください。
-</danger-note>
+</DangerNote>

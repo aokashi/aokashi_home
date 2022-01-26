@@ -1,31 +1,34 @@
 import React from "react"
 import { graphql } from "gatsby"
-import RenderAst from "../utils/renderAst"
 import Layout from "../layouts/page-layout"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import PageHeader from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
+import { MDXProvider } from "@mdx-js/react"
 
 const DefaultTemplate = ({
   data
 }) => {
-  const { markdownRemark } = data
-  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
+  const { mdx } = data
+  const { frontmatter, body, tableOfContents } = mdx
   return (
     <Layout
-      sidebarContent={<TableOfContents html={tableOfContents} />}
+      sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={
         <PageHeader>
           <h1>{frontmatter.title}</h1>
         </PageHeader>
       }
     >
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div className="content">
-        {
-          RenderAst(htmlAst)
-        }
+        <MDXProvider>
+          <MDXRenderer frontmatter={frontmatter}>
+            {body}
+          </MDXRenderer>
+        </MDXProvider>
       </div>
     </Layout>
   )
@@ -33,9 +36,9 @@ const DefaultTemplate = ({
 
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
+    mdx(fields: { slug: { eq: $path } }) {
       id
-      htmlAst
+      body
       tableOfContents
       fields {
         slug

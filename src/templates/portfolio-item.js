@@ -1,25 +1,30 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import styles from "./portfolio-item.module.sass"
+import {
+  summary,
+  headerIcon,
+  images as styleImages
+} from "./portfolio-item.module.sass"
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"
-import renderAst from "../utils/renderAst"
 import Carousel from "../components/Carousel"
 import convertDate from "../utils/convertDate"
 import BackLink from "../components/BackLink"
 
 import DateIcon from "../images/portfolio_items_icon-date.svg"
 import TagIcon from "../images/portfolio_items_icon-tag.svg"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
 import TableOfContents from "../components/TableOfContents"
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const PortfolioItemTemplate = ({
   data
 }) => {
-  const { markdownRemark } = data
-  const { frontmatter, htmlAst, tableOfContents } = markdownRemark
+  const { mdx } = data
+  const { frontmatter, body, tableOfContents } = mdx
   const aboutWords = frontmatter.words
     ? data.allPortfolioAboutWordYaml.nodes.filter(aboutWord => {
       return frontmatter.words.includes(aboutWord.name)
@@ -27,15 +32,15 @@ const PortfolioItemTemplate = ({
     : []
   return (
     <Layout
-      sidebarContent={<TableOfContents html={tableOfContents} />}
+      sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={<ItemHeader frontmatter={frontmatter} />}
     >
-      <SEO title={`ポートフォリオ ${frontmatter.title}`} />
+      <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
-        {
-          renderAst(htmlAst)
-        }
+        <MDXProvider>
+          <MDXRenderer>{body}</MDXRenderer>
+        </MDXProvider>
         {frontmatter.links &&
           <>
             <h2>関連リンク</h2>
@@ -83,16 +88,16 @@ const PortfolioItemTemplate = ({
 const ItemHeader = ({ frontmatter }) => {
   return (
     <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
-      <div className={`${styles.summary} block`}>
+      <div className={`${summary} block`}>
         <h1>{frontmatter.title}</h1>
         <div>
-          <span className={`${styles.headerIcon} icon is-medium`}>
+          <span className={`${headerIcon} icon is-medium`}>
             <img src={DateIcon} alt={"日付:"} />
           </span>
           <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
         </div>
         <div className="tags">
-          <span className={`${styles.headerIcon} icon is-medium`}>
+          <span className={`${headerIcon} icon is-medium`}>
             <img src={TagIcon} alt={"タグ:"} />
           </span>
           {frontmatter.tags.map((tag, tagIndex) => 
@@ -126,7 +131,7 @@ const PortfolioCarousel = ({ images }) => {
   const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 1)
 
   return (
-    <div className={styles.images}>
+    <div className={styleImages}>
       <Carousel items={images} width={maxWidth} height={maxHeight} />
     </div>
   )
@@ -137,7 +142,7 @@ const PortfolioCarousel = ({ images }) => {
  */
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(
+    mdx(
       fields: {
         slug: {
           eq: $path
@@ -150,7 +155,7 @@ export const pageQuery = graphql`
       }
     ) {
       id
-      htmlAst
+      body
       tableOfContents
       fields {
         slug
@@ -163,9 +168,7 @@ export const pageQuery = graphql`
         images {
           path {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData
               original {
                 height
                 width

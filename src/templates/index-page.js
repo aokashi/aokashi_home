@@ -2,16 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts/index-layout"
 
-import styles from "./index-page.module.sass"
-import SEO from "../components/seo"
+import {
+  sectionTitle,
+  sectionItem,
+  itemTitle,
+  itemText
+} from "./index-page.module.sass"
+import Seo from "../components/seo"
 import Link from "../components/Link"
 
 const IndexPageTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter } = markdownRemark
+  const { mdx } = data
+  const { frontmatter } = mdx
   return (
     <Layout>
-      <SEO title={frontmatter.title} description="Aokashi のWebサイトです。" />
+      <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className="section">
         <p className="block">{frontmatter.profile.description}</p>
         <div className="message">
@@ -28,13 +33,13 @@ const IndexPageTemplate = ({ data }) => {
         </div>
         <div className="columns">
           <section className="column is-two-thirds">
-            <h2 className={styles.sectionTitle}>好きなもの</h2>
+            <h2 className={sectionTitle}>好きなもの</h2>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
           <section className="column is-one-third">
-            <h2 className={styles.sectionTitle}>使用環境</h2>
+            <h2 className={sectionTitle}>使用環境</h2>
             {
               ProfileSection(frontmatter.profile.items.environments)
             }
@@ -48,7 +53,7 @@ const IndexPageTemplate = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    markdownRemark( frontmatter: { template: { eq: "index-page" } }) {
+    mdx( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
         title
         profile {
@@ -78,13 +83,13 @@ export const pageQuery = graphql`
   }
 `
 
-export const ProfileSection = (data) => {
+const ProfileSection = (data) => {
   return data.map((item, index) => (
-    <section className={styles.sectionItem} key={index}>
-      <h3 className={styles.itemTitle}>{item.name}</h3>
-      <p className={styles.itemText}>{item.text}</p>
+    <section className={sectionItem} key={index}>
+      <h3 className={itemTitle}>{item.name}</h3>
+      <p className={itemText}>{item.text}</p>
       {item.link &&
-        <p className={styles.itemText}>
+        <p className={itemText}>
           <Link href={item.link.url} className="button is-primary">{item.link.text}</Link>
         </p>
       }

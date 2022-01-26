@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import Layout from "../../layouts/page-layout"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import PageHeader from "../../components/PageHeader"
 import BoxList from "../../components/BoxList"
 import Box from "../../components/Box/Box"
@@ -48,9 +48,7 @@ const WWAPage = () => {
       }
       file(relativePath: {eq: "wwawing-logo.png"}) {
         childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
       allFile(filter: {
@@ -59,9 +57,7 @@ const WWAPage = () => {
       }) {
         nodes {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData
           }
           relativePath
         }
@@ -72,7 +68,7 @@ const WWAPage = () => {
 
   return (
     <Layout headerContent={<PageHeader><h1>WWA</h1></PageHeader>}>
-      <SEO title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
+      <Seo title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
       <div className="content">
         <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
         <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
@@ -81,7 +77,7 @@ const WWAPage = () => {
         </InfoNote>
         <label className="checkbox">
           <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
-          <Img fixed={data.file.childImageSharp.fixed} alt="WWA Wing" /> 対応のWWAのみ表示する
+          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /> 対応のWWAのみ表示する
         </label>
         <WarningNote>
           <p>WWA Wing 未対応のWWAをプレイする場合は旧資料集の <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA" title="WWA/HowToLaunchWWA - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
@@ -116,7 +112,7 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item, i
       footerContent={<BoxNav navItems={getLinks(item.links)} />}
     >
       {item.supportWWAWing &&
-        <div className="has-text-right"><Img fixed={wwaWingLogo.childImageSharp.fixed} alt="WWA Wing 対応" /></div>
+        <div className="has-text-right"><GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" /></div>
       }
       <p>{item.description}</p>
     </Box>
