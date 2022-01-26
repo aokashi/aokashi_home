@@ -48,7 +48,9 @@ module.exports = {
         name: `AokashiRoom`,
       }
     },
-    `gatsby-remark-images`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -75,9 +77,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
