@@ -158,9 +158,12 @@
   name: 謎めいた機械を追い求めて
   description: |
     繁栄を築いたこの都市で、とんでもないものが見つかった！！ 現場近くで働く主人公は、この機械を探し出すことになるのだが...
-    WWA COLLECTION 2の収録作品ですが、当サイト公開に向けて調整中です。
+    WWA COLLECTION 2の収録作品です。
   publishedAt: 2019-12-19
   screenPath: wwa/strange_machine.png
   links:
+    - name: メインページ
+      link: https://www.aokashi.net/wwa/strange_machine/
     - name: WWA COLLECTION 2 のストアページへ
       link: https://ec.nintendo.com/JP/ja/titles/70010000018564
+  supportWWAWing: true
