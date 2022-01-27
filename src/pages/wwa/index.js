@@ -20,7 +20,7 @@ const WWAPage = () => {
   /**
    * WWA Wing対応の絞り込みに使用するステートです。
    */
-  const [onlyWWAWing, checkOnlyWWAWing] = useState(false);
+  const [onlyWWAWing, checkOnlyWWAWing] = useState(true);
   const data = useStaticQuery(graphql`
     query WWADataQuery {
       allWwaYaml {
@@ -75,10 +75,12 @@ const WWAPage = () => {
         <InfoNote>
           <p>WWA Wing(JavaScript)ではなくJavaアプレットで動作したい場合はWWA作品のプレイページから <q>Javaアプレットの動作に切り替える</q> のリンクで変更できます。</p>
         </InfoNote>
-        <label className="checkbox">
-          <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
-          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /> 対応のWWAのみ表示する
-        </label>
+        <div className="p-2">
+          <label className="checkbox">
+            <input type="checkbox" onClick={() => checkOnlyWWAWing(!onlyWWAWing)} defaultChecked={onlyWWAWing} />
+            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" className="is-inline-block ml-2" /> 対応のWWAのみ表示する
+          </label>
+        </div> 
         <WarningNote>
           <p>WWA Wing 未対応のWWAをプレイする場合は旧資料集の <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA" title="WWA/HowToLaunchWWA - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
         </WarningNote>
