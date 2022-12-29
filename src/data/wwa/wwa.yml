@@ -167,3 +167,15 @@
     - name: WWA COLLECTION 2 のストアページへ
       link: https://ec.nintendo.com/JP/ja/titles/70010000018564
   supportWWAWing: true
+- id: null_battle
+  name: ヌル岬の戦い
+  description: |
+    ブーメランドのヌル岬が公世軍と北伝軍に奪われてしまう！ プレイヤー二人で立ち向かえ！
+    ぐんぐん進む成長システムや戦況が変わるコマンドバトルなど、新要素の実験作品です。
+  publishedAt: 2022-12-29
+  screenPath: wwa/null_battle.png
+  links:
+    - link: https://www.aokashi.net/wwa/null_battle.html
+    - name: ダウンロード
+      link: https://www.aokashi.net/wwa/null_battle.zip
+  supportWWAWing: true
