@@ -63,5 +63,8 @@
   },
   "bugs": {
     "url": "https://github.com/aokashi/aokashi_home/issues"
+  },
+  "engines": {
+    "node": "16.x.x"
   }
 }
