@@ -13,6 +13,9 @@
 - name: pixiv
   link: https://www.pixiv.net/member.php?id=24383596
   text: Aokashi
+- name: Misskey.io
+  link: https://misskey.io/@aokashi
+  text: '@aokashi'
 - name: Speaker Deck
   link: https://speakerdeck.com/aokashi
   text: aokashi
