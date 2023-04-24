@@ -187,13 +187,13 @@
   tags:
     - WWA素材第3世代
     - アイテム
-- name: ObFurniture11
+- name: ObFurniture11-1
   file: /materials/wwa/ObFurniture11-1.gif
   publishedAt: ''
   tags:
     - WWA素材第2世代
     - 物体
-- name: ObFurniture11
+- name: ObFurniture11-2
   file: /materials/wwa/ObFurniture11-2.gif
   publishedAt: ''
   tags:

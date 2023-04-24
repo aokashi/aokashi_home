@@ -18,6 +18,7 @@ class WWAMaterialPage extends React.Component {
     super()
     this.state = {
       isPreview: false,
+      sort: 'desc',
       previewItem: {},
       tagBy: "",
     }
@@ -115,20 +116,59 @@ class WWAMaterialPage extends React.Component {
     })
   }
 
+  /**
+   * ソートを切り替えます
+   * @param {'asc' | 'desc'} sort 
+   */
+  setSort(sort) {
+    this.setState({
+      sort
+    })
+  }
+
   renderMaterialList(materialNodes) {
-    const materialData = this.state.tagBy !== ""
-      ? materialNodes.filter(node => node.tags.includes(this.state.tagBy))
-      : materialNodes
+    const materialData =
+      (
+        this.state.tagBy !== ""
+          ? materialNodes.filter(node => node.tags.includes(this.state.tagBy))
+          : materialNodes
+      ).sort((a, b) => {
+        const aTime = a.publishedAt ? new Date(a.publishedAt).valueOf() : 0;
+        const bTime = b.publishedAt ? new Date(b.publishedAt).valueOf() : 0;
+        if (this.state.sort === "asc") {
+          return aTime - bTime;
+        }
+        return bTime - aTime;
+      })
     return (
-      <BoxList>
-        {materialData.map((item, itemIndex) => (
-          <ImageMaterialBox
-            materialItem={item}
-            key={itemIndex}
-            onItemClick={() => this.showPreview(item)}
-          />
-        ))}
-      </BoxList>
+      <div>
+        <div className="message is-primary">
+          <div className="message-header">
+            <p>並び替え</p>
+          </div>
+          <div className="message-body">
+            <div className="buttons">
+              <button
+                className={`button ${this.state.sort === "asc" ? "is-dark is-active" : ""}`}
+                onClick={() => this.setSort("asc")}
+              >昇順</button>
+              <button
+                className={`button ${this.state.sort === "desc" ? "is-dark is-active" : ""}`}
+                onClick={() => this.setSort("desc")}
+              >降順</button>
+            </div>
+          </div>
+        </div>
+        <BoxList>
+          {materialData.map((item) => (
+            <ImageMaterialBox
+              materialItem={item}
+              key={item.name}
+              onItemClick={() => this.showPreview(item)}
+            />
+          ))}
+        </BoxList>
+      </div>
     )
   }
 
