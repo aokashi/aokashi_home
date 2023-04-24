@@ -647,11 +647,13 @@
     - 乗り物
 - name: 23Floor
   file: /materials/wwa/23Floor.gif
+  publishedAt: 2023-04-25
   tags:
     - WWA素材第3世代
     - 地面
 - name: 23InteriorWindow.gif
   file: /materials/wwa/23InteriorWindow.gif
+  publishedAt: 2023-04-25
   tags:
     - WWA素材第3世代
     - 物体
