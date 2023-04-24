@@ -645,3 +645,13 @@
   tags:
     - WWA素材第3世代
     - 乗り物
+- name: 23Floor
+  file: /materials/wwa/23Floor.gif
+  tags:
+    - WWA素材第3世代
+    - 地面
+- name: 23InteriorWindow.gif
+  file: /materials/wwa/23InteriorWindow.gif
+  tags:
+    - WWA素材第3世代
+    - 物体
