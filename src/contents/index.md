@@ -74,12 +74,12 @@ profile:
         text: >-
           家から各地までのルートを市販の地図に描いたことから始まり、架空世界の表現にまで発展。現在は架空地図を作るツールが無く管理しにくいところが課題である。
     environments:
-      - name: 自作PC (第2世代)
+      - name: 自作PC (第4世代)
         text: >-
-          2017年に組み立て。性能よりも各パーツの付加価値を重視している。
-          2019年には REALFORCE と GTX 1660Ti の導入で更に強くなった。
+          2023年に組み立て。 Ryzen の Zen4 CPU を搭載。前代のメインPCよりも大幅に性能アップ、見た目にこだわった。
+          余ったケースファンやRGBライティングパーツを取り付けまくった結果、冷却性能重視の光るPCになった。
         link:
-          url: https://jisaku.com/pc/YUvgFoED2yipZ6sett89Q2
+          url: https://jisaku.com/pc/VmF5FMSK4Hh2NQk5e71nGt
           text: 自作.com で構成を見る
       - name: MacBook Air (Early 2020)
         text: >-
