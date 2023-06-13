@@ -23,6 +23,9 @@
 - name: askfm
   link: https://ask.fm/aokashi
   text: aokashi
+- name: Discord
+  text: aokashi.towa
+  icon: discord
 - name: Twitch
   link: https://www.twitch.tv/aokashi_towa
   text: aokashi_towa
