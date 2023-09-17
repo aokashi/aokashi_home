@@ -651,9 +651,27 @@
   tags:
     - WWA素材第3世代
     - 地面
-- name: 23InteriorWindow.gif
+- name: 23InteriorWindow
   file: /materials/wwa/23InteriorWindow.gif
   publishedAt: 2023-05-02
   tags:
     - WWA素材第3世代
     - 物体
+- name: 23-boat-small
+  file: /materials/wwa/23-boat-small.gif
+  publishedAt: 2023-09-18
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+- name: 23-boat-middle_sightseeing
+  file: /materials/wwa/23-boat-middle_sightseeing.gif
+  publishedAt: 2023-09-18
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+- name: 23-boat-large_ferry
+  file: /materials/wwa/23-boat-large_ferry.gif
+  publishedAt: 2023-09-18
+  tags:
+    - WWA素材第3世代
+    - 乗り物
