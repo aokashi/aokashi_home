@@ -10,36 +10,26 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  const result = await graphql(`
-    {
-      defaultPages: allMdx {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              template
-            }
-          }
+  const result = await graphql(`{
+  defaultPages: allMdx {
+    edges {
+      node {
+        id
+        fields {
+          slug
         }
-      }
-      portfolioTags: allMdx(
-        filter: {
-          fields: {
-            slug: {
-              glob: "/portfolio/*"
-            }
-          }
-        }
-      ) {
-        group(field: frontmatter___tags) {
-          fieldValue
+        frontmatter {
+          template
         }
       }
     }
-  `)
+  }
+  portfolioTags: allMdx(filter: {fields: {slug: {glob: "/portfolio/*"}}}) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+    }
+  }
+}`)
   if (result.errors) {
     result.errors.forEach(error => console.error(error.toString()))
     return Promise.reject(result.errors)

@@ -70,46 +70,35 @@ class PortfolioPage extends React.Component {
     return (
       <StaticQuery
         query={
-          graphql`
-            query AllPortfolioItemQuery {
-              allMdx(
-                filter: {
-                  fields: {
-                    slug: {
-                      glob: "/portfolio/*"
-                    }
-                  }
-                }
-                sort: {
-                  fields: [frontmatter___date]
-                  order: ASC
-                }
-              ) {
-                group(field: frontmatter___season) {
-                  nodes {
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      date
-                      images {
-                        path {
-                          childImageSharp {
-                            gatsbyImageData
-                          }
-                        }
-                        alt
-                      }
-                      tags
-                      title
-                      season
-                    }
-                  }
-                  fieldValue
-                }
+          graphql`query AllPortfolioItemQuery {
+  allMdx(
+    filter: {fields: {slug: {glob: "/portfolio/*"}}}
+    sort: {frontmatter: {date: ASC}}
+  ) {
+    group(field: {frontmatter: {season: SELECT}}) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          date
+          images {
+            path {
+              childImageSharp {
+                gatsbyImageData
               }
             }
-          `
+            alt
+          }
+          tags
+          title
+          season
+        }
+      }
+      fieldValue
+    }
+  }
+}`
         }
         render={ (data) => {
           const sortedData = data.allMdx.group.sort(seasonSorting);
@@ -144,7 +133,7 @@ class PortfolioPage extends React.Component {
           )
         } }
       />
-    )
+    );
   }
 
   renderOtherPortfolioList() {

@@ -39,53 +39,45 @@ const {
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-        file(relativePath: { eq: "ah-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        allNavItemYaml {
-          group(field: type) {
-            nodes {
-              name
-              type
-              link
-              icon
-              color
-            }
-            fieldValue
-          }
-        }
-        allSocialLinkYaml {
-          nodes {
-            name
-            link
-            text
-            icon
-          }
-        }
-        allFeedAokashiRoom(
-          sort: {
-            fields: isoDate,
-            order: DESC
-          },
-          limit: 1
-        ) {
-          nodes {
-            title
-            link
-            isoDate
-          }
-        }
+    graphql`{
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  file(relativePath: {eq: "ah-logo.png"}) {
+    childImageSharp {
+      gatsbyImageData
+    }
+  }
+  allNavItemYaml {
+    group(field: {type: SELECT}) {
+      nodes {
+        name
+        type
+        link
+        icon
+        color
       }
-    `
+      fieldValue
+    }
+  }
+  allSocialLinkYaml {
+    nodes {
+      name
+      link
+      text
+      icon
+    }
+  }
+  allFeedAokashiRoom(sort: {isoDate: DESC}, limit: 1) {
+    nodes {
+      title
+      link
+      isoDate
+    }
+  }
+}`
   )
 
   const [screenHeight, setScreenHeight] = useState(0)

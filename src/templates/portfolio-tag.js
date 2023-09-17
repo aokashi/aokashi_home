@@ -35,49 +35,31 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PortfolioItemsQueryByTag(
-    $tag: String
+export const pageQuery = graphql`query PortfolioItemsQueryByTag($tag: String) {
+  allMdx(
+    filter: {fields: {slug: {glob: "/portfolio/*"}}, frontmatter: {tags: {in: [$tag]}}}
+    sort: {frontmatter: {date: ASC}}
   ) {
-    allMdx(
-      filter: {
-        fields: {
-          slug: {
-            glob: "/portfolio/*"
-          }
-        }
-        frontmatter: {
-          tags: {
-            in: [$tag]
-          }
-        }
+    nodes {
+      fields {
+        slug
       }
-      sort: {
-        fields: [frontmatter___date]
-        order: ASC
-      }
-    ) {
-      nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          date
-          images {
-            path {
-              childImageSharp {
-                gatsbyImageData
-              }
+      frontmatter {
+        date
+        images {
+          path {
+            childImageSharp {
+              gatsbyImageData
             }
-            alt
           }
-          tags
-          title
-          season
+          alt
         }
+        tags
+        title
+        season
       }
     }
   }
-`
+}`
 
 export default PortfolioTagTemplate

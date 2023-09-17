@@ -45,22 +45,20 @@ class WWAMaterialPage extends React.Component {
           </WarningNote>
         </div>
         <StaticQuery
-          query={graphql`
-            query WWAMaterialDataQuery {
-              allWwaMaterialYaml {
-                nodes {
-                  name
-                  file
-                  description
-                  publishedAt
-                  tags
-                }
-                group(field: tags) {
-                  fieldValue
-                }
-              }
-            }
-          `}
+          query={graphql`query WWAMaterialDataQuery {
+  allWwaMaterialYaml {
+    nodes {
+      name
+      file
+      description
+      publishedAt
+      tags
+    }
+    group(field: {tags: SELECT}) {
+      fieldValue
+    }
+  }
+}`}
           render={data =>
             <>
               {this.renderTagList(data.allWwaMaterialYaml.group)}
@@ -73,7 +71,7 @@ class WWAMaterialPage extends React.Component {
             this.renderModal()
         }
       </Layout>
-    )
+    );
   }
 
   renderTagList(tagGroups) {
