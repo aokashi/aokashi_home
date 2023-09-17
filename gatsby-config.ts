@@ -88,6 +88,12 @@ const config: GatsbyConfig = {
         icon: `src/images/ah-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `@chakra-ui/gatsby-plugin`,
+      options: {
+        resetCSS: false,
+      }
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
