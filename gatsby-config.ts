@@ -1,7 +1,6 @@
-const { resolve } = require('path');
-const path = require('path');
+import { GatsbyConfig } from 'gatsby';
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Aokashi Home`,
     description: `Aokashi の個人サイトです。`,
@@ -104,3 +103,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+export default config;

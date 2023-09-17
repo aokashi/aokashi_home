@@ -43,7 +43,8 @@
     "sass": "^1.44.0"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "typescript": "^5.2.2"
   },
   "keywords": [
     "gatsby"
