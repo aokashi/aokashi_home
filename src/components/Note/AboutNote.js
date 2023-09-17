@@ -1,17 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Note from "./Note"
 
 import AboutIcon from "../../images/note_icon-about.png"
+import { Alert, AlertDescription, AlertTitle, Box, Image } from "@chakra-ui/react"
 
 const AboutNote = ({ title, children }) => (
-  <Note
-    className="is-success"
-    title={title}
-    icon={AboutIcon}
-  >
-    {children}
-  </Note>
+  <Alert status="success">
+    <Image src={AboutIcon} alt="解説" mr={3} />
+    <Box>
+      <AlertTitle>{title}</AlertTitle>
+      <AlertDescription>{children}</AlertDescription>
+    </Box>
+  </Alert>
 )
 
 AboutNote.propTypes = {

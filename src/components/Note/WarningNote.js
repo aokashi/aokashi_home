@@ -1,12 +1,14 @@
 import React from "react"
-import Note from "./Note"
 import WarningIcon from "../../images/note_icon-warning.png"
+import { Alert, Box, Image } from "@chakra-ui/react"
 
 const WarningNote = ({ children }) => (
-  <Note
-    className="is-warning"
-    icon={WarningIcon}
-  >{children}</Note>
+  <Alert status="warning">
+    <Image src={WarningIcon} alt="注意" mr={3} />
+    <Box>
+      {children}
+    </Box>
+  </Alert>
 )
 
 export default WarningNote

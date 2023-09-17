@@ -4,11 +4,11 @@ import Layout from "../layouts/page-layout"
 import Seo from "../components/seo"
 import SoftwareData from "../data/software.json"
 import PageHeader from "../components/PageHeader"
-import BoxList from "../components/BoxList"
 import Box from "../components/Box/Box"
 import BoxNav from "../components/BoxNav"
 import InfoNote from "../components/Note/InfoNote"
 import LinkButton from "../components/LinkButton"
+import { SimpleGrid } from "@chakra-ui/react"
 
 const SoftwarePage = () => (
   <Layout headerContent={<PageHeader><h1>ソフトウェア</h1></PageHeader>}>
@@ -25,13 +25,13 @@ const SoftwarePage = () => (
 )
 
 const softwareList = (
-  <BoxList>
+  <SimpleGrid columns={[1, 2, 3]} spacing={4}>
     {
-      SoftwareData.map((item, index) => (
+      SoftwareData.map((item) => (
         <Box
           title={item.name}
           width="half"
-          key={index}
+          key={item.name}
           footerContent={<BoxNav navItems={getLinks(item)} />}
         >
           <p>{item.description}</p>
@@ -43,7 +43,7 @@ const softwareList = (
         </Box>
       ))
     }
-  </BoxList>
+  </SimpleGrid>
 )
 
 /**

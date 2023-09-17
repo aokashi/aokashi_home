@@ -6,11 +6,11 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Seo from "../../components/seo"
 import PageHeader from "../../components/PageHeader"
-import BoxList from "../../components/BoxList"
 import Box from "../../components/Box/Box"
 import BoxNav from "../../components/BoxNav"
 import WarningNote from "../../components/Note/WarningNote"
 import InfoNote from "../../components/Note/InfoNote"
+import { Card, CardBody, CardHeader, HStack, Heading, SimpleGrid, Stack, Tag, Text } from "@chakra-ui/react"
 
 /**
  * WWAページのコンポーネントです。
@@ -85,17 +85,17 @@ const WWAPage = () => {
           <p>WWA Wing 未対応のWWAをプレイする場合は旧資料集の <a href="https://contents.aokashi.net/docs/?WWA/HowToLaunchJavaWWA" title="WWA/HowToLaunchWWA - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">JavaアプレットのWWAを動作するには</a> で設定をお願いします。</p>
         </WarningNote>
       </div>
-      <BoxList>
+      <SimpleGrid columns={[1, 2, 3]} spacing={4}>
         <WWAList wwaData={WWAData} screenImages={data.allFile.nodes} wwaWingLogo={data.file} />
-      </BoxList>
+      </SimpleGrid>
       <div className="content">
         <h2>Thanks</h2>
         <WarningNote>
           <p>2019年11月10日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
         </WarningNote>
-        <div className="columns is-multiline">
+        <SimpleGrid columns={[1, 2, 3]} spacing={4}>
           {WWALicenseList(data.allWwaLicenseYaml)}
-        </div>
+        </SimpleGrid>
       </div>
     </Layout>
   )
@@ -110,40 +110,40 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item, i
       title={item.name}
       imagePath={screenImage}
       width="one-third"
-      key={index}
+      key={item.name}
       footerContent={<BoxNav navItems={getLinks(item.links)} />}
     >
       {item.supportWWAWing &&
-        <div className="has-text-right"><GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" /></div>
+        <Stack direction="row-reverse">
+          <GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" />
+        </Stack>
       }
-      <p>{item.description}</p>
+      <Text>{item.description}</Text>
     </Box>
   )
 })
 
-const WWALicenseList = (data) => data.nodes.map((license, licenseIndex) => (
-  <div className="column is-one-third" key={licenseIndex}>
-    <div className="card">
-      <div className="card-content">
-        <div className="title is-5">
-          <a href={license.url} target="_blank" rel="noopener noreferrer">{license.name}</a>
-        </div>
-        <div className="subtitle is-6">
-          {license.authors.join(", ")}
-        </div>
-        <div className="tags">
-          {license.items.map((item, index) =>
-            <span className="tag" key={index}>{item}</span>
-          )}
-        </div>
-        {license.remark &&
-          <div className="block">
-            <p>{license.remark}</p>
-          </div>
-        }
-      </div>
-    </div>
-  </div>
+const WWALicenseList = (data) => data.nodes.map((license) => (
+  <Card key={license.name}>
+    <CardHeader>
+      <Heading as="h3" size="xs">
+        <a href={license.url} target="_blank" rel="noopener noreferrer">{license.name}</a>
+      </Heading>
+      <Text>
+        {license.authors.join(", ")}
+      </Text>
+    </CardHeader>
+    <CardBody>
+      <HStack>
+        {license.items.map((item) =>
+          <Tag size="md" key={item}>{item}</Tag>
+        )}
+      </HStack>
+      {license.remark &&
+        <Text>{license.remark}</Text>
+      }
+    </CardBody>
+  </Card>
 ))
 
 /**

@@ -1,12 +1,14 @@
 import React from "react"
-import Note from "./Note"
 import InfoIcon from "../../images/note_icon-info.png"
+import { Alert, Box, Image } from "@chakra-ui/react"
 
 const InfoNote = ({ children }) => (
-  <Note
-    className="is-info"
-    icon={InfoIcon}
-  >{children}</Note>
+  <Alert status="info">
+    <Image src={InfoIcon} alt="情報" mr={3} />
+    <Box>
+      {children}
+    </Box>
+  </Alert>
 )
 
 export default InfoNote

@@ -2,32 +2,33 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
 import Image from "../Image"
+import { Card, CardBody, CardFooter, CardHeader } from "@chakra-ui/react"
 
 const Box = ({ title, link, imagePath, onImageClick, width, className, children, footerContent }) => (
-  <div className={`column ${getWidth(width)}`}>
-    <div className={`card ${className}`}>
-      {imagePath &&
-        <div className="card-image has-text-centered has-background-light">
-          <BoxLink href={link} onClick={onImageClick}>
-            <Image src={imagePath} />
-          </BoxLink>
-        </div>
-      }
-      {title &&
-        <header className="card-header">
-          <BoxLink href={link}>
-            <h3 className="card-header-title">{title}</h3>
-          </BoxLink>
-        </header>
-      }
-      <div className="card-content">
-        {children}
+  <Card>
+    {imagePath &&
+      <div className="card-image has-text-centered has-background-light">
+        <BoxLink href={link} onClick={onImageClick}>
+          <Image src={imagePath} />
+        </BoxLink>
       </div>
-      {footerContent &&
-        footerContent
+    }
+    <CardHeader>
+      {title &&
+        <BoxLink onClick={() => {}} href={link}>
+          <h3 className="card-header-title">{title}</h3>
+        </BoxLink>
       }
-    </div>
-  </div>
+    </CardHeader>
+    <CardBody>
+      {children}
+    </CardBody>
+    {footerContent && (
+      <CardFooter>
+        {footerContent}
+      </CardFooter>
+    )}
+  </Card>
 )
 
 /**
@@ -39,7 +40,7 @@ const BoxLink = ({ href, onClick, children }) => {
     return <Link href={href}>{children}</Link>
   }
   if (onClick) {
-    return <div role="button" tabIndex="0" onClick={onClick} onKeyDown={onClick}>{children}</div>
+    return <div role="button" tabIndex={0} onClick={onClick} onKeyDown={onClick}>{children}</div>
   }
   return <>{children}</>
 }
