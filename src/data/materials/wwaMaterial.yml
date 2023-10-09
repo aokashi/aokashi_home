@@ -659,19 +659,25 @@
     - 物体
 - name: 23-boat-small
   file: /materials/wwa/23-boat-small.gif
-  publishedAt: 2023-09-18
+  publishedAt: 2023-10-09
   tags:
     - WWA素材第3世代
     - 乗り物
 - name: 23-boat-middle_sightseeing
   file: /materials/wwa/23-boat-middle_sightseeing.gif
-  publishedAt: 2023-09-18
+  publishedAt: 2023-10-09
   tags:
     - WWA素材第3世代
     - 乗り物
 - name: 23-boat-large_ferry
   file: /materials/wwa/23-boat-large_ferry.gif
-  publishedAt: 2023-09-18
+  publishedAt: 2023-10-09
+  tags:
+    - WWA素材第3世代
+    - 乗り物
+- name: 23-piano
+  file: /materials/wwa/23-piano.gif
+  publishedAt: 2023-10-09
   tags:
     - WWA素材第3世代
     - 乗り物
