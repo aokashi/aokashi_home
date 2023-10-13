@@ -18,13 +18,13 @@ import Seo from "../components/seo"
 import AboutNote from "../components/Note/AboutNote"
 import TableOfContents from "../components/TableOfContents"
 import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const PortfolioItemTemplate = ({
-  data
+  data,
+  children
 }) => {
   const { mdx } = data
-  const { frontmatter, body, tableOfContents } = mdx
+  const { frontmatter, tableOfContents } = mdx
   const aboutWords = frontmatter.words
     ? data.allPortfolioAboutWordYaml.nodes.filter(aboutWord => {
       return frontmatter.words.includes(aboutWord.name)
@@ -39,7 +39,7 @@ const PortfolioItemTemplate = ({
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="content">
         <MDXProvider>
-          <MDXRenderer>{body}</MDXRenderer>
+          {children}
         </MDXProvider>
         {frontmatter.links &&
           <>
@@ -155,7 +155,6 @@ export const pageQuery = graphql`
       }
     ) {
       id
-      body
       tableOfContents
       fields {
         slug

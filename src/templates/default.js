@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts/page-layout"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import PageHeader from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
@@ -9,10 +8,11 @@ import Seo from "../components/seo"
 import { MDXProvider } from "@mdx-js/react"
 
 const DefaultTemplate = ({
-  data
+  data,
+  children
 }) => {
   const { mdx } = data
-  const { frontmatter, body, tableOfContents } = mdx
+  const { frontmatter, tableOfContents } = mdx
   return (
     <Layout
       sidebarContent={<TableOfContents body={tableOfContents} />}
@@ -25,9 +25,7 @@ const DefaultTemplate = ({
       <Seo title={frontmatter.title} />
       <div className="content">
         <MDXProvider>
-          <MDXRenderer frontmatter={frontmatter}>
-            {body}
-          </MDXRenderer>
+          {children}
         </MDXProvider>
       </div>
     </Layout>
@@ -38,7 +36,6 @@ export const pageQuery = graphql`
   query ($path: String!) {
     mdx(fields: { slug: { eq: $path } }) {
       id
-      body
       tableOfContents
       fields {
         slug

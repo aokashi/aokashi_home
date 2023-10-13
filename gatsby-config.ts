@@ -54,26 +54,28 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              icon: false,
+        mdxOptions: {
+          remarkPlugins: [
+            {
+              resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                icon: false,
+              }
+            },
+            {
+              resolve: `gatsby-remark-prismjs`,
+              options: {
+                classPrefix: `language-`
+              }
+            },
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1280
+              }
             }
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: `language-`
-            }
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1280
-            }
-          }
-        ]
+          ]
+        }
       }
     },
     {

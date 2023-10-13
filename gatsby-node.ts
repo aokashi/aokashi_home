@@ -5,10 +5,10 @@
  */
 
 // You can delete this file if you're not using it
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+import * as path from 'path'
+import { createFilePath } from 'gatsby-source-filesystem'
 
-exports.createPages = async ({ actions, graphql }) => {
+export const createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const result = await graphql(`{
   defaultPages: allMdx {
@@ -20,6 +20,9 @@ exports.createPages = async ({ actions, graphql }) => {
         }
         frontmatter {
           template
+        }
+        internal {
+          contentFilePath
         }
       }
     }
@@ -41,11 +44,12 @@ exports.createPages = async ({ actions, graphql }) => {
     const templateName = node.frontmatter.template
       ? String(node.frontmatter.template)
       : 'default'
+    const template = path.resolve(`./src/templates/${templateName}.js`)
     const nodeId = node.id
 
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/${templateName}.js`),
+      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         nodeId
       }
@@ -67,14 +71,13 @@ exports.createPages = async ({ actions, graphql }) => {
 
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === 'Mdx') {
     const value = createFilePath({
       node,
       getNode,
-      trailingSlash: false,
     })
     createNodeField({
       name: `slug`,
