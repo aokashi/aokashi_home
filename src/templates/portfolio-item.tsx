@@ -1,11 +1,7 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import { graphql, Link } from "gatsby"
+import { chakra, Box } from "@chakra-ui/react"
 
-import {
-  summary,
-  headerIcon,
-  images as styleImages
-} from "./portfolio-item.module.sass"
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"
 import Carousel from "../components/Carousel"
@@ -85,28 +81,30 @@ const PortfolioItemTemplate = ({
   )
 }
 
+const HeaderIcon = ({ children }: { children: ReactNode }) => <chakra.span mr={2} verticalAlign="middle">{children}</chakra.span>
+
 const ItemHeader = ({ frontmatter }) => {
   return (
     <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
-      <div className={`${summary} block`}>
+      <Box pb={4}>
         <h1>{frontmatter.title}</h1>
         <div>
-          <span className={`${headerIcon} icon is-medium`}>
+          <HeaderIcon>
             <img src={DateIcon} alt={"日付:"} />
-          </span>
+          </HeaderIcon>
           <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
         </div>
         <div className="tags">
-          <span className={`${headerIcon} icon is-medium`}>
+          <HeaderIcon>
             <img src={TagIcon} alt={"タグ:"} />
-          </span>
+          </HeaderIcon>
           {frontmatter.tags.map((tag, tagIndex) => 
             <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
               {tag}
             </Link>
           )}
         </div>
-      </div>
+      </Box>
     </PageHeader>
   )
 }
@@ -131,9 +129,9 @@ const PortfolioCarousel = ({ images }) => {
   const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 1)
 
   return (
-    <div className={styleImages}>
+    <Box backgroundColor="gray" margin="0 auto" maxW={["auto", "800px"]}>
       <Carousel items={images} width={maxWidth} height={maxHeight} />
-    </div>
+    </Box>
   )
 }
 
@@ -141,7 +139,7 @@ const PortfolioCarousel = ({ images }) => {
  * @todo allPortfolioAboutWordYaml についてはcontextにwordsを含めた形で gatsby-node.js に移行する
  */
 export const pageQuery = graphql`
-  query ($path: String!) {
+  query portfolioDetailsByPath ($path: String!) {
     mdx(
       fields: {
         slug: {

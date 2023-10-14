@@ -33,7 +33,7 @@ const DefaultTemplate = ({
 }
 
 export const pageQuery = graphql`
-  query ($path: String!) {
+  query pageDataByPath ($path: String!) {
     mdx(fields: { slug: { eq: $path } }) {
       id
       tableOfContents

@@ -1,17 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, { ReactNode } from "react"
+import { PageProps, graphql } from "gatsby"
 import Layout from "../layouts/index-layout"
 
-import {
-  sectionTitle,
-  sectionItem,
-  itemTitle,
-  itemText
-} from "./index-page.module.sass"
 import Seo from "../components/seo"
 import Link from "../components/Link"
+import { Box, Heading, Text } from "@chakra-ui/react"
 
-const IndexPageTemplate = ({ data }) => {
+const SectionTitle = ({ children }: { children: ReactNode }) => <Heading as="h2" borderBottom="2px solid" borderColor="brand">{children}</Heading>
+
+const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery>) => {
   const { mdx } = data
   const { frontmatter } = mdx
   return (
@@ -33,13 +30,13 @@ const IndexPageTemplate = ({ data }) => {
         </div>
         <div className="columns">
           <section className="column is-two-thirds">
-            <h2 className={sectionTitle}>好きなもの</h2>
+            <SectionTitle>好きなもの</SectionTitle>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
           </section>
           <section className="column is-one-third">
-            <h2 className={sectionTitle}>使用環境</h2>
+            <SectionTitle>使用環境</SectionTitle>
             {
               ProfileSection(frontmatter.profile.items.environments)
             }
@@ -52,7 +49,7 @@ const IndexPageTemplate = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query {
+  query indexPageProfileData {
     mdx( frontmatter: { template: { eq: "index-page" } }) {
       frontmatter {
         title
@@ -83,17 +80,20 @@ export const pageQuery = graphql`
   }
 `
 
-const ProfileSection = (data) => {
+const SectionItem = ({ children }: { children: ReactNode }) => <Box as="section" p={2}>{children}</Box>
+
+// TODO graphql-typegen の型を有効活用したいが、使用すると data.map 内の item が any 扱いされてしまう
+const ProfileSection = (data: readonly { name: string, text: string, link?: { url: string, text: string } }[]) => {
   return data.map((item, index) => (
-    <section className={sectionItem} key={index}>
-      <h3 className={itemTitle}>{item.name}</h3>
-      <p className={itemText}>{item.text}</p>
-      {item.link &&
-        <p className={itemText}>
+    <SectionItem key={index}>
+      <Heading as="h3">{item.name}</Heading>
+      <Text ml={4}>{item.text}</Text>
+      {'link' in item && item.link &&
+        <Text ml={4}>
           <Link href={item.link.url} className="button is-primary">{item.link.text}</Link>
-        </p>
+        </Text>
       }
-    </section>
+    </SectionItem>
   ))
 }
 

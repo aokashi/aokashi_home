@@ -45,7 +45,7 @@ query generateTargetPages {
     const templateName = node.frontmatter.template
       ? String(node.frontmatter.template)
       : 'default'
-    const template = path.resolve(`./src/templates/${templateName}.js`)
+    const template = path.resolve(`./src/templates/${templateName}.tsx`)
     const nodeId = node.id
 
     createPage({
@@ -63,7 +63,7 @@ query generateTargetPages {
 
     createPage({
       path: `/portfolio/tag/${tagName}/`,
-      component: path.resolve('./src/templates/portfolio-tag.js'),
+      component: path.resolve('./src/templates/portfolio-tag.tsx'),
       context: {
         tag: tagName,
       }
