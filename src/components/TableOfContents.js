@@ -25,7 +25,7 @@ const TableOfContents = ({ body }) => {
 }
 
 /**
- * プロパティ body は MDXRenderer で使用するオブジェクトです。
+ * プロパティ body は MDX から出力される目次のオブジェクトです。
  */
 TableOfContents.propTypes = {
   body: PropTypes.object,
