@@ -8,6 +8,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.aokashi.net`,
     openGraphImage: `/images/ah-ogp_image.png`,
   },
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

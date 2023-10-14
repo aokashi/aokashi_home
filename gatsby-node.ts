@@ -10,7 +10,8 @@ import { createFilePath } from 'gatsby-source-filesystem'
 
 export const createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
-  const result = await graphql(`{
+  const result = await graphql(`
+query generateTargetPages {
   defaultPages: allMdx {
     edges {
       node {
