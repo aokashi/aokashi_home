@@ -3,37 +3,45 @@ import PropTypes from "prop-types"
 
 /**
  * 親要素が PortfolioList の場合にスタイルシートを付与したいため、CSSはPortfolioListと共用
+ * @todo TypeScript にすると export がないと型エラーを起こすため、対策が必要
  */
 import { group } from "./PortfolioList.module.sass"
+import { Box, SimpleGrid, Text } from "@chakra-ui/react"
 
-const PortfolioGroup = ({ name, descriptionTitle, description, children }) => (
+const PortfolioGrid = ({ children }) =>
+  <SimpleGrid columns={[1, 1, 2]} spacingX={[4, 4, 8]} spacingY={4} my={8}>
+    {children}
+  </SimpleGrid>
+
+const PortfolioGroup = ({ seasonId, name, descriptionTitle, description, children }) => (
   <div className={group}>
+    <div id={seasonId}></div>
     {name &&
-      <div className="columns has-text-dark is-variable is-0-mobile is-5-tablet block">
+      <PortfolioGrid>
 
-        <div className="column is-half is-size-4">{name}</div>
+        <Box><Text fontSize="xl" fontWeight="bold">{name}</Text></Box>
 
         {description &&
-          <div className="column is-half">
+          <Box>
             {descriptionTitle &&
-              <div className="has-text-weight-bold">{descriptionTitle}</div>
+              <Text fontSize="lg" fontWeight="bold">{descriptionTitle}</Text>
             }
             {description.split("\n").map((line, lineIndex) =>
               <p key={lineIndex}>{line}</p>
             )}
-          </div>
+          </Box>
         }
 
-      </div>
+      </PortfolioGrid>
     }
-
-    <div className="columns is-multiline is-variable is-0-mobile is-5-tablet">
+    <PortfolioGrid>
       {children}
-    </div>
+    </PortfolioGrid>
   </div>
 )
 
 PortfolioGroup.propTypes = {
+  seasonId: PropTypes.string,
   name: PropTypes.string,
   children: PropTypes.node,
 }
