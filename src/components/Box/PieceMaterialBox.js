@@ -13,7 +13,7 @@ const PieceMaterialBox = ({ materialItem }) => {
       title={materialItem.name}
       materialItem={materialItem}
     >
-      <div className="block">
+      <div>
         {
           materialItem.files.map((file, fileIndex) => {
             let noteSign = ""

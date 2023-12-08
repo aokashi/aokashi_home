@@ -1,24 +1,39 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Box from "./Box"
+import { HStack, Tag } from "@chakra-ui/react"
 
-const MaterialBox = ({ materialItem, imagePath, onImageClick, width, title, children }) => (
+export type MaterialItem = {
+  name: string,
+  file: string,
+  tags?: string[],
+  description?: string,
+}
+
+type Props = {
+  materialItem: MaterialItem,
+  imagePath: string,
+  onImageClick: VoidFunction,
+  title?: string,
+  children?: React.ReactNode,
+}
+
+const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }: Props) => (
   <Box
     title={title}
     imagePath={imagePath}
     onImageClick={onImageClick}
-    width={width}
   >
     {children}
     {
       materialItem.tags &&
-        <div className="tags block">
+        <HStack spacing={2} py={2}>
           {
             materialItem.tags.map((tagItem, tagIndex) => (
-              <span className="tag" key={tagIndex}>{tagItem}</span>
+              <Tag key={tagIndex}>{tagItem}</Tag>
             ))
           }
-        </div>
+        </HStack>
     }
     {
       materialItem.description &&
@@ -37,7 +52,6 @@ MaterialBox.propTypes = {
   }),
   imagePath: Box.propTypes.imagePath,
   onImageClick: PropTypes.func,
-  width: PropTypes.string,
   title: PropTypes.string,
   children: PropTypes.node,
 }
