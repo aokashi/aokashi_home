@@ -1,9 +1,10 @@
 import React from "react"
 import WarningIcon from "../../images/note_icon-warning.png"
 import { Alert, Box, Image } from "@chakra-ui/react"
+import { NoteProps } from "./types"
 
-const WarningNote = ({ children }) => (
-  <Alert status="warning">
+const WarningNote = ({ children }: NoteProps) => (
+  <Alert status="warning" my={6}>
     <Image src={WarningIcon} alt="注意" mr={3} />
     <Box>
       {children}

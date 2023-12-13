@@ -177,6 +177,7 @@ class WWAMaterialPage extends React.Component {
         alt={this.state.previewItem.name}
         name={this.state.previewItem.name}
         description={this.state.previewItem.description}
+        imageBg="rgb(158, 158, 158)"
         onOutsideClick={() => this.hidePreview()}
       />
     )
