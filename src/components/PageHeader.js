@@ -1,18 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { pageHeader, content } from "./PageHeader.module.sass"
+import { Box, HStack, Image } from "@chakra-ui/react"
 
 const PageHeaderBase = (styleFunction, contentFunction) => {
   const Component = ({ image, bottomContent, children }) => (
-    <div
+    <Box
+      bgColor="silver.500"
+      fontWeight="bold"
       style={styleFunction(image)}
-      className={pageHeader}
     >
-      <div className={content}>
+      <Box px={4} py={6}>
         { contentFunction(children, image) }
-      </div>
+      </Box>
       {bottomContent}
-    </div>
+    </Box>
   )
 
   Component.propTypes = {
@@ -37,16 +38,12 @@ const PageHeader = PageHeaderBase(
 const IconPageHeader = PageHeaderBase(
   () => ({}),
   (children, image) =>
-    <div className="media">
-      <div className="media-left">
-        <div className="image is-64x64">
-          <img src={image} alt="" />
-        </div>
-      </div>
-      <div className="media-content">
+    <HStack spacing={4}>
+      <Image src={image} width="64px" height="64px" />
+      <Box>
         {children}
-      </div>
-    </div>
+      </Box>
+    </HStack>
 )
 
 export default PageHeader

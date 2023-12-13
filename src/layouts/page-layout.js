@@ -12,15 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import {
   pageBody,
-  mainContent,
-  nav,
-  navContent,
   navItem as styleNavItem,
   isActive,
-  article,
-  header,
-  rightSidebar,
-  bottomLink,
   floatNav,
   navIcon,
   navText
@@ -28,6 +21,40 @@ import {
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
+import { Box, Button, Grid, GridItem, VStack } from "@chakra-ui/react"
+
+const gridTemplate = [
+  `
+  "h" auto
+  "t" auto
+  "m" 1fr
+  "f" auto
+  / 1fr
+  `,
+  `
+  "h" auto
+  "t" auto
+  "m" 1fr
+  "f" auto
+  / 1fr
+  `,
+  `
+  "h h h h h" auto
+  "n . m . t" 1fr
+  "f f f f f" auto
+  / 200px auto 1fr auto 200px
+  `
+]
+
+const NavItem = ({ href, name, isActive }) =>
+  <Button
+    as={Link}
+    borderColor={isActive ? "brand.800" : "gray.500"}
+    href={href}
+    variant="navItem"
+  >
+    {name}
+  </Button>
 
 const Layout = ({ headerContent, sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
@@ -61,38 +88,41 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
       <Helmet>
         <body className={pageBody} />
       </Helmet>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        siteNavItems={siteNavItems}
-        logoImage={data.file}
-      />
-      <main className={mainContent}>
-        <nav className={nav}>
-          <nav className={navContent}>
-            <Link href="/" className={styleNavItem}>Home</Link>
-            {
-              contentsNavItems.map((navItem, navIndex) => (
-                <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>{navItem.name}</Link>
-              ))
-            }
-          </nav>
-        </nav>
-        <article className={`${article} container`}>
-          {headerContent &&
-            <header className={header}>{headerContent}</header>
+      <Grid gridTemplate={gridTemplate}>
+        <GridItem area="h">
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            siteNavItems={siteNavItems}
+            logoImage={data.file}
+          />
+        </GridItem>
+        <GridItem area="n" as="nav" bgColor="brand.300" display={['none', 'none', 'block']}>
+          <NavItem href="/" className={styleNavItem} name="Home" />
+          {
+            contentsNavItems.map((navItem) => (
+              // TODO 現在ページであれば isActive を true にしたい
+              <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
+            ))
           }
-          <div className="section">{children}</div>
-        </article>
+        </GridItem>
+        <GridItem area="m" as="article">
+          <VStack alignItems="stretch">
+            {headerContent &&
+              <Box as="header">{headerContent}</Box>
+            }
+            <Box className="section" p={8}>{children}</Box>
+            <Button borderRadius={0} colorScheme="gray" onClick={backToTop}>トップへ戻る</Button>
+          </VStack>
+        </GridItem>
         {sidebarContent &&
-          <aside className={rightSidebar}>
+          <GridItem area="t" as="aside">
             {sidebarContent}
-          </aside>
+          </GridItem>
         }
-        <div className={bottomLink}>
-          <button className="button is-fullwidth is-light" onClick={backToTop}>トップへ戻る</button>
-        </div>
-      </main>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+        <GridItem area="f">
+          <Footer siteTitle={data.site.siteMetadata.title} />
+        </GridItem>
+      </Grid>
       <div className={floatNav}>
         {
           data.allNavItemYaml.nodes.map((navItem, navIndex) => {
