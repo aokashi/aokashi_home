@@ -1,13 +1,22 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import PropTypes from "prop-types"
-import { Box, HStack, Image } from "@chakra-ui/react"
+import { Box, HStack, Image, SystemStyleObject } from "@chakra-ui/react"
 
-const PageHeaderBase = (styleFunction, contentFunction) => {
+type PropsBase = {
+  image?: string,
+  bottomContent?: ReactNode,
+  children: ReactNode
+}
+
+const PageHeaderBase = (
+  styleFunction: (image?: string) => SystemStyleObject,
+  contentFunction: (children: ReactNode, image?: string) => ReactNode
+): ((props: PropsBase) => ReactNode) => {
   const Component = ({ image, bottomContent, children }) => (
     <Box
-      bgColor="silver.500"
+      bgColor="silver.200"
       fontWeight="bold"
-      style={styleFunction(image)}
+      sx={styleFunction(image)}
     >
       <Box px={4} py={6}>
         { contentFunction(children, image) }

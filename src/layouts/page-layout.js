@@ -21,9 +21,17 @@ import {
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
-import { Box, Button, Grid, GridItem, VStack } from "@chakra-ui/react"
+import { Box, Button, Container, Grid, GridItem, Hide, Show, VStack } from "@chakra-ui/react"
+import { ClassNames } from "@emotion/react"
 
 const gridTemplate = [
+  `
+  "h" auto
+  "t" auto
+  "m" 1fr
+  "f" auto
+  / 1fr
+  `,
   `
   "h" auto
   "t" auto
@@ -46,15 +54,21 @@ const gridTemplate = [
   `
 ]
 
-const NavItem = ({ href, name, isActive }) =>
-  <Button
-    as={Link}
-    borderColor={isActive ? "brand.800" : "gray.500"}
-    href={href}
-    variant="navItem"
-  >
-    {name}
-  </Button>
+const NavItem = ({ href, name }) => (
+  <ClassNames>
+    {({ css }) => (
+      <Button
+        as={Link}
+        // テーマ側の CSS が優先的に使用されてしまうため、 !important で優先させる
+        activeClassName={css({ borderColor: 'var(--chakra-colors-brand-800)!important', fontWeight: 'bold!important' })}
+        href={href}
+        variant="navItem"
+      >
+        {name}
+      </Button>
+    )}
+  </ClassNames>
+)
 
 const Layout = ({ headerContent, sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
@@ -96,23 +110,26 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
             logoImage={data.file}
           />
         </GridItem>
-        <GridItem area="n" as="nav" bgColor="brand.300" display={['none', 'none', 'block']}>
-          <NavItem href="/" className={styleNavItem} name="Home" />
-          {
-            contentsNavItems.map((navItem) => (
-              // TODO 現在ページであれば isActive を true にしたい
-              <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
-            ))
-          }
-        </GridItem>
-        <GridItem area="m" as="article">
-          <VStack alignItems="stretch">
-            {headerContent &&
-              <Box as="header">{headerContent}</Box>
+        <Show above="lg">
+          <GridItem area="n" as="nav" bgColor="brand.200">
+            <NavItem href="/" className={styleNavItem} name="Home" />
+            {
+              contentsNavItems.map((navItem) => (
+                <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
+              ))
             }
-            <Box className="section" p={8}>{children}</Box>
-            <Button borderRadius={0} colorScheme="gray" onClick={backToTop}>トップへ戻る</Button>
-          </VStack>
+          </GridItem>
+        </Show>
+        <GridItem area="m" as="article">
+          <Container>
+            <VStack alignItems="stretch">
+              {headerContent &&
+                <Box as="header">{headerContent}</Box>
+              }
+              <Box className="section" p={8}>{children}</Box>
+              <Button borderRadius={0} colorScheme="gray" onClick={backToTop}>トップへ戻る</Button>
+            </VStack>
+          </Container>
         </GridItem>
         {sidebarContent &&
           <GridItem area="t" as="aside">
@@ -123,21 +140,23 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
           <Footer siteTitle={data.site.siteMetadata.title} />
         </GridItem>
       </Grid>
-      <div className={floatNav}>
-        {
-          data.allNavItemYaml.nodes.map((navItem, navIndex) => {
-            if (navItem.type !== "contents") {
-              return null
-            }
-            return (
-              <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>
-                <img src={navItem.icon} alt="" className={navIcon} />
-                <span className={navText}>{navItem.name}</span>
-              </Link>
-            )
-          })
-        }
-      </div>
+      <Hide above="lg">
+        <div className={floatNav}>
+          {
+            data.allNavItemYaml.nodes.map((navItem, navIndex) => {
+              if (navItem.type !== "contents") {
+                return null
+              }
+              return (
+                <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>
+                  <img src={navItem.icon} alt="" className={navIcon} />
+                  <span className={navText}>{navItem.name}</span>
+                </Link>
+              )
+            })
+          }
+        </div>
+      </Hide>
     </>
   )
 }

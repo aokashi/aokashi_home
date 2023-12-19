@@ -1,22 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { Tab, TabList, Tabs } from "@chakra-ui/react"
+import { HStack, Link as ChakraLink } from "@chakra-ui/react"
+import { ClassNames } from "@emotion/react"
 
 const PageHeaderNav = ({ navItems }) => (
-  <Tabs align="center">
-    <TabList>
-      {
-        /**
-         * @todo Linkコンポーネントの activeClassName はLink自体しか付与されず、親属性の li 属性には付与できません。
-         *     Link コンポーネントのAPIを調べれば、実現できるかもしれませんが、そのAPIの扱い方がわからないので、分かるまではこのまま放置で行きます。
-         */
-      }
-      {navItems.map((link) =>
-        <Tab as={Link} to={link.link}>{link.name}</Tab>
-      )}
-    </TabList>
-  </Tabs>
+  <HStack borderBottom="1px solid" borderColor="gray.800" justifyContent="center" spacing={3}>
+    {navItems.map((link) =>
+      <ClassNames>
+        {({ css }) => (
+          <ChakraLink
+            as={Link}
+            activeClassName={css({ borderBottom: '1px solid', borderColor: 'black' })}
+            p={2}
+            to={link.link}
+          >
+            {link.name}
+          </ChakraLink>
+        )}
+      </ClassNames>
+    )}
+  </HStack>
 )
 
 PageHeaderNav.propTypes = {

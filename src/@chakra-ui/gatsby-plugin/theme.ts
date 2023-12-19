@@ -15,16 +15,16 @@ const theme = {
       900: '#000040',
     },
     silver: {
-      50: '#c0c0c0',
-      100: '#c0c0c0',
-      200: '#c0c0c0',
-      300: '#c0c0c0',
+      50: '#fff',
+      100: '#f0f0f0',
+      200: '#e0e0e0',
+      300: '#d0d0d0',
       400: '#c0c0c0',
-      500: '#c0c0c0',
-      600: '#404040',
-      700: '#404040',
+      500: '#a0a0a0',
+      600: '#808080',
+      700: '#606060',
       800: '#404040',
-      900: '#404040',
+      900: '#202020',
     }
   },
   styles: {
@@ -34,7 +34,25 @@ const theme = {
         color: 'gray.800',
         fontFamily: '"Noto Sans CJK JP", "Noto Sans JP", "Noto Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", -sans-serif',
         margin: 0,
-      }
+      },
+      h1: {
+        color: 'brand.800'
+      },
+      h2: {
+        color: 'brand.800'
+      },
+      h3: {
+        color: 'brand.800'
+      },
+      h4: {
+        color: 'brand.800'
+      },
+      h5: {
+        color: 'brand.800'
+      },
+      h6: {
+        color: 'brand.800'
+      },
     }
   },
   components: {
@@ -47,11 +65,12 @@ const theme = {
           _hover: {
             bgColor: 'gray.500'
           },
-          bgColor: 'silver.500',
+          bgColor: 'silver.300',
           borderLeft: '4px solid',
           borderColor: 'gray.500',
           borderRadius: 0,
           display: 'block',
+          fontWeight: 'normal',
           height: 'auto',
           margin: 4,
           padding: 3,
@@ -67,6 +86,13 @@ const theme = {
           borderStyle: 'solid',
           borderColor: 'brand.500'
         }
+      }
+    },
+    Container: {
+      baseStyle: {
+        // https://chakra-ui.com/docs/styled-system/theme#breakpoints
+        maxW: ['30em', '48em', '62em', '100ch', '128ch', '152ch'],
+        padding: 0,
       }
     }
   }
