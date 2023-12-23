@@ -4,7 +4,7 @@ import Layout from "../layouts/index-layout"
 
 import Seo from "../components/seo"
 import Link from "../components/Link"
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Card, CardBody, CardHeader, HStack, Heading, Tag, Text } from "@chakra-ui/react"
 
 const SectionTitle = ({ children }: { children: ReactNode }) => <Heading as="h2" borderBottom="2px solid" borderColor="brand">{children}</Heading>
 
@@ -15,19 +15,17 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
     <Layout>
       <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <div className="section">
-        <p className="block">{frontmatter.profile.description}</p>
-        <div className="message">
-          <div className="message-header">
-            <p>スキル</p>
-          </div>
-          <div className="message-body">
-            <p className="level-item tags is-block">
+        <Text>{frontmatter.profile.description}</Text>
+        <Card>
+          <CardHeader>スキル</CardHeader>
+          <CardBody>
+            <HStack spacing={2}>
               {frontmatter.profile.skills.map((skill, skillIndex) =>
-                <span className="tag is-black" style={ { backgroundColor: skill.color } } key={skillIndex}>{skill.name}</span>
+                <Tag color="white" sx={ { backgroundColor: skill.color } } key={skillIndex}>{skill.name}</Tag>
               )}
-            </p>
-          </div>
-        </div>
+            </HStack>
+          </CardBody>
+        </Card>
         <div className="columns">
           <section className="column is-two-thirds">
             <SectionTitle>好きなもの</SectionTitle>
@@ -42,7 +40,7 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
             }
           </section>
         </div>
-        <p>{frontmatter.profile.extra}</p>
+        <Text>{frontmatter.profile.extra}</Text>
       </div>
     </Layout>
   )

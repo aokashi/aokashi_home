@@ -10,15 +10,30 @@ import Link from "../components/Link"
 import Footer from "../components/footer.js"
 import Icon from "../images/aokashi-icon.png"
 import convertDate from "../utils/convertDate"
+import { Container, Grid, GridItem, Stack } from "@chakra-ui/react"
+
+const gridTemplateNarrow = `
+". . ." 1fr
+". l ." 96px
+". . ." 1fr
+"n n n" auto
+"e e e" auto
+"b b b" auto
+/ 1fr minmax(auto,512px) 1fr
+`;
+
+const gridTemplateWide = `
+"n . ."  1fr
+"n l ." 96px
+"n . e" 1fr
+"b b b" auto
+/ 1fr 512px 1fr
+`;
 
 const {
   indexBody,
-  firstScreen,
-  title,
-  quickContents,
   aboutme,
   aboutmeIcon,
-  mainContent,
   navItem: styleNavItem,
   navItemLink: styleNavItemLink,
   navItemIcon: styleNavItemIcon,
@@ -85,63 +100,67 @@ const IndexLayout = ({ children }) => {
     setScreenHeight(window.innerHeight);
   }, [])
 
+  const contentsNavItems = data.allNavItemYaml.group.find(({ fieldValue }) => fieldValue === "contents")
+  const siteNavItems = data.allNavItemYaml.group.find(({ fieldValue }) => fieldValue === "site")
+
   return (
     <>
       <Helmet>
         <body className={indexBody} />
       </Helmet>
-      <div className={`${firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
-        <div className={title}>
-          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
-        </div>
-        {
-          navItems(data.allNavItemYaml)
-        }
-        <div className={quickContents}>
-          {
-            Information(data.allFeedAokashiRoom.nodes[0])
-          }
-          <div className={aboutme}>
-            <img src={Icon} alt="Aokashi" className={aboutmeIcon}/>
+      <Container minH={`${screenHeight}px`}>
+        <Grid gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]} h="full">
+          <GridItem area="l">
+            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
+          </GridItem>
+          <GridItem area="n">
             {
-              socialLinks(data.allSocialLinkYaml)
+              navItems(contentsNavItems.nodes)
             }
-          </div>
-        </div>
-      </div>
-      <div className={`${mainContent} container`}>
+          </GridItem>
+          <GridItem area="e">
+            {
+              navItems(siteNavItems.nodes)
+            }
+          </GridItem>
+          <GridItem area="b">
+            {
+              Information(data.allFeedAokashiRoom.nodes[0])
+            }
+            <div className={aboutme}>
+              <img src={Icon} alt="Aokashi" className={aboutmeIcon}/>
+              {
+                socialLinks(data.allSocialLinkYaml)
+              }
+            </div>
+          </GridItem>
+        </Grid>
+      </Container>
+      <Container>
         {children}
-      </div>
+      </Container>
       <Footer siteTitle={data.site.siteMetadata.title} />
     </>
   )
 }
 
-const navItems = (navData) => (
-  <>
+const navItems = (navItems) => (
+  <Stack color="white" direction={['row', 'row', 'column']}>
     {
-      navData.group.map((group, groupIndex) => (
-        <div className={getNavGroupClassName(group.fieldValue)} key={groupIndex}>
-          {
-            group.nodes.map((navItem, navItemIndex) => (
-              <div className={styleNavItem} key={navItemIndex}>
-                <Link
-                  href={navItem.link}
-                  className={styleNavItemLink}
-                >
-                  {
-                    navItem.icon &&
-                      <img src={navItem.icon} alt={""} className={styleNavItemIcon} />
-                  }
-                  <span className={styleNavItemText}>{navItem.name}</span>
-                </Link>
-              </div>
-            ))
-          }
-        </div>
+      navItems.map((navItem, navItemIndex) => (
+        // TODO リンクの色が白になっていない
+        <Link key={navItemIndex} href={navItem.link}>
+          <Stack alignItems="center" direction={['column', 'column', 'row']}>
+            {
+              navItem.icon &&
+                <img src={navItem.icon} alt={""} className={styleNavItemIcon} />
+            }
+            <span className={styleNavItemText}>{navItem.name}</span>
+          </Stack>
+        </Link>
       ))
     }
-  </>
+  </Stack>
 )
 
 const socialLinks = (socialData) => (
@@ -195,10 +214,6 @@ const Information = (data) => (
     </a>
   </div>
 )
-
-function getNavGroupClassName(groupValue) {
-  return styles[groupValue + "Nav"]
-}
 
 IndexLayout.propTypes = {
   children: PropTypes.node.isRequired,
