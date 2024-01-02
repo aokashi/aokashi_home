@@ -1,7 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Box, VStack, Wrap } from "@chakra-ui/react"
 
 import MaterialBox from "./MaterialBox"
+import LinkButton from "../LinkButton"
 import getFileName from "../../utils/getFileName"
 
 const PieceMaterialBox = ({ materialItem }) => {
@@ -13,24 +15,26 @@ const PieceMaterialBox = ({ materialItem }) => {
       title={materialItem.name}
       materialItem={materialItem}
     >
-      <div>
-        {
-          materialItem.files.map((file, fileIndex) => {
-            let noteSign = ""
-            if (file.note) {
-              notes.push(file.note)
-              noteSign = <sup>{notes.length}</sup>
-            }
-            return (
-              <span key={fileIndex}>
-                <a download={getFileName(file.path)} href={file.path}>
-                  <img src={file.path} alt={file.alt} />
-                </a>
-                {noteSign}
-              </span>
-            )
-          })
-        }
+      <VStack alignItems="stretch">
+        <Wrap>
+          {
+            materialItem.files.map((file, fileIndex) => {
+              let noteSign = ""
+              if (file.note) {
+                notes.push(file.note)
+                noteSign = <sup>{notes.length}</sup>
+              }
+              return (
+                <span key={fileIndex}>
+                  <a download={getFileName(file.path)} href={file.path}>
+                    <img src={file.path} alt={file.alt} />
+                  </a>
+                  {noteSign}
+                </span>
+              )
+            })
+          }
+        </Wrap>
         <ol>
           {
             notes.map((noteItem, noteIndex) => (
@@ -38,13 +42,13 @@ const PieceMaterialBox = ({ materialItem }) => {
             ))
           }
         </ol>
-        {
-          materialItem.downloadFile &&
-            <div className="buttons is-right">
-              <a href={materialItem.downloadFile} className="button">ダウンロード</a>
-            </div>
-        }
-      </div>
+        <Box textAlign="right">
+          {
+            materialItem.downloadFile &&
+              <LinkButton href={materialItem.downloadFile}>ダウンロード</LinkButton>
+          }
+        </Box>
+      </VStack>
     </MaterialBox>
   )
 }

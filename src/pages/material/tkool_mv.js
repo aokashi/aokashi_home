@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Layout from "../../layouts/page-layout"
+import { Heading } from "@chakra-ui/react"
 
 import MaterialNavItem from "../../data/materials/navItem.json"
 import PageHeader from "../../components/PageHeader"
@@ -25,11 +26,11 @@ class TkoolMvPage extends React.Component {
     return (
       <Layout headerContent={
         <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-          <h1>RPGツクールMV/MZ対応素材</h1>
+          <Heading as="h1" size="lg">RPGツクールMV/MZ対応素材</Heading>
         </PageHeader>
       }>
         <Seo title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
-        <div className="content">
+        <div className="ah-article">
           <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>
             <p>特に表記がない場合は、画像素材のコピーとペーストでゲームの素材に組み込む必要があります。</p>

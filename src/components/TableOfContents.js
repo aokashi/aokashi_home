@@ -10,7 +10,7 @@ const TableOfContents = ({ body }) => {
   return (
     <Box as="aside" p={4}>
       <Heading as="h2" size="sm" className="menu-label"><FontAwesomeIcon icon="list" /> 目次</Heading>
-      <List spacing={3} pl={2}>
+      <List variant="tableOfContents">
         {body.items.map((item, index) => (
           <ListItem key={index}><a href={item.url}>{item.title}</a></ListItem>
         ))}

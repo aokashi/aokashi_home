@@ -6,20 +6,22 @@ import { ClassNames } from "@emotion/react"
 
 const PageHeaderNav = ({ navItems }) => (
   <HStack borderBottom="1px solid" borderColor="gray.800" justifyContent="center" spacing={3}>
-    {navItems.map((link) =>
-      <ClassNames>
-        {({ css }) => (
+    <ClassNames>
+      {({ css }) => {
+        const activeClassName = css({ borderBottom: '1px solid', borderColor: 'black' });
+        return navItems.map((link) =>
           <ChakraLink
+            key={link.name}
             as={Link}
-            activeClassName={css({ borderBottom: '1px solid', borderColor: 'black' })}
+            activeClassName={activeClassName}
             p={2}
             to={link.link}
           >
             {link.name}
           </ChakraLink>
-        )}
-      </ClassNames>
-    )}
+        )
+      }}
+    </ClassNames>
   </HStack>
 )
 

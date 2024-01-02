@@ -27,7 +27,7 @@ const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }:
     {children}
     {
       materialItem.tags &&
-        <HStack spacing={2} py={2}>
+        <HStack spacing={2} py={2} wrap="wrap">
           {
             materialItem.tags.map((tagItem, tagIndex) => (
               <Tag key={tagIndex}>{tagItem}</Tag>
@@ -37,7 +37,7 @@ const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }:
     }
     {
       materialItem.description &&
-        <div className="content">
+        <div className="ah-article">
           <p>{materialItem.description}</p>
         </div>
     }

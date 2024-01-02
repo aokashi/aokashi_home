@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react"
 import { PageProps, graphql } from "gatsby"
-import { Box, Card, CardBody, CardHeader, Grid, GridItem, HStack, Heading, Tag, Text } from "@chakra-ui/react"
+import { Box, Card, CardBody, CardHeader, Grid, GridItem, HStack, Heading, Tag, Text, VStack } from "@chakra-ui/react"
 import Layout from "../layouts/index-layout"
 
 import Seo from "../components/seo"
-import Link from "../components/Link"
+import LinkButton from "../components/LinkButton"
 
 const SectionTitle = ({ children }: { children: ReactNode }) =>
   <Heading as="h2" borderBottom="2px solid" borderColor="brand" p={2} size="md">{children}</Heading>
@@ -15,9 +15,9 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
   return (
     <Layout>
       <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
-      <Box p="8">
+      <VStack alignItems="stretch" p={8}>
         <Text>{frontmatter.profile.description}</Text>
-        <Card variant="profile">
+        <Card variant="profile" my={6}>
           <CardHeader>スキル</CardHeader>
           <CardBody>
             <HStack spacing={2}>
@@ -42,7 +42,7 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
           </GridItem>
         </Grid>
         <Text>{frontmatter.profile.extra}</Text>
-      </Box>
+      </VStack>
     </Layout>
   )
 }
@@ -89,7 +89,7 @@ const ProfileSection = (data: readonly { name: string, text: string, link?: { ur
       <Text ml={4} my={1}>{item.text}</Text>
       {'link' in item && item.link &&
         <Text ml={4}>
-          <Link href={item.link.url}>{item.link.text}</Link>
+          <LinkButton href={item.link.url}>{item.link.text}</LinkButton>
         </Text>
       }
     </SectionItem>

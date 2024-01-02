@@ -1,8 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { Box, List, ListItem } from "@chakra-ui/react"
 
 import Layout from "../../layouts/page-layout"
-import PageHeader from "../../components/PageHeader"
+import { BasicPageHeader } from "../../components/PageHeader"
 import PortfolioList from "../../components/PortfolioList"
 import PortfolioItem from "../../components/PortfolioItem"
 import PortfolioGroup from "../../components/PortfolioGroup"
@@ -16,17 +17,13 @@ class PortfolioPage extends React.Component {
   render() {
     return (
       <Layout
-        headerContent={
-          <PageHeader>
-            <h1>ポートフォリオ</h1>
-          </PageHeader>
-        }
+        headerContent={<BasicPageHeader>ポートフォリオ</BasicPageHeader>}
         sidebarContent={this.renderSidebar()}
       >
         <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
 
         {this.renderPortfolioList()}
-        <div className="content">
+        <Box className="ah-article">
           <h2>ポートフォリオについて</h2>
           <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。周りの環境からのインプットから始まり、アウトプットを通して自分自身をアップデートしていく軌跡をコンテンツにしました。</p>
           <WarningNote>
@@ -41,22 +38,22 @@ class PortfolioPage extends React.Component {
           <h2>その他のデータ</h2>
           <p>ポートフォリオの項目に載るものではないものの、コンテンツ整理によって行き場を失った作品紹介を掲載しています。</p>
           {this.renderOtherPortfolioList()}
-        </div>
+        </Box>
       </Layout>
     )
   }
 
   renderSidebar() {
     return (
-      <aside className="menu">
-        <ul className="menu-list">
+      <Box as="aside">
+        <List variant="tableOfContents">
           {Object.keys(seasonDetails).map((seasonId) => (
-            <li key={seasonId}>
+            <ListItem key={seasonId}>
               <a href={`#${seasonId}`}>{seasonDetails[seasonId].name}</a>
-            </li>
+            </ListItem>
           ))}
-        </ul>
-      </aside> 
+        </List>
+      </Box> 
     )
   }
 

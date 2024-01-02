@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { ChakraProps, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text, VStack } from "@chakra-ui/react"
+import { Box, ChakraProps, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text, VStack } from "@chakra-ui/react"
 
 type Props = {
   src: string,
@@ -20,8 +20,10 @@ const ImageModal = ({ src, alt, name, description, imageBg, onOutsideClick }: Pr
       )}
       <ModalCloseButton />
       <ModalBody>
-        <VStack bgColor={imageBg} spacing={6}>
-          <img src={src} alt={alt} />
+        <VStack spacing={6}>
+          <Box bgColor={imageBg}>
+            <img src={src} alt={alt} />
+          </Box>
           {description &&
             <Text>{description}</Text>
           }

@@ -29,13 +29,6 @@ const PortfolioGroup = ({ seasonId, name, descriptionTitle, description, childre
         </Box>
       }
     </SimpleGrid>
-    {name &&
-      <PortfolioGrid>
-
-
-
-      </PortfolioGrid>
-    }
     <PortfolioGrid>
       {children}
     </PortfolioGrid>

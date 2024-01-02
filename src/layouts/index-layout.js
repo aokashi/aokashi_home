@@ -150,7 +150,7 @@ const navItems = (navItems) => (
 )
 
 const socialLinks = (socialData) => (
-  <Wrap px={5} spacingX={10} spacingY={5}>
+  <Wrap px={5} py={3} spacingX={10} spacingY={3}>
     {
       socialData.nodes.map((socialItem, socialItemIndex) => (
         <WrapItem key={socialItemIndex}>

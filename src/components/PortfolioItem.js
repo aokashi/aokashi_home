@@ -19,7 +19,7 @@ const PortfolioItem = ({ portfolioItem, slug }) => {
           {convertDate(portfolioItem.date)}
         </time>
       </div>
-      <HStack>
+      <HStack wrap="wrap">
         {portfolioItem.tags.map((tag, tagIndex) => 
           <Tag as={GatsbyLink} to={`/portfolio/tag/${tag}`} key={tagIndex}>{tag}</Tag>
         )}

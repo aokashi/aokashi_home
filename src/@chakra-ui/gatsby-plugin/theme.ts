@@ -3,8 +3,9 @@ import { extendTheme } from '@chakra-ui/react'
 import Alert from './components/alert'
 import Button from './components/button'
 import Card from './components/card'
+import List from './components/list'
 
-const theme = {
+const theme = extendTheme({
   colors: {
     brand: {
       50: '#c0e0ff',
@@ -40,6 +41,10 @@ const theme = {
         margin: 0,
       },
       a: {
+        _hover: {
+          color: 'brand.800',
+        },
+        color: 'brand.500',
         textDecoration: 'none',
       },
       h1: {
@@ -60,6 +65,36 @@ const theme = {
       h6: {
         color: 'brand.800'
       },
+      ul: {
+        paddingLeft: 8,
+      },
+      ol: {
+        paddingLeft: 8,
+      },
+      '.ah-article': {
+        h2: {
+          bgColor: 'transparent',
+          bgGradient: 'linear(to-r, silver.300, transparent)',
+          borderLeftWidth: 16,
+          borderStyle: 'solid',
+          borderColor: 'brand.800',
+          fontSize: '2xl',
+          fontWeight: 'bold',
+          marginTop: '1rem',
+          marginBottom: '.5rem',
+          padding: 3,
+        },
+        h3: {
+          fontSize: 'lg',
+          fontWeight: 'bold',
+          marginTop: '1rem',
+          marginBottom: '.5rem',
+          padding: 2,
+        },
+        p: {
+          my: '1rem',
+        }
+      }
     }
   },
   components: {
@@ -72,8 +107,9 @@ const theme = {
         maxW: ['30em', '48em', '62em', '100ch', '128ch', '152ch'],
         padding: 0,
       }
-    }
+    },
+    List
   }
-};
+})
 
-export default extendTheme(theme)
+export default theme

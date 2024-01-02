@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import PropTypes from "prop-types"
-import { Box, HStack, Image, SystemStyleObject } from "@chakra-ui/react"
+import { Box, HStack, Heading, Image, SystemStyleObject } from "@chakra-ui/react"
 
 type PropsBase = {
   image?: string,
@@ -44,6 +44,11 @@ const PageHeader = PageHeaderBase(
   (children) => <>{children}</>
 )
 
+const BasicPageHeader = PageHeaderBase(
+  () => ({}),
+  (children) => <Heading as="h1" size="lg">{children}</Heading>
+)
+
 const IconPageHeader = PageHeaderBase(
   () => ({}),
   (children, image) =>
@@ -56,4 +61,4 @@ const IconPageHeader = PageHeaderBase(
 )
 
 export default PageHeader
-export { IconPageHeader }
+export { BasicPageHeader, IconPageHeader }

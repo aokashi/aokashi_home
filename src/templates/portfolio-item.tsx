@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { graphql, Link } from "gatsby"
-import { chakra, Box } from "@chakra-ui/react"
+import { chakra, Box, Tag, HStack, Image, Heading } from "@chakra-ui/react"
 
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"
@@ -33,7 +33,7 @@ const PortfolioItemTemplate = ({
     >
       <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
-      <div className="content">
+      <div className="ah-article">
         <MDXProvider>
           {children}
         </MDXProvider>
@@ -57,7 +57,7 @@ const PortfolioItemTemplate = ({
         }
       </div>
       {frontmatter.words &&
-        <div className="content">
+        <div className="ah-article">
           {aboutWords.map((aboutWordItem, aboutWordIndex) => 
             <AboutNote title={aboutWordItem.title} key={aboutWordIndex}>
               {aboutWordItem.description.split("\n").map((line, lineIndex) =>
@@ -81,29 +81,23 @@ const PortfolioItemTemplate = ({
   )
 }
 
-const HeaderIcon = ({ children }: { children: ReactNode }) => <chakra.span mr={2} verticalAlign="middle">{children}</chakra.span>
-
 const ItemHeader = ({ frontmatter }) => {
   return (
     <PageHeader bottomContent={<PortfolioCarousel images={frontmatter.images} />}>
       <Box pb={4}>
-        <h1>{frontmatter.title}</h1>
-        <div>
-          <HeaderIcon>
-            <img src={DateIcon} alt={"日付:"} />
-          </HeaderIcon>
+        <Heading as="h1" size="lg">{frontmatter.title}</Heading>
+        <HStack my={2}>
+          <Image src={DateIcon} alt={"日付:"} />
           <time dateTime={frontmatter.date}>{convertDate(frontmatter.date)}</time>
-        </div>
-        <div className="tags">
-          <HeaderIcon>
-            <img src={TagIcon} alt={"タグ:"} />
-          </HeaderIcon>
-          {frontmatter.tags.map((tag, tagIndex) => 
-            <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>
+        </HStack>
+        <HStack>
+          <Image src={TagIcon} alt={"タグ:"} />
+          {frontmatter.tags.map((tag, tagIndex) =>
+            <Tag key={tagIndex} as={Link} to={`/portfolio/tag/${tag}`}>
               {tag}
-            </Link>
+            </Tag>
           )}
-        </div>
+        </HStack>
       </Box>
     </PageHeader>
   )

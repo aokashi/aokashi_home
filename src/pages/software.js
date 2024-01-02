@@ -3,7 +3,7 @@ import Layout from "../layouts/page-layout"
 
 import Seo from "../components/seo"
 import SoftwareData from "../data/software.json"
-import PageHeader from "../components/PageHeader"
+import { BasicPageHeader } from "../components/PageHeader"
 import Box from "../components/Box/Box"
 import BoxNav from "../components/BoxNav"
 import InfoNote from "../components/Note/InfoNote"
@@ -11,9 +11,9 @@ import LinkButton from "../components/LinkButton"
 import { SimpleGrid } from "@chakra-ui/react"
 
 const SoftwarePage = () => (
-  <Layout headerContent={<PageHeader><h1>ソフトウェア</h1></PageHeader>}>
+  <Layout headerContent={<BasicPageHeader>ソフトウェア</BasicPageHeader>}>
     <Seo title="ソフトウェア" description="Aokashi Homeのソフトウェアページです。あると便利なツールや、創作を手助けするツールの開発をしています。" />
-    <div className="content">
+    <div className="ah-article">
       <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
       <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
       <InfoNote>

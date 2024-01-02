@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
 import Image from "../Image"
-import { Card, CardBody, CardFooter, CardHeader, ChakraProps, chakra } from "@chakra-ui/react"
+import { Card, CardBody, CardFooter, CardHeader, ChakraProps, Heading, chakra } from "@chakra-ui/react"
 
 type Props = {
   title?: string,
@@ -16,20 +16,19 @@ type Props = {
 /**
  * カード形ボックスコンポーネントです。
  * Chakra UI の Box コンポーネントとは異なります。
+ * @todo 今後は Chakra UI の Box コンポーネントとの混在を防ぐため、 BoxCard コンポーネントに改称する。
  */
 const Box = ({ title, link, imagePath, onImageClick, children, footerContent, ...chakraProps }: Props) => (
   <Card {...chakraProps}>
     {imagePath &&
-      <div className="card-image has-text-centered has-background-light">
-        <BoxLink href={link} onClick={onImageClick}>
-          <Image src={imagePath} />
-        </BoxLink>
-      </div>
+      <BoxLink href={link} onClick={onImageClick}>
+        <Image src={imagePath} />
+      </BoxLink>
     }
     {title &&
       <CardHeader>
         <BoxLink onClick={() => {}} href={link}>
-          <h3 className="card-header-title">{title}</h3>
+          <Heading as="h3" size="md">{title}</Heading>
         </BoxLink>
       </CardHeader>
     }

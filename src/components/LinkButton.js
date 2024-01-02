@@ -2,14 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Link from "./Link"
+import { Button } from "@chakra-ui/react"
 
 const LinkButton = ({ href, children }) => (
-  <div className="buttons is-centered block">
-    <Link
-      className="button"
-      href={href}
-    >{children}</Link>
-  </div>
+  <Button as={Link} href={href}>
+    {children}
+  </Button>
 )
 
 LinkButton.propTypes = {

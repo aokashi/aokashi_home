@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Heading } from "@chakra-ui/react"
 
 import Layout from "../layouts/page-layout"
 import { IconPageHeader } from "../components/PageHeader"
@@ -15,7 +16,7 @@ const PortfolioTagTemplate = ({ pageContext, data }) => {
   return (
     <Layout headerContent={
       <IconPageHeader image={TagIcon}>
-        <h1>タグ <strong>{tag}</strong> のポートフォリオ項目一覧</h1>
+        <Heading as="h1" size="lg">タグ「{tag}」のポートフォリオ項目一覧</Heading>
       </IconPageHeader>
     }>
       <BackLink to="/portfolio">ポートフォリオ トップ</BackLink>

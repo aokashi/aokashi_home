@@ -1,19 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Button, HStack, Image } from "@chakra-ui/react"
 
-import { arrowIcon } from "./BackLink.module.sass"
 import ArrowIcon from "../images/button_icon-arrow.svg"
 
 const BackLink = ({ to, children }) => (
-  <div className="block is-size-5">
-    <Link to={to}>
-      <span className={`${arrowIcon} icon`}>
-        <img src={ArrowIcon} alt="" />
-      </span>
+  <HStack>
+    <Button
+      as={Link}
+      leftIcon={<Image src={ArrowIcon} boxSize="24px" alt="" />}
+      to={to}
+      variant="ghost"
+    >
       {children}
-    </Link>
-  </div>
+    </Button>
+  </HStack>
 )
 
 BackLink.propTypes = {

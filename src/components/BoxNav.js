@@ -12,6 +12,8 @@ const BoxNav = ({ navItems }) => (
         <Button
           leftIcon={navItem.fa ? (<FontAwesomeIcon icon={["fab", navItem.fa]} />) : undefined}
           variant="outline"
+          // 幅が狭い上にテキストを詰める場合があるため、折り返せるようにする
+          whiteSpace="normal"
         >
           {navItem.name}
         </Button>

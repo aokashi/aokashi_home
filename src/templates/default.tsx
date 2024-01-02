@@ -1,8 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts/page-layout"
+import { Box, Heading } from "@chakra-ui/react"
 
-import PageHeader from "../components/PageHeader"
+import { BasicPageHeader } from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
 import Seo from "../components/seo"
 import { MDXProvider } from "@mdx-js/react"
@@ -17,17 +18,15 @@ const DefaultTemplate = ({
     <Layout
       sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={
-        <PageHeader>
-          <h1>{frontmatter.title}</h1>
-        </PageHeader>
+        <BasicPageHeader>{frontmatter.title}</BasicPageHeader>
       }
     >
       <Seo title={frontmatter.title} />
-      <div className="content">
+      <Box className="ah-article">
         <MDXProvider>
           {children}
         </MDXProvider>
-      </div>
+      </Box>
     </Layout>
   )
 }

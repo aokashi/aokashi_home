@@ -2,7 +2,7 @@ import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
 
 const buttonTheme = defineStyleConfig({
   defaultProps: {
-    colorScheme: 'brand'
+    colorScheme: 'brand',
   },
   variants: {
     navItem: defineStyle({

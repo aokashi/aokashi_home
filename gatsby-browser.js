@@ -13,8 +13,13 @@ import {
   // トップへ戻るボタンで使用
   faArrowUp,
   // 目次で使用
-  faList
+  faList,
+  // WWA の Thanks の各アイコンで使用
+  faCog,
+  faImage,
+  faMusic,
+  faGuitar,
 } from '@fortawesome/free-solid-svg-icons'
 import 'prismjs/themes/prism-tomorrow.css'
 
-library.add(fab, faArrowUp, faList)
+library.add(fab, faArrowUp, faList, faCog, faImage, faMusic, faGuitar)

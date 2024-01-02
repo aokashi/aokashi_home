@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../layouts/page-layout"
+import { Heading } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
 import MaterialNavItem from "../data/materials/navItem.json"
@@ -10,11 +11,11 @@ import PageHeaderNav from "../components/PageHeaderNav"
 const MaterialIndexPage = () => (
   <Layout headerContent={
     <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-      <h1>素材</h1>
+      <Heading as="h1" size="lg">素材</Heading>
     </PageHeader>
   }>
     <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
-    <div className="content">
+    <div className="ah-article">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <h2>ご利用について</h2>
       <p>当サイトでは、なるべく多くの方に利用してもらえるように、ここの素材やライブラリの利用制限はなるべく最小限に留めています。 <strong>「このサイト (Aokashi Home) から利用した」</strong> という表記を含めていただければ、ご自由にご利用できます。加工も自由です(また、画像を重ねるような加工が前提としたものもあります)。</p>
