@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 
 import convertDate from "../utils/convertDate"
 import Box from "./Box/Box"
-import { Link } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
+import { HStack, Tag } from "@chakra-ui/react"
 
 const PortfolioItem = ({ portfolioItem, slug }) => {
   return (
@@ -18,11 +19,11 @@ const PortfolioItem = ({ portfolioItem, slug }) => {
           {convertDate(portfolioItem.date)}
         </time>
       </div>
-      <div className="tags">
+      <HStack>
         {portfolioItem.tags.map((tag, tagIndex) => 
-          <Link to={`/portfolio/tag/${tag}`} className="tag" key={tagIndex}>{tag}</Link>
+          <Tag as={GatsbyLink} to={`/portfolio/tag/${tag}`} key={tagIndex}>{tag}</Tag>
         )}
-      </div>
+      </HStack>
     </Box>
   )
 }

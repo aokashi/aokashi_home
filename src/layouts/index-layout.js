@@ -4,13 +4,14 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, WrapItem } from "@chakra-ui/react"
 
 import * as styles from "./index-layout.module.sass"
 import Link from "../components/Link"
 import Footer from "../components/footer.js"
 import Icon from "../images/aokashi-icon.png"
+import ProfileBg from "../images/ah-background_profile.png"
 import convertDate from "../utils/convertDate"
-import { Container, Grid, GridItem, Stack } from "@chakra-ui/react"
 
 const gridTemplateNarrow = `
 ". . ." 1fr
@@ -32,24 +33,6 @@ const gridTemplateWide = `
 
 const {
   indexBody,
-  aboutme,
-  aboutmeIcon,
-  navItem: styleNavItem,
-  navItemLink: styleNavItemLink,
-  navItemIcon: styleNavItemIcon,
-  navItemText: styleNavItemText,
-  social,
-  socialItem: styleSocialItem,
-  socialText: styleSocialText,
-  socialLink,
-  hasLink,
-  socialIcon,
-  isIcon,
-  isText,
-  information,
-  informationTitle,
-  informationLink,
-  informationDate
 } = styles;
 
 const IndexLayout = ({ children }) => {
@@ -108,8 +91,8 @@ const IndexLayout = ({ children }) => {
       <Helmet>
         <body className={indexBody} />
       </Helmet>
-      <Container minH={`${screenHeight}px`}>
-        <Grid gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]} h="full">
+      <Container>
+        <Grid gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]} minH={`${screenHeight}px`}>
           <GridItem area="l">
             <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
           </GridItem>
@@ -127,16 +110,16 @@ const IndexLayout = ({ children }) => {
             {
               Information(data.allFeedAokashiRoom.nodes[0])
             }
-            <div className={aboutme}>
-              <img src={Icon} alt="Aokashi" className={aboutmeIcon}/>
+            <HStack backgroundImage={ProfileBg}>
+              <Image src={Icon} alt="Aokashi" flex="none" h={["64px", "64px", "128px"]} />
               {
                 socialLinks(data.allSocialLinkYaml)
               }
-            </div>
+            </HStack>
           </GridItem>
         </Grid>
       </Container>
-      <Container>
+      <Container backgroundImage={ProfileBg}>
         {children}
       </Container>
       <Footer siteTitle={data.site.siteMetadata.title} />
@@ -145,17 +128,20 @@ const IndexLayout = ({ children }) => {
 }
 
 const navItems = (navItems) => (
-  <Stack color="white" direction={['row', 'row', 'column']}>
+  <Stack color="white" direction={['row', 'row', 'column']} justifyContent="center" h="full" w="full">
     {
       navItems.map((navItem, navItemIndex) => (
-        // TODO リンクの色が白になっていない
-        <Link key={navItemIndex} href={navItem.link}>
+        <Link
+          key={navItemIndex}
+          _hover={{ color: 'gray.800' }}
+          href={navItem.link}
+        >
           <Stack alignItems="center" direction={['column', 'column', 'row']}>
             {
               navItem.icon &&
-                <img src={navItem.icon} alt={""} className={styleNavItemIcon} />
+                <img src={navItem.icon} alt={""} />
             }
-            <span className={styleNavItemText}>{navItem.name}</span>
+            <Box fontSize="lg" fontFamily="Nunito" textTransform="uppercase">{navItem.name}</Box>
           </Stack>
         </Link>
       ))
@@ -164,27 +150,27 @@ const navItems = (navItems) => (
 )
 
 const socialLinks = (socialData) => (
-  <div className={social}>
+  <Wrap px={5} spacingX={10} spacingY={5}>
     {
       socialData.nodes.map((socialItem, socialItemIndex) => (
-        <div className={styleSocialItem} key={socialItemIndex}>
+        <WrapItem key={socialItemIndex}>
           <SocialLink socialItem={socialItem}>
             <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
-            <span className={styleSocialText}>
+            <chakra.span color="gray.700" ml={2}>
               {socialItem.text}
-            </span>
+            </chakra.span>
           </SocialLink>
-        </div>
+        </WrapItem>
       ))
     }
-  </div>
+  </Wrap>
 )
 
 const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={`${socialLink} ${hasLink}`}>{children}</a>
+      <Link href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer">{children}</Link>
     )
   } else {
     return (
@@ -196,23 +182,25 @@ const SocialLink = ({ socialItem, children }) => {
 const SocialIcon = ({ icon, alt }) => {
   if (icon) {
     return (
-      <FontAwesomeIcon icon={["fab", icon]} className={`${socialIcon} ${isIcon}`} />
+      <FontAwesomeIcon icon={["fab", icon]} size="2x" />
     )
   } else {
     return (
-      <span className={`${socialIcon} ${isText}`}>{alt}</span>
+      <span>{alt}</span>
     )
   }
 }
 
 const Information = (data) => (
-  <div className={information}>
-    <span className={informationTitle}>ブログ記事</span>
-    <a href={data.link} target="_blank" rel="noopener noreferrer" className={informationLink}>
+  <HStack backgroundColor="white" borderTop="2px solid" borderColor="brand.800" px={3} py={2}>
+    <Box fontWeight="bold">ブログ記事</Box>
+    <Link href={data.link} color="brand.600">
       {data.title}
-      <time dateTime={data.isoDate} className={informationDate}>{convertDate(data.isoDate)}</time>
-    </a>
-  </div>
+    </Link>
+    <Box color="gray.600" fontSize="sm">
+      <time dateTime={data.isoDate}>{convertDate(data.isoDate)}</time>
+    </Box>
+  </HStack>
 )
 
 IndexLayout.propTypes = {

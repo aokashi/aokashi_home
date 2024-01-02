@@ -1,12 +1,13 @@
 import React, { ReactNode } from "react"
 import { PageProps, graphql } from "gatsby"
+import { Box, Card, CardBody, CardHeader, Grid, GridItem, HStack, Heading, Tag, Text } from "@chakra-ui/react"
 import Layout from "../layouts/index-layout"
 
 import Seo from "../components/seo"
 import Link from "../components/Link"
-import { Box, Card, CardBody, CardHeader, HStack, Heading, Tag, Text } from "@chakra-ui/react"
 
-const SectionTitle = ({ children }: { children: ReactNode }) => <Heading as="h2" borderBottom="2px solid" borderColor="brand">{children}</Heading>
+const SectionTitle = ({ children }: { children: ReactNode }) =>
+  <Heading as="h2" borderBottom="2px solid" borderColor="brand" p={2} size="md">{children}</Heading>
 
 const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery>) => {
   const { mdx } = data
@@ -14,9 +15,9 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
   return (
     <Layout>
       <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
-      <div className="section">
+      <Box p="8">
         <Text>{frontmatter.profile.description}</Text>
-        <Card>
+        <Card variant="profile">
           <CardHeader>スキル</CardHeader>
           <CardBody>
             <HStack spacing={2}>
@@ -26,22 +27,22 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
             </HStack>
           </CardBody>
         </Card>
-        <div className="columns">
-          <section className="column is-two-thirds">
+        <Grid gap={4} templateColumns={["1fr", "1fr", "2fr 1fr"]}>
+          <GridItem>
             <SectionTitle>好きなもの</SectionTitle>
             {
               ProfileSection(frontmatter.profile.items.likes)
             }
-          </section>
-          <section className="column is-one-third">
+          </GridItem>
+          <GridItem>
             <SectionTitle>使用環境</SectionTitle>
             {
               ProfileSection(frontmatter.profile.items.environments)
             }
-          </section>
-        </div>
+          </GridItem>
+        </Grid>
         <Text>{frontmatter.profile.extra}</Text>
-      </div>
+      </Box>
     </Layout>
   )
 }
@@ -78,17 +79,17 @@ export const pageQuery = graphql`
   }
 `
 
-const SectionItem = ({ children }: { children: ReactNode }) => <Box as="section" p={2}>{children}</Box>
+const SectionItem = ({ children }: { children: ReactNode }) => <Box as="section" my={5}>{children}</Box>
 
 // TODO graphql-typegen の型を有効活用したいが、使用すると data.map 内の item が any 扱いされてしまう
 const ProfileSection = (data: readonly { name: string, text: string, link?: { url: string, text: string } }[]) => {
   return data.map((item, index) => (
     <SectionItem key={index}>
-      <Heading as="h3">{item.name}</Heading>
-      <Text ml={4}>{item.text}</Text>
+      <Heading as="h3" size="sm" my={1}>{item.name}</Heading>
+      <Text ml={4} my={1}>{item.text}</Text>
       {'link' in item && item.link &&
         <Text ml={4}>
-          <Link href={item.link.url} className="button is-primary">{item.link.text}</Link>
+          <Link href={item.link.url}>{item.link.text}</Link>
         </Text>
       }
     </SectionItem>

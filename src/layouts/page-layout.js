@@ -6,23 +6,16 @@
  */
 
 import React from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import {
-  pageBody,
-  navItem as styleNavItem,
-  isActive,
-  floatNav,
-  navIcon,
-  navText
-} from "./page-layout.module.sass"
+import BgContent from "../images/ah-background_content.png"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
-import { Box, Button, Container, Grid, GridItem, Hide, Show, VStack } from "@chakra-ui/react"
-import { ClassNames } from "@emotion/react"
+import { Box, Button, Container, Grid, GridItem, HStack, Hide, Image, Show, VStack } from "@chakra-ui/react"
+import { ClassNames, Global } from "@emotion/react"
 
 const gridTemplate = [
   `
@@ -99,9 +92,16 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
 
   return (
     <>
-      <Helmet>
-        <body className={pageBody} />
-      </Helmet>
+      <Global
+        styles={{
+          body: {
+            backgroundColor: 'var(--chakra-colors-white)',
+            backgroundImage: `url(${BgContent})`,
+            backgroundRepeat: 'repeat',
+            backgroundPosition: '0 0'
+          }
+        }}
+      />
       <Grid gridTemplate={gridTemplate}>
         <GridItem area="h">
           <Header
@@ -111,13 +111,15 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
           />
         </GridItem>
         <Show above="lg">
-          <GridItem area="n" as="nav" bgColor="brand.200">
-            <NavItem href="/" className={styleNavItem} name="Home" />
-            {
-              contentsNavItems.map((navItem) => (
-                <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
-              ))
-            }
+          <GridItem area="n" bgColor="brand.200">
+            <Box as="nav" py={3} position="sticky" top={0}>
+              <NavItem href="/" name="Home" />
+              {
+                contentsNavItems.map((navItem) => (
+                  <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
+                ))
+              }
+            </Box>
           </GridItem>
         </Show>
         <GridItem area="m" as="article">
@@ -127,7 +129,13 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
                 <Box as="header">{headerContent}</Box>
               }
               <Box className="section" p={8}>{children}</Box>
-              <Button borderRadius={0} colorScheme="gray" onClick={backToTop}>トップへ戻る</Button>
+              <Button
+                onClick={backToTop}
+                leftIcon={<FontAwesomeIcon icon="arrow-up" />}
+                variant="jumpTop"
+              >
+                トップへ戻る
+              </Button>
             </VStack>
           </Container>
         </GridItem>
@@ -141,21 +149,40 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
         </GridItem>
       </Grid>
       <Hide above="lg">
-        <div className={floatNav}>
-          {
-            data.allNavItemYaml.nodes.map((navItem, navIndex) => {
+        <HStack
+          as="nav"
+          alignItems="center"
+          bgColor="silver.300"
+          borderTop="2px solid"
+          borderColor="brand.800"
+          bottom="0"
+          justifyContent="stretch"
+          position="fixed"
+          py={1}
+          w="full"
+        >
+          <ClassNames>
+            {({ css }) => data.allNavItemYaml.nodes.map((navItem, navIndex) => {
               if (navItem.type !== "contents") {
                 return null
               }
               return (
-                <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>
-                  <img src={navItem.icon} alt="" className={navIcon} />
-                  <span className={navText}>{navItem.name}</span>
+                <Link
+                  key={navIndex}
+                  activeClassName={css({ fontWeight: 'bold' })}
+                  href={navItem.link}
+                  w="full"
+                >
+                  <VStack spacing={0}>
+                    {/** 横持ちで閲覧した場合、なるべく閲覧領域を確保するため幅に上限をもたせる */}
+                    <Image src={navItem.icon} alt="" maxW="48px" />
+                    <Box>{navItem.name}</Box>
+                  </VStack>
                 </Link>
               )
-            })
-          }
-        </div>
+            })}
+          </ClassNames>
+        </HStack>
       </Hide>
     </>
   )

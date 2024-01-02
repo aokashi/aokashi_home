@@ -10,7 +10,7 @@ type Props = NoteProps & {
 };
 
 const AboutNote = ({ title, children }: Props) => (
-  <Alert status="success" my={6}>
+  <Alert status="success" my={6} variant="outline">
     <Image src={AboutIcon} alt="解説" mr={3} />
     <Box>
       <AlertTitle>{title}</AlertTitle>

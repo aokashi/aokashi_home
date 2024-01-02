@@ -4,7 +4,7 @@ import { Alert, Box, Image } from "@chakra-ui/react"
 import { NoteProps } from "./types"
 
 const InfoNote = ({ children }: NoteProps) => (
-  <Alert status="info" my={6}>
+  <Alert status="info" my={6} variant="outline">
     <Image src={InfoIcon} alt="情報" mr={3} />
     <Box>
       {children}

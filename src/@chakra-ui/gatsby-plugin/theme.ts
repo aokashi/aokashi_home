@@ -1,4 +1,8 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react'
+
+import Alert from './components/alert'
+import Button from './components/button'
+import Card from './components/card'
 
 const theme = {
   colors: {
@@ -35,6 +39,9 @@ const theme = {
         fontFamily: '"Noto Sans CJK JP", "Noto Sans JP", "Noto Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", -sans-serif',
         margin: 0,
       },
+      a: {
+        textDecoration: 'none',
+      },
       h1: {
         color: 'brand.800'
       },
@@ -56,38 +63,9 @@ const theme = {
     }
   },
   components: {
-    Button: {
-      defaultProps: {
-        colorScheme: 'brand'
-      },
-      variants: {
-        navItem: {
-          _hover: {
-            bgColor: 'gray.500'
-          },
-          bgColor: 'silver.300',
-          borderLeft: '4px solid',
-          borderColor: 'gray.500',
-          borderRadius: 0,
-          display: 'block',
-          fontWeight: 'normal',
-          height: 'auto',
-          margin: 4,
-          padding: 3,
-          textDecoration: 'none',
-        }
-      }
-    },
-    Card: {
-      baseStyle: {
-        container: {
-          backgroundColor: 'gray.200',
-          borderWidth: 2,
-          borderStyle: 'solid',
-          borderColor: 'brand.500'
-        }
-      }
-    },
+    Alert,
+    Button,
+    Card,
     Container: {
       baseStyle: {
         // https://chakra-ui.com/docs/styled-system/theme#breakpoints
