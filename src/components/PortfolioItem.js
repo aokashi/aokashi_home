@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import convertDate from "../utils/convertDate"
 import Box from "./Box/Box"
 import { Link as GatsbyLink } from "gatsby"
-import { HStack, Tag } from "@chakra-ui/react"
+import { HStack, Tag, Text } from "@chakra-ui/react"
 
 const PortfolioItem = ({ portfolioItem, slug }) => {
   return (
@@ -12,12 +12,14 @@ const PortfolioItem = ({ portfolioItem, slug }) => {
       title={portfolioItem.title}
       link={slug}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
+      headerContent={
+        <Text fontSize="sm">
+          <time datatime={portfolioItem.date}>
+            {convertDate(portfolioItem.date)}
+          </time>
+        </Text>
+      }
     >
-      <div className="is-size-7">
-        <time datatime={portfolioItem.date}>
-          {convertDate(portfolioItem.date)}
-        </time>
-      </div>
       <HStack wrap="wrap">
         {portfolioItem.tags.map((tag, tagIndex) => 
           <Tag as={GatsbyLink} to={`/portfolio/tag/${tag}`} key={tagIndex}>{tag}</Tag>

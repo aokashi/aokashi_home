@@ -48,7 +48,7 @@ class PortfolioPage extends React.Component {
 
   renderSidebar() {
     return (
-      <Box as="aside">
+      <Box as="aside" p={4}>
         <List variant="tableOfContents">
           {Object.keys(seasonDetails).map((seasonId) => (
             <ListItem key={seasonId}>

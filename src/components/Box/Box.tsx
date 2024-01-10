@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
 import Image from "../Image"
-import { Card, CardBody, CardFooter, CardHeader, ChakraProps, Heading, chakra } from "@chakra-ui/react"
+import { Card, CardBody, CardFooter, CardHeader, Center, ChakraProps, Heading, chakra } from "@chakra-ui/react"
 
 type Props = {
   title?: string,
@@ -23,7 +23,9 @@ const Box = ({ title, link, imagePath, onImageClick, children, headerContent, fo
   <Card {...chakraProps}>
     {imagePath &&
       <BoxLink href={link} onClick={onImageClick}>
-        <Image src={imagePath} />
+        <Center>
+          <Image src={imagePath} />
+        </Center>
       </BoxLink>
     }
     {(title || headerContent) && (
@@ -60,7 +62,7 @@ const BoxLink = ({ href, onClick, children }: { href?: string, onClick?: VoidFun
     return <Link href={href}>{children}</Link>
   }
   if (onClick) {
-    return <chakra.div role="button" tabIndex={0} mx="auto" onClick={onClick} onKeyDown={onClick}>{children}</chakra.div>
+    return <chakra.div role="button" mx="auto" onClick={onClick} onKeyDown={onClick}>{children}</chakra.div>
   }
   return <>{children}</>
 }

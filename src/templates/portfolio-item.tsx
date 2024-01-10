@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
-import { chakra, Box, Tag, HStack, Image, Heading } from "@chakra-ui/react"
+import { Box, Tag, HStack, Image, Heading } from "@chakra-ui/react"
 
 import Layout from "../layouts/page-layout"
 import PageHeader from "../components/PageHeader"

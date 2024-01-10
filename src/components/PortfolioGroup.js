@@ -9,7 +9,7 @@ import { group } from "./PortfolioList.module.sass"
 import { Box, SimpleGrid, Text } from "@chakra-ui/react"
 
 const PortfolioGrid = ({ children }) =>
-  <SimpleGrid columns={[1, 1, 2, 2, 4]} spacingX={[0, 0, 12]} spacingY={4} my={8}>
+  <SimpleGrid columns={[1, 1, 2, 2, 2, 4]} spacingX={[0, 0, 12]} spacingY={4} my={8}>
     {children}
   </SimpleGrid>
 
