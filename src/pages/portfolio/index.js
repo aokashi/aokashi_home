@@ -1,8 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Box, List, ListItem } from "@chakra-ui/react"
+import { Box, ButtonGroup, List, ListItem } from "@chakra-ui/react"
 
 import Layout from "../../layouts/page-layout"
+import BoxCard from "../../components/Box/Box"
+import BoxList from "../../components/BoxList"
+import LinkButton from "../../components/LinkButton"
 import { BasicPageHeader } from "../../components/PageHeader"
 import PortfolioList from "../../components/PortfolioList"
 import PortfolioItem from "../../components/PortfolioItem"
@@ -135,26 +138,26 @@ class PortfolioPage extends React.Component {
 
   renderOtherPortfolioList() {
     return (
-      <>
+      <BoxList>
         {
-          otherPortfolioItems.map((item, itemIndex) => (
-            <section key={itemIndex}>
-              <h3>{item.title}</h3>
-              {
-                item.links &&
-                  <ul>
-                    {
-                      item.links.map((link, linkIndex) => (
-                        <li key={linkIndex}><a href={link.link}>{link.name}</a></li>
-                      ))
-                    }
-                  </ul>
+          otherPortfolioItems.map((item) => (
+            <BoxCard
+              title={item.title}
+              footerContent={
+                item.links ? (
+                  <ButtonGroup>
+                    {item.links.map((link, linkIndex) => (
+                      <LinkButton key={linkIndex} href={link.link}>{link.name}</LinkButton>
+                    ))}
+                  </ButtonGroup>
+                ) : null
               }
+            >
               <p>{item.description}</p>
-            </section>
+            </BoxCard>
           ))
         }
-      </>
+      </BoxList>
     )
   }
 }

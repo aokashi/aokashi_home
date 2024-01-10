@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Button, ButtonGroup, Card, CardBody, CardHeader, Heading, Text, VStack } from "@chakra-ui/react"
+import { Button, ButtonGroup, Card, CardBody, CardFooter, CardHeader, Heading, Text, VStack } from "@chakra-ui/react"
 import Layout from "../../layouts/page-layout"
 
 import Seo from "../../components/seo"
@@ -102,10 +102,12 @@ class WWAMaterialPage extends React.Component {
               )}
             </>
           </ButtonGroup>
+        </CardBody>
+        <CardFooter>
           <Button onClick={() => this.setTag("")} variant="outline">
             絞り込みを解除
           </Button>
-        </CardBody>
+        </CardFooter>
       </Card>
     )
   }

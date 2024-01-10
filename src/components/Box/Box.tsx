@@ -10,6 +10,7 @@ type Props = {
   imagePath?: string,
   onImageClick?: VoidFunction,
   children?: React.ReactNode,
+  headerContent?: React.ReactNode,
   footerContent?: React.ReactNode
 } & ChakraProps;
 
@@ -18,20 +19,27 @@ type Props = {
  * Chakra UI の Box コンポーネントとは異なります。
  * @todo 今後は Chakra UI の Box コンポーネントとの混在を防ぐため、 BoxCard コンポーネントに改称する。
  */
-const Box = ({ title, link, imagePath, onImageClick, children, footerContent, ...chakraProps }: Props) => (
+const Box = ({ title, link, imagePath, onImageClick, children, headerContent, footerContent, ...chakraProps }: Props) => (
   <Card {...chakraProps}>
     {imagePath &&
       <BoxLink href={link} onClick={onImageClick}>
         <Image src={imagePath} />
       </BoxLink>
     }
-    {title &&
+    {(title || headerContent) && (
       <CardHeader>
-        <BoxLink onClick={() => {}} href={link}>
-          <Heading as="h3" size="md">{title}</Heading>
-        </BoxLink>
+        {title && (
+          link ? (
+            <BoxLink href={link}>
+              <Heading as="h3" size="md">{title}</Heading>
+            </BoxLink>
+          ) : (
+            <Heading as="h3" size="md">{title}</Heading>
+          )
+        )}
+        {headerContent}
       </CardHeader>
-    }
+    )}
     <CardBody>
       {children}
     </CardBody>
@@ -47,12 +55,12 @@ const Box = ({ title, link, imagePath, onImageClick, children, footerContent, ..
  * Box 内でリンクの出力が必要な際に利用するコンポーネントです。
  * @param {Object} props href: リンク先, onClick: クリックイベント
  */
-const BoxLink = ({ href, onClick, children }: { href?: string, onClick: VoidFunction, children: React.ReactNode }) => {
+const BoxLink = ({ href, onClick, children }: { href?: string, onClick?: VoidFunction, children: React.ReactNode }) => {
   if (href) {
     return <Link href={href}>{children}</Link>
   }
   if (onClick) {
-    return <chakra.div role="button" tabIndex={0} onClick={onClick} onKeyDown={onClick}>{children}</chakra.div>
+    return <chakra.div role="button" tabIndex={0} mx="auto" onClick={onClick} onKeyDown={onClick}>{children}</chakra.div>
   }
   return <>{children}</>
 }
@@ -64,6 +72,7 @@ Box.propTypes = {
   onImageClick: PropTypes.func,
   className: PropTypes.string,
   children: PropTypes.node,
+  headerContent: PropTypes.node,
   footerContent: PropTypes.node,
 }
 
@@ -71,8 +80,6 @@ Box.defaultProps = {
   title: "",
   link: "",
   imagePath: null,
-  onImageClick: () => {},
-  width: "one-quater",
   className: "",
 }
 

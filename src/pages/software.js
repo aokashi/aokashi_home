@@ -1,4 +1,5 @@
 import React from "react"
+import { SimpleGrid, Tag, Wrap } from "@chakra-ui/react"
 import Layout from "../layouts/page-layout"
 
 import Seo from "../components/seo"
@@ -8,7 +9,6 @@ import Box from "../components/Box/Box"
 import BoxNav from "../components/BoxNav"
 import InfoNote from "../components/Note/InfoNote"
 import LinkButton from "../components/LinkButton"
-import { SimpleGrid } from "@chakra-ui/react"
 
 const SoftwarePage = () => (
   <Layout headerContent={<BasicPageHeader>ソフトウェア</BasicPageHeader>}>
@@ -32,14 +32,16 @@ const softwareList = (
           title={item.name}
           width="half"
           key={item.name}
+          headerContent={(
+            <Wrap mt={3}>
+              {item.keywords.map((keyword, keywordIndex) => (
+                <Tag key={keywordIndex}>{keyword}</Tag>
+              ))}
+            </Wrap>
+          )}
           footerContent={<BoxNav navItems={getLinks(item)} />}
         >
           <p>{item.description}</p>
-          <div className="tags">
-            {item.keywords.map((keyword, keywordIndex) => (
-              <span className="tag" key={keywordIndex}>{keyword}</span>
-            ))}
-          </div>
         </Box>
       ))
     }

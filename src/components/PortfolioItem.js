@@ -12,7 +12,6 @@ const PortfolioItem = ({ portfolioItem, slug }) => {
       title={portfolioItem.title}
       link={slug}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
-      width={["half-tablet", "one-quarter-widescreen"]}
     >
       <div className="is-size-7">
         <time datatime={portfolioItem.date}>

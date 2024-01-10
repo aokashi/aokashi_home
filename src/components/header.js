@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Box, Button, ButtonGroup, Container, HStack, Spacer } from "@chakra-ui/react"
+import { Box, ButtonGroup, Container, HStack, Spacer } from "@chakra-ui/react"
+import LinkButton from "./LinkButton"
 
 const Header = ({ siteTitle, siteNavItems, logoImage }) => (
   <Box as="header" bgColor="silver" borderBottom="2px solid" borderColor="brand.800">
@@ -15,9 +16,9 @@ const Header = ({ siteTitle, siteNavItems, logoImage }) => (
         <Spacer />
         <ButtonGroup colorScheme="gray" variant="ghost">
           {siteNavItems.map((navItem, navIndex) => 
-            <Button key={navIndex} as="a" href={navItem.link} target="_blank" rel="noopener noreferrer">
+            <LinkButton key={navIndex} href={navItem.link}>
               {navItem.name}
-            </Button>
+            </LinkButton>
           )}
         </ButtonGroup>
       </HStack>

@@ -10,6 +10,7 @@ import BoxCard from "../../components/Box/Box"
 import BoxNav from "../../components/BoxNav"
 import WarningNote from "../../components/Note/WarningNote"
 import InfoNote from "../../components/Note/InfoNote"
+import Link from "../../components/Link"
 import { chakra, Box, Card, CardBody, CardHeader, Checkbox, HStack, Heading, SimpleGrid, Stack, Tag, TagLabel, Text } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -108,13 +109,15 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item) =
       title={item.name}
       imagePath={screenImage}
       key={item.name}
+      headerContent={
+        item.supportWWAWing ? (
+          <Stack direction="row-reverse" mt={3}>
+            <GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" />
+          </Stack>
+        ) : null
+      }
       footerContent={<BoxNav navItems={getLinks(item.links)} />}
     >
-      {item.supportWWAWing &&
-        <Stack direction="row-reverse">
-          <GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" />
-        </Stack>
-      }
       <Text>{item.description}</Text>
     </BoxCard>
   )
@@ -131,7 +134,7 @@ const WWALicenseList = (data) => data.nodes.map((license) => (
   <Card key={license.name}>
     <CardHeader>
       <Heading as="h3" size="sm">
-        <a href={license.url} target="_blank" rel="noopener noreferrer">{license.name}</a>
+        <Link href={license.url}>{license.name}</Link>
       </Heading>
       <Text>
         {license.authors.join(", ")}

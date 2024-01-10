@@ -11,6 +11,9 @@ const cardTheme = defineMultiStyleConfig({
       borderStyle: 'solid',
       borderColor: 'brand.500'
     },
+    header: {
+      color: 'brand.700'
+    }
   },
   variants: {
     profile: definePartsStyle({

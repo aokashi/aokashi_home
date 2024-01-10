@@ -47,24 +47,6 @@ const theme = extendTheme({
         color: 'brand.500',
         textDecoration: 'none',
       },
-      h1: {
-        color: 'brand.800'
-      },
-      h2: {
-        color: 'brand.800'
-      },
-      h3: {
-        color: 'brand.800'
-      },
-      h4: {
-        color: 'brand.800'
-      },
-      h5: {
-        color: 'brand.800'
-      },
-      h6: {
-        color: 'brand.800'
-      },
       ul: {
         paddingLeft: 8,
       },
@@ -72,27 +54,36 @@ const theme = extendTheme({
         paddingLeft: 8,
       },
       '.ah-article': {
-        h2: {
+        '> h2': {
           bgColor: 'transparent',
           bgGradient: 'linear(to-r, silver.300, transparent)',
           borderLeftWidth: 16,
           borderStyle: 'solid',
           borderColor: 'brand.800',
+          color: 'brand.800',
           fontSize: '2xl',
           fontWeight: 'bold',
           marginTop: '1rem',
           marginBottom: '.5rem',
           padding: 3,
         },
-        h3: {
+        '> h3': {
+          color: 'brand.800',
           fontSize: 'lg',
           fontWeight: 'bold',
           marginTop: '1rem',
           marginBottom: '.5rem',
           padding: 2,
         },
-        p: {
+        '> p': {
           my: '1rem',
+        },
+        '> blockquote': {
+          bgColor: 'silver.200',
+          borderLeftWidth: 5,
+          borderStyle: 'solid',
+          borderColor: 'silver.700',
+          padding: '1rem'
         }
       }
     }

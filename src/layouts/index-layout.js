@@ -8,7 +8,7 @@ import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, Wra
 
 import * as styles from "./index-layout.module.sass"
 import Link from "../components/Link"
-import Footer from "../components/footer.js"
+import Footer from "../components/footer"
 import Icon from "../images/aokashi-icon.png"
 import ProfileBg from "../images/ah-background_profile.png"
 import convertDate from "../utils/convertDate"
