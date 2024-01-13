@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "../layouts/page-layout"
-import { Heading } from "@chakra-ui/react"
+import { Heading, Image } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
 import MaterialNavItem from "../data/materials/navItem.json"
 import PageHeader from "../components/PageHeader"
 import WarningNote from "../components/Note/WarningNote"
 import PageHeaderNav from "../components/PageHeaderNav"
+import Link from "../components/Link"
 
 const MaterialIndexPage = () => (
   <Layout headerContent={
@@ -28,9 +29,13 @@ const MaterialIndexPage = () => (
       </WarningNote>
       <h2>使用ツール</h2>
       <ul>
-        <li><a href="http://takabosoft.com/edge2" target="_blank" rel="noopener noreferrer"><img src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" /></a></li>
-        <li><a href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer">Aseprite</a></li>
-        <li><a href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
+        <li>
+          <Link href="http://takabosoft.com/edge2">
+            <Image src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" sx={{ display: 'inline' }} />
+          </Link>
+        </li>
+        <li><Link href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer">Aseprite</Link></li>
+        <li><Link href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</Link></li>
       </ul>
     </div>
   </Layout>
