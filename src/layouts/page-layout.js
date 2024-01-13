@@ -122,7 +122,8 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
             </Box>
           </GridItem>
         </Show>
-        <GridItem area="m" as="article">
+        {/** Flex や Grid の仕様で minW を 0 に指定しないと大きいコンテンツでオーバーフローする */}
+        <GridItem area="m" as="article" minW="0">
           <Container>
             <VStack alignItems="stretch">
               {headerContent &&

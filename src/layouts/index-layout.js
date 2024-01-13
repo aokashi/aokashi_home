@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, WrapItem } from "@chakra-ui/react"
+import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, WrapItem, useBreakpointValue } from "@chakra-ui/react"
 
-import * as styles from "./index-layout.module.sass"
+import BgIndex from "../images/ah-background_index.png"
 import Link from "../components/Link"
 import Footer from "../components/footer"
 import Icon from "../images/aokashi-icon.png"
 import ProfileBg from "../images/ah-background_profile.png"
 import convertDate from "../utils/convertDate"
+import { Global } from "@emotion/react"
 
 const gridTemplateNarrow = `
 ". . ." 1fr
@@ -30,10 +30,6 @@ const gridTemplateWide = `
 "b b b" auto
 / 1fr 512px 1fr
 `;
-
-const {
-  indexBody,
-} = styles;
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
@@ -88,11 +84,21 @@ const IndexLayout = ({ children }) => {
 
   return (
     <>
-      <Helmet>
-        <body className={indexBody} />
-      </Helmet>
+      <Global
+        styles={{
+          body: {
+            backgroundColor: 'var(--chakra-colors-silver-600)',
+            backgroundImage: `url(${BgIndex})`,
+            backgroundRepeat: 'repeat',
+            backgroundPosition: '0 0 ',
+          }
+        }}
+      />
       <Container>
-        <Grid gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]} minH={`${screenHeight}px`}>
+        <Grid
+          gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]}
+          minH={`${screenHeight}px`}
+        >
           <GridItem area="l">
             <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
           </GridItem>
@@ -112,9 +118,7 @@ const IndexLayout = ({ children }) => {
             }
             <HStack backgroundImage={ProfileBg}>
               <Image src={Icon} alt="Aokashi" flex="none" h={["64px", "64px", "128px"]} />
-              {
-                socialLinks(data.allSocialLinkYaml)
-              }
+              <SocialLinks socialData={data.allSocialLinkYaml } />
             </HStack>
           </GridItem>
         </Grid>
@@ -128,7 +132,13 @@ const IndexLayout = ({ children }) => {
 }
 
 const navItems = (navItems) => (
-  <Stack color="white" direction={['row', 'row', 'column']} justifyContent="center" h="full" w="full">
+  <Stack
+    color="white"
+    direction={['row', 'row', 'row', 'column']}
+    justifyContent={["space-around", "space-around", "space-around", "center"]}
+    h="full"
+    w="full"
+  >
     {
       navItems.map((navItem, navItemIndex) => (
         <Link
@@ -136,7 +146,7 @@ const navItems = (navItems) => (
           _hover={{ color: 'gray.800' }}
           href={navItem.link}
         >
-          <Stack alignItems="center" direction={['column', 'column', 'row']}>
+          <Stack alignItems="center" direction={['column', 'column', 'column', 'row']}>
             {
               navItem.icon &&
                 <img src={navItem.icon} alt={""} />
@@ -149,22 +159,27 @@ const navItems = (navItems) => (
   </Stack>
 )
 
-const socialLinks = (socialData) => (
-  <Wrap px={5} py={3} spacingX={10} spacingY={3}>
-    {
-      socialData.nodes.map((socialItem, socialItemIndex) => (
-        <WrapItem key={socialItemIndex}>
-          <SocialLink socialItem={socialItem}>
-            <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
-            <chakra.span color="gray.700" ml={2}>
-              {socialItem.text}
-            </chakra.span>
-          </SocialLink>
-        </WrapItem>
-      ))
-    }
-  </Wrap>
-)
+const SocialLinks = ({ socialData }) => {
+  const isShowSocialText = useBreakpointValue({ md: false, lg: true })
+  return (
+    <Wrap px={5} py={3} spacingX={10} spacingY={3}>
+      {
+        socialData.nodes.map((socialItem, socialItemIndex) => (
+          <WrapItem key={socialItemIndex}>
+            <SocialLink socialItem={socialItem}>
+              <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
+              {(!socialItem.link || isShowSocialText) && (
+                <chakra.span color="gray.700" ml={2}>
+                  {socialItem.text}
+                </chakra.span>
+              )}
+            </SocialLink>
+          </WrapItem>
+        ))
+      }
+    </Wrap>
+  )
+}
 
 const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;

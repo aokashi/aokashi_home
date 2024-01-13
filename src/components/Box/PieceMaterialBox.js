@@ -59,7 +59,7 @@ PieceMaterialBox.propTypes = {
     files: PropTypes.arrayOf(PropTypes.shape({
       path: PropTypes.string.isRequired,
       alt: PropTypes.string,
-      note: PropTypes.note,
+      note: PropTypes.string,
     })),
     downloadFile: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),

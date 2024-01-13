@@ -123,7 +123,7 @@ const PortfolioCarousel = ({ images }) => {
   const maxHeight = images.reduce(findMaxSize(gatsbyImage => gatsbyImage.childImageSharp.original.height), 1)
 
   return (
-    <Box backgroundColor="gray" margin="0 auto" maxW={["auto", "800px"]}>
+    <Box backgroundColor="gray" margin="0 auto" maxH={`${maxHeight}px`} maxW={`${maxWidth}px`}>
       <Carousel items={images} width={maxWidth} height={maxHeight} />
     </Box>
   )

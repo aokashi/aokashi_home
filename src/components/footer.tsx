@@ -8,9 +8,12 @@ type Props = {
   siteTitle: string
 }
 
+const MOBILE_NAVBAR_HEIGHT_SPACING = 20;
+
 const Footer = ({ siteTitle }: Props) => (
   <Box as="footer" bgColor="silver.800" borderTop="2px solid" borderColor="brand.800">
-    <Container>
+    {/** モバイル環境の場合、メニュー分の高さを確保する必要があるのでフッターでカバーする */}
+    <Container pb={[MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, 0]}>
       <VStack spacing={8} py={8}>
         <DarkMode>
           <ButtonGroup colorScheme="gray" spacing={4} variant="ghost">
