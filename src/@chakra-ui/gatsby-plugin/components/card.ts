@@ -6,10 +6,10 @@ const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpe
 const cardTheme = defineMultiStyleConfig({
   baseStyle: {
     container: {
-      backgroundColor: 'gray.200',
+      backgroundColor: 'silver.200',
       borderWidth: 2,
       borderStyle: 'solid',
-      borderColor: 'brand.500'
+      borderColor: 'brand.700'
     },
     header: {
       color: 'brand.700'

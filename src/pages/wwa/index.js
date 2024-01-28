@@ -13,6 +13,7 @@ import InfoNote from "../../components/Note/InfoNote"
 import Link from "../../components/Link"
 import { chakra, Box, Card, CardBody, CardHeader, Checkbox, HStack, Heading, SimpleGrid, Stack, Tag, TagLabel, Text } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import LinkButton from "../../components/LinkButton"
 
 /**
  * WWAページのコンポーネントです。
@@ -36,6 +37,7 @@ const WWAPage = () => {
             name
             link
           }
+          recommend
           supportWWAWing
         }
       }
@@ -77,6 +79,12 @@ const WWAPage = () => {
         <InfoNote>
           <p>ゲームは新しい順で並び替えています。章立てで構成されるゲームについては、初回の投稿日時を基準としています。</p>
         </InfoNote>
+        <InfoNote>
+          <p>一部ゲームでは PLiCy で遊ぶこともできます。ミニ実況でコメントしたりして遊んでみてください。</p>
+          <LinkButton href="https://plicy.net/User/19602" mt={2}>
+            PLiCy のユーザーページに移動
+          </LinkButton>
+        </InfoNote>
         <Checkbox isChecked={onlyWWAWing} onChange={() => checkOnlyWWAWing(!onlyWWAWing)}>
           <Box display="inline-block"><GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /></Box> 対応のWWAのみ表示する
         </Checkbox>
@@ -107,15 +115,14 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item) =
   return (
     <BoxCard
       title={item.name}
+      titleBadge={item.recommend ? "オススメ!" : undefined}
       imagePath={screenImage}
       key={item.name}
-      headerContent={
-        item.supportWWAWing ? (
-          <Stack direction="row-reverse" mt={3}>
-            <GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" />
-          </Stack>
-        ) : null
-      }
+      headerContent={item.supportWWAWing && (
+        <Stack direction="row-reverse" mt={3}>
+          <GatsbyImage image={wwaWingLogo.childImageSharp.gatsbyImageData} alt="WWA Wing 対応" />
+        </Stack>
+      )}
       footerContent={<BoxNav navItems={getLinks(item.links)} />}
     >
       <Text>{item.description}</Text>
@@ -133,10 +140,10 @@ const LICENSE_ICONS = {
 const WWALicenseList = (data) => data.nodes.map((license) => (
   <Card key={license.name}>
     <CardHeader>
-      <Heading as="h3" size="sm">
+      <Heading as="h3" size="md">
         <Link href={license.url}>{license.name}</Link>
       </Heading>
-      <Text>
+      <Text mt={2}>
         {license.authors.join(", ")}
       </Text>
     </CardHeader>

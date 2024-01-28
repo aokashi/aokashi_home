@@ -2,10 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "../Link"
 import Image from "../Image"
-import { Card, CardBody, CardFooter, CardHeader, Center, ChakraProps, Heading, chakra } from "@chakra-ui/react"
+import { Badge, Card, CardBody, CardFooter, CardHeader, Center, ChakraProps, Heading, chakra } from "@chakra-ui/react"
 
 type Props = {
   title?: string,
+  titleBadge?: string,
   link?: string,
   imagePath?: string,
   onImageClick?: VoidFunction,
@@ -19,7 +20,7 @@ type Props = {
  * Chakra UI の Box コンポーネントとは異なります。
  * @todo 今後は Chakra UI の Box コンポーネントとの混在を防ぐため、 BoxCard コンポーネントに改称する。
  */
-const Box = ({ title, link, imagePath, onImageClick, children, headerContent, footerContent, ...chakraProps }: Props) => (
+const Box = ({ title, titleBadge, link, imagePath, onImageClick, children, headerContent, footerContent, ...chakraProps }: Props) => (
   <Card {...chakraProps}>
     {imagePath &&
       <BoxLink href={link} onClick={onImageClick}>
@@ -33,10 +34,10 @@ const Box = ({ title, link, imagePath, onImageClick, children, headerContent, fo
         {title && (
           link ? (
             <BoxLink href={link}>
-              <Heading as="h3" size="md">{title}</Heading>
+              <BoxTitle title={title} titleBadge={titleBadge} />
             </BoxLink>
           ) : (
-            <Heading as="h3" size="md">{title}</Heading>
+            <BoxTitle title={title} titleBadge={titleBadge} />
           )
         )}
         {headerContent}
@@ -51,6 +52,13 @@ const Box = ({ title, link, imagePath, onImageClick, children, headerContent, fo
       </CardFooter>
     }
   </Card>
+)
+
+const BoxTitle = ({ title, titleBadge }: { title: string, titleBadge?: string }) => (
+  <Heading as="h3" size="md">
+    {title}
+    {titleBadge && <Badge colorScheme="green" fontSize="sm" ml={2}>{titleBadge}</Badge>}
+  </Heading>
 )
 
 /**

@@ -11,6 +11,7 @@
       link: https://www.aokashi.net/wwa/order_life_2.html
     - name: 3章
       link: https://www.aokashi.net/wwa/order_life_3.html
+  recommend: true
   supportWWAWing: true
 - id: eito_city
   name: 英棟市
@@ -20,6 +21,7 @@
   links:
     - name: メインページ
       link: https://www.aokashi.net/wwa/eito_city/
+  recommend: true
   supportWWAWing: true
 - id: falling_floor
   name: 崩れる床
@@ -103,6 +105,7 @@
     - link: https://www.aokashi.net/wwa/walking.html
     - name: ランキング
       link: https://www.aokashi.net/wwa/walking_ranking/wwarank.cgi?mode=rank
+  recommend: true
   supportWWAWing: true
 - id: escape_cave_2
   name: 洞窟脱出2
@@ -119,6 +122,7 @@
   screenPath: wwa/escape_stronghold.png
   links:
     - link: https://www.aokashi.net/wwa/escape_stronghold.html
+  recommend: true
   supportWWAWing: true
 - id: kusonemi
   name: クソネミを倒すゲーム
@@ -143,6 +147,7 @@
   screenPath: wwa/city_island.png
   links:
     - link: https://www.aokashi.net/wwa/city_island.html
+  recommend: true
   supportWWAWing: true
 - id: return_food
   name: 食べ物を取り戻せ!!
@@ -166,6 +171,7 @@
       link: https://www.aokashi.net/wwa/strange_machine/
     - name: WWA COLLECTION 2 のストアページへ
       link: https://ec.nintendo.com/JP/ja/titles/70010000018564
+  recommend: true
   supportWWAWing: true
 - id: null_battle
   name: ヌル岬の戦い
@@ -178,4 +184,5 @@
     - link: https://www.aokashi.net/wwa/null_battle.html
     - name: ダウンロード
       link: https://www.aokashi.net/wwa/null_battle.zip
+  recommend: true
   supportWWAWing: true
