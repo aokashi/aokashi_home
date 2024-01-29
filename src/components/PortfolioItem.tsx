@@ -6,7 +6,23 @@ import Box from "./Box/Box"
 import { Link as GatsbyLink } from "gatsby"
 import { HStack, Tag, Text } from "@chakra-ui/react"
 
-const PortfolioItem = ({ portfolioItem, slug }) => {
+type PortfolioItem = {
+  title: string,
+  path: string,
+  date: string,
+  tags: string[],
+  images?: {
+    path: string,
+    alt: string
+  }[],
+}
+
+type Props = {
+  portfolioItem: PortfolioItem,
+  slug: string
+}
+
+const PortfolioItem = ({ portfolioItem, slug }: Props) => {
   return (
     <Box
       title={portfolioItem.title}
@@ -14,7 +30,7 @@ const PortfolioItem = ({ portfolioItem, slug }) => {
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
       headerContent={
         <Text fontSize="sm">
-          <time datatime={portfolioItem.date}>
+          <time dateTime={portfolioItem.date}>
             {convertDate(portfolioItem.date)}
           </time>
         </Text>

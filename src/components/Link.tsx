@@ -14,7 +14,7 @@ type Props = {
 const LinkComponent = ({ href, title, activeClassName, children, ...chakraProps }: Props) => {
   if (isExternalLink(href)) {
     return (
-      <ChakraLink href={href} title={title} target="_blank" rel="noopener noreferrer" {...chakraProps}>{children}</ChakraLink>
+      <ChakraLink href={href} title={title} isExternal {...chakraProps}>{children}</ChakraLink>
     )
   } else {
     return (

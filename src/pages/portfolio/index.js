@@ -142,6 +142,7 @@ class PortfolioPage extends React.Component {
         {
           otherPortfolioItems.map((item) => (
             <BoxCard
+              key={item.title}
               title={item.title}
               footerContent={
                 item.links ? (

@@ -3,6 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 import Alert from './components/alert'
 import Button from './components/button'
 import Card from './components/card'
+import Link from './components/link'
 import List from './components/list'
 
 const theme = extendTheme({
@@ -99,6 +100,7 @@ const theme = extendTheme({
         padding: 0,
       }
     },
+    Link,
     List
   }
 })

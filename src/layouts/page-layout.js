@@ -141,7 +141,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
           </Container>
         </GridItem>
         {sidebarContent &&
-          <GridItem area="t" as="aside">
+          <GridItem area="t" as="aside" bgColor={["silver.300", "silver.300", "silver.300", "transparent"]}>
             {sidebarContent}
           </GridItem>
         }
@@ -190,7 +190,10 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
 }
 
 const backToTop = () => {
-  window.scroll(0, 0)
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  })
 }
 
 Layout.propTypes = {

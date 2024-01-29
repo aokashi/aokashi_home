@@ -34,8 +34,8 @@ const MaterialIndexPage = () => (
             <Image src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" sx={{ display: 'inline' }} />
           </Link>
         </li>
-        <li><Link href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer">Aseprite</Link></li>
-        <li><Link href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</Link></li>
+        <li><Link href="https://www.aseprite.org/">Aseprite</Link></li>
+        <li><Link href="https://www.getpaint.net/">Paint.NET</Link></li>
       </ul>
     </div>
   </Layout>

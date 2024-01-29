@@ -10,9 +10,11 @@ type Props = {
 } & ButtonProps
 
 const LinkButton = ({ href, children, ...chakraProps }: Props) => (
-  <Button as={Link} href={href} {...chakraProps}>
-    {children}
-  </Button>
+  <Link href={href}>
+    <Button {...chakraProps}>
+      {children}
+    </Button>
+  </Link>
 )
 
 LinkButton.propTypes = {

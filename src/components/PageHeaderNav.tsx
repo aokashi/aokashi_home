@@ -4,7 +4,14 @@ import { Link } from "gatsby"
 import { HStack, Link as ChakraLink } from "@chakra-ui/react"
 import { ClassNames } from "@emotion/react"
 
-const PageHeaderNav = ({ navItems }) => (
+type Props = {
+  navItems: {
+    link: string,
+    name: string
+  }[]
+}
+
+const PageHeaderNav = ({ navItems }: Props) => (
   <HStack borderBottom="1px solid" borderColor="gray.800" justifyContent="center" spacing={3}>
     <ClassNames>
       {({ css }) => {
@@ -14,6 +21,7 @@ const PageHeaderNav = ({ navItems }) => (
             key={link.name}
             as={Link}
             activeClassName={activeClassName}
+            color="brand.900"
             p={2}
             to={link.link}
           >

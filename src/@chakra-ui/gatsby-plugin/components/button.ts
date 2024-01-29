@@ -8,12 +8,14 @@ const buttonTheme = defineStyleConfig({
     navItem: defineStyle({
       _hover: {
         bgColor: 'gray.500',
+        color: 'inherit',
         textDecoration: 'none',
       },
       bgColor: 'silver.300',
       borderLeft: '4px solid',
       borderColor: 'gray.500',
       borderRadius: 0,
+      color: 'brand.900',
       display: 'block',
       fontWeight: 'normal',
       height: 'auto',

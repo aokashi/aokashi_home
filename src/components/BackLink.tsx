@@ -7,14 +7,11 @@ import ArrowIcon from "../images/button_icon-arrow.svg"
 
 const BackLink = ({ to, children }) => (
   <HStack>
-    <Button
-      as={Link}
-      leftIcon={<Image src={ArrowIcon} boxSize="24px" alt="" />}
-      to={to}
-      variant="ghost"
-    >
-      {children}
-    </Button>
+    <Link to={to}>
+      <Button leftIcon={<Image src={ArrowIcon} boxSize="24px" alt="" />} variant="ghost">
+        {children}
+      </Button>
+    </Link>
   </HStack>
 )
 
