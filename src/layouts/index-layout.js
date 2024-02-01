@@ -133,7 +133,6 @@ const IndexLayout = ({ children }) => {
 
 const navItems = (navItems) => (
   <Stack
-    color="white"
     direction={['row', 'row', 'row', 'column']}
     justifyContent={["space-around", "space-around", "space-around", "center"]}
     h="full"
@@ -144,6 +143,7 @@ const navItems = (navItems) => (
         <Link
           key={navItemIndex}
           _hover={{ color: 'gray.800' }}
+          color="white"
           href={navItem.link}
         >
           <Stack alignItems="center" direction={['column', 'column', 'column', 'row']}>
@@ -185,7 +185,7 @@ const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <Link href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer">{children}</Link>
+      <Link href={socialItem.link} title={titleText} color="inherit">{children}</Link>
     )
   } else {
     return (

@@ -16,7 +16,7 @@ const Footer = ({ siteTitle }: Props) => (
     <Container pb={[MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, 0]}>
       <VStack spacing={8} py={8}>
         <DarkMode>
-          <ButtonGroup colorScheme="gray" spacing={4} variant="ghost">
+          <ButtonGroup colorScheme="gray" justifyContent="center" spacing={4} variant="ghost" flexWrap="wrap">
             <LinkButton href="/">Home</LinkButton>
             <LinkButton href="/about/">当サイトについて</LinkButton>
             <LinkButton href="http://aokashi.hatenablog.jp">Blog</LinkButton>

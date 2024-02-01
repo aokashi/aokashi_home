@@ -17,34 +17,26 @@ import Link from "../components/Link"
 import { Box, Button, Container, Grid, GridItem, HStack, Hide, Image, Show, VStack } from "@chakra-ui/react"
 import { ClassNames, Global } from "@emotion/react"
 
+const gridTemplateNarrow = `
+"h" auto
+"t" auto
+"m" 1fr
+"f" auto
+/ 1fr
+`
+
+const gridTemplateWide = `
+"h h h h h" auto
+"n . m . t" 1fr
+"f f f f f" auto
+/ 200px auto 1fr auto 200px
+`
+
 const gridTemplate = [
-  `
-  "h" auto
-  "t" auto
-  "m" 1fr
-  "f" auto
-  / 1fr
-  `,
-  `
-  "h" auto
-  "t" auto
-  "m" 1fr
-  "f" auto
-  / 1fr
-  `,
-  `
-  "h" auto
-  "t" auto
-  "m" 1fr
-  "f" auto
-  / 1fr
-  `,
-  `
-  "h h h h h" auto
-  "n . m . t" 1fr
-  "f f f f f" auto
-  / 200px auto 1fr auto 200px
-  `
+  gridTemplateNarrow,
+  gridTemplateNarrow,
+  gridTemplateNarrow,
+  gridTemplateWide
 ]
 
 const NavItem = ({ href, name }) => (
@@ -171,6 +163,7 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
                 <Link
                   key={navIndex}
                   activeClassName={css({ fontWeight: 'bold' })}
+                  color="inherit"
                   href={navItem.link}
                   w="full"
                 >
