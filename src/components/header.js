@@ -1,11 +1,10 @@
-import { Box, Button, ButtonGroup, Container, HStack, Hide, Menu, MenuButton, MenuItem, MenuList, Show, Spacer } from "@chakra-ui/react"
+import { Box, ButtonGroup, Container, HStack, Hide, Spacer } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import React from "react"
 
 import LinkButton from "./LinkButton"
-import LinkComponent from "./Link"
 
 const Header = ({ siteTitle, siteNavItems, logoImage }) => (
   <Box as="header" bgColor="silver" borderBottom="2px solid" borderColor="brand.800">
@@ -24,18 +23,6 @@ const Header = ({ siteTitle, siteNavItems, logoImage }) => (
             )}
           </ButtonGroup>
         </Hide>
-        <Show below="md">
-          <Menu>
-            <MenuButton as={Button} colorScheme="gray">サイト一覧</MenuButton>
-            <MenuList>
-              {siteNavItems.map((navItem, navIndex) =>
-                <MenuItem key={navIndex} as={LinkComponent} href={navItem.link}>
-                  {navItem.name}
-                </MenuItem>
-              )}
-            </MenuList>
-          </Menu>
-        </Show>
       </HStack>
     </Container>
   </Box>

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
-import { Box, Button, ButtonProps, Image as ChakraImage, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Button, ButtonProps, Center, Image as ChakraImage, useBreakpointValue } from "@chakra-ui/react"
 
 import ArrowIcon from "../images/button_icon-arrow.svg"
 import Image from "./Image"
@@ -43,7 +43,20 @@ const CarouselButton = ({ alt, flip, ...props }: { alt: string, flip?: boolean }
   )
 }
 
-const Carousel = ({ width, height, items }) => (
+type CarouselItem = {
+  // prop-types では object となっているが、処理される Chakra UI の Image の src は string のため string に揃える
+  path: string,
+  alt: string,
+  description: string,
+}
+
+type Props = {
+  width: number,
+  height: number,
+  items: CarouselItem[],
+}
+
+const Carousel = ({ width, height, items }: Props) => (
   <CarouselProvider
     naturalSlideWidth={width}
     naturalSlideHeight={height}
@@ -53,10 +66,10 @@ const Carousel = ({ width, height, items }) => (
       <Slider>
         {items.map((item, itemIndex) => (
           <Slide index={itemIndex} key={itemIndex}>
-            <figure>
-              <Box position="absolute">
+            <Box as="figure">
+              <Center>
                 <Image src={item.path} alt={item.alt} />
-              </Box>
+              </Center>
               <Box
                 backgroundColor="rgba(0, 0, 0, .5)"
                 bottom={0}
@@ -68,7 +81,7 @@ const Carousel = ({ width, height, items }) => (
               >
                 <figcaption>{item.description}</figcaption>
               </Box>
-            </figure>
+            </Box>
           </Slide>
         ))}
       </Slider>
