@@ -7,6 +7,9 @@
     "keywords": ["PHP"],
     "references": [
       {
+        "name": "ポートフォリオのページ",
+        "url": "/portfolio/word_dic"
+      },{
         "name": "サンプル",
         "url": "https://contents.aokashi.net/works/word-dic/word_dictionary.php"
       }
@@ -54,14 +57,24 @@
     "description": "USBメモリ上で起動できるWindowsアプリケーションです。",
     "repository": "https://github.com/aokashi/PortableLauncher",
     "keywords": ["Windows", "C#"],
-    "references": []
+    "references": [
+      {
+        "name": "ポートフォリオのページ",
+        "url": "/portfolio/portable_launcher"
+      }
+    ]
   }, {
     "id": "wide_wiki",
     "name": "Wide Wiki",
     "description": "タイトルからURLで探せるWikiシステムです。",
     "repository": "https://github.com/aokashi/wide-wiki",
-    "keywords": ["JavaScriot", "Node.js"],
-    "references": []
+    "keywords": ["JavaScript", "Node.js"],
+    "references": [
+      {
+        "name": "ポートフォリオのページ",
+        "url": "/portfolio/wide_wiki"
+      }
+    ]
   }, {
     "id": "wwa_message_loader",
     "name": "WWA Message Loader",
@@ -71,7 +84,7 @@
     "references": [
       {
         "name": "ポートフォリオのページ",
-        "url": "https://www.aokashi.net/portfolio/wwa_collection"
+        "url": "/portfolio/wwa_collection"
       }
     ]
   }, {
@@ -84,6 +97,30 @@
       {
         "name": "テーマストアのページ",
         "url": "https://blog.hatena.ne.jp/-/store/theme/26006613497175020"
+      }
+    ]
+  }, {
+    "id": "wwa_wing",
+    "name": "【チーム開発】 WWA Wing",
+    "description": "ブラウザーで動くRPGゲームシステム「World Wide Adventure」の JavaScript 実装です。主に仮想パッドやピクチャ機能の開発を担当しています。",
+    "repository": "https://github.com/WWAWing/WWAWing",
+    "keywords": ["TypeScript"],
+    "references": [
+      {
+        "name": "Webサイト",
+        "url": "https://wwawing.com"
+      }
+    ]
+  }, {
+    "id": "blog_wwawing_com",
+    "name": "WWA Wing ブログ",
+    "description": "主に新機能紹介を行う WWA Wing のブログです。記事はチームメンバーが執筆しています。 Aokashi Home と同じ Gatsby で生成しています。",
+    "repository": "https://github.com/WWAWing/blog.wwawing.com",
+    "keywords": ["TypeScript", "Gatsby"],
+    "references": [
+      {
+        "name": "ブログサイト",
+        "url": "https://blog.wwawing.com"
       }
     ]
   }

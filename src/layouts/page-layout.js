@@ -135,7 +135,9 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
         </GridItem>
         {sidebarContent &&
           <GridItem area="t" as="aside" bgColor={["silver.300", "silver.300", "silver.300", "transparent"]}>
-            {sidebarContent}
+            <Box position={{ lg: "sticky" }} top={{ lg: 0 }}>
+              {sidebarContent}
+            </Box>
           </GridItem>
         }
         <GridItem area="f">

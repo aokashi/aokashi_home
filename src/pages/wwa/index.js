@@ -97,7 +97,7 @@ const WWAPage = () => {
       <div className="ah-article">
         <h2>Thanks</h2>
         <WarningNote>
-          <p>2019年11月10日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
+          <p>2024年2月3日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
         </WarningNote>
         <SimpleGrid columns={[1, 2, 3]} spacing={4}>
           {WWALicenseList(data.allWwaLicenseYaml)}
