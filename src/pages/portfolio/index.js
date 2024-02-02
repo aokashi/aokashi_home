@@ -23,8 +23,6 @@ class PortfolioPage extends React.Component {
         headerContent={<BasicPageHeader>ポートフォリオ</BasicPageHeader>}
         sidebarContent={this.renderSidebar()}
       >
-        <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
-
         {this.renderPortfolioList()}
         <Box className="ah-article">
           <h2>ポートフォリオについて</h2>
@@ -178,5 +176,9 @@ const seasonSorting = (ownSeasonData, yoursSeasonData) => {
   return seasonDetails[ownSeasonData.fieldValue].index -
          seasonDetails[yoursSeasonData.fieldValue].index
 }
+
+export const Head = () => (
+  <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
+)
 
 export default PortfolioPage

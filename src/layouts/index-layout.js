@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, WrapItem, useBreakpointValue } from "@chakra-ui/react"
+import { Global } from "@emotion/react"
 
 import BgIndex from "../images/ah-background_index.png"
 import Link from "../components/Link"
@@ -11,7 +12,6 @@ import Footer from "../components/footer"
 import Icon from "../images/aokashi-icon.png"
 import ProfileBg from "../images/ah-background_profile.png"
 import convertDate from "../utils/convertDate"
-import { Global } from "@emotion/react"
 
 const gridTemplateNarrow = `
 ". . ." 1fr

@@ -12,11 +12,14 @@ const NotFoundPage = () => (
       <Heading as="h2" size="md">ページやファイルが見つかりません</Heading>
     </PageHeader>
   }>
-    <Seo title="404: Not found" />
     <div className="ah-article">
       <p>Webサイトの整備によって、ページが移転されたり削除されたりする場合があります。お手数ですが、もう一度トップページに戻って目的のコンテンツをお探しください。</p>
     </div>
   </Layout>
+)
+
+export const Head = () => (
+  <Seo title="404: Not found" />
 )
 
 export default NotFoundPage

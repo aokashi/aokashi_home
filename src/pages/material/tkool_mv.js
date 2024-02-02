@@ -29,7 +29,6 @@ class TkoolMvPage extends React.Component {
           <Heading as="h1" size="lg">RPGツクールMV/MZ対応素材</Heading>
         </PageHeader>
       }>
-        <Seo title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
         <div className="ah-article">
           <p>1マス48×48ピクセルの画像素材です。RPGツクールMVとRPGツクールMZに対応しています。</p>
           <InfoNote>
@@ -108,5 +107,9 @@ class TkoolMvPage extends React.Component {
     })
   }
 }
+
+export const Head = () => (
+  <Seo title="RPGツクールMV/MZ対応素材" description="RPGツクールMVとRPGツクールMZ対応の素材です。数は少ないですが、RPGツクール標準の素材に並べても違和感のないように仕上げています。" />
+)
 
 export default TkoolMvPage

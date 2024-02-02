@@ -33,7 +33,6 @@ class WWAMaterialPage extends React.Component {
           <Heading as="h1" size="lg">WWA素材</Heading>
         </PageHeader>
       }>
-        <Seo title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
         <div className="ah-article">
           <p>WWAで利用できる素材です。</p>
           <InfoNote>
@@ -208,5 +207,9 @@ class WWAMaterialPage extends React.Component {
   }
 
 }
+
+export const Head = () => (
+  <Seo title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
+)
 
 export default WWAMaterialPage

@@ -10,7 +10,6 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -95,7 +94,6 @@ const config: GatsbyConfig = {
         resetCSS: true,
       }
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {

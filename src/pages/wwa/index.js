@@ -72,7 +72,6 @@ const WWAPage = () => {
 
   return (
     <Layout headerContent={<BasicPageHeader>WWA</BasicPageHeader>}>
-      <Seo title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
       <div className="ah-article">
         <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
         <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
@@ -180,5 +179,9 @@ function getLinks (links) {
     }
   })
 }
+
+export const Head = () => (
+  <Seo title="WWA" description="Aokashi HomeのWWAページです。広い世界観の中で起こりうる物語と緻密なマップ表現をお楽しみください。" />
+)
 
 export default WWAPage

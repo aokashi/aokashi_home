@@ -36,8 +36,8 @@ contents.aokashi.net
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
+    ├── gatsby-config.ts
+    ├── gatsby-node.ts
     ├── gatsby-ssr.js
     ├── LICENSE
     ├── package-lock.json
@@ -52,13 +52,6 @@ contents.aokashi.net
 - `gatsby-config.js`: Gatsby.js の設定ファイルです。
 - `gatsby-node.js`: Aokashi Home ビルド時に実行されている JavaScript ソースファイルです。
 - `gatsby-ssr.js`: SSR(サーバーサイドレンダリング) 技術に関する設定が含まれている JavaScript ソースファイルです。
-
-### 稼働に必要な依存関係について
-
-直接的には関係ないものの、ないとエラーで続行できないために必要な依存関係を下記に記載します。
-
-- `sass`
-- `deepmerge`: ビルド時に必要 (`gatsby-plugin-react-helmet` で発生)
 
 ## ライセンスについて
 **Apache 2.0** ライセンスが適用されます。

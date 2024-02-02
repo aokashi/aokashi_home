@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layouts/page-layout"
-import { Box, Heading } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 
 import { BasicPageHeader } from "../components/PageHeader"
 import TableOfContents from "../components/TableOfContents"
@@ -21,7 +21,6 @@ const DefaultTemplate = ({
         <BasicPageHeader>{frontmatter.title}</BasicPageHeader>
       }
     >
-      <Seo title={frontmatter.title} />
       <Box className="ah-article">
         <MDXProvider>
           {children}
@@ -45,5 +44,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ data }) => (
+  <Seo title={data.mdx.frontmatter.title} />
+)
 
 export default DefaultTemplate

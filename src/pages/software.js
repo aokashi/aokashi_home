@@ -12,7 +12,6 @@ import LinkButton from "../components/LinkButton"
 
 const SoftwarePage = () => (
   <Layout headerContent={<BasicPageHeader>ソフトウェア</BasicPageHeader>}>
-    <Seo title="ソフトウェア" description="Aokashi Homeのソフトウェアページです。あると便利なツールや、創作を手助けするツールの開発をしています。" />
     <div className="ah-article">
       <p>制作したプログラムを公開しています。基本的にここに公開しているプログラムはすべてGitHubにリポジトリを残しています。以下のリンクからGitHubへアクセスできます。</p>
       <LinkButton href="https://github.com/aokashi">GitHubへアクセス</LinkButton>
@@ -73,5 +72,9 @@ function getLinks(softwareItem) {
 
   return links
 }
+
+export const Head = () => (
+  <Seo title="ソフトウェア" description="Aokashi Homeのソフトウェアページです。あると便利なツールや、創作を手助けするツールの開発をしています。" />
+)
 
 export default SoftwarePage

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { PageProps, graphql } from "gatsby"
-import { Box, Card, CardBody, CardHeader, Grid, GridItem, HStack, Heading, Tag, Text, VStack } from "@chakra-ui/react"
+import { HeadProps, PageProps, graphql } from "gatsby"
+import { Box, Card, CardBody, CardHeader, Grid, GridItem, Heading, Tag, Text, VStack, Wrap } from "@chakra-ui/react"
 import Layout from "../layouts/index-layout"
 
 import Seo from "../components/seo"
@@ -14,17 +14,16 @@ const IndexPageTemplate = ({ data }: PageProps<Queries.indexPageProfileDataQuery
   const { frontmatter } = mdx
   return (
     <Layout>
-      <Seo title={frontmatter.title} description="Aokashi のWebサイトです。" />
       <VStack alignItems="stretch" p={8}>
         <Text>{frontmatter.profile.description}</Text>
         <Card variant="profile" my={6}>
           <CardHeader>スキル</CardHeader>
           <CardBody>
-            <HStack spacing={2}>
+            <Wrap spacing={2}>
               {frontmatter.profile.skills.map((skill, skillIndex) =>
                 <Tag color="white" sx={ { backgroundColor: skill.color } } key={skillIndex}>{skill.name}</Tag>
               )}
-            </HStack>
+            </Wrap>
           </CardBody>
         </Card>
         <Grid gap={4} templateColumns={["1fr", "1fr", "2fr 1fr"]}>
@@ -95,5 +94,9 @@ const ProfileSection = (data: readonly { name: string, text: string, link?: { ur
     </SectionItem>
   ))
 }
+
+export const Head = ({ data }: HeadProps<Queries.indexPageProfileDataQuery>) => (
+  <Seo title={data.mdx.frontmatter.title} description="Aokashi のWebサイトです。" />
+)
 
 export default IndexPageTemplate

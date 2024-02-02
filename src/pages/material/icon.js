@@ -18,7 +18,6 @@ class IconPage extends React.Component {
           <Heading as="h1" size="lg">アイコン素材</Heading>
         </PageHeader>
       }>
-        <Seo title="アイコン素材" description="Aokashi Homeのアイコン素材は32×32のサイズの建物で取り扱っています。元々CGIゲームのTOWN用に制作したものですが、今でもマップ制作におすすめです。" />
         <div className="ah-article">
           <p>アイコンはすべて32×32のサイズに統一しています。</p>
         </div>
@@ -57,5 +56,9 @@ class IconPage extends React.Component {
     )
   }
 }
+
+export const Head = () => (
+  <Seo title="アイコン素材" description="Aokashi Homeのアイコン素材は32×32のサイズの建物で取り扱っています。元々CGIゲームのTOWN用に制作したものですが、今でもマップ制作におすすめです。" />
+)
 
 export default IconPage

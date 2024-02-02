@@ -32,7 +32,6 @@ export default function WolfRPGEditorMaterialPage() {
         <Heading as="h1" size="lg">WOLF RPG エディター素材</Heading>
       </PageHeader>
     }>
-      <Seo title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
       <div className="ah-article">
         <p>WOLF RPG エディターで利用できる素材です。</p>
         <WarningNote>
@@ -82,3 +81,7 @@ export default function WolfRPGEditorMaterialPage() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
+)

@@ -15,7 +15,6 @@ const MaterialIndexPage = () => (
       <Heading as="h1" size="lg">素材</Heading>
     </PageHeader>
   }>
-    <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
     <div className="ah-article">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <h2>ご利用について</h2>
@@ -39,6 +38,10 @@ const MaterialIndexPage = () => (
       </ul>
     </div>
   </Layout>
+)
+
+export const Head = () => (
+  <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
 )
 
 export default MaterialIndexPage

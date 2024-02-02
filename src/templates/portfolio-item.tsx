@@ -31,7 +31,6 @@ const PortfolioItemTemplate = ({
       sidebarContent={<TableOfContents body={tableOfContents} />}
       headerContent={<ItemHeader frontmatter={frontmatter} />}
     >
-      <Seo title={`ポートフォリオ ${frontmatter.title}`} />
       <BackLink to="/portfolio">戻る</BackLink>
       <div className="ah-article">
         <MDXProvider>
@@ -188,5 +187,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ data }) => (
+  <Seo title={`ポートフォリオ ${data.mdx.frontmatter.title}`} />
+)
 
 export default PortfolioItemTemplate
