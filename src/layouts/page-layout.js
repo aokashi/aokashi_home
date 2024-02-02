@@ -20,15 +20,15 @@ import { ClassNames, Global } from "@emotion/react"
 const gridTemplateNarrow = `
 "h" auto
 "t" auto
-"m" 1fr
-"f" auto
+"m" auto
+"f" 1fr
 / 1fr
 `
 
 const gridTemplateWide = `
 "h h h h h" auto
-"n . m . t" 1fr
-"f f f f f" auto
+"n . m . t" auto
+"f f f f f" 1fr
 / 200px auto 1fr auto 200px
 `
 
@@ -87,14 +87,15 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
       <Global
         styles={{
           body: {
-            backgroundColor: 'var(--chakra-colors-white)',
-            backgroundImage: `url(${BgContent})`,
+            // !important がないと Chakra UI のテーマ設定で上書きされてしまう
+            backgroundColor: 'var(--chakra-colors-white)!important',
+            backgroundImage: `url(${BgContent})!important`,
             backgroundRepeat: 'repeat',
             backgroundPosition: '0 0'
           }
         }}
       />
-      <Grid gridTemplate={gridTemplate}>
+      <Grid gridTemplate={gridTemplate} minH="100vh">
         <GridItem area="h">
           <Header
             siteTitle={data.site.siteMetadata.title}

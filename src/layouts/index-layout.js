@@ -87,8 +87,9 @@ const IndexLayout = ({ children }) => {
       <Global
         styles={{
           body: {
-            backgroundColor: 'var(--chakra-colors-silver-600)',
-            backgroundImage: `url(${BgIndex})`,
+            // !important がないと Chakra UI のテーマ設定で上書きされてしまう
+            backgroundColor: 'var(--chakra-colors-silver-600)!important',
+            backgroundImage: `url(${BgIndex})!important`,
             backgroundRepeat: 'repeat',
             backgroundPosition: '0 0 ',
           }

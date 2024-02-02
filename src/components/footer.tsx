@@ -11,7 +11,8 @@ type Props = {
 const MOBILE_NAVBAR_HEIGHT_SPACING = 20;
 
 const Footer = ({ siteTitle }: Props) => (
-  <Box as="footer" bgColor="silver.800" borderTop="2px solid" borderColor="brand.800">
+  // page-layout では余った高さをフッター領域分に充てるため、親要素いっぱいまで高さを広げる
+  <Box as="footer" bgColor="silver.800" borderTop="2px solid" borderColor="brand.800" h="full">
     {/** モバイル環境の場合、メニュー分の高さを確保する必要があるのでフッターでカバーする */}
     <Container pb={[MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, MOBILE_NAVBAR_HEIGHT_SPACING, 0]}>
       <VStack spacing={8} py={8}>
