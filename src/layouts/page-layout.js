@@ -6,28 +6,54 @@
  */
 
 import React from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import {
-  pageBody,
-  mainContent,
-  nav,
-  navContent,
-  navItem as styleNavItem,
-  isActive,
-  article,
-  header,
-  rightSidebar,
-  bottomLink,
-  floatNav,
-  navIcon,
-  navText
-} from "./page-layout.module.sass"
+import BgContent from "../images/ah-background_content.png"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Link from "../components/Link"
+import { Box, Button, Container, Grid, GridItem, HStack, Hide, Image, Show, VStack } from "@chakra-ui/react"
+import { ClassNames, Global } from "@emotion/react"
+
+const gridTemplateNarrow = `
+"h" auto
+"t" auto
+"m" auto
+"f" 1fr
+/ 1fr
+`
+
+const gridTemplateWide = `
+"h h h h h" auto
+"n . m . t" auto
+"f f f f f" 1fr
+/ 200px auto 1fr auto 200px
+`
+
+const gridTemplate = [
+  gridTemplateNarrow,
+  gridTemplateNarrow,
+  gridTemplateNarrow,
+  gridTemplateWide
+]
+
+const NavItem = ({ href, name }) => (
+  <ClassNames>
+    {({ css }) => (
+      <Button
+        as={Link}
+        // テーマ側の CSS が優先的に使用されてしまうため、 !important で優先させる
+        activeClassName={css({ borderColor: 'var(--chakra-colors-brand-800)!important', fontWeight: 'bold!important' })}
+        href={href}
+        variant="navItem"
+      >
+        {name}
+      </Button>
+    )}
+  </ClassNames>
+)
 
 const Layout = ({ headerContent, sidebarContent, children }) => {
   const data = useStaticQuery(graphql`
@@ -58,62 +84,112 @@ const Layout = ({ headerContent, sidebarContent, children }) => {
 
   return (
     <>
-      <Helmet>
-        <body className={pageBody} />
-      </Helmet>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        siteNavItems={siteNavItems}
-        logoImage={data.file}
-      />
-      <main className={mainContent}>
-        <nav className={nav}>
-          <nav className={navContent}>
-            <Link href="/" className={styleNavItem}>Home</Link>
-            {
-              contentsNavItems.map((navItem, navIndex) => (
-                <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>{navItem.name}</Link>
-              ))
-            }
-          </nav>
-        </nav>
-        <article className={`${article} container`}>
-          {headerContent &&
-            <header className={header}>{headerContent}</header>
+      <Global
+        styles={{
+          body: {
+            // !important がないと Chakra UI のテーマ設定で上書きされてしまう
+            backgroundColor: 'var(--chakra-colors-white)!important',
+            backgroundImage: `url(${BgContent})!important`,
+            backgroundRepeat: 'repeat',
+            backgroundPosition: '0 0'
           }
-          <div className="section">{children}</div>
-        </article>
+        }}
+      />
+      <Grid gridTemplate={gridTemplate} minH="100vh">
+        <GridItem area="h">
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            siteNavItems={siteNavItems}
+            logoImage={data.file}
+          />
+        </GridItem>
+        <Show above="lg">
+          <GridItem area="n" bgColor="brand.200">
+            <Box as="nav" py={3} position="sticky" top={0}>
+              <NavItem href="/" name="Home" />
+              {
+                contentsNavItems.map((navItem) => (
+                  <NavItem key={navItem.name} href={navItem.link} name={navItem.name} />
+                ))
+              }
+            </Box>
+          </GridItem>
+        </Show>
+        {/** Flex や Grid の仕様で minW を 0 に指定しないと大きいコンテンツでオーバーフローする */}
+        <GridItem area="m" as="article" minW="0">
+          <Container>
+            <VStack alignItems="stretch">
+              {headerContent &&
+                <Box as="header">{headerContent}</Box>
+              }
+              <Box className="section" p={8}>{children}</Box>
+              <Button
+                onClick={backToTop}
+                leftIcon={<FontAwesomeIcon icon="arrow-up" />}
+                variant="jumpTop"
+              >
+                トップへ戻る
+              </Button>
+            </VStack>
+          </Container>
+        </GridItem>
         {sidebarContent &&
-          <aside className={rightSidebar}>
-            {sidebarContent}
-          </aside>
+          <GridItem area="t" as="aside" bgColor={["silver.300", "silver.300", "silver.300", "transparent"]}>
+            <Box position={{ lg: "sticky" }} top={{ lg: 0 }}>
+              {sidebarContent}
+            </Box>
+          </GridItem>
         }
-        <div className={bottomLink}>
-          <button className="button is-fullwidth is-light" onClick={backToTop}>トップへ戻る</button>
-        </div>
-      </main>
-      <Footer siteTitle={data.site.siteMetadata.title} />
-      <div className={floatNav}>
-        {
-          data.allNavItemYaml.nodes.map((navItem, navIndex) => {
-            if (navItem.type !== "contents") {
-              return null
-            }
-            return (
-              <Link href={navItem.link} className={styleNavItem} activeClassName={isActive} key={navIndex}>
-                <img src={navItem.icon} alt="" className={navIcon} />
-                <span className={navText}>{navItem.name}</span>
-              </Link>
-            )
-          })
-        }
-      </div>
+        <GridItem area="f">
+          <Footer siteTitle={data.site.siteMetadata.title} />
+        </GridItem>
+      </Grid>
+      <Hide above="lg">
+        <HStack
+          as="nav"
+          alignItems="center"
+          bgColor="silver.300"
+          borderTop="2px solid"
+          borderColor="brand.800"
+          bottom="0"
+          justifyContent="stretch"
+          position="fixed"
+          py={1}
+          w="full"
+        >
+          <ClassNames>
+            {({ css }) => data.allNavItemYaml.nodes.map((navItem, navIndex) => {
+              if (navItem.type !== "contents") {
+                return null
+              }
+              return (
+                <Link
+                  key={navIndex}
+                  activeClassName={css({ fontWeight: 'bold' })}
+                  color="inherit"
+                  href={navItem.link}
+                  w="full"
+                >
+                  <VStack spacing={0}>
+                    {/** 横持ちで閲覧した場合、なるべく閲覧領域を確保するため幅に上限をもたせる */}
+                    <Image src={navItem.icon} alt="" maxW="48px" />
+                    <Box>{navItem.name}</Box>
+                  </VStack>
+                </Link>
+              )
+            })}
+          </ClassNames>
+        </HStack>
+      </Hide>
     </>
   )
 }
 
 const backToTop = () => {
-  window.scroll(0, 0)
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  })
 }
 
 Layout.propTypes = {

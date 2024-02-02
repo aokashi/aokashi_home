@@ -81,9 +81,10 @@ profile:
         link:
           url: https://jisaku.com/pc/VmF5FMSK4Hh2NQk5e71nGt
           text: 自作.com で構成を見る
-      - name: MacBook Air (Early 2020)
+      - name: MacBook Air (M2, 2022)
         text: >-
-          モバイルPC。会社で使用できない＋外出しづらいため、ほぼリビング専用 PC と化している。
+          モバイルPC。 Apple Silicon になって開発などは超快適になったものの、トリプルモニターにできず会社でも使用できないので、やはり使用する機会は限られている。
+          色はミッドナイト。筐体デザインは気に入っている。
   extra: >-
     今まで制作した作品や、自分の歴史などについては、ポートフォリオをご参照ください。
 ---

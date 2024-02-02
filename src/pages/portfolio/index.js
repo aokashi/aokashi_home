@@ -1,8 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { Box, ButtonGroup, List, ListItem } from "@chakra-ui/react"
 
 import Layout from "../../layouts/page-layout"
-import PageHeader from "../../components/PageHeader"
+import BoxCard from "../../components/Box/Box"
+import BoxList from "../../components/BoxList"
+import LinkButton from "../../components/LinkButton"
+import { BasicPageHeader } from "../../components/PageHeader"
 import PortfolioList from "../../components/PortfolioList"
 import PortfolioItem from "../../components/PortfolioItem"
 import PortfolioGroup from "../../components/PortfolioGroup"
@@ -16,17 +20,11 @@ class PortfolioPage extends React.Component {
   render() {
     return (
       <Layout
-        headerContent={
-          <PageHeader>
-            <h1>ポートフォリオ</h1>
-          </PageHeader>
-        }
+        headerContent={<BasicPageHeader>ポートフォリオ</BasicPageHeader>}
         sidebarContent={this.renderSidebar()}
       >
-        <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
-
         {this.renderPortfolioList()}
-        <div className="content">
+        <Box className="ah-article">
           <h2>ポートフォリオについて</h2>
           <p>このページは、私 Aokashi がインターネットの世界に踏み出してから現在に至るまでの活動を記録しています。周りの環境からのインプットから始まり、アウトプットを通して自分自身をアップデートしていく軌跡をコンテンツにしました。</p>
           <WarningNote>
@@ -41,22 +39,22 @@ class PortfolioPage extends React.Component {
           <h2>その他のデータ</h2>
           <p>ポートフォリオの項目に載るものではないものの、コンテンツ整理によって行き場を失った作品紹介を掲載しています。</p>
           {this.renderOtherPortfolioList()}
-        </div>
+        </Box>
       </Layout>
     )
   }
 
   renderSidebar() {
     return (
-      <aside className="menu">
-        <ul className="menu-list">
+      <Box as="aside" p={4}>
+        <List variant="tableOfContents">
           {Object.keys(seasonDetails).map((seasonId) => (
-            <li key={seasonId}>
+            <ListItem key={seasonId}>
               <a href={`#${seasonId}`}>{seasonDetails[seasonId].name}</a>
-            </li>
+            </ListItem>
           ))}
-        </ul>
-      </aside> 
+        </List>
+      </Box> 
     )
   }
 
@@ -70,46 +68,35 @@ class PortfolioPage extends React.Component {
     return (
       <StaticQuery
         query={
-          graphql`
-            query AllPortfolioItemQuery {
-              allMdx(
-                filter: {
-                  fields: {
-                    slug: {
-                      glob: "/portfolio/*"
-                    }
-                  }
-                }
-                sort: {
-                  fields: [frontmatter___date]
-                  order: ASC
-                }
-              ) {
-                group(field: frontmatter___season) {
-                  nodes {
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      date
-                      images {
-                        path {
-                          childImageSharp {
-                            gatsbyImageData
-                          }
-                        }
-                        alt
-                      }
-                      tags
-                      title
-                      season
-                    }
-                  }
-                  fieldValue
-                }
+          graphql`query AllPortfolioItemQuery {
+  allMdx(
+    filter: {fields: {slug: {glob: "/portfolio/*"}}}
+    sort: {frontmatter: {date: ASC}}
+  ) {
+    group(field: {frontmatter: {season: SELECT}}) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          date
+          images {
+            path {
+              childImageSharp {
+                gatsbyImageData
               }
             }
-          `
+            alt
+          }
+          tags
+          title
+          season
+        }
+      }
+      fieldValue
+    }
+  }
+}`
         }
         render={ (data) => {
           const sortedData = data.allMdx.group.sort(seasonSorting);
@@ -123,12 +110,12 @@ class PortfolioPage extends React.Component {
 
                   return (
                     <PortfolioGroup
+                      seasonId={seasonId}
                       name={seasonData.name}
                       descriptionTitle={seasonData.theme}
                       description={seasonData.description}
                       key={seasonIndex}
                     >
-                      <div id={seasonId}></div>
                       {season.nodes.map((item, itemIndex) => (
                         <PortfolioItem
                           portfolioItem={item.frontmatter}
@@ -144,31 +131,32 @@ class PortfolioPage extends React.Component {
           )
         } }
       />
-    )
+    );
   }
 
   renderOtherPortfolioList() {
     return (
-      <>
+      <BoxList>
         {
-          otherPortfolioItems.map((item, itemIndex) => (
-            <section key={itemIndex}>
-              <h3>{item.title}</h3>
-              {
-                item.links &&
-                  <ul>
-                    {
-                      item.links.map((link, linkIndex) => (
-                        <li key={linkIndex}><a href={link.link}>{link.name}</a></li>
-                      ))
-                    }
-                  </ul>
+          otherPortfolioItems.map((item) => (
+            <BoxCard
+              key={item.title}
+              title={item.title}
+              footerContent={
+                item.links ? (
+                  <ButtonGroup>
+                    {item.links.map((link, linkIndex) => (
+                      <LinkButton key={linkIndex} href={link.link}>{link.name}</LinkButton>
+                    ))}
+                  </ButtonGroup>
+                ) : null
               }
+            >
               <p>{item.description}</p>
-            </section>
+            </BoxCard>
           ))
         }
-      </>
+      </BoxList>
     )
   }
 }
@@ -188,5 +176,9 @@ const seasonSorting = (ownSeasonData, yoursSeasonData) => {
   return seasonDetails[ownSeasonData.fieldValue].index -
          seasonDetails[yoursSeasonData.fieldValue].index
 }
+
+export const Head = () => (
+  <Seo title="ポートフォリオ" description="Aokashi のポートフォリオページです。これまで制作したWebサイトやツールなどを見ることができます。" />
+)
 
 export default PortfolioPage

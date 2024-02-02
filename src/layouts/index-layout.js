@@ -1,91 +1,77 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { chakra, Box, Container, Grid, GridItem, HStack, Image, Stack, Wrap, WrapItem, useBreakpointValue } from "@chakra-ui/react"
+import { Global } from "@emotion/react"
 
-import * as styles from "./index-layout.module.sass"
+import BgIndex from "../images/ah-background_index.png"
 import Link from "../components/Link"
-import Footer from "../components/footer.js"
+import Footer from "../components/footer"
 import Icon from "../images/aokashi-icon.png"
+import ProfileBg from "../images/ah-background_profile.png"
 import convertDate from "../utils/convertDate"
 
-const {
-  indexBody,
-  firstScreen,
-  title,
-  quickContents,
-  aboutme,
-  aboutmeIcon,
-  mainContent,
-  navItem: styleNavItem,
-  navItemLink: styleNavItemLink,
-  navItemIcon: styleNavItemIcon,
-  navItemText: styleNavItemText,
-  social,
-  socialItem: styleSocialItem,
-  socialText: styleSocialText,
-  socialLink,
-  hasLink,
-  socialIcon,
-  isIcon,
-  isText,
-  information,
-  informationTitle,
-  informationLink,
-  informationDate
-} = styles;
+const gridTemplateNarrow = `
+". . ." 1fr
+". l ." 96px
+". . ." 1fr
+"n n n" auto
+"e e e" auto
+"b b b" auto
+/ 1fr minmax(auto,512px) 1fr
+`;
+
+const gridTemplateWide = `
+"n . ."  1fr
+"n l ." 96px
+"n . e" 1fr
+"b b b" auto
+/ 1fr 512px 1fr
+`;
 
 const IndexLayout = ({ children }) => {
   const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-        file(relativePath: { eq: "ah-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        allNavItemYaml {
-          group(field: type) {
-            nodes {
-              name
-              type
-              link
-              icon
-              color
-            }
-            fieldValue
-          }
-        }
-        allSocialLinkYaml {
-          nodes {
-            name
-            link
-            text
-            icon
-          }
-        }
-        allFeedAokashiRoom(
-          sort: {
-            fields: isoDate,
-            order: DESC
-          },
-          limit: 1
-        ) {
-          nodes {
-            title
-            link
-            isoDate
-          }
-        }
+    graphql`{
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  file(relativePath: {eq: "ah-logo.png"}) {
+    childImageSharp {
+      gatsbyImageData
+    }
+  }
+  allNavItemYaml {
+    group(field: {type: SELECT}) {
+      nodes {
+        name
+        type
+        link
+        icon
+        color
       }
-    `
+      fieldValue
+    }
+  }
+  allSocialLinkYaml {
+    nodes {
+      name
+      link
+      text
+      icon
+    }
+  }
+  allFeedAokashiRoom(sort: {isoDate: DESC}, limit: 1) {
+    nodes {
+      title
+      link
+      isoDate
+    }
+  }
+}`
   )
 
   const [screenHeight, setScreenHeight] = useState(0)
@@ -93,87 +79,114 @@ const IndexLayout = ({ children }) => {
     setScreenHeight(window.innerHeight);
   }, [])
 
+  const contentsNavItems = data.allNavItemYaml.group.find(({ fieldValue }) => fieldValue === "contents")
+  const siteNavItems = data.allNavItemYaml.group.find(({ fieldValue }) => fieldValue === "site")
+
   return (
     <>
-      <Helmet>
-        <body className={indexBody} />
-      </Helmet>
-      <div className={`${firstScreen} container`} style={{ minHeight: `${screenHeight}px` }}>
-        <div className={title}>
-          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
-        </div>
-        {
-          navItems(data.allNavItemYaml)
-        }
-        <div className={quickContents}>
-          {
-            Information(data.allFeedAokashiRoom.nodes[0])
+      <Global
+        styles={{
+          body: {
+            // !important がないと Chakra UI のテーマ設定で上書きされてしまう
+            backgroundColor: 'var(--chakra-colors-silver-600)!important',
+            backgroundImage: `url(${BgIndex})!important`,
+            backgroundRepeat: 'repeat',
+            backgroundPosition: '0 0 ',
           }
-          <div className={aboutme}>
-            <img src={Icon} alt="Aokashi" className={aboutmeIcon}/>
+        }}
+      />
+      <Container>
+        <Grid
+          gridTemplate={[gridTemplateNarrow, gridTemplateNarrow, gridTemplateNarrow, gridTemplateWide]}
+          minH={`${screenHeight}px`}
+        >
+          <GridItem area="l">
+            <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={data.site.siteMetadata.title} />
+          </GridItem>
+          <GridItem area="n">
             {
-              socialLinks(data.allSocialLinkYaml)
+              navItems(contentsNavItems.nodes)
             }
-          </div>
-        </div>
-      </div>
-      <div className={`${mainContent} container`}>
+          </GridItem>
+          <GridItem area="e">
+            {
+              navItems(siteNavItems.nodes)
+            }
+          </GridItem>
+          <GridItem area="b">
+            {
+              Information(data.allFeedAokashiRoom.nodes[0])
+            }
+            <HStack backgroundImage={ProfileBg}>
+              <Image src={Icon} alt="Aokashi" flex="none" h={["64px", "64px", "128px"]} />
+              <SocialLinks socialData={data.allSocialLinkYaml } />
+            </HStack>
+          </GridItem>
+        </Grid>
+      </Container>
+      <Container backgroundImage={ProfileBg}>
         {children}
-      </div>
+      </Container>
       <Footer siteTitle={data.site.siteMetadata.title} />
     </>
   )
 }
 
-const navItems = (navData) => (
-  <>
+const navItems = (navItems) => (
+  <Stack
+    direction={['row', 'row', 'row', 'column']}
+    justifyContent={["space-around", "space-around", "space-around", "center"]}
+    h="full"
+    w="full"
+  >
     {
-      navData.group.map((group, groupIndex) => (
-        <div className={getNavGroupClassName(group.fieldValue)} key={groupIndex}>
-          {
-            group.nodes.map((navItem, navItemIndex) => (
-              <div className={styleNavItem} key={navItemIndex}>
-                <Link
-                  href={navItem.link}
-                  className={styleNavItemLink}
-                >
-                  {
-                    navItem.icon &&
-                      <img src={navItem.icon} alt={""} className={styleNavItemIcon} />
-                  }
-                  <span className={styleNavItemText}>{navItem.name}</span>
-                </Link>
-              </div>
-            ))
-          }
-        </div>
+      navItems.map((navItem, navItemIndex) => (
+        <Link
+          key={navItemIndex}
+          _hover={{ color: 'gray.800' }}
+          color="white"
+          href={navItem.link}
+        >
+          <Stack alignItems="center" direction={['column', 'column', 'column', 'row']}>
+            {
+              navItem.icon &&
+                <img src={navItem.icon} alt={""} />
+            }
+            <Box fontSize="lg" fontFamily="Nunito" textTransform="uppercase">{navItem.name}</Box>
+          </Stack>
+        </Link>
       ))
     }
-  </>
+  </Stack>
 )
 
-const socialLinks = (socialData) => (
-  <div className={social}>
-    {
-      socialData.nodes.map((socialItem, socialItemIndex) => (
-        <div className={styleSocialItem} key={socialItemIndex}>
-          <SocialLink socialItem={socialItem}>
-            <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
-            <span className={styleSocialText}>
-              {socialItem.text}
-            </span>
-          </SocialLink>
-        </div>
-      ))
-    }
-  </div>
-)
+const SocialLinks = ({ socialData }) => {
+  const isShowSocialText = useBreakpointValue({ md: false, lg: true })
+  return (
+    <Wrap px={5} py={3} spacingX={10} spacingY={3}>
+      {
+        socialData.nodes.map((socialItem, socialItemIndex) => (
+          <WrapItem key={socialItemIndex}>
+            <SocialLink socialItem={socialItem}>
+              <SocialIcon icon={socialItem.icon} alt={socialItem.name} />
+              {(!socialItem.link || isShowSocialText) && (
+                <chakra.span color="gray.700" ml={2}>
+                  {socialItem.text}
+                </chakra.span>
+              )}
+            </SocialLink>
+          </WrapItem>
+        ))
+      }
+    </Wrap>
+  )
+}
 
 const SocialLink = ({ socialItem, children }) => {
   const titleText = `${socialItem.name} - ${socialItem.text}`;
   if (socialItem.link) {
     return (
-      <a href={socialItem.link} title={titleText} target="_blank" rel="noopener noreferrer" className={`${socialLink} ${hasLink}`}>{children}</a>
+      <Link href={socialItem.link} title={titleText} color="inherit">{children}</Link>
     )
   } else {
     return (
@@ -185,28 +198,26 @@ const SocialLink = ({ socialItem, children }) => {
 const SocialIcon = ({ icon, alt }) => {
   if (icon) {
     return (
-      <FontAwesomeIcon icon={["fab", icon]} className={`${socialIcon} ${isIcon}`} />
+      <FontAwesomeIcon icon={["fab", icon]} size="2x" />
     )
   } else {
     return (
-      <span className={`${socialIcon} ${isText}`}>{alt}</span>
+      <span>{alt}</span>
     )
   }
 }
 
 const Information = (data) => (
-  <div className={information}>
-    <span className={informationTitle}>ブログ記事</span>
-    <a href={data.link} target="_blank" rel="noopener noreferrer" className={informationLink}>
+  <HStack backgroundColor="white" borderTop="2px solid" borderColor="brand.800" px={3} py={2}>
+    <Box fontWeight="bold">ブログ記事</Box>
+    <Link href={data.link} color="brand.600">
       {data.title}
-      <time dateTime={data.isoDate} className={informationDate}>{convertDate(data.isoDate)}</time>
-    </a>
-  </div>
+    </Link>
+    <Box color="gray.600" fontSize="sm">
+      <time dateTime={data.isoDate}>{convertDate(data.isoDate)}</time>
+    </Box>
+  </HStack>
 )
-
-function getNavGroupClassName(groupValue) {
-  return styles[groupValue + "Nav"]
-}
 
 IndexLayout.propTypes = {
   children: PropTypes.node.isRequired,

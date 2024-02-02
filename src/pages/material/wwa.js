@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { Button, ButtonGroup, Card, CardBody, CardFooter, CardHeader, Heading, Text, VStack } from "@chakra-ui/react"
 import Layout from "../../layouts/page-layout"
 
 import Seo from "../../components/seo"
@@ -11,6 +12,7 @@ import BoxList from "../../components/BoxList"
 import ImageMaterialBox from "../../components/Box/ImageMaterialBox"
 import ImageModal from "../../components/Modal/ImageModal"
 import PageHeaderNav from "../../components/PageHeaderNav"
+import Link from "../../components/Link"
 
 class WWAMaterialPage extends React.Component {
 
@@ -28,44 +30,43 @@ class WWAMaterialPage extends React.Component {
     return (
       <Layout headerContent={
         <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-          <h1>WWA素材</h1>
+          <Heading as="h1" size="lg">WWA素材</Heading>
         </PageHeader>
       }>
-        <Seo title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
-        <div className="content">
+        <div className="ah-article">
           <p>WWAで利用できる素材です。</p>
           <InfoNote>
-            <p>セット以外のWWA素材はWWA制作に使う画像ファイルに埋め込む必要があります。</p>
-            <ul>
-              <li><a href="https://contents.aokashi.net/docs/?WWA/HowToUseMaterial" title="WWA/HowToUseMaterial - Aokashi Home 資料集" target="_blank" rel="noopener noreferrer">埋め込み方は当サイトの旧資料集で知ることができます。</a></li>
-            </ul>
+            <Text>セット以外のWWA素材はWWA制作に使う画像ファイルに埋め込む必要があります。</Text>
+            <Text><Link href="https://blog.wwawing.com/how-to-insert-material/" title="WWA素材をWWAゲームのGIF画像に埋め込むには？ | WWA Wing ブログ">埋め込み方は WWA Wing のブログで知ることができます。</Link></Text>
+          </InfoNote>
+          <InfoNote>
+            <Text>使用サンプルをPixivに掲載しています。参考にどうぞ。</Text>
+            <Text><Link href="https://www.pixiv.net/users/24383596">Aokashi - Pixiv</Link></Text>
           </InfoNote>
           <WarningNote>
             <p>タグ「標準素材風」の一部素材には、ＮＡＯさんのＷＷＡ標準素材を使用しています。問題がありましたら、削除する場合があります。</p>
           </WarningNote>
         </div>
         <StaticQuery
-          query={graphql`
-            query WWAMaterialDataQuery {
-              allWwaMaterialYaml {
-                nodes {
-                  name
-                  file
-                  description
-                  publishedAt
-                  tags
-                }
-                group(field: tags) {
-                  fieldValue
-                }
-              }
-            }
-          `}
+          query={graphql`query WWAMaterialDataQuery {
+  allWwaMaterialYaml {
+    nodes {
+      name
+      file
+      description
+      publishedAt
+      tags
+    }
+    group(field: {tags: SELECT}) {
+      fieldValue
+    }
+  }
+}`}
           render={data =>
-            <>
+            <VStack alignItems="stretch" spacing={6}>
               {this.renderTagList(data.allWwaMaterialYaml.group)}
               {this.renderMaterialList(data.allWwaMaterialYaml.nodes)}
-            </>
+            </VStack>
           }
         />
         {
@@ -73,36 +74,40 @@ class WWAMaterialPage extends React.Component {
             this.renderModal()
         }
       </Layout>
-    )
+    );
   }
 
   renderTagList(tagGroups) {
     return (
-      <div className="message is-primary">
-        <div className="message-header">
-          <p>タグで絞り込み</p>
-        </div>
-        <div className="message-body">
-          <div className="buttons are-small">
-            {tagGroups.map(function (tagGroup, tagIndex) {
-              const tagValue = tagGroup.fieldValue
-              const activeClassName = tagValue === this.state.tagBy ? "is-dark is-active" : ""
-              return (
-                <button
-                  className={`button ${activeClassName}`}
-                  onClick={() => this.setTag(tagValue)}
-                  key={tagIndex}
-                >{tagValue}</button>
-              )
-            }.bind(this))}
-          </div>
-          <div className="buttons">
-            {this.state.tagBy !== "" &&
-              <button className="button" onClick={() => this.setTag("")}>絞り込みを解除</button>
-            }
-          </div>
-        </div>
-      </div>
+      <Card>
+        <CardHeader><Heading as="h2" size="sm">タグで絞り込み</Heading></CardHeader>
+        <CardBody>
+          <ButtonGroup flexWrap="wrap" gap={2} my={2} size="sm">
+            <>
+              {tagGroups.map(
+                function (tagGroup, tagIndex) {
+                  const tagValue = tagGroup.fieldValue
+                  const isActive = tagValue === this.state.tagBy
+                  return (
+                    <Button
+                      key={tagIndex}
+                      onClick={() => this.setTag(tagValue)}
+                      variant={isActive ? "solid" : "outline"}
+                    >
+                      {tagValue}
+                    </Button>
+                  )
+                }.bind(this)
+              )}
+            </>
+          </ButtonGroup>
+        </CardBody>
+        <CardFooter>
+          <Button onClick={() => this.setTag("")} variant="outline">
+            絞り込みを解除
+          </Button>
+        </CardFooter>
+      </Card>
     )
   }
 
@@ -141,24 +146,26 @@ class WWAMaterialPage extends React.Component {
         return bTime - aTime;
       })
     return (
-      <div>
-        <div className="message is-primary">
-          <div className="message-header">
-            <p>並び替え</p>
-          </div>
-          <div className="message-body">
-            <div className="buttons">
-              <button
-                className={`button ${this.state.sort === "asc" ? "is-dark is-active" : ""}`}
+      <>
+        <Card>
+          <CardHeader><Heading as="h2" size="sm">並び替え</Heading></CardHeader>
+          <CardBody>
+            <ButtonGroup>
+              <Button
                 onClick={() => this.setSort("asc")}
-              >昇順</button>
-              <button
-                className={`button ${this.state.sort === "desc" ? "is-dark is-active" : ""}`}
+                variant={this.state.sort === "asc" ? "solid" : "outline"}
+              >
+                昇順
+              </Button>
+              <Button
                 onClick={() => this.setSort("desc")}
-              >降順</button>
-            </div>
-          </div>
-        </div>
+                variant={this.state.sort === "desc" ? "solid" : "outline"}
+              >
+                降順
+              </Button>
+            </ButtonGroup>
+          </CardBody>
+        </Card>
         <BoxList>
           {materialData.map((item) => (
             <ImageMaterialBox
@@ -168,7 +175,7 @@ class WWAMaterialPage extends React.Component {
             />
           ))}
         </BoxList>
-      </div>
+      </>
     )
   }
 
@@ -179,6 +186,7 @@ class WWAMaterialPage extends React.Component {
         alt={this.state.previewItem.name}
         name={this.state.previewItem.name}
         description={this.state.previewItem.description}
+        imageBg="rgb(158, 158, 158)"
         onOutsideClick={() => this.hidePreview()}
       />
     )
@@ -199,5 +207,9 @@ class WWAMaterialPage extends React.Component {
   }
 
 }
+
+export const Head = () => (
+  <Seo title="WWA素材" description="Aokashi HomeのWWA素材ページです。現代の建物を中心に、凝ったマップが作れます。新作の素材なら、WWAの標準素材との組み合わせに最適！" />
+)
 
 export default WWAMaterialPage

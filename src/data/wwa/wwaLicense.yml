@@ -37,9 +37,10 @@
 - name: 万色の宙
   authors:
   - yuhiro
-  url: http://c-lr.net/touch/
+  url: http://web.archive.org/web/20230327115858/http://c-lr.net/touch/
   items:
     - image
+  remark: サイト消失のため、2023年3月27日のアーカイブを表示
 - name: まてるある～ん
   authors:
   - えふ・けー
@@ -73,7 +74,7 @@
 - name: 魔王魂
   authors:
   - KOUICHI
-  url: http://maoudamashii.jokersounds.com/
+  url: http://maou.audio/
   items:
     - sound
 - name: WEB WAVE LIB

@@ -1,12 +1,14 @@
 .vscode
 .idea
+
+node_modules/
+.cache/
 public
+src/gatsby-types.d.ts
 
 *.log
-.cache
 .DS_Store
 src/.temp
-node_modules
 dist
 .env
 .env.*

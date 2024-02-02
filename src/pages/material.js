@@ -1,20 +1,21 @@
 import React from "react"
 import Layout from "../layouts/page-layout"
+import { Heading, Image } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
 import MaterialNavItem from "../data/materials/navItem.json"
 import PageHeader from "../components/PageHeader"
 import WarningNote from "../components/Note/WarningNote"
 import PageHeaderNav from "../components/PageHeaderNav"
+import Link from "../components/Link"
 
 const MaterialIndexPage = () => (
   <Layout headerContent={
     <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-      <h1>素材</h1>
+      <Heading as="h1" size="lg">素材</Heading>
     </PageHeader>
   }>
-    <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
-    <div className="content">
+    <div className="ah-article">
       <p>作品の制作に利用できる素材やライブラリ、アセットを公開しています。</p>
       <h2>ご利用について</h2>
       <p>当サイトでは、なるべく多くの方に利用してもらえるように、ここの素材やライブラリの利用制限はなるべく最小限に留めています。 <strong>「このサイト (Aokashi Home) から利用した」</strong> という表記を含めていただければ、ご自由にご利用できます。加工も自由です(また、画像を重ねるような加工が前提としたものもあります)。</p>
@@ -27,12 +28,20 @@ const MaterialIndexPage = () => (
       </WarningNote>
       <h2>使用ツール</h2>
       <ul>
-        <li><a href="http://takabosoft.com/edge2" target="_blank" rel="noopener noreferrer"><img src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" /></a></li>
-        <li><a href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer">Aseprite</a></li>
-        <li><a href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
+        <li>
+          <Link href="http://takabosoft.com/edge2">
+            <Image src="https://contents.aokashi.net/banner/site_banner-takabo_edge2.png" alt="高機能ドット絵エディタ EDGE2" sx={{ display: 'inline' }} />
+          </Link>
+        </li>
+        <li><Link href="https://www.aseprite.org/">Aseprite</Link></li>
+        <li><Link href="https://www.getpaint.net/">Paint.NET</Link></li>
       </ul>
     </div>
   </Layout>
+)
+
+export const Head = () => (
+  <Seo title="素材" description="Aokashi Homeの素材はWWAや建物のアイコンなどを取り扱っています。総数は200件以上！" />
 )
 
 export default MaterialIndexPage

@@ -1,26 +1,31 @@
+import { Box, ButtonGroup, Container, HStack, Hide, Spacer } from "@chakra-ui/react"
 import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { GatsbyImage } from "gatsby-plugin-image"
+import LinkButton from "./LinkButton"
 
 const Header = ({ siteTitle, siteNavItems, logoImage }) => (
-  <header className="navbar">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
+  <Box as="header" bgColor="silver" borderBottom="2px solid" borderColor="brand.800">
+    <Container>
+      <HStack px={4} py={2}>
+        <Link to="/">
           <GatsbyImage image={logoImage.childImageSharp.gatsbyImageData} alt={siteTitle} />
         </Link>
-      </div>
-      <div className="navbar-menu">
-        <div className="navbar-end">
-          {siteNavItems.map((navItem, navIndex) => 
-            <a href={navItem.link} target="_blank" rel="noopener noreferrer" className="navbar-item" key={navIndex}>{navItem.name}</a>
-          )}
-        </div>
-      </div>
-    </div>
-  </header>
+        <Spacer />
+        <Hide below="md">
+          <ButtonGroup colorScheme="gray" variant="ghost">
+            {siteNavItems.map((navItem, navIndex) => 
+              <LinkButton key={navIndex} href={navItem.link}>
+                {navItem.name}
+              </LinkButton>
+            )}
+          </ButtonGroup>
+        </Hide>
+      </HStack>
+    </Container>
+  </Box>
 )
 
 Header.propTypes = {

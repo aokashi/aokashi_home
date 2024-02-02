@@ -1,31 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Heading, List, ListItem } from "@chakra-ui/react";
 
-/**
- * Bulma の menu は ul にクラス menu-list を渡すことが普通だが、ここでは ul 要素にクラスを渡すことができないので div 要素に渡す形となっている。
- *     もし想定した表示になっていない場合は、下記ページで変更が無いか確認しておくこと。
- * @see https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
- */
 const TableOfContents = ({ body }) => {
   if (!body.items) {
     return null;
   }
   return (
-    <aside className="menu">
-      <p className="menu-label">目次</p>
-      <div className="menu-list">
-        <ul>
-          {body.items.map((item, index) => (
-            <li key={index}><a href={item.url}>{item.title}</a></li>
-          ))}
-        </ul>
-      </div>
-    </aside>
+    <Box as="aside" p={4}>
+      <Heading as="h2" size="sm" className="menu-label"><FontAwesomeIcon icon="list" /> 目次</Heading>
+      <List variant="tableOfContents">
+        {body.items.map((item, index) => (
+          <ListItem key={index}><a href={item.url}>{item.title}</a></ListItem>
+        ))}
+      </List>
+    </Box>
   )
 }
 
 /**
- * プロパティ body は MDXRenderer で使用するオブジェクトです。
+ * プロパティ body は MDX から出力される目次のオブジェクトです。
  */
 TableOfContents.propTypes = {
   body: PropTypes.object,

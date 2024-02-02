@@ -28,7 +28,6 @@ Aokashi Home は、Aokashiが運営するWebサイトです。主にゲームや
 
  - メール: Aokashi.Towa(at)Outlook.jp
  - Twitter: [@aokashi](https://twitter.com/aokashi)
- - askfm: [@aokashi](https://ask.fm/aokashi)
 
 <WarningNote>
 サーバーの移転により、メールサーバーがまだ用意していません。このため、リニューアル前に利用していたメールアドレスは利用できなくなっています。ご不便をおかけしますが、ご協力の程お願いします。

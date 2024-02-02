@@ -3,20 +3,23 @@ import PropTypes from "prop-types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Link from "./Link"
+import { Button, Wrap } from "@chakra-ui/react"
 
 const BoxNav = ({ navItems }) => (
-  <div className="card-footer">
-    {navItems.map((navItem, navIndex) => (
-        <Link href={navItem.link} className="card-footer-item" key={navIndex}>
-          {navItem.fa &&
-            <span className="icon">
-              <FontAwesomeIcon icon={["fab", navItem.fa]} />
-            </span>
-          }
+  <Wrap>
+    {navItems.map((navItem) => (
+      <Link href={navItem.link} key={navItem.link}>
+        <Button
+          leftIcon={navItem.fa ? (<FontAwesomeIcon icon={["fab", navItem.fa]} />) : undefined}
+          variant="outline"
+          // 幅が狭い上にテキストを詰める場合があるため、折り返せるようにする
+          whiteSpace="normal"
+        >
           {navItem.name}
-        </Link>
+        </Button>
+      </Link>
     ))}
-  </div>
+  </Wrap>
 )
 
 BoxNav.propTypes = {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Layout from "../../layouts/page-layout";
+import { Heading } from "@chakra-ui/react";
 
 import PageHeader from "../../components/PageHeader";
 import PageHeaderNav from "../../components/PageHeaderNav"
@@ -28,11 +29,10 @@ export default function WolfRPGEditorMaterialPage() {
   return (
     <Layout headerContent={
       <PageHeader bottomContent={<PageHeaderNav navItems={MaterialNavItem} />}>
-        <h1>WOLF RPG エディター素材</h1>
+        <Heading as="h1" size="lg">WOLF RPG エディター素材</Heading>
       </PageHeader>
     }>
-      <Seo title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
-      <div className="content">
+      <div className="ah-article">
         <p>WOLF RPG エディターで利用できる素材です。</p>
         <WarningNote>
           <p>本素材はWWA素材から流用している都合上、タイルサイズが40×40に対応しているものがほとんどです。ご使用する場合はタイルサイズを40×40 (解像度が 800×600) に変更する必要があります。変更の際は併用する素材の対応タイルサイズにご注意ください。</p>
@@ -81,3 +81,7 @@ export default function WolfRPGEditorMaterialPage() {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <Seo title="WOLF RPG エディター素材" description="Aokashi Home の WOLF RPG エディター対応の素材ページです。タイルサイズが40×40に対応しているものを中心に取り扱っています。" />
+)
