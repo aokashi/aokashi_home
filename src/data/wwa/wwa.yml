@@ -186,3 +186,15 @@
       link: https://www.aokashi.net/wwa/null_battle.zip
   recommend: true
   supportWWAWing: true
+- id: strange_machine_next
+  name: 謎めいた機械を追い求めて 闇組織の争奪
+  description: |
+    不穏と離散を、挑戦で乗り越える。魔塔団と座信会の争いに介入しつつ、暴走する SATELLA の動きを止めよう。
+    「謎めいた機械を追い求めて」から12年後の続編作品。 WWA Script とピクチャ機能で実現した、 WWA の中では長編の RPG です。
+  publishedAt: 2024-09-21
+  screenPath: wwa/strange_machine_next.png
+  links:
+    - name: メインページ
+      link: https://www.aokashi.net/wwa/strange_machine_next/
+  recommend: true
+  supportWWAWing: true
