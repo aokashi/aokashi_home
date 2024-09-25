@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import MaterialBox, { MaterialItem } from "./MaterialBox"
 import getFileName from "../../utils/getFileName"
-import { Box, Button, ButtonGroup } from "@chakra-ui/react";
+import { Box, Button, ButtonGroup, Link } from "@chakra-ui/react";
 
 type Props = {
   materialItem: MaterialItem,
@@ -18,6 +18,16 @@ const ImageMaterialBox = ({ materialItem, onItemClick }: Props) => (
   >
     <Box textAlign="right">
       <ButtonGroup>
+        {materialItem.docsLink && (
+          <Button
+            as={Link}
+            href={materialItem.docsLink}
+            isExternal
+            variant="ghost"
+          >
+            もっと知る
+          </Button>
+        )}
         <Button
           as="a"
           download={getFileName(materialItem.file)}
