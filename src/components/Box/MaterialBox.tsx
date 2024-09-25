@@ -8,6 +8,7 @@ export type MaterialItem = {
   file: string,
   tags?: string[],
   description?: string,
+  docsLink?: string,
 }
 
 type Props = {
@@ -21,6 +22,7 @@ type Props = {
 const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }: Props) => (
   <Box
     title={title}
+    // TODO 縦に長い画像だとリストのレイアウトが崩れて閲覧に支障をきたすので、最大の高さを指定できるようにして、はみ出した分は隠すようにしたい
     imagePath={imagePath}
     onImageClick={onImageClick}
   >
