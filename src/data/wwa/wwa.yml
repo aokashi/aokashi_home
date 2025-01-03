@@ -103,8 +103,9 @@
   screenPath: wwa/walking.png
   links:
     - link: https://www.aokashi.net/wwa/walking.html
-    - name: ランキング
-      link: https://www.aokashi.net/wwa/walking_ranking/wwarank.cgi?mode=rank
+    # ランキングは見れるように整備していないので停止中
+    # - name: ランキング
+    #   link: https://www.aokashi.net/wwa/walking_ranking/wwarank.cgi?mode=rank
   recommend: true
   supportWWAWing: true
 - id: escape_cave_2
