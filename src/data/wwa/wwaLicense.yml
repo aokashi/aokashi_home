@@ -41,6 +41,12 @@
   items:
     - image
   remark: サイト消失のため、2023年3月27日のアーカイブを表示
+- name: ZOKUGAMI
+  authors:
+  - アルクス
+  url: https://zokugami.net
+  items:
+    - image
 - name: まてるある～ん
   authors:
   - えふ・けー
@@ -51,6 +57,20 @@
   authors:
   - げおるぐ
   url: http://geo.kesagiri.net/
+  items:
+    - image
+- name: ぼうけんのきろく
+  authors:
+  - ひかる
+  url: https://tabinokiroku20xx.blogspot.com/
+  items:
+    - image
+- name: PLiCy
+  authors:
+  - ラルフ
+  - コルネリア
+  - かわせみ
+  url: https://plicy.net/
   items:
     - image
 - name: TAM Music Factory
@@ -96,19 +116,18 @@
   url: http://d-symphony.com/
   items:
     - sound
-- name: ぼうけんのきろく
+- name: OLD WOODS HUT
   authors:
-  - ひかる
-  url: https://tabinokiroku20xx.blogspot.com/
+  - FICUSEL
+  url: https://valse.ficusel.com/
   items:
-    - image
-- name: PLiCy
+    - sound
+- name: 夢にみた緑
   authors:
-  - ラルフ
-  - コルネリア
-  url: https://plicy.net/
+  - 遊句
+  url: https://yougou.sonnabakana.com/
   items:
-    - image
+    - sound
 - name: Merlin Soundfont Banks
   authors:
   - Saphyr 2000 enr. Canada
