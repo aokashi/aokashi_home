@@ -187,6 +187,17 @@
       link: https://www.aokashi.net/wwa/null_battle.zip
   recommend: true
   supportWWAWing: true
+- id: picture_test
+  name: ピクチャ機能のテストマップ
+  description: |
+    WWA Wing の新機能「ピクチャ機能」で使用できるプロパティや使用例を掲載したマップです。
+    ピクチャ機能の動作を一通り確かめることができます。
+  publishedAt: 2024-01-28
+  screenPath: wwa/picture_test.png
+  links:
+    - link: https://wwawing.com/unstable/picture_test
+      name: WWA Wing からプレイ
+  supportWWAWing: true
 - id: strange_machine_next
   name: 謎めいた機械を追い求めて 闇組織の争奪
   description: |
