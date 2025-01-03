@@ -12,7 +12,7 @@ type Props = {
 }
 
 const ImageModal = ({ src, alt, name, description, imageBg, onOutsideClick }: Props) => (
-  <Modal isCentered isOpen onClose={onOutsideClick} scrollBehavior="inside">
+  <Modal isCentered size="3xl" isOpen onClose={onOutsideClick} scrollBehavior="inside">
     <ModalOverlay bg="blackAlpha.700" />
     <ModalContent>
       {name && (
