@@ -47,6 +47,12 @@
   url: https://zokugami.net
   items:
     - image
+- name: CINAGAWANET
+  authors:
+  - may-b
+  url: https://cinagawanet.web.fc2.com/index.html
+  items:
+    - image
 - name: まてるある～ん
   authors:
   - えふ・けー
@@ -97,6 +103,12 @@
   url: http://maou.audio/
   items:
     - sound
+- name: ザ・マッチメイカァズ
+  authors:
+  - OSA
+  url: https://osabisi.sakura.ne.jp/m2/
+  items:
+    - sound
 - name: WEB WAVE LIB
   authors:
   - WEB WAVE LIB 運営委員会
@@ -114,6 +126,18 @@
   authors:
   - 藤村ほわん
   url: http://d-symphony.com/
+  items:
+    - sound
+- name: Cnoc
+  authors:
+  - あき
+  url: http://cnoc.web.fc2.com/index.html
+  items:
+    - sound
+- name: PANICPUMPKIN
+  authors:
+  - みそか
+  url: http://pansound.com/panicpumpkin/
   items:
     - sound
 - name: OLD WOODS HUT
