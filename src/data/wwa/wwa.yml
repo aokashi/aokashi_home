@@ -210,3 +210,16 @@
       link: https://www.aokashi.net/wwa/strange_machine_next/
   recommend: true
   supportWWAWing: true
+- id: dream_travel
+  name: 夢探しのふるさと生活
+  description: |
+    主人公は1週間の休みの中、帰省でふるさとに戻ってきました。
+    モンスターだらけの町をかいくぐりながら、思い出の場所を4カ所すべて見つけてください。
+    2Day WWA Jam (テーマ「夢」) の投稿作品です。
+  publishedAt: 2025-02-23
+  screenPath: wwa/dream_travel.png
+  links:
+    - link: https://www.aokashi.net/wwa/dream_travel.html
+    - name: PLiCy からプレイ
+      link: https://plicy.net/GamePlay/200045
+  supportWWAWing: true
