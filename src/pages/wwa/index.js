@@ -74,7 +74,8 @@ const WWAPage = () => {
     <Layout headerContent={<BasicPageHeader>WWA</BasicPageHeader>}>
       <div className="ah-article">
         <p><strong>World Wide Adventure</strong> は、RPGゲームが作れるゲームエンジンです。手元のブラウザで動作できますので、WWAゲームにアクセスしてすぐに遊べます。</p>
-        <p><a href="https://www.wwajp.com">公式サイト</a> と <a href="https://wwawing.com">WWA Wing</a> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
+        <p><Link href="https://www.wwajp.com">公式サイト</Link> と <Link href="https://wwawing.com">WWA Wing</Link> でWWAゲームの制作ツールが頒布されています。あなたも、WWAゲームを制作してみませんか？</p>
+        <p>また、 <Link href="https://www.wwafansq.com">WWA FanSquare</Link> の <Link href="https://www.wwafansq.com/community">Discord コミュニティ</Link> ではWWAゲームの感想を投稿することもできます。興味があれば参加してみてください。</p>
         <InfoNote>
           <p>ゲームは新しい順で並び替えています。章立てで構成されるゲームについては、初回の投稿日時を基準としています。</p>
         </InfoNote>
@@ -88,7 +89,8 @@ const WWAPage = () => {
           <Box display="inline-block"><GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /></Box> 対応のWWAのみ表示する
         </Checkbox>
         <WarningNote>
-          <p>WWA Wing 未対応のWWAをプレイする方法についてはただいま整備中です。</p>
+          {/** 相対リンクで記載すると Gatsby 内のページから探そうとするので 404 になる */}
+          <p>WWA Wing 未対応のWWAをプレイする方法については当サイト内の記事 <Link href="https://www.aokashi.net/wwa/how_to_launch_java">Java版WWAを起動するには？</Link> をご確認ください。</p>
         </WarningNote>
       </div>
       <SimpleGrid columns={[1, 1, 2, 2, 3]} spacing={4}>
