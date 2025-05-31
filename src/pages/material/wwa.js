@@ -40,8 +40,8 @@ class WWAMaterialPage extends React.Component {
             <Text><Link href="https://blog.wwawing.com/how-to-insert-material/" title="WWA素材をWWAゲームのGIF画像に埋め込むには？ | WWA Wing ブログ">埋め込み方は WWA Wing のブログで知ることができます。</Link></Text>
           </InfoNote>
           <InfoNote>
-            <Text>使用サンプルをPixivに掲載しています。参考にどうぞ。</Text>
-            <Text><Link href="https://www.pixiv.net/users/24383596">Aokashi - Pixiv</Link></Text>
+            <Text>使用サンプルを <Link href="https://www.pixiv.net/users/24383596">Pixiv</Link> に掲載しています。参考にどうぞ。</Text>
+            <Text>また、これに無い WWA 素材は <Link href="https://www.wwafansq.com/community">WWA FanSquare の Discord コミュニティ</Link> にあるかもしれません。いち早く素材を入手したい方は是非お立ち寄りください。</Text>
           </InfoNote>
           <WarningNote>
             <p>タグ「標準素材風」の一部素材には、ＮＡＯさんのＷＷＡ標準素材を使用しています。問題がありましたら、削除する場合があります。</p>
