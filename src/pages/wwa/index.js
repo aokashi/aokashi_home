@@ -89,7 +89,8 @@ const WWAPage = () => {
           <Box display="inline-block"><GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="WWA Wing" /></Box> 対応のWWAのみ表示する
         </Checkbox>
         <WarningNote>
-          <p>WWA Wing 未対応のWWAをプレイする方法については当サイト内の記事 <a href="./how_to_launch_java/">Java版WWAを起動するには？</a> をご確認ください。</p>
+          {/** 相対リンクで記載すると Gatsby 内のページから探そうとするので 404 になる */}
+          <p>WWA Wing 未対応のWWAをプレイする方法については当サイト内の記事 <Link href="https://www.aokashi.net/wwa/how_to_launch_java">Java版WWAを起動するには？</Link> をご確認ください。</p>
         </WarningNote>
       </div>
       <SimpleGrid columns={[1, 1, 2, 2, 3]} spacing={4}>
