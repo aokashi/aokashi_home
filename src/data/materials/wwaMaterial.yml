@@ -725,3 +725,9 @@
   tags:
     - WWA素材第3世代
     - 地面
+- name: 24-rear_command_icons
+  file: /materials/wwa/24-rear_command_icons.gif
+  publishedAt: 2025-07-24
+  tags:
+    - WWA素材第3世代
+    - システム
