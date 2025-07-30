@@ -35,6 +35,12 @@ const MaterialIndexPage = () => (
         </li>
         <li><Link href="https://www.aseprite.org/">Aseprite</Link></li>
         <li><Link href="https://www.getpaint.net/">Paint.NET</Link></li>
+        <li><Link href="https://hippogamesunity.github.io/PixelStudioHub/">Pixel Studio PRO for pixel art</Link>
+          <ul>
+            <li><Link href="https://apps.apple.com/jp/app/pixel-studio-pro-for-pixel-art/id1476932307">App Store</Link></li>
+            <li><Link href="https://play.google.com/store/apps/details?id=com.pixelstudio.pro">Google Play</Link></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </Layout>

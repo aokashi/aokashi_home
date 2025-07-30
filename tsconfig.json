@@ -9,7 +9,8 @@
     "forceConsistentCasingInFileNames": true,
     // TODO すべてを TypeScript に変えたら true に変える
     "strict": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
   },
   "include": [
     "./src/**/*"
