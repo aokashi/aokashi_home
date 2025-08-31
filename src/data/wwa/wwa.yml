@@ -223,3 +223,15 @@
     - name: PLiCy からプレイ
       link: https://plicy.net/GamePlay/200045
   supportWWAWing: true
+- id: rail_dungeon
+  name: RAIL LAND DUNGEON
+  description: |
+    大きな都市で、主人公は訳あって悪霊現象を受けてしまった！
+    外は危険地帯。鉄道に乗ってかいくぐり、弱いモンスターから倒して、主人公が抱える悪霊現象を解決させてください。
+  publishedAt: 2025-08-31
+  screenPath: wwa/rail_dungeon.png
+  links:
+    - name: PLiCy からプレイ
+      link: https://plicy.net/GamePlay/212449
+  recommend: true
+  supportWWAWing: true
