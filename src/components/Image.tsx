@@ -1,35 +1,29 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { CSSProperties } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { FileNode } from "gatsby-plugin-image/dist/src/components/hooks"
 import { Image as ChakraImage } from "@chakra-ui/react"
+
+interface Props {
+  src: string | FileNode,
+  alt?: string,
+  style?: CSSProperties,
+}
 
 /**
  * 文字列や Gatsby Image に対応できる画像コンポーネントです。
  */
-const Image = ({ src, alt }) => {
+const Image = ({ src, alt = "", style }: Props) => {
   if (typeof src === "string") { // 文字列 → Chakra Image (img タグ)
-    return <ChakraImage src={src} alt={alt} />
+    return <ChakraImage src={src} alt={alt} style={style} />
   }
   if (typeof src === "object") { // Object → Gatsby Image
     if (src.childImageSharp) {
       if (src.childImageSharp.gatsbyImageData !== undefined) {
-        return <GatsbyImage image={src.childImageSharp.gatsbyImageData} alt={alt} />
+        return <GatsbyImage image={src.childImageSharp.gatsbyImageData} alt={alt} imgStyle={style} />
       }
     }
   }
   return null
-}
-
-Image.defaultProps = {
-  alt: "",
-}
-
-Image.propTypes = {
-  src: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-  ]),
-  alt: PropTypes.string,
 }
 
 export default Image

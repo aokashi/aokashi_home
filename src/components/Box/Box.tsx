@@ -1,14 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { ReactNode } from "react"
 import Link from "../Link"
 import Image from "../Image"
-import { Badge, Card, CardBody, CardFooter, CardHeader, Center, ChakraProps, Heading, chakra } from "@chakra-ui/react"
+import { Badge, Card, CardBody, CardFooter, CardHeader, ChakraProps, Heading, chakra, Center } from "@chakra-ui/react"
 
 type Props = {
   title?: string,
   titleBadge?: string,
   link?: string,
   imagePath?: string,
+  imageWrapper?: (image: ReactNode) => ReactNode,
   onImageClick?: VoidFunction,
   children?: React.ReactNode,
   headerContent?: React.ReactNode,
@@ -20,13 +20,25 @@ type Props = {
  * Chakra UI の Box コンポーネントとは異なります。
  * @todo 今後は Chakra UI の Box コンポーネントとの混在を防ぐため、 BoxCard コンポーネントに改称する。
  */
-const Box = ({ title, titleBadge, link, imagePath, onImageClick, children, headerContent, footerContent, ...chakraProps }: Props) => (
+const Box = ({
+  title = "",
+  titleBadge,
+  link = "",
+  imagePath,
+  imageWrapper,
+  onImageClick,
+  children,
+  headerContent,
+  footerContent,
+  ...chakraProps
+}: Props) => (
   <Card {...chakraProps}>
     {imagePath &&
       <BoxLink href={link} onClick={onImageClick}>
-        <Center>
-          <Image src={imagePath} />
-        </Center>
+        {imageWrapper
+          ? imageWrapper(<Image src={imagePath} />)
+          : <Center><Image src={imagePath} /></Center>
+        }
       </BoxLink>
     }
     {(title || headerContent) && (
@@ -73,24 +85,6 @@ const BoxLink = ({ href, onClick, children }: { href?: string, onClick?: VoidFun
     return <chakra.div role="button" mx="auto" onClick={onClick} onKeyDown={onClick}>{children}</chakra.div>
   }
   return <>{children}</>
-}
-
-Box.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string,
-  imagePath: Image.propTypes.src,
-  onImageClick: PropTypes.func,
-  className: PropTypes.string,
-  children: PropTypes.node,
-  headerContent: PropTypes.node,
-  footerContent: PropTypes.node,
-}
-
-Box.defaultProps = {
-  title: "",
-  link: "",
-  imagePath: null,
-  className: "",
 }
 
 export default Box

@@ -1,7 +1,6 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Box from "./Box"
-import { HStack, Tag } from "@chakra-ui/react"
+import { Box as ChakraBox, HStack, Tag } from "@chakra-ui/react"
 
 export type MaterialItem = {
   name: string,
@@ -19,11 +18,16 @@ type Props = {
   children?: React.ReactNode,
 }
 
+// TODO 画像が縦長の場合は「クリックで全体を見る」ボタンを上の被せて表示したい
 const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }: Props) => (
   <Box
     title={title}
-    // TODO 縦に長い画像だとリストのレイアウトが崩れて閲覧に支障をきたすので、最大の高さを指定できるようにして、はみ出した分は隠すようにしたい
     imagePath={imagePath}
+    imageWrapper={(image) => (
+      <ChakraBox textAlign="center" aspectRatio="1/1" overflowY="hidden">
+        {image}
+      </ChakraBox>
+    )}
     onImageClick={onImageClick}
   >
     {children}
@@ -45,17 +49,5 @@ const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }:
     }
   </Box>
 )
-
-MaterialBox.propTypes = {
-  materialItem: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string),
-    description: PropTypes.string,
-  }),
-  imagePath: Box.propTypes.imagePath,
-  onImageClick: PropTypes.func,
-  title: PropTypes.string,
-  children: PropTypes.node,
-}
 
 export default MaterialBox
