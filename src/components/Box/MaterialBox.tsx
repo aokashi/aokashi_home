@@ -1,6 +1,6 @@
 import React from "react"
 import Box from "./Box"
-import { Box as ChakraBox, HStack, Tag } from "@chakra-ui/react"
+import { HStack, Tag } from "@chakra-ui/react"
 
 export type MaterialItem = {
   name: string,
@@ -18,16 +18,11 @@ type Props = {
   children?: React.ReactNode,
 }
 
-// TODO 画像が縦長の場合は「クリックで全体を見る」ボタンを上の被せて表示したい
 const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }: Props) => (
   <Box
     title={title}
     imagePath={imagePath}
-    imageWrapper={(image) => (
-      <ChakraBox textAlign="center" aspectRatio="1/1" overflowY="hidden">
-        {image}
-      </ChakraBox>
-    )}
+    truncateImage
     onImageClick={onImageClick}
   >
     {children}

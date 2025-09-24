@@ -118,6 +118,7 @@ const WWAList = ({ wwaData, screenImages, wwaWingLogo }) => wwaData.map((item) =
       title={item.name}
       titleBadge={item.recommend ? "オススメ!" : undefined}
       imagePath={screenImage}
+      truncateImage={false}
       key={item.name}
       headerContent={item.supportWWAWing && (
         <Stack direction="row-reverse" mt={3}>
