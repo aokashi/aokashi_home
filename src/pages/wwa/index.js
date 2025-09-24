@@ -11,7 +11,7 @@ import BoxNav from "../../components/BoxNav"
 import WarningNote from "../../components/Note/WarningNote"
 import InfoNote from "../../components/Note/InfoNote"
 import Link from "../../components/Link"
-import { chakra, Box, Card, CardBody, CardHeader, Checkbox, HStack, Heading, SimpleGrid, Stack, Tag, TagLabel, Text } from "@chakra-ui/react"
+import { chakra, Box, Card, CardBody, CardHeader, Checkbox, Heading, SimpleGrid, Stack, Tag, TagLabel, Text, Wrap } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import LinkButton from "../../components/LinkButton"
 
@@ -99,7 +99,7 @@ const WWAPage = () => {
       <div className="ah-article">
         <h2>Thanks</h2>
         <WarningNote>
-          <p>2024年2月3日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
+          <p>2025年9月25日当時のリンク先を表示しています。リンク先が変更された場合は、後程対応します。</p>
         </WarningNote>
         <SimpleGrid columns={[1, 2, 3]} spacing={4}>
           {WWALicenseList(data.allWwaLicenseYaml)}
@@ -150,7 +150,7 @@ const WWALicenseList = (data) => data.nodes.map((license) => (
       </Text>
     </CardHeader>
     <CardBody>
-      <HStack wrap="wrap">
+      <Wrap>
         {license.items.map((item) =>
           <Tag size="md" key={item}>
             {LICENSE_ICONS[item] && (
@@ -161,9 +161,9 @@ const WWALicenseList = (data) => data.nodes.map((license) => (
             <TagLabel>{item}</TagLabel>
           </Tag>
         )}
-      </HStack>
+      </Wrap>
       {license.remark &&
-        <Text>{license.remark}</Text>
+        <Text mt={2}>{license.remark}</Text>
       }
     </CardBody>
   </Card>
