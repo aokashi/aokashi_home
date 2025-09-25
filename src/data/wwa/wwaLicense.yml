@@ -25,9 +25,10 @@
 - name: 福田直人のホームページ
   authors:
   - 福田直人
-  url: http://www.t3.rim.or.jp/~naoto/naoto.html
+  url: https://web.archive.org/web/20250318123045/http://www.t3.rim.or.jp/~naoto/naoto.html
   items:
     - image
+  remark: サイト消失のため、2025年3月18日のアーカイブを表示
 - name: ヒラリラーのMP
   authors:
   - ヒラリラー
@@ -55,8 +56,8 @@
     - image
 - name: まてるある～ん
   authors:
-  - えふ・けー
-  url: http://ameblo.jp/msrr-material/
+  - FK
+  url: https://msrr.game-ss.com/
   items:
     - image
 - name: G-Eden
@@ -69,6 +70,12 @@
   authors:
   - ひかる
   url: https://tabinokiroku20xx.blogspot.com/
+  items:
+    - image
+- name: hhhkk4232
+  authors:
+  - hhhkk4232
+  url: https://hhhkk4232.web.fc2.com/
   items:
     - image
 - name: PLiCy
@@ -150,6 +157,12 @@
   authors:
   - 遊句
   url: https://yougou.sonnabakana.com/
+  items:
+    - sound
+- name: 対目的ユートピア
+  authors:
+  - Uraken A.O.
+  url: https://musix.pupu.jp/index.html
   items:
     - sound
 - name: Merlin Soundfont Banks

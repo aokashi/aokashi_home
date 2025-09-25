@@ -28,6 +28,7 @@ const PortfolioItem = ({ portfolioItem, slug }: Props) => {
       title={portfolioItem.title}
       link={slug}
       imagePath={portfolioItem.images ? portfolioItem.images[0].path : null}
+      truncateImage={false}
       headerContent={
         <Text fontSize="sm">
           <time dateTime={portfolioItem.date}>

@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Box from "./Box"
 import { HStack, Tag } from "@chakra-ui/react"
 
@@ -22,8 +21,8 @@ type Props = {
 const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }: Props) => (
   <Box
     title={title}
-    // TODO 縦に長い画像だとリストのレイアウトが崩れて閲覧に支障をきたすので、最大の高さを指定できるようにして、はみ出した分は隠すようにしたい
     imagePath={imagePath}
+    truncateImage
     onImageClick={onImageClick}
   >
     {children}
@@ -45,17 +44,5 @@ const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }:
     }
   </Box>
 )
-
-MaterialBox.propTypes = {
-  materialItem: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string),
-    description: PropTypes.string,
-  }),
-  imagePath: Box.propTypes.imagePath,
-  onImageClick: PropTypes.func,
-  title: PropTypes.string,
-  children: PropTypes.node,
-}
 
 export default MaterialBox
