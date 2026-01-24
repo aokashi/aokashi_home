@@ -123,5 +123,20 @@
         "url": "https://blog.wwawing.com"
       }
     ]
+  }, {
+    "id": "draw-square-challenge",
+    "name": "矩形ツールで正方形チャレンジ",
+    "description": "ペイントの矩形ツールで正方形をちゃんと描けるかな？ 目指せタイムアタック！ 2026年1月のイベント「冬休みドット大作戦」用で制作しました。",
+    "repository": "https://github.com/aokashi/draw-square-challenge",
+    "keywords": ["TypeScript"],
+    "references": [
+      {
+        "name": "サンプル",
+        "url": "https://contents.aokashi.net/works/draw-square-challenge"
+      }, {
+        "name": "紹介のブログ記事",
+        "url": "https://aokashi.hatenablog.jp/entry/winter-dot-daisakusen-2026"
+      }
+    ]
   }
 ]
