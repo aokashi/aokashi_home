@@ -118,7 +118,7 @@ const IndexLayout = ({ children }) => {
               Information(data.allFeedAokashiRoom.nodes[0])
             }
             <HStack backgroundImage={ProfileBg}>
-              <Image src={Icon} alt="Aokashi" flex="none" h={["64px", "64px", "128px"]} />
+              <Image src={Icon} alt="Aokashi" flex="none" h={["80px", "120px", "160px"]} />
               <SocialLinks socialData={data.allSocialLinkYaml } />
             </HStack>
           </GridItem>

@@ -65,10 +65,6 @@ export const pageQuery = graphql`
             environments {
               name
               text
-              link {
-                url
-                text
-              }
             }
           }
           extra
