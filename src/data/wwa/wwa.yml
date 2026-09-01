@@ -236,3 +236,18 @@
       link: https://plicy.net/GamePlay/212449
   recommend: true
   supportWWAWing: true
+- id: rail_trial
+  name: レイル・トライアル
+  description: |
+    ある大学では我が国の鉄道網を利用して、いかに効率よく観光地を巡れるか競うチャレンジ「レイル・トライアル」が行われていました。
+    大学に入学したての主人公としてレイル・トライアルに参加し、部員たちとの勝負に挑みましょう。
+    本作はヒラリラーさんとの共同制作です。
+  publishedAt: 2026-08-29
+  screenPath: wwa/rail_trial.png
+  recommend: true
+  supportWWAWing: true
+  links:
+    - link: https://hirarira.net/wwa/new_wwa/rail_trial/
+      name: ヒラリラーのMPからプレイ
+    - link: https://plicy.net/GamePlay/236201
+      name: PLiCy からプレイ
