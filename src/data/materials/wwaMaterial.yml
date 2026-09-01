@@ -744,6 +744,12 @@
   tags:
     - WWA素材第3世代
     - 物体
+- name: 20wall_furniture
+  file: /materials/wwa/20wall_furniture.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - 物体
 - name: 24-fruit-lemon
   file: /materials/wwa/24-fruit-lemon.gif
   publishedAt: 2026-09-01
