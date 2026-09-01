@@ -738,3 +738,59 @@
     - WWA素材第3世代
     - セット
   docsLink: https://docs.aokashi.net/wiki/MINIATURE_LAND_MATERIAL
+- name: 20bench
+  file: /materials/wwa/20bench.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - 物体
+- name: 24-fruit-lemon
+  file: /materials/wwa/24-fruit-lemon.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 24-monsters_insect.gif
+  file: /materials/wwa/24-monsters_insect.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - キャラクター
+- name: 24-ultra_crab.gif
+  file: /materials/wwa/24-ultra_crab.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - キャラクター
+- name: 24-train_interior-express_side
+  file: /materials/wwa/24-train_interior-express_side.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - 列車内装
+- name: 25-toilet
+  file: /materials/wwa/25-toilet.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - 物体
+  description: |
+    使用例のキャラクターはＮＡＯさんのＷＷＡ標準素材を使用しています。
+- name: 25-item_bag
+  file: /materials/wwa/25-item_bag.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - アイテム
+- name: 25-people-sennin_player
+  file: /materials/wwa/25-people-sennin_player.gif
+  publishedAt: 2026-09-01
+  tags:
+    - 標準素材風
+    - プレイヤー
+- name: 25-depart_sales_table
+  file: /materials/wwa/25-depart_sales_table.gif
+  publishedAt: 2026-09-01
+  tags:
+    - WWA素材第3世代
+    - 物体
