@@ -800,3 +800,12 @@
   tags:
     - WWA素材第3世代
     - 物体
+- name: 25-building-american
+  file: /materials/wwa/25-building-american.gif
+  publishedAt: 2026-09-18
+  tags:
+    - WWA素材第3世代
+    - 建物
+    - 地面
+    - 乗り物
+  docsLink: https://docs.aokashi.net/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%80%E3%82%A4%E3%83%8A%E3%83%BC%E9%A2%A8%E3%83%9E%E3%83%83%E3%83%97%E3%83%81%E3%83%83%E3%83%97
