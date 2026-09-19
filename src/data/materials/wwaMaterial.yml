@@ -737,6 +737,7 @@
   tags:
     - WWA素材第3世代
     - セット
+    - フィールドマップ
   docsLink: https://docs.aokashi.net/wiki/MINIATURE_LAND_MATERIAL
 - name: 20bench
   file: /materials/wwa/20bench.gif
@@ -809,3 +810,42 @@
     - 地面
     - 乗り物
   docsLink: https://docs.aokashi.net/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%80%E3%82%A4%E3%83%8A%E3%83%BC%E9%A2%A8%E3%83%9E%E3%83%83%E3%83%97%E3%83%81%E3%83%83%E3%83%97
+- name: development_set-2026-people
+  file: /materials/wwa/development_set-2026-people.gif
+  publishedAt: 2026-09-20
+  tags:
+    - WWA素材第4世代
+    - キャラクター
+    - プレイヤー
+  docsLink: https://docs.aokashi.net/wiki/WWA%E5%BB%BA%E7%AF%89%E7%B4%A0%E6%9D%90%E3%82%BB%E3%83%83%E3%83%882026
+- name: development_set-2026-housing
+  file: /materials/wwa/development_set-2026-housing.gif
+  publishedAt: 2026-09-20
+  tags:
+    - WWA素材第4世代
+    - 建物
+    - 地面
+  docsLink: https://docs.aokashi.net/wiki/WWA%E5%BB%BA%E7%AF%89%E7%B4%A0%E6%9D%90%E3%82%BB%E3%83%83%E3%83%882026
+  useExtendPalette: true
+- name: development_set-2026-interior
+  file: /materials/wwa/development_set-2026-interior.gif
+  publishedAt: 2026-09-20
+  tags:
+    - WWA素材第4世代
+    - 地面
+  docsLink: https://docs.aokashi.net/wiki/WWA%E5%BB%BA%E7%AF%89%E7%B4%A0%E6%9D%90%E3%82%BB%E3%83%83%E3%83%882026
+  useExtendPalette: true
+- name: development_set-2026-field
+  file: /materials/wwa/development_set-2026-field.gif
+  publishedAt: 2026-09-20
+  tags:
+    - WWA素材第4世代
+    - フィールドマップ
+  docsLink: https://docs.aokashi.net/wiki/WWA%E5%BB%BA%E7%AF%89%E7%B4%A0%E6%9D%90%E3%82%BB%E3%83%83%E3%83%882026
+- name: development_set-2026-others
+  file: /materials/wwa/development_set-2026-others.gif
+  publishedAt: 2026-09-20
+  tags:
+    - WWA素材第4世代
+    - システム
+  docsLink: https://docs.aokashi.net/wiki/WWA%E5%BB%BA%E7%AF%89%E7%B4%A0%E6%9D%90%E3%82%BB%E3%83%83%E3%83%882026

@@ -57,6 +57,7 @@ class WWAMaterialPage extends React.Component {
       publishedAt
       tags
       docsLink
+      useExtendPalette
     }
     group(field: {tags: SELECT}) {
       fieldValue
