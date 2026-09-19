@@ -8,6 +8,7 @@ export type MaterialItem = {
   tags?: string[],
   description?: string,
   docsLink?: string,
+  useExtendPalette?: boolean,
 }
 
 type Props = {
@@ -35,6 +36,10 @@ const MaterialBox = ({ materialItem, imagePath, onImageClick, title, children }:
             ))
           }
         </HStack>
+    }
+    {
+      materialItem.useExtendPalette &&
+        <Tag colorScheme="purple">拡張パレット使用 (色落ち注意)</Tag>
     }
     {
       materialItem.description &&
